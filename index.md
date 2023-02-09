@@ -1,5 +1,5 @@
-
-### AIcoding2023年1v1课程开始招生中
+### AIcoding
+<p style="text-align: center;">### AIcoding2023年1v1课程开始招生中</p>
 ### 【招生对象】:初中高中在读学生(K-12)
 
 ### AIcoding开设课程有:
