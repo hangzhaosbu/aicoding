@@ -1,7 +1,3 @@
----
-layout: index
----
-
 [Our courses](course.md){: .btn} &nbsp; &nbsp; &nbsp; &nbsp; [About us](about.md){: .btn}
 
 ### AIcoding2023年1v1课程开始招生中
