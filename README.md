@@ -4,7 +4,7 @@
 # AIcoding开设课程有:
 # 【计算机】: Python, Java, C++, APCSA, USACO, Machine Learning, AI
 # AIcoding所有课程都是1对1在线私教课。
-# AIcoding所有老师都是美国在读博士。
+# AIcoding所有老师都是美国计算机博士。
 
 
 # 【联系电话】:3473796896
