@@ -26,6 +26,8 @@ github:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  auto_ids: true
 theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
