@@ -16,6 +16,8 @@
 title: AIcoding
 email: juliachenortho@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
+  AIcoding是由美国计算机博士团队2023年创立的致力于K-12学生背景提升的教育品牌。
+  [Our courses](course.md){: .btn} &nbsp; &nbsp; &nbsp; &nbsp; [About us](about.md){: .btn}
 baseurl: "/aicoding" # the subpath of your site, e.g. /blog
 url: "https://hangzhaosbu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
