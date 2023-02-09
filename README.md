@@ -1,4 +1,5 @@
-[Our courses](course.md){: .btn .btn--success} &nbsp; &nbsp; &nbsp; &nbsp; [About us](about.md){: .btn .btn--success}
+[Our courses](course.md) &nbsp; &nbsp; &nbsp; &nbsp; [About us](about.md)
+<a href="javascript:void(0)" class="button">Default Button</a>
 
 ##  AIcoding2023年1v1课程开始招生中
 ## 【招生对象】:初中高中在读学生(K-12)
