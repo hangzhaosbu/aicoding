@@ -1,3 +1,4 @@
+---
 [About us](about.md)
 
 ##  AIcoding2023年1v1课程开始招生中
@@ -12,3 +13,8 @@
 ## 【联系电话】:3473796896
 ## 【微信】:julia3473796896
 ## ©Copyright 2023 by AIcoding
+
+layout: home
+---
+
+
