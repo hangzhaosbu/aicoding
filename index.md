@@ -8,13 +8,3 @@
 ### AIcoding所有课程都是1对1在线私教课。
 ### AIcoding所有老师都是美国计算机博士。
 
-
-### 【联系电话】:3473796896
-### 【微信】:julia3473796896
-### ©Copyright 2023 by AIcoding
-
-
-<footer class="site-footer">
-  <span class="site-footer-owner"><a href="{{ site.url }}">{{ site.title }}</a> is maintained by <a href="{{ site.author.url }}">{{ site.author.name }}</a>.</span>
-  <span class="site-footer-credits">Copyright (c) 2023, AIcoding. All rights reserved.</span>
-</footer>
