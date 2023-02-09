@@ -19,8 +19,10 @@
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       {% if site.github.is_project_page %}
-        <a href="{{ course.md }}" class="btn">Our courses</a>
-        <a href="{{ about.md }}" class="btn">About us</a>
+        <a href="{{ /index }}" class="btn">Home</a>
+        <a href="{{ /course }}" class="btn">Our courses</a>
+        <a href="{{ /about }}" class="btn">About us</a>
+        <a href="{{ /contact }}" class="btn">Contact</a>
       {% endif %}
       {% if site.show_downloads %}
         <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
@@ -33,9 +35,9 @@
 
       <footer class="site-footer">
           <section class="container copyright">
-              <span>联系电话:3473796896.</span>
-              <span>微信:julia3473796896.</span>
-              <span>©Copyright 2023 by AIcoding. All rights reserved.</span>
+              <p>联系电话:3473796896</p>
+              <p>微信:julia3473796896</p>
+              <p>©Copyright 2023 by AIcoding. All rights reserved.</p>
           </section>
       </footer>
     </main>

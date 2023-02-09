@@ -1,5 +1,3 @@
-[Our courses](course.md){: .btn} &nbsp; &nbsp; &nbsp; &nbsp; [About us](about.md){: .btn}
-
 ### AIcoding2023年1v1课程开始招生中
 ### 【招生对象】:初中高中在读学生(K-12)
 
