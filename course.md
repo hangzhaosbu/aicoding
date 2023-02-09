@@ -1,17 +1,17 @@
-[Back to Home](README.md)
+[Back to Home](index.md)
 
-## Python
+### Python
 
-## Java
+### Java
 
-## C++
+### C++
 
-## Data Structure
+### Data Structure
 
-## Algorithm
+### Algorithm
 
-## APCSA
+### APCSA
 
-## USACO
+### USACO
 
-## Machine Learning/AI Project
+### Machine Learning/AI Project
