@@ -8,7 +8,7 @@
   </tr>
 
   <tr>
-    <td><center>Python Fundamental I & II</center></td>
+    <td><center><a href="./aicoding/course.html/python.html" class="btn">Python Fundamental I & II</a></center></td>
      <td><center>Java Fundamental I & II</center></td>
   </tr>
 
@@ -67,7 +67,7 @@
 
   <tr>
     <td><img src="./images/USACO.png" width=400 height=300></td>
-    <td><img src="./images/machinelearning.jpg" width=380 height=230></td>
+    <td><img src="./images/machinelearning.jpg" width=360 height=230></td>
   </tr>
 
   <tr>
