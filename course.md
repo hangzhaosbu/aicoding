@@ -8,8 +8,8 @@
   </tr>
 
   <tr>
-    <td><center><a href="./aicoding/course.html/python.html" class="btn">Python Fundamental I & II</a></center></td>
-     <td><center>Java Fundamental I & II</center></td>
+    <td><center><a href="./aicoding/python.html">Python Fundamental I & II</a></center></td>
+     <td><center><a href="./aicoding/java.html">Java Fundamental I & II</a></center></td>
   </tr>
 
   <tr>
@@ -29,8 +29,8 @@
   </tr>
 
   <tr>
-    <td><center>C++ Fundamental I & II</center></td>
-     <td><center>Data Structure</center></td>
+    <td><center><a href="./aicoding/cplusplus.html">C++ Fundamental I & II</a></center></td>
+     <td><center><a href="./aicoding/datastructure.html">Data Structure</a></center></td>
   </tr>
 
   <tr>
@@ -50,8 +50,8 @@
   </tr>
 
   <tr>
-    <td><center>Algorithm</center></td>
-     <td><center>AP Computer Science A</center></td>
+    <td><center><a href="./aicoding/algorithm.html">Algorithm</a></center></td>
+     <td><center><a href="./aicoding/APCSA.html">AP Computer Science A</a></center></td>
   </tr>
 
   <tr>
@@ -67,12 +67,12 @@
 
   <tr>
     <td><img src="./images/USACO.png" width=400 height=300></td>
-    <td><img src="./images/machinelearning.jpg" width=360 height=230></td>
+    <td><img src="./images/machinelearning.jpg" width=300 height=230></td>
   </tr>
 
   <tr>
-    <td><center>USA Computing Olympiad</center></td>
-     <td><center>Machine Learning & Artificial Intelligence Fundamental</center></td>
+    <td><center><a href="./aicoding/USACO.html">USA Computing Olympiad</a></center></td>
+     <td><center><a href="./aicoding/MachineLearning.html">Machine Learning & AI</a></center></td>
   </tr>
 
   <tr>
