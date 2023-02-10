@@ -24,8 +24,8 @@
 <table>
 
   <tr>
-    <td><img src="./images/cplusplus.png" width=400 height=280></td>
-    <td><img src="./images/datastructure.png" width=400 height=240></td>
+    <td><img src="./images/cplusplus.png" width=400 height=350></td>
+    <td><img src="./images/datastructure.png" width=400 height=280></td>
   </tr>
 
   <tr>
@@ -45,7 +45,7 @@
 <table>
 
   <tr>
-    <td><img src="./images/algorithm.jpg" width=400 height=280></td>
+    <td><img src="./images/algorithm.jpg" width=400 height=320></td>
     <td><img src="./images/APCSA.jpg" width=400 height=230></td>
   </tr>
 
@@ -66,8 +66,8 @@
 <table>
 
   <tr>
-    <td><img src="./images/USACO.png" width=400 height=280></td>
-    <td><img src="./images/machinelearning.jpg" width=400 height=230></td>
+    <td><img src="./images/USACO.png" width=400 height=300></td>
+    <td><img src="./images/machinelearning.jpg" width=380 height=230></td>
   </tr>
 
   <tr>
