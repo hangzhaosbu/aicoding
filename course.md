@@ -66,8 +66,8 @@
 <table>
 
   <tr>
-    <td><img src="./images/USACO.png" width=400 height=300></td>
-    <td><img src="./images/machinelearning.jpg" width=360 height=230></td>
+    <td><img src="./images/USACO.png" width=360 height=300></td>
+    <td><img src="./images/machinelearning.jpg" width=400 height=230></td>
   </tr>
 
   <tr>
