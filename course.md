@@ -1,5 +1,11 @@
 <h3 style="text-align: center;">AIcoding</h3>
 
+<style>
+ td, th {
+   border: none!important;
+ }
+</style>
+
 <table>
   
   <tr>
