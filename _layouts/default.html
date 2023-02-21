@@ -1,49 +1,54 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
+<html lang="{{ site.lang | default: " en-US" }}">
 
-{% seo %}
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    {% include head-custom.html %}
-  </head>
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
+<head>
+  <meta charset="UTF-8">
 
-    <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="../aicoding" class="btn">Home</a>
-        <a href="../aicoding/course.html" class="btn">Our courses</a>
-        <a href="../aicoding/about.html" class="btn">About us</a>
-        <a href="../aicoding/contact.html" class="btn">Contact</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
-    </header>
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style"
+    type="text/css" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  {% include head-custom.html %}
+</head>
 
-    <main id="content" class="main-content" role="main">
-      {{ content }}
+<body>
+  <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-      <footer class="site-footer">
-          <section class="container copyright">
-              <center><b>联系电话: 3473796896</b></center>
-          </section>
-          <section class="container copyright">
-              <center><b>微信: julia3473796896</b></center>
-          </section>
-          <section class="container copyright">
-              <center><b>©Copyright 2023 by AIcoding. All rights reserved.</b></center>
-          </section>
-      </footer>
-    </main>
-  </body>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+    <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline
+      }}</h2>
+    {% if site.github.is_project_page %}
+    <a href="../aicoding" class="btn">Home</a>
+    <a href="../aicoding/course.html" class="btn">Our courses</a>
+    <a href="../aicoding/about.html" class="btn">About us</a>
+    <a href="../aicoding/contact.html" class="btn">Contact</a>
+    {% endif %}
+    {% if site.show_downloads %}
+    <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+    <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+    {% endif %}
+  </header>
+
+  <main id="content" class="main-content" role="main">
+    {{ content }}
+
+    <footer class="site-footer">
+      <section class="container copyright">
+        <center><b>联系电话: 3473796896</b></center>
+      </section>
+      <section class="container copyright">
+        <center><b>微信: julia3473796896</b></center>
+      </section>
+      <section class="container copyright">
+        <center><b>&copy;Copyright 2023 by AIcoding. All rights reserved.</b></center>
+      </section>
+    </footer>
+  </main>
+</body>
+
 </html>
