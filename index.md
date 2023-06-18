@@ -4,6 +4,6 @@
 
 ### AIcoding开设课程有:
 ### 【计算机】: Python, Java, C++, R, Data Structure, Algorithm, APCSA, APCSP, USACO, Machine Learning/AI Project, 机器学习竞赛, 学术论文指导
-### AIcoding所有课程都是1对1货1对N在线课程。
+### AIcoding所有课程都是1对1或1对N在线课程。
 ### AIcoding所有老师都是美国计算机博士。
 
