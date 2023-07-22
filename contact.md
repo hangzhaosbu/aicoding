@@ -1,3 +1,3 @@
 <h3 style="text-align: center;">AIcoding</h3>
-### 联系电话: 3473796896
-### 微信: SpiritedAway2023
+### Mobile: 3473796896
+### Wechat: SpiritedAway2023
