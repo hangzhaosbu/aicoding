@@ -3,7 +3,7 @@
 ### 【Target】: K-12 Students
 
 ### AIcoding Courses:
-### 【Computer Science】: Python, Java, C++, R, Javascript/HTML/CSS, MySQL Database, Data Structure, Algorithm, APCSA, APCSP, USACO, Machine Learning/AI Project, Competition, Paper Guidance
-### We offer both online and in-person courses.
+### 【Computer Science】: Python, Java, C++, R, Javascript/HTML/CSS, MySQL Database, Data Structure, Algorithm, APCSA, APCSP, AP Statistics, USACO, HiMCM, Machine Learning/AI Project, Competition, Paper Guidance
+### We offer online courses.
 ### All instructors in AIcoding are computer science Ph.D.
 
