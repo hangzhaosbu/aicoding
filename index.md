@@ -1,6 +1,6 @@
 <h3 style="text-align: center;">AIcoding</h3>
 <h3 style="text-align: center;">AIcoding 2023 1v1, 1vN students recruitment</h3>
-###【Target】: K-12 Students
+### 【Target】: K-12 Students
 
 ### AIcoding Courses:
 
