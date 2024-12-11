@@ -9,7 +9,7 @@
 
 【SAT】: SAT English, SAT Math
 
-【Math】: AP Calculus AB/BC
+【Math】: AP Calculus AB/BC, AP Stats
 
 We offer online courses.
 All instructors in AIcoding Computer Science classes are Ph.D.
