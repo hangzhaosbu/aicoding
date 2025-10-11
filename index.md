@@ -1,6 +1,3 @@
-<h3 style="text-align: center;">AIcoding</h3>
-<h3 style="text-align: center;">AIcoding 2025 1v1, 1vN students recruitment</h3>
-
 🎯 Who We Tutor
 
 U.S. K–12: middle school, high school, undergraduate, graduate
