@@ -1,18 +1,53 @@
 <h3 style="text-align: center;">AIcoding</h3>
 <h3 style="text-align: center;">AIcoding 2025 1v1, 1vN students recruitment</h3>
 
-### 【Target】: K-12 Students
+🎯 Who We Tutor
 
-### AIcoding Courses:
+U.S. K–12: middle school, high school, undergraduate, graduate
 
-【Computer Science】: Python, Java, C++, R, Javascript/HTML/CSS, MySQL Database, Data Structure, Algorithm, APCSA, APCSP, AP Statistics, USACO, HiMCM, Machine Learning/AI Project, Competition, Paper Guidance
+China: middle school, high school, undergraduate, graduate
 
-【SAT】: SAT English, SAT Math
+💻 Signature Courses
 
-【Math】: AP Calculus AB/BC, AP Stats
+Popular programming languages: Python, Java, C++, R, JavaScript, HTML/CSS
 
-We offer online courses.
-All instructors in AIcoding Computer Science classes are Ph.D.
+Data & Algorithms: MySQL, Data Structures, Algorithms
+
+Exam Prep: AP Computer Science A (AP CSA), AP Computer Science Principles (AP CSP)
+
+🏆 Contests & Projects
+
+USACO (USA Computing Olympiad): Your path to Gold and Platinum is within reach!
+
+USAAIO (U.S. Artificial Intelligence Olympiad): Dive into AI—hands-on modeling and reasoning!
+
+AMC 8/10/12 & AIME: Systematic training in mathematical thinking to advance toward the USA Math Olympiad and build a strong profile in international math competitions
+
+ACSL (American Computer Science League): Core coverage of programming, algorithms, and CS theory to elevate academic foundations and practical skills
+
+WorldQuant Quantitative Finance Competition: Factor discovery and strategy building—bridging finance, coding, and research
+
+Math Modeling (HiMCM): Strengthen logic and mathematical literacy
+
+Machine Learning / AI Projects: Stay on the cutting edge and build showcase-ready work
+
+Specialized Prep for Various Programming Contests: Customized training for comprehensive improvement
+
+✨ Why Us
+
+Expert Instructors: PhDs in Computer Science from top U.S. universities, front-line ML engineers at leading tech companies, multi-award competitors with robust research experience
+
+Personalized Plans: Tailored learning and sprint roadmaps to match your goals and background
+
+Strong Recommendations: Outstanding students may receive personalized letters from U.S. university professors
+
+🚀 What You Get
+
+Competition Sprints: Pro strategies + real-world practice to help you stand out in USACO/USAAIO/quant/modeling competitions
+
+Academic Growth: End-to-end guidance on research topics, project design, and technical implementation to elevate your academic profile
+
+📢 Contact us now to kickstart your journey to excellence!
 
 
 
