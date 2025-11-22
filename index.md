@@ -171,7 +171,7 @@ description: Elite Programming Education for Future Tech Leaders
     color: white;
   }
 
-  /* Instructor Section */
+  /* Instructor Section - UPDATED COLOR */
   .instructor-highlights {
     background: #F9FAFB;
     border-radius: 15px;
@@ -193,7 +193,9 @@ description: Elite Programming Education for Future Tech Leaders
   .highlight-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #4F46E5;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .highlight-label {
@@ -255,34 +257,6 @@ description: Elite Programming Education for Future Tech Leaders
     background: rgba(255, 255, 255, 0.1);
   }
 
-  /* Language Toggle */
-  .language-section {
-    text-align: center;
-    margin: 2rem 0;
-  }
-
-  .language-toggle {
-    display: inline-flex;
-    background: #F3F4F6;
-    border-radius: 10px;
-    padding: 0.25rem;
-  }
-
-  .lang-btn {
-    padding: 0.5rem 1.5rem;
-    border-radius: 8px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s;
-  }
-
-  .lang-btn.active {
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
   /* Responsive Design */
   @media (max-width: 768px) {
     .hero-title {
@@ -294,14 +268,6 @@ description: Elite Programming Education for Future Tech Leaders
     }
   }
 </style>
-
-<!-- Language Toggle -->
-<div class="language-section">
-  <div class="language-toggle">
-    <button class="lang-btn active" onclick="setLanguage('en')">English</button>
-    <button class="lang-btn" onclick="setLanguage('zh')">中文</button>
-  </div>
-</div>
 
 <!-- Hero Section -->
 <section class="hero-section">
@@ -472,23 +438,3 @@ description: Elite Programming Education for Future Tech Leaders
     </a>
   </div>
 </section>
-
-<script>
-  function setLanguage(lang) {
-    const enContent = document.querySelectorAll('.en-content');
-    const zhContent = document.querySelectorAll('.zh-content');
-    const langBtns = document.querySelectorAll('.lang-btn');
-    
-    langBtns.forEach(btn => btn.classList.remove('active'));
-    
-    if (lang === 'zh') {
-      enContent.forEach(el => el.style.display = 'none');
-      zhContent.forEach(el => el.style.display = 'inline');
-      langBtns[1].classList.add('active');
-    } else {
-      enContent.forEach(el => el.style.display = 'inline');
-      zhContent.forEach(el => el.style.display = 'none');
-      langBtns[0].classList.add('active');
-    }
-  }
-</script>
