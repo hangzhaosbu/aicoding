@@ -64,11 +64,11 @@
     <h2 class="project-tagline">{{ page.description | default: site.description | default: "Elite Programming Education" }}</h2>
     
     {% if site.github.is_project_page %}
-    <!-- Fixed navigation links -->
-    <a href="{{ '/index.html' | relative_url }}" class="btn">Home</a>
-    <a href="{{ '/course.html' | relative_url }}" class="btn">Our Courses</a>
-    <a href="{{ '/about.html' | relative_url }}" class="btn">About Us</a>
-    <a href="{{ '/contact.html' | relative_url }}" class="btn">Contact</a>
+    <!-- Use hard-coded paths for GitHub Pages -->
+    <a href="/aicoding/" class="btn">Home</a>
+    <a href="/aicoding/course.html" class="btn">Our Courses</a>
+    <a href="/aicoding/about.html" class="btn">About Us</a>
+    <a href="/aicoding/contact.html" class="btn">Contact</a>
     {% endif %}
   </header>
   
