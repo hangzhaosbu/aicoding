@@ -1,23 +1,87 @@
-<h3 style="text-align: center;">AIcoding</h3>
-
-
-## APCSA
-
-### Program Goal
-### Understanding Java basic knowledge (40 hours)
-
-1. Installing Java
-2. Why Program?
-3. Primitive Types
-4. Using Objects
-5. Boolean Expressions and if Statement
-6. Loops and Iterations
-7. Strings
-8. Writing Classes
-9. Array
-10. ArrayList
-11. 2D Array
-12. Inheritance and Polymorphism
-13. Network Programming
-14. Recursion
-15. Sorting Algorithm
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+  <meta charset="UTF-8">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style" type="text/css" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4F46E5">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  
+  <style>
+    /* Inline critical styles to ensure they always load */
+    .page-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      color: white !important;
+    }
+    
+    .page-header * {
+      color: white !important;
+    }
+    
+    .page-header .btn {
+      color: white !important;
+      background-color: rgba(255, 255, 255, 0.15) !important;
+      border-color: rgba(255, 255, 255, 0.3) !important;
+    }
+    
+    .page-header .btn:hover {
+      color: white !important;
+      background-color: rgba(255, 255, 255, 0.25) !important;
+      border-color: rgba(255, 255, 255, 0.4) !important;
+    }
+    
+    /* Fix CTA buttons */
+    .cta-button {
+      background: white !important;
+      color: #667eea !important;
+    }
+    
+    .cta-button span {
+      color: #667eea !important;
+    }
+    
+    .cta-button-secondary {
+      background: transparent !important;
+      color: white !important;
+      border: 2px solid white !important;
+    }
+    
+    .cta-button-secondary span {
+      color: white !important;
+    }
+  </style>
+  
+  {% include head-custom.html %}
+</head>
+<body>
+  <a id="skip-to-content" href="#content">Skip to the content.</a>
+  
+  <header class="page-header" role="banner">
+    <h1 class="project-name">{{ page.title | default: site.title | default: "AIcoding Academy" }}</h1>
+    <h2 class="project-tagline">{{ page.description | default: site.description | default: "Elite Programming Education" }}</h2>
+    
+    {% if site.github.is_project_page %}
+    <!-- Use absolute paths from baseurl -->
+    <a href="{{ site.baseurl }}/" class="btn">Home</a>
+    <a href="{{ site.baseurl }}/course.html" class="btn">Our Courses</a>
+    <a href="{{ site.baseurl }}/about.html" class="btn">About Us</a>
+    <a href="{{ site.baseurl }}/contact.html" class="btn">Contact</a>
+    {% endif %}
+  </header>
+  
+  <main id="content" class="main-content" role="main">
+    {{ content }}
+    
+    <footer class="site-footer">
+      <div style="text-align: center; padding: 2rem 0; border-top: 1px solid #e5e7eb;">
+        <p><strong>Mobile:</strong> +1 (347) 379-6896</p>
+        <p><strong>WeChat:</strong> SpiritedAway2023</p>
+        <p style="margin-top: 1rem; color: #6b7280;">© 2025 AIcoding Academy. All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
