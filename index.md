@@ -134,11 +134,13 @@ description: Elite Programming Education for Future Tech Leaders
   .category-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: white !important;
   }
 
   .category-card p {
     opacity: 0.95;
     line-height: 1.6;
+    color: white !important;
   }
 
   /* Competition Section */
@@ -171,7 +173,7 @@ description: Elite Programming Education for Future Tech Leaders
     color: white;
   }
 
-  /* Instructor Section - UPDATED COLOR */
+  /* Instructor Section */
   .instructor-highlights {
     background: #F9FAFB;
     border-radius: 15px;
@@ -216,12 +218,14 @@ description: Elite Programming Education for Future Tech Leaders
   .cta-title {
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: white !important;
   }
 
   .cta-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     opacity: 0.95;
+    color: white !important;
   }
 
   .cta-buttons {
@@ -245,6 +249,7 @@ description: Elite Programming Education for Future Tech Leaders
   .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: #4F46E5;
   }
 
   .cta-button-secondary {
@@ -255,6 +260,7 @@ description: Elite Programming Education for Future Tech Leaders
 
   .cta-button-secondary:hover {
     background: rgba(255, 255, 255, 0.1);
+    color: white;
   }
 
   /* Responsive Design */
@@ -273,11 +279,11 @@ description: Elite Programming Education for Future Tech Leaders
 <section class="hero-section">
   <h1 class="hero-title">
     <span class="en-content">Welcome to AIcoding Academy</span>
-    <span class="zh-content" style="display:none;">欢迎来到 AIcoding 学院</span>
+    <span class="zh-content">欢迎来到 AIcoding 学院</span>
   </h1>
   <p class="hero-subtitle">
     <span class="en-content">Where Future Tech Leaders Begin Their Journey</span>
-    <span class="zh-content" style="display:none;">未来科技领袖的起点</span>
+    <span class="zh-content">未来科技领袖的起点</span>
   </p>
 </section>
 
@@ -287,11 +293,11 @@ description: Elite Programming Education for Future Tech Leaders
     <div class="feature-icon">🎯</div>
     <h3 class="feature-title">
       <span class="en-content">Personalized Learning</span>
-      <span class="zh-content" style="display:none;">个性化学习</span>
+      <span class="zh-content">个性化学习</span>
     </h3>
     <p class="feature-description">
       <span class="en-content">Tailored curriculum designed to match your goals and learning pace</span>
-      <span class="zh-content" style="display:none;">根据您的目标和学习节奏量身定制的课程</span>
+      <span class="zh-content">根据您的目标和学习节奏量身定制的课程</span>
     </p>
   </div>
   
@@ -299,11 +305,11 @@ description: Elite Programming Education for Future Tech Leaders
     <div class="feature-icon">🏆</div>
     <h3 class="feature-title">
       <span class="en-content">Competition Excellence</span>
-      <span class="zh-content" style="display:none;">竞赛卓越</span>
+      <span class="zh-content">竞赛卓越</span>
     </h3>
     <p class="feature-description">
       <span class="en-content">Proven track record in USACO, USAAIO, AMC, and more</span>
-      <span class="zh-content" style="display:none;">在 USACO、USAAIO、AMC 等竞赛中成绩斐然</span>
+      <span class="zh-content">在 USACO、USAAIO、AMC 等竞赛中成绩斐然</span>
     </p>
   </div>
   
@@ -311,11 +317,11 @@ description: Elite Programming Education for Future Tech Leaders
     <div class="feature-icon">👨‍🏫</div>
     <h3 class="feature-title">
       <span class="en-content">Expert Instructors</span>
-      <span class="zh-content" style="display:none;">专家导师</span>
+      <span class="zh-content">专家导师</span>
     </h3>
     <p class="feature-description">
       <span class="en-content">PhD holders and industry professionals from top tech companies</span>
-      <span class="zh-content" style="display:none;">来自顶尖科技公司的博士和行业专家</span>
+      <span class="zh-content">来自顶尖科技公司的博士和行业专家</span>
     </p>
   </div>
 </section>
@@ -325,28 +331,46 @@ description: Elite Programming Education for Future Tech Leaders
   <div class="section-header">
     <h2 class="section-title">
       <span class="en-content">Our Programs</span>
-      <span class="zh-content" style="display:none;">我们的课程</span>
+      <span class="zh-content">我们的课程</span>
     </h2>
     <p class="section-subtitle">
       <span class="en-content">Comprehensive courses from fundamentals to advanced topics</span>
-      <span class="zh-content" style="display:none;">从基础到高级的全面课程</span>
+      <span class="zh-content">从基础到高级的全面课程</span>
     </p>
   </div>
   
   <div class="categories-grid">
     <div class="category-card">
-      <h3>💻 Programming Languages</h3>
-      <p>Python, Java, C++, JavaScript, R</p>
+      <h3>
+        <span class="en-content">💻 Programming Languages</span>
+        <span class="zh-content">💻 编程语言</span>
+      </h3>
+      <p>
+        <span class="en-content">Python, Java, C++, JavaScript, R</span>
+        <span class="zh-content">Python, Java, C++, JavaScript, R</span>
+      </p>
     </div>
     
     <div class="category-card" style="background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%);">
-      <h3>📊 Data & Algorithms</h3>
-      <p>Data Structures, Algorithms, MySQL</p>
+      <h3>
+        <span class="en-content">📊 Data & Algorithms</span>
+        <span class="zh-content">📊 数据与算法</span>
+      </h3>
+      <p>
+        <span class="en-content">Data Structures, Algorithms, MySQL</span>
+        <span class="zh-content">数据结构、算法、MySQL</span>
+      </p>
     </div>
     
     <div class="category-card" style="background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);">
-      <h3>🤖 AI & Machine Learning</h3>
-      <p>Deep Learning, Neural Networks, AI Projects</p>
+      <h3>
+        <span class="en-content">🤖 AI & Machine Learning</span>
+        <span class="zh-content">🤖 人工智能与机器学习</span>
+      </h3>
+      <p>
+        <span class="en-content">Deep Learning, Neural Networks, AI Projects</span>
+        <span class="zh-content">深度学习、神经网络、AI项目</span>
+      </p>
     </div>
   </div>
 </section>
@@ -356,12 +380,15 @@ description: Elite Programming Education for Future Tech Leaders
   <div class="section-header">
     <h2 class="section-title">
       <span class="en-content">Competition Training</span>
-      <span class="zh-content" style="display:none;">竞赛培训</span>
+      <span class="zh-content">竞赛培训</span>
     </h2>
   </div>
   
   <div class="competition-badges">
-    <span class="badge badge-gold">USACO Gold & Platinum</span>
+    <span class="badge badge-gold">
+      <span class="en-content">USACO Gold & Platinum</span>
+      <span class="zh-content">USACO 金牌与白金</span>
+    </span>
     <span class="badge">USAAIO</span>
     <span class="badge">AMC 8/10/12</span>
     <span class="badge">AIME</span>
@@ -378,7 +405,7 @@ description: Elite Programming Education for Future Tech Leaders
   <div class="section-header">
     <h2 class="section-title">
       <span class="en-content">Why Choose AIcoding?</span>
-      <span class="zh-content" style="display:none;">为什么选择 AIcoding？</span>
+      <span class="zh-content">为什么选择 AIcoding？</span>
     </h2>
   </div>
   
@@ -387,7 +414,7 @@ description: Elite Programming Education for Future Tech Leaders
       <div class="highlight-number">500+</div>
       <div class="highlight-label">
         <span class="en-content">Students Taught</span>
-        <span class="zh-content" style="display:none;">学生人数</span>
+        <span class="zh-content">学生人数</span>
       </div>
     </div>
     
@@ -395,7 +422,7 @@ description: Elite Programming Education for Future Tech Leaders
       <div class="highlight-number">95%</div>
       <div class="highlight-label">
         <span class="en-content">Success Rate</span>
-        <span class="zh-content" style="display:none;">成功率</span>
+        <span class="zh-content">成功率</span>
       </div>
     </div>
     
@@ -403,7 +430,7 @@ description: Elite Programming Education for Future Tech Leaders
       <div class="highlight-number">50+</div>
       <div class="highlight-label">
         <span class="en-content">Competition Awards</span>
-        <span class="zh-content" style="display:none;">竞赛奖项</span>
+        <span class="zh-content">竞赛奖项</span>
       </div>
     </div>
     
@@ -411,7 +438,7 @@ description: Elite Programming Education for Future Tech Leaders
       <div class="highlight-number">10+</div>
       <div class="highlight-label">
         <span class="en-content">Years Experience</span>
-        <span class="zh-content" style="display:none;">年经验</span>
+        <span class="zh-content">年经验</span>
       </div>
     </div>
   </div>
@@ -421,20 +448,20 @@ description: Elite Programming Education for Future Tech Leaders
 <section class="cta-section">
   <h2 class="cta-title">
     <span class="en-content">Ready to Start Your Coding Journey?</span>
-    <span class="zh-content" style="display:none;">准备开始您的编程之旅了吗？</span>
+    <span class="zh-content">准备开始您的编程之旅了吗？</span>
   </h2>
   <p class="cta-description">
     <span class="en-content">Join hundreds of successful students who have achieved their tech dreams</span>
-    <span class="zh-content" style="display:none;">加入数百名成功实现科技梦想的学生行列</span>
+    <span class="zh-content">加入数百名成功实现科技梦想的学生行列</span>
   </p>
   <div class="cta-buttons">
     <a href="./contact.html" class="cta-button">
       <span class="en-content">Get Started Today</span>
-      <span class="zh-content" style="display:none;">立即开始</span>
+      <span class="zh-content">立即开始</span>
     </a>
     <a href="./course.html" class="cta-button cta-button-secondary">
       <span class="en-content">View All Courses</span>
-      <span class="zh-content" style="display:none;">查看所有课程</span>
+      <span class="zh-content">查看所有课程</span>
     </a>
   </div>
 </section>
