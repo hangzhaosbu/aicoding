@@ -539,8 +539,8 @@ description: Get in Touch with AIcoding Academy
     <!-- Office Hours -->
     <div class="office-hours">
       <h3>
-        <span class="en-content">🕐 Office Hours (EST)</span>
-        <span class="zh-content">🕐 办公时间 (美东时间)</span>
+        <span class="en-content">🕐 Office Hours (PST)</span>
+        <span class="zh-content">🕐 办公时间 (美西时间)</span>
       </h3>
       <ul class="hours-list">
         <li>
@@ -642,4 +642,5 @@ description: Get in Touch with AIcoding Academy
     }, 5000);
   });
 </script>
+
 
