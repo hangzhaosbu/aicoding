@@ -11,46 +11,278 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   
   <style>
-    /* Critical inline styles that always load */
+    /* Complete inline styles to ensure they always work */
+    :root {
+      --primary-color: #667eea;
+      --primary-dark: #764ba2;
+      --text-dark: #1e293b;
+      --text-medium: #4b5563;
+      --text-light: #6b7280;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #606c71;
+    }
+
+    /* Page Header Styles */
     .page-header {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
       color: white !important;
+      padding: 2rem 1rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
     
     .page-header * {
       color: white !important;
     }
+
+    .project-name {
+      font-size: 3rem;
+      font-weight: 700;
+      color: white !important;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-tagline {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.95) !important;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
     
     .page-header .btn {
+      display: inline-block;
+      margin-bottom: 1rem;
       color: white !important;
       background-color: rgba(255, 255, 255, 0.15) !important;
-      border-color: rgba(255, 255, 255, 0.3) !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      border-radius: 0.3rem;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      margin-right: 1rem;
     }
     
     .page-header .btn:hover {
       color: white !important;
       background-color: rgba(255, 255, 255, 0.25) !important;
       border-color: rgba(255, 255, 255, 0.4) !important;
+      text-decoration: none;
     }
-    
-    /* Fix CTA buttons */
+
+    /* Main Content */
+    .main-content {
+      max-width: 64rem;
+      padding: 2rem 6rem;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    .main-content h1,
+    .main-content h2,
+    .main-content h3,
+    .main-content h4,
+    .main-content h5,
+    .main-content h6 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: normal;
+      color: #1e293b !important;
+    }
+
+    .main-content p {
+      margin-bottom: 1em;
+    }
+
+    .main-content a {
+      color: #2563eb !important;
+      text-decoration: none;
+    }
+
+    .main-content a:hover {
+      color: #1d4ed8 !important;
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      text-align: center;
+      padding: 3rem 0;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 20px;
+      margin-bottom: 4rem;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: #4B5563;
+      margin-bottom: 2rem;
+    }
+
+    /* Feature Cards */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+      transition: all 0.3s ease;
+      border: 1px solid #E5E7EB;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      border-color: #667eea;
+    }
+
+    .feature-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #1F2937 !important;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-description {
+      color: #6B7280 !important;
+      line-height: 1.6;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      border-radius: 20px;
+      padding: 3rem;
+      text-align: center;
+      color: white !important;
+      margin: 4rem 0;
+    }
+
+    .cta-section h2,
+    .cta-section p {
+      color: white !important;
+    }
+
     .cta-button {
       background: white !important;
       color: #667eea !important;
+      padding: 0.8rem 2rem;
+      border-radius: 10px;
+      text-decoration: none !important;
+      font-weight: 600;
+      transition: transform 0.3s;
+      display: inline-block;
+      margin: 0.5rem;
     }
-    
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      color: #667eea !important;
+      background: rgba(255, 255, 255, 0.95) !important;
+    }
+
     .cta-button span {
       color: #667eea !important;
     }
-    
+
     .cta-button-secondary {
       background: transparent !important;
       color: white !important;
       border: 2px solid white !important;
     }
-    
+
+    .cta-button-secondary:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
+
     .cta-button-secondary span {
       color: white !important;
+    }
+
+    /* Competition Badges */
+    .competition-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .badge {
+      background: #F3F4F6;
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      font-weight: 500;
+      color: #4B5563 !important;
+      border: 2px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .badge:hover {
+      border-color: #667eea;
+      color: #667eea !important;
+      background: #EEF2FF;
+    }
+
+    .badge-gold {
+      background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+      color: white !important;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: solid 1px #eff0f1;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .project-name {
+        font-size: 2rem;
+      }
+
+      .main-content {
+        padding: 2rem 1rem;
+      }
+
+      .page-header {
+        padding: 2rem 1rem;
+      }
+
+      .page-header .btn {
+        display: block;
+        width: 100%;
+        margin: 0.25rem 0;
+      }
     }
   </style>
   
@@ -61,10 +293,9 @@
   
   <header class="page-header" role="banner">
     <h1 class="project-name">{{ page.title | default: site.title | default: "AIcoding Academy" }}</h1>
-    <h2 class="project-tagline">{{ page.description | default: site.description | default: "Elite Programming Education" }}</h2>
+    <h2 class="project-tagline">{{ page.description | default: site.description | default: "Elite Programming Education for Future Tech Leaders" }}</h2>
     
     {% if site.github.is_project_page %}
-    <!-- Use hard-coded paths for GitHub Pages -->
     <a href="/aicoding/" class="btn">Home</a>
     <a href="/aicoding/course.html" class="btn">Our Courses</a>
     <a href="/aicoding/about.html" class="btn">About Us</a>
@@ -76,11 +307,9 @@
     {{ content }}
     
     <footer class="site-footer">
-      <div style="text-align: center; padding: 2rem 0; border-top: 1px solid #e5e7eb;">
-        <p><strong>Mobile:</strong> +1 (347) 379-6896</p>
-        <p><strong>WeChat:</strong> SpiritedAway2023</p>
-        <p style="margin-top: 1rem; color: #6b7280;">© 2025 AIcoding Academy. All rights reserved.</p>
-      </div>
+      <p><strong>Mobile:</strong> +1 (347) 379-6896</p>
+      <p><strong>WeChat:</strong> SpiritedAway2023</p>
+      <p style="margin-top: 1rem; color: #6b7280;">© 2025 AIcoding Academy. All rights reserved.</p>
     </footer>
   </main>
 </body>
