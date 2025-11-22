@@ -2,29 +2,3 @@
 ---
 
 @import 'jekyll-theme-cayman';
-
-/* Override colors to purple theme */
-.page-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-}
-
-.page-header .btn {
-  color: white !important;
-}
-
-.main-content h1, 
-.main-content h2, 
-.main-content h3, 
-.main-content h4, 
-.main-content h5, 
-.main-content h6 {
-  color: #1e293b !important;
-}
-
-.main-content a {
-  color: #2563eb !important;
-}
-
-.main-content a:hover {
-  color: #1d4ed8 !important;
-}
