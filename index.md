@@ -1,103 +1,494 @@
-🎯 Who We Tutor
+---
+layout: default
+title: AIcoding Academy
+description: Elite Programming Education for Future Tech Leaders
+---
 
-U.S. K–12: middle school, high school, undergraduate, graduate
+<style>
+  /* Hero Section */
+  .hero-section {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 20px;
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
 
-China: middle school, high school, undergraduate, graduate
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, transparent 70%);
+    animation: pulse 15s ease-in-out infinite;
+  }
 
-💻 Signature Courses
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
 
-Popular programming languages: Python, Java, C++, R, JavaScript, HTML/CSS
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    position: relative;
+  }
 
-Data & Algorithms: MySQL, Data Structures, Algorithms
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #4B5563;
+    margin-bottom: 2rem;
+    position: relative;
+  }
 
-Exam Prep: AP Computer Science A (AP CSA), AP Computer Science Principles (AP CSP)
+  /* Feature Cards */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
 
-🏆 Contests & Projects
+  .feature-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+    border: 1px solid #E5E7EB;
+  }
 
-USACO (USA Computing Olympiad): Your path to Gold and Platinum is within reach!
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: #4F46E5;
+  }
 
-USAAIO (U.S. Artificial Intelligence Olympiad): Dive into AI—hands-on modeling and reasoning!
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
 
-AMC 8/10/12 & AIME: Systematic training in mathematical thinking to advance toward the USA Math Olympiad and build a strong profile in international math competitions
+  .feature-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+  }
 
-ACSL (American Computer Science League): Core coverage of programming, algorithms, and CS theory to elevate academic foundations and practical skills
+  .feature-description {
+    color: #6B7280;
+    line-height: 1.6;
+  }
 
-WorldQuant Quantitative Finance Competition: Factor discovery and strategy building—bridging finance, coding, and research
+  /* Course Categories */
+  .category-section {
+    margin: 4rem 0;
+  }
 
-Math Modeling (HiMCM): Strengthen logic and mathematical literacy
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
 
-Machine Learning / AI Projects: Stay on the cutting edge and build showcase-ready work
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 1rem;
+  }
 
-Specialized Prep for Various Programming Contests: Customized training for comprehensive improvement
+  .section-subtitle {
+    color: #6B7280;
+    font-size: 1.1rem;
+  }
 
-✨ Why Us
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
 
-Expert Instructors: PhDs in Computer Science from top U.S. universities, front-line ML engineers at leading tech companies, multi-award competitors with robust research experience
+  .category-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
 
-Personalized Plans: Tailored learning and sprint roadmaps to match your goals and background
+  .category-card:hover {
+    transform: scale(1.05);
+  }
 
-Strong Recommendations: Outstanding students may receive personalized letters from U.S. university professors
+  .category-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
 
-🚀 What You Get
+  .category-card p {
+    opacity: 0.95;
+    line-height: 1.6;
+  }
 
-Competition Sprints: Pro strategies + real-world practice to help you stand out in USACO/USAAIO/quant/modeling competitions
+  /* Competition Section */
+  .competition-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+  }
 
-Academic Growth: End-to-end guidance on research topics, project design, and technical implementation to elevate your academic profile
+  .badge {
+    background: #F3F4F6;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    color: #4B5563;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
 
-📢 Contact us now to kickstart your journey to excellence!
+  .badge:hover {
+    border-color: #4F46E5;
+    color: #4F46E5;
+    background: #EEF2FF;
+  }
 
+  .badge-gold {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: white;
+  }
 
+  /* Instructor Section */
+  .instructor-highlights {
+    background: #F9FAFB;
+    border-radius: 15px;
+    padding: 3rem;
+    margin: 3rem 0;
+  }
 
-🎯 辅导对象：
+  .highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
 
-美国 K-12 初中，高中，本科，研究生
+  .highlight-item {
+    text-align: center;
+  }
 
-中国初中，高中，本科，研究生
+  .highlight-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4F46E5;
+  }
 
+  .highlight-label {
+    color: #6B7280;
+    margin-top: 0.5rem;
+  }
 
-💻 精品课程：
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    color: white;
+    margin: 4rem 0;
+  }
 
-热门编程语言： Python、Java、C++、R、JavaScript、HTML/CSS
+  .cta-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 
-数据与算法： MySQL、数据结构、算法
+  .cta-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+  }
 
-考试冲刺： AP 计算机科学 A（APCSA）、AP 计算机科学原理（APCSP）
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
+  .cta-button {
+    background: white;
+    color: #4F46E5;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s;
+    display: inline-block;
+  }
 
-🏆 竞赛与项目：
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
 
-USACO 美国计算机奥林匹克竞赛： 金牌、铂金之路，指日可待！
+  .cta-button-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
 
-USAAIO 美国人工智能竞赛： 深入 AI 赛道，实战强化智能建模与推理能力！
+  .cta-button-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
 
-AMC 8/10/12 & AIME 数学竞赛：系统训练数学思维与解题能力，助力晋级美国数学奥林匹克之路，提升国际数学竞赛背景
+  /* Language Toggle */
+  .language-section {
+    text-align: center;
+    margin: 2rem 0;
+  }
 
-ACSL 美国计算机联盟竞赛：覆盖编程、算法、计算机理论等核心考点，全面提升计算机学术素养与实战能力
+  .language-toggle {
+    display: inline-flex;
+    background: #F3F4F6;
+    border-radius: 10px;
+    padding: 0.25rem;
+  }
 
-WorldQuant 金融量化比赛： 因子挖掘与策略构建实战，打通金融 + 编程 + 研究路径！
+  .lang-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
 
-数学建模（HiMCM）： 锻炼逻辑思维，提升数学素养！
+  .lang-btn.active {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
-机器学习/人工智能项目： 走在科技最前沿，产出可展示作品！
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
 
-各类编程竞赛专项辅导： 定制训练，全面提升！
+<!-- Language Toggle -->
+<div class="language-section">
+  <div class="language-toggle">
+    <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+    <button class="lang-btn" onclick="setLanguage('zh')">中文</button>
+  </div>
+</div>
 
+<!-- Hero Section -->
+<section class="hero-section">
+  <h1 class="hero-title">
+    <span class="en-content">Welcome to AIcoding Academy</span>
+    <span class="zh-content" style="display:none;">欢迎来到 AIcoding 学院</span>
+  </h1>
+  <p class="hero-subtitle">
+    <span class="en-content">Where Future Tech Leaders Begin Their Journey</span>
+    <span class="zh-content" style="display:none;">未来科技领袖的起点</span>
+  </p>
+</section>
 
-✨ 我们的优势：
+<!-- Features Grid -->
+<section class="features-grid">
+  <div class="feature-card">
+    <div class="feature-icon">🎯</div>
+    <h3 class="feature-title">
+      <span class="en-content">Personalized Learning</span>
+      <span class="zh-content" style="display:none;">个性化学习</span>
+    </h3>
+    <p class="feature-description">
+      <span class="en-content">Tailored curriculum designed to match your goals and learning pace</span>
+      <span class="zh-content" style="display:none;">根据您的目标和学习节奏量身定制的课程</span>
+    </p>
+  </div>
+  
+  <div class="feature-card">
+    <div class="feature-icon">🏆</div>
+    <h3 class="feature-title">
+      <span class="en-content">Competition Excellence</span>
+      <span class="zh-content" style="display:none;">竞赛卓越</span>
+    </h3>
+    <p class="feature-description">
+      <span class="en-content">Proven track record in USACO, USAAIO, AMC, and more</span>
+      <span class="zh-content" style="display:none;">在 USACO、USAAIO、AMC 等竞赛中成绩斐然</span>
+    </p>
+  </div>
+  
+  <div class="feature-card">
+    <div class="feature-icon">👨‍🏫</div>
+    <h3 class="feature-title">
+      <span class="en-content">Expert Instructors</span>
+      <span class="zh-content" style="display:none;">专家导师</span>
+    </h3>
+    <p class="feature-description">
+      <span class="en-content">PhD holders and industry professionals from top tech companies</span>
+      <span class="zh-content" style="display:none;">来自顶尖科技公司的博士和行业专家</span>
+    </p>
+  </div>
+</section>
 
-权威导师： 美国名校计算机科学博士，一线大厂机器学习工程师，多次竞赛获奖，科研经验丰富！
+<!-- Course Categories -->
+<section class="category-section">
+  <div class="section-header">
+    <h2 class="section-title">
+      <span class="en-content">Our Programs</span>
+      <span class="zh-content" style="display:none;">我们的课程</span>
+    </h2>
+    <p class="section-subtitle">
+      <span class="en-content">Comprehensive courses from fundamentals to advanced topics</span>
+      <span class="zh-content" style="display:none;">从基础到高级的全面课程</span>
+    </p>
+  </div>
+  
+  <div class="categories-grid">
+    <div class="category-card">
+      <h3>💻 Programming Languages</h3>
+      <p>Python, Java, C++, JavaScript, R</p>
+    </div>
+    
+    <div class="category-card" style="background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%);">
+      <h3>📊 Data & Algorithms</h3>
+      <p>Data Structures, Algorithms, MySQL</p>
+    </div>
+    
+    <div class="category-card" style="background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);">
+      <h3>🤖 AI & Machine Learning</h3>
+      <p>Deep Learning, Neural Networks, AI Projects</p>
+    </div>
+  </div>
+</section>
 
-个性化定制： 根据您的目标与背景量身打造专属学习与冲刺计划！
+<!-- Competition Badges -->
+<section class="competition-section">
+  <div class="section-header">
+    <h2 class="section-title">
+      <span class="en-content">Competition Training</span>
+      <span class="zh-content" style="display:none;">竞赛培训</span>
+    </h2>
+  </div>
+  
+  <div class="competition-badges">
+    <span class="badge badge-gold">USACO Gold & Platinum</span>
+    <span class="badge">USAAIO</span>
+    <span class="badge">AMC 8/10/12</span>
+    <span class="badge">AIME</span>
+    <span class="badge">ACSL</span>
+    <span class="badge">WorldQuant</span>
+    <span class="badge">HiMCM</span>
+    <span class="badge">AP CSA</span>
+    <span class="badge">AP CSP</span>
+  </div>
+</section>
 
-强力推荐信： 优秀学员可获美国大学教授亲笔推荐信！
+<!-- Instructor Highlights -->
+<section class="instructor-highlights">
+  <div class="section-header">
+    <h2 class="section-title">
+      <span class="en-content">Why Choose AIcoding?</span>
+      <span class="zh-content" style="display:none;">为什么选择 AIcoding？</span>
+    </h2>
+  </div>
+  
+  <div class="highlight-grid">
+    <div class="highlight-item">
+      <div class="highlight-number">500+</div>
+      <div class="highlight-label">
+        <span class="en-content">Students Taught</span>
+        <span class="zh-content" style="display:none;">学生人数</span>
+      </div>
+    </div>
+    
+    <div class="highlight-item">
+      <div class="highlight-number">95%</div>
+      <div class="highlight-label">
+        <span class="en-content">Success Rate</span>
+        <span class="zh-content" style="display:none;">成功率</span>
+      </div>
+    </div>
+    
+    <div class="highlight-item">
+      <div class="highlight-number">50+</div>
+      <div class="highlight-label">
+        <span class="en-content">Competition Awards</span>
+        <span class="zh-content" style="display:none;">竞赛奖项</span>
+      </div>
+    </div>
+    
+    <div class="highlight-item">
+      <div class="highlight-number">10+</div>
+      <div class="highlight-label">
+        <span class="en-content">Years Experience</span>
+        <span class="zh-content" style="display:none;">年经验</span>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- CTA Section -->
+<section class="cta-section">
+  <h2 class="cta-title">
+    <span class="en-content">Ready to Start Your Coding Journey?</span>
+    <span class="zh-content" style="display:none;">准备开始您的编程之旅了吗？</span>
+  </h2>
+  <p class="cta-description">
+    <span class="en-content">Join hundreds of successful students who have achieved their tech dreams</span>
+    <span class="zh-content" style="display:none;">加入数百名成功实现科技梦想的学生行列</span>
+  </p>
+  <div class="cta-buttons">
+    <a href="./contact.html" class="cta-button">
+      <span class="en-content">Get Started Today</span>
+      <span class="zh-content" style="display:none;">立即开始</span>
+    </a>
+    <a href="./course.html" class="cta-button cta-button-secondary">
+      <span class="en-content">View All Courses</span>
+      <span class="zh-content" style="display:none;">查看所有课程</span>
+    </a>
+  </div>
+</section>
 
-🚀 服务亮点：
-
-竞赛冲刺： 专业策略+实战训练，助您在 USACO/USAAIO/量化/建模等赛场中脱颖而出！
-
-学术提升： 全面指导科研选题、项目设计与技术实现，丰富您的申请背景！
-
-
-📢 立即联系我们，开启卓越之旅！
-
+<script>
+  function setLanguage(lang) {
+    const enContent = document.querySelectorAll('.en-content');
+    const zhContent = document.querySelectorAll('.zh-content');
+    const langBtns = document.querySelectorAll('.lang-btn');
+    
+    langBtns.forEach(btn => btn.classList.remove('active'));
+    
+    if (lang === 'zh') {
+      enContent.forEach(el => el.style.display = 'none');
+      zhContent.forEach(el => el.style.display = 'inline');
+      langBtns[1].classList.add('active');
+    } else {
+      enContent.forEach(el => el.style.display = 'inline');
+      zhContent.forEach(el => el.style.display = 'none');
+      langBtns[0].classList.add('active');
+    }
+  }
+</script>
