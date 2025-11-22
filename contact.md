@@ -327,34 +327,64 @@ description: Get in Touch with AIcoding Academy
 
 <!-- Contact Hero -->
 <div class="contact-hero">
-  <h1 class="contact-title">Let's Start Your Coding Journey</h1>
-  <p class="contact-subtitle">We're here to answer your questions and help you succeed</p>
+  <h1 class="contact-title">
+    <span class="en-content">Let's Start Your Coding Journey</span>
+    <span class="zh-content">开启您的编程之旅</span>
+  </h1>
+  <p class="contact-subtitle">
+    <span class="en-content">We're here to answer your questions and help you succeed</span>
+    <span class="zh-content">我们在这里回答您的问题并帮助您成功</span>
+  </p>
 </div>
 
 <!-- Quick Contact Cards -->
 <div class="quick-contact-cards">
   <div class="quick-card">
     <div class="quick-card-icon">⚡</div>
-    <h3 class="quick-card-title">Quick Response</h3>
-    <p class="quick-card-content">We typically respond within 24 hours</p>
+    <h3 class="quick-card-title">
+      <span class="en-content">Quick Response</span>
+      <span class="zh-content">快速响应</span>
+    </h3>
+    <p class="quick-card-content">
+      <span class="en-content">We typically respond within 24 hours</span>
+      <span class="zh-content">我们通常在24小时内回复</span>
+    </p>
   </div>
   
   <div class="quick-card">
     <div class="quick-card-icon">🌍</div>
-    <h3 class="quick-card-title">Global Service</h3>
-    <p class="quick-card-content">Supporting students from US & China</p>
+    <h3 class="quick-card-title">
+      <span class="en-content">Global Service</span>
+      <span class="zh-content">全球服务</span>
+    </h3>
+    <p class="quick-card-content">
+      <span class="en-content">Supporting students from US & China</span>
+      <span class="zh-content">为美国和中国的学生提供支持</span>
+    </p>
   </div>
   
   <div class="quick-card">
     <div class="quick-card-icon">💬</div>
-    <h3 class="quick-card-title">Bilingual Support</h3>
-    <p class="quick-card-content">English & Chinese communication available</p>
+    <h3 class="quick-card-title">
+      <span class="en-content">Bilingual Support</span>
+      <span class="zh-content">双语支持</span>
+    </h3>
+    <p class="quick-card-content">
+      <span class="en-content">English & Chinese communication available</span>
+      <span class="zh-content">提供英文和中文沟通服务</span>
+    </p>
   </div>
   
   <div class="quick-card">
     <div class="quick-card-icon">📅</div>
-    <h3 class="quick-card-title">Flexible Schedule</h3>
-    <p class="quick-card-content">Classes available across time zones</p>
+    <h3 class="quick-card-title">
+      <span class="en-content">Flexible Schedule</span>
+      <span class="zh-content">灵活安排</span>
+    </h3>
+    <p class="quick-card-content">
+      <span class="en-content">Classes available across time zones</span>
+      <span class="zh-content">跨时区授课</span>
+    </p>
   </div>
 </div>
 
@@ -362,62 +392,115 @@ description: Get in Touch with AIcoding Academy
 <div class="contact-container">
   <!-- Contact Form -->
   <div class="contact-form-section">
-    <h2 class="form-title">Send Us a Message</h2>
+    <h2 class="form-title">
+      <span class="en-content">Send Us a Message</span>
+      <span class="zh-content">发送消息</span>
+    </h2>
     
     <div id="responseMessage" class="response-message">
-      Thank you for your message! We'll get back to you soon.
+      <span class="en-content">Thank you for your message! We'll get back to you soon.</span>
+      <span class="zh-content">感谢您的消息！我们会尽快回复您。</span>
     </div>
     
     <form id="contactForm">
       <div class="form-group">
-        <label class="form-label" for="name">Full Name *</label>
+        <label class="form-label" for="name">
+          <span class="en-content">Full Name *</span>
+          <span class="zh-content">姓名 *</span>
+        </label>
         <input type="text" id="name" class="form-input" required>
       </div>
       
       <div class="form-group">
-        <label class="form-label" for="email">Email Address *</label>
+        <label class="form-label" for="email">
+          <span class="en-content">Email Address *</span>
+          <span class="zh-content">电子邮箱 *</span>
+        </label>
         <input type="email" id="email" class="form-input" required>
       </div>
       
       <div class="form-group">
-        <label class="form-label" for="phone">Phone Number</label>
+        <label class="form-label" for="phone">
+          <span class="en-content">Phone Number</span>
+          <span class="zh-content">电话号码</span>
+        </label>
         <input type="tel" id="phone" class="form-input">
       </div>
       
       <div class="form-group">
-        <label class="form-label" for="course">Course Interest</label>
+        <label class="form-label" for="course">
+          <span class="en-content">Course Interest</span>
+          <span class="zh-content">感兴趣的课程</span>
+        </label>
         <select id="course" class="form-select">
-          <option value="">Select a course...</option>
-          <option value="python">Python Programming</option>
-          <option value="java">Java Programming</option>
-          <option value="cpp">C++ Programming</option>
-          <option value="usaco">USACO Prep</option>
+          <option value="">
+            <span class="en-content">Select a course...</span>
+            <span class="zh-content">选择课程...</span>
+          </option>
+          <option value="python">
+            <span class="en-content">Python Programming</span>
+            <span class="zh-content">Python编程</span>
+          </option>
+          <option value="java">
+            <span class="en-content">Java Programming</span>
+            <span class="zh-content">Java编程</span>
+          </option>
+          <option value="cpp">
+            <span class="en-content">C++ Programming</span>
+            <span class="zh-content">C++编程</span>
+          </option>
+          <option value="usaco">
+            <span class="en-content">USACO Prep</span>
+            <span class="zh-content">USACO准备</span>
+          </option>
           <option value="apcsa">AP Computer Science A</option>
-          <option value="ml">Machine Learning & AI</option>
-          <option value="other">Other / Custom Program</option>
+          <option value="ml">
+            <span class="en-content">Machine Learning & AI</span>
+            <span class="zh-content">机器学习与人工智能</span>
+          </option>
+          <option value="other">
+            <span class="en-content">Other / Custom Program</span>
+            <span class="zh-content">其他/定制课程</span>
+          </option>
         </select>
       </div>
       
       <div class="form-group">
-        <label class="form-label" for="message">Message *</label>
-        <textarea id="message" class="form-textarea" required placeholder="Tell us about your goals and how we can help..."></textarea>
+        <label class="form-label" for="message">
+          <span class="en-content">Message *</span>
+          <span class="zh-content">留言 *</span>
+        </label>
+        <textarea id="message" class="form-textarea" required 
+          placeholder="Tell us about your goals and how we can help..."></textarea>
       </div>
       
-      <button type="submit" class="submit-btn">Send Message</button>
+      <button type="submit" class="submit-btn">
+        <span class="en-content">Send Message</span>
+        <span class="zh-content">发送消息</span>
+      </button>
     </form>
   </div>
   
   <!-- Contact Info -->
   <div class="contact-info-section">
-    <h2 class="info-title">Get in Touch</h2>
+    <h2 class="info-title">
+      <span class="en-content">Get in Touch</span>
+      <span class="zh-content">联系方式</span>
+    </h2>
     
     <!-- Phone -->
     <div class="contact-method">
       <div class="contact-icon">📱</div>
       <div class="contact-details">
-        <h3>Phone</h3>
+        <h3>
+          <span class="en-content">Phone</span>
+          <span class="zh-content">电话</span>
+        </h3>
         <p>+1 (347) 379-6896</p>
-        <a href="tel:+13473796896" class="action-link">Call Now →</a>
+        <a href="tel:+13473796896" class="action-link">
+          <span class="en-content">Call Now →</span>
+          <span class="zh-content">立即致电 →</span>
+        </a>
       </div>
     </div>
     
@@ -425,9 +508,15 @@ description: Get in Touch with AIcoding Academy
     <div class="contact-method">
       <div class="contact-icon">💬</div>
       <div class="contact-details">
-        <h3>WeChat</h3>
+        <h3>
+          <span class="en-content">WeChat</span>
+          <span class="zh-content">微信</span>
+        </h3>
         <p>SpiritedAway2023</p>
-        <span class="action-link">Add on WeChat →</span>
+        <span class="action-link">
+          <span class="en-content">Add on WeChat →</span>
+          <span class="zh-content">添加微信 →</span>
+        </span>
       </div>
     </div>
     
@@ -435,27 +524,48 @@ description: Get in Touch with AIcoding Academy
     <div class="contact-method">
       <div class="contact-icon">✉️</div>
       <div class="contact-details">
-        <h3>Email</h3>
+        <h3>
+          <span class="en-content">Email</span>
+          <span class="zh-content">邮箱</span>
+        </h3>
         <p>contact@aicodingacademy.com</p>
-        <a href="mailto:contact@aicodingacademy.com" class="action-link">Send Email →</a>
+        <a href="mailto:contact@aicodingacademy.com" class="action-link">
+          <span class="en-content">Send Email →</span>
+          <span class="zh-content">发送邮件 →</span>
+        </a>
       </div>
     </div>
     
     <!-- Office Hours -->
     <div class="office-hours">
-      <h3>🕐 Office Hours (EST)</h3>
+      <h3>
+        <span class="en-content">🕐 Office Hours (EST)</span>
+        <span class="zh-content">🕐 办公时间 (美东时间)</span>
+      </h3>
       <ul class="hours-list">
         <li>
-          <span>Monday - Friday</span>
+          <span>
+            <span class="en-content">Monday - Friday</span>
+            <span class="zh-content">周一至周五</span>
+          </span>
           <span>9:00 AM - 9:00 PM</span>
         </li>
         <li>
-          <span>Saturday - Sunday</span>
+          <span>
+            <span class="en-content">Saturday - Sunday</span>
+            <span class="zh-content">周六至周日</span>
+          </span>
           <span>10:00 AM - 6:00 PM</span>
         </li>
         <li>
-          <span>China Time Zone</span>
-          <span>Flexible Hours Available</span>
+          <span>
+            <span class="en-content">China Time Zone</span>
+            <span class="zh-content">中国时区</span>
+          </span>
+          <span>
+            <span class="en-content">Flexible Hours Available</span>
+            <span class="zh-content">灵活安排时间</span>
+          </span>
         </li>
       </ul>
     </div>
@@ -464,33 +574,52 @@ description: Get in Touch with AIcoding Academy
 
 <!-- FAQ Section -->
 <div class="faq-section">
-  <h2 class="faq-title">Frequently Asked Questions</h2>
+  <h2 class="faq-title">
+    <span class="en-content">Frequently Asked Questions</span>
+    <span class="zh-content">常见问题</span>
+  </h2>
   
   <div class="faq-item">
-    <div class="faq-question">What age groups do you teach?</div>
+    <div class="faq-question">
+      <span class="en-content">What age groups do you teach?</span>
+      <span class="zh-content">你们教哪些年龄段的学生？</span>
+    </div>
     <div class="faq-answer">
-      We offer courses for students aged 10-18, as well as undergraduate and graduate students. Our curriculum is tailored to different skill levels and age-appropriate learning objectives.
+      <span class="en-content">We offer courses for students aged 10-18, as well as undergraduate and graduate students. Our curriculum is tailored to different skill levels and age-appropriate learning objectives.</span>
+      <span class="zh-content">我们为10-18岁的学生以及本科生和研究生提供课程。我们的课程根据不同的技能水平和适合年龄的学习目标量身定制。</span>
     </div>
   </div>
   
   <div class="faq-item">
-    <div class="faq-question">Do you offer trial classes?</div>
+    <div class="faq-question">
+      <span class="en-content">Do you offer trial classes?</span>
+      <span class="zh-content">你们提供试听课吗？</span>
+    </div>
     <div class="faq-answer">
-      Yes! We offer a free consultation session to assess your needs and recommend the best learning path. Contact us to schedule your trial class.
+      <span class="en-content">Yes! We offer a free consultation session to assess your needs and recommend the best learning path. Contact us to schedule your trial class.</span>
+      <span class="zh-content">是的！我们提供免费的咨询课程来评估您的需求并推荐最佳的学习路径。请联系我们安排试听课。</span>
     </div>
   </div>
   
   <div class="faq-item">
-    <div class="faq-question">What's the class format?</div>
+    <div class="faq-question">
+      <span class="en-content">What's the class format?</span>
+      <span class="zh-content">课程形式是怎样的？</span>
+    </div>
     <div class="faq-answer">
-      We offer both one-on-one and small group classes (max 4 students) via online platforms. All classes are interactive with screen sharing, coding exercises, and real-time feedback.
+      <span class="en-content">We offer both one-on-one and small group classes (max 4 students) via online platforms. All classes are interactive with screen sharing, coding exercises, and real-time feedback.</span>
+      <span class="zh-content">我们通过在线平台提供一对一和小班课程（最多4名学生）。所有课程都是互动式的，包括屏幕共享、编程练习和实时反馈。</span>
     </div>
   </div>
   
   <div class="faq-item">
-    <div class="faq-question">Can you help with competition preparation?</div>
+    <div class="faq-question">
+      <span class="en-content">Can you help with competition preparation?</span>
+      <span class="zh-content">你们能帮助准备竞赛吗？</span>
+    </div>
     <div class="faq-answer">
-      Absolutely! We specialize in USACO, USAAIO, AMC, ACSL, and other competitions. Our instructors have extensive experience and proven track records in competition coaching.
+      <span class="en-content">Absolutely! We specialize in USACO, USAAIO, AMC, ACSL, and other competitions. Our instructors have extensive experience and proven track records in competition coaching.</span>
+      <span class="zh-content">当然可以！我们专门从事USACO、USAAIO、AMC、ACSL和其他竞赛的培训。我们的导师在竞赛辅导方面有丰富的经验和优秀的成绩记录。</span>
     </div>
   </div>
 </div>
