@@ -528,8 +528,8 @@ description: Get in Touch with AIcoding Academy
           <span class="en-content">Email</span>
           <span class="zh-content">邮箱</span>
         </h3>
-        <p>contact@aicodingacademy.com</p>
-        <a href="mailto:contact@aicodingacademy.com" class="action-link">
+        <p>hangzhao2021@gmail.com</p>
+        <a href="mailto:hangzhao2021@gmail.com" class="action-link">
           <span class="en-content">Send Email →</span>
           <span class="zh-content">发送邮件 →</span>
         </a>
@@ -642,3 +642,4 @@ description: Get in Touch with AIcoding Academy
     }, 5000);
   });
 </script>
+
