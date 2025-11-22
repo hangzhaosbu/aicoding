@@ -2,15 +2,15 @@
 $large-breakpoint: 64em !default;
 $medium-breakpoint: 42em !default;
 
-// Headers
+// Headers - Changed from green to purple gradient
 $header-heading-color: #fff !default;
-$header-bg-color: #159957 !default;
-$header-bg-color-secondary: #155799 !default;
+$header-bg-color: #667eea !default;  // Changed from #159957 (green) to purple
+$header-bg-color-secondary: #764ba2 !default;  // Changed from #155799 (blue) to purple
 
-// Text
-$section-headings-color: #159957 !default;
+// Text - Changed green to purple
+$section-headings-color: #4F46E5 !default;  // Changed from #159957 (green) to purple
 $body-text-color: #606c71 !default;
-$body-link-color: #1e6bb8 !default;
+$body-link-color: #4F46E5 !default;  // Changed from #1e6bb8 to purple
 $blockquote-text-color: #819198 !default;
 
 // Code
