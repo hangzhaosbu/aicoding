@@ -3,3 +3,273 @@
 
 @import 'jekyll-theme-cayman';
 
+// Color palette for better contrast
+:root {
+  --primary-purple: #667eea;
+  --secondary-purple: #764ba2;
+  --dark-navy: #1e293b;
+  --medium-blue: #2563eb;
+  --light-blue: #3b82f6;
+  --text-dark: #1f2937;
+  --text-medium: #4b5563;
+  --text-light: #6b7280;
+  --bg-light: #f9fafb;
+  --border-light: #e5e7eb;
+}
+
+// Override theme colors for better contrast
+// Header keeps purple gradient
+.page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+// Headings use dark navy for contrast
+h1, h2, h3, h4, h5, h6 {
+  color: #1e293b !important;
+}
+
+// Main content headings
+.main-content {
+  h1, h2, h3, h4, h5, h6 {
+    color: #1e293b !important;
+  }
+}
+
+// Links use bright blue
+a {
+  color: #2563eb !important;
+  
+  &:hover {
+    color: #1d4ed8 !important;
+    text-decoration: underline;
+  }
+}
+
+// For content on purple backgrounds, use white
+.category-card,
+.course-card .course-image,
+.cta-section,
+.enroll-section,
+.hero-section {
+  h1, h2, h3, h4, h5, h6 {
+    color: white !important;
+  }
+  
+  p, span, li {
+    color: white !important;
+  }
+  
+  a {
+    color: white !important;
+    
+    &:hover {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+  }
+}
+
+// Statistics numbers - use gradient effect but darker
+.highlight-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Feature cards
+.feature-card {
+  h3.feature-title {
+    color: #1e293b !important;
+  }
+  
+  p.feature-description {
+    color: #6b7280 !important;
+  }
+  
+  &:hover {
+    border-color: #667eea !important;
+  }
+}
+
+// Competition badges
+.badge {
+  color: #4b5563 !important;
+  
+  &:hover {
+    border-color: #667eea !important;
+    color: #667eea !important;
+    background: #eef2ff !important;
+  }
+  
+  &.badge-gold {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: white !important;
+  }
+}
+
+// Course cards specific styling
+.course-card {
+  .course-title {
+    color: #1e293b !important;
+  }
+  
+  .course-subtitle {
+    color: #6b7280 !important;
+  }
+  
+  .course-features li {
+    color: #4b5563 !important;
+    
+    &::before {
+      color: #667eea !important;
+    }
+  }
+}
+
+// Level and age tags
+.level-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+
+.age-tag {
+  background: #eef2ff !important;
+  color: #667eea !important;
+}
+
+// Category titles
+.category-title {
+  color: #1e293b !important;
+  border-bottom-color: #667eea !important;
+}
+
+// Section titles in general
+.section-title {
+  color: #1e293b !important;
+}
+
+.section-subtitle {
+  color: #6b7280 !important;
+}
+
+// Learning path elements
+.step-number {
+  background: #667eea !important;
+  color: white !important;
+}
+
+.step-title {
+  color: #1e293b !important;
+}
+
+.step-description {
+  color: #6b7280 !important;
+}
+
+// Buttons
+.btn {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+  }
+}
+
+// Enroll buttons
+.enroll-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4) !important;
+    text-decoration: none !important;
+  }
+}
+
+// CTA buttons
+.cta-button {
+  background: white !important;
+  color: #667eea !important;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+    text-decoration: none !important;
+  }
+  
+  &.cta-button-secondary {
+    background: transparent !important;
+    color: white !important;
+    border: 2px solid white !important;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
+  }
+}
+
+// Tables
+table {
+  th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+  }
+  
+  td {
+    color: #4b5563 !important;
+  }
+  
+  td, th {
+    border-color: #e5e7eb !important;
+  }
+}
+
+// Code blocks
+pre, code {
+  border-color: #e5e7eb !important;
+}
+
+// Blockquotes
+blockquote {
+  border-left-color: #667eea !important;
+  color: #6b7280 !important;
+}
+
+// Form elements
+.form-input,
+.form-textarea,
+.form-select {
+  border-color: #d1d5db !important;
+  color: #1f2937 !important;
+  
+  &:focus {
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+  }
+}
+
+// Info boxes and cards
+.info-box,
+.content-box {
+  h3, h4 {
+    color: #1e293b !important;
+  }
+  
+  p, li {
+    color: #4b5563 !important;
+  }
+}
+
+// Special gradient text (for emphasis)
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
