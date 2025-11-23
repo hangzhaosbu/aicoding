@@ -178,11 +178,13 @@ description_zh: 全方位编程课程，适合各个水平
     color: white;
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   .step-description {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   }
 
   /* Course Categories - Ultra Modern */
@@ -225,9 +227,34 @@ description_zh: 全方位编程课程，适合各个水平
   /* Course Grid - Premium Cards */
   .courses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     margin-top: 3rem;
+  }
+
+  .courses-grid-2x3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 1400px) {
+    .courses-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .courses-grid-2x3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .courses-grid {
+      grid-template-columns: 1fr;
+    }
+    .courses-grid-2x3 {
+      grid-template-columns: 1fr;
+    }
   }
 
   .course-card {
@@ -476,6 +503,17 @@ description_zh: 全方位编程课程，适合各个水平
     font-size: 3rem;
     margin-bottom: 1rem;
     display: block;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .kaggle-logo {
+    display: inline-block;
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: #20BEFF;
+    text-shadow: 0 2px 10px rgba(32, 190, 255, 0.4);
+    margin-bottom: 1rem;
     animation: float 4s ease-in-out infinite;
   }
 
@@ -840,7 +878,7 @@ description_zh: 全方位编程课程，适合各个水平
     </p>
   </div>
   
-  <div class="courses-grid">
+  <div class="courses-grid-2x3">
     <!-- Data Structures -->
     <div class="course-card">
       <div class="course-image" style="background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%);">
@@ -1097,6 +1135,61 @@ description_zh: 全方位编程课程，适合各个水平
         </a>
       </div>
     </div>
+
+    <!-- Web Development - New Course -->
+    <div class="course-card">
+      <div class="course-image" style="background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);">
+        <div class="badge-container">
+          <span class="popular-badge">
+            <span class="en-content">TRENDING</span>
+            <span class="zh-content">趋势</span>
+          </span>
+        </div>
+        🌐
+      </div>
+      <div class="course-content">
+        <h3 class="course-title">
+          <span class="en-content">Full-Stack Web Development</span>
+          <span class="zh-content">全栈网页开发</span>
+        </h3>
+        <p class="course-subtitle">
+          <span class="en-content">Build Modern Web Applications</span>
+          <span class="zh-content">构建现代网页应用</span>
+        </p>
+        <ul class="course-features">
+          <li>
+            <span class="en-content">HTML5, CSS3, JavaScript</span>
+            <span class="zh-content">HTML5, CSS3, JavaScript</span>
+          </li>
+          <li>
+            <span class="en-content">React, Vue, Angular</span>
+            <span class="zh-content">React, Vue, Angular</span>
+          </li>
+          <li>
+            <span class="en-content">Node.js & Database Design</span>
+            <span class="zh-content">Node.js与数据库设计</span>
+          </li>
+          <li>
+            <span class="en-content">Deploy Real Applications</span>
+            <span class="zh-content">部署真实应用</span>
+          </li>
+        </ul>
+        <div class="course-footer">
+          <span class="age-tag">
+            <span class="en-content">Age: 13-18</span>
+            <span class="zh-content">年龄: 13-18</span>
+          </span>
+          <span class="level-tag">
+            <span class="en-content">All Levels</span>
+            <span class="zh-content">所有级别</span>
+          </span>
+        </div>
+        <a href="./webdev.html" class="enroll-btn">
+          <span class="en-content">Learn More</span>
+          <span class="zh-content">了解更多</span>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1144,7 +1237,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- Kaggle -->
     <div class="competition-card">
-      <span class="competition-icon">📊</span>
+      <span class="kaggle-logo">K</span>
       <h3 class="competition-name">Kaggle</h3>
       <p class="competition-desc">
         <span class="en-content">Data Science Competitions</span>
