@@ -249,13 +249,14 @@ description_zh: 全方位编程课程，适合各个水平
 
   /* Learning Path - Premium Design */
   .learning-path {
-    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+    background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 25%, #C7D2FE 50%, #DBEAFE 100%);
     border-radius: 30px;
     padding: 4rem 3rem;
     margin: 5rem 0;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(139, 92, 246, 0.2);
   }
 
   .learning-path::before {
@@ -265,14 +266,16 @@ description_zh: 全方位编程课程，适合各个水平
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
     animation: shimmer 8s infinite;
   }
 
   .path-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 3rem;
     text-align: center;
     position: relative;
@@ -300,19 +303,20 @@ description_zh: 全方位编程课程，适合各个水平
   }
 
   .path-step {
-    background: rgba(255, 255, 255, 0.05);
+    background: white;
     backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(139, 92, 246, 0.2);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
 
   .path-step:hover {
     transform: translateY(-10px) scale(1.05);
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: #667eea;
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
   }
 
   .step-number {
@@ -332,19 +336,15 @@ description_zh: 全方位编程课程，适合各个水平
 
   .step-title {
     font-weight: 700;
-    color: #FFFFFF;
+    color: #1F2937;
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-    letter-spacing: 0.5px;
   }
 
   .step-description {
     font-size: 1rem;
-    color: #FFFFFF;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    color: #6B7280;
     font-weight: 500;
-    opacity: 1;
   }
 
   /* Course Categories - Ultra Modern */
