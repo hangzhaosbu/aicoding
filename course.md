@@ -14,6 +14,12 @@ description_zh: 全方位编程课程，适合各个水平
     100% { background-position: 0% 50%; }
   }
 
+  .gradient-animated-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 100%);
+    background-size: 300% 300%;
+    animation: gradientWave 12s ease infinite;
+  }
+
   @keyframes float {
     0%, 100% { transform: translateY(0) rotate(0deg); }
     25% { transform: translateY(-10px) rotate(-2deg); }
@@ -706,7 +712,7 @@ description_zh: 全方位编程课程，适合各个水平
   <div class="courses-grid">
     <!-- Python Course -->
     <div class="course-card">
-      <div class="course-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+      <div class="course-image gradient-animated-bg">
         <div class="badge-container">
           <span class="popular-badge">
             <span class="en-content">POPULAR</span>
@@ -761,7 +767,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- Java Course -->
     <div class="course-card">
-      <div class="course-image" style="background: linear-gradient(135deg, #EA580C 0%, #DC2626 100%);">
+      <div class="course-image gradient-animated-bg">
         <div class="badge-container">
           <span class="popular-badge">
             <span class="en-content">POPULAR</span>
@@ -816,7 +822,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- C++ Course -->
     <div class="course-card">
-      <div class="course-image" style="background: linear-gradient(135deg, #1E40AF 0%, #7C3AED 100%);">
+      <div class="course-image gradient-animated-bg">
         ⚙️
       </div>
       <div class="course-content">
@@ -881,7 +887,7 @@ description_zh: 全方位编程课程，适合各个水平
   <div class="courses-grid-2x3">
     <!-- Data Structures -->
     <div class="course-card">
-      <div class="course-image" style="background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%);">
+      <div class="course-image gradient-animated-bg">
         🗂️
       </div>
       <div class="course-content">
@@ -930,7 +936,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- Algorithms -->
     <div class="course-card">
-      <div class="course-image" style="background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%);">
+      <div class="course-image gradient-animated-bg">
         🧮
       </div>
       <div class="course-content">
@@ -979,7 +985,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- Machine Learning -->
     <div class="course-card">
-      <div class="course-image" style="background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);">
+      <div class="course-image gradient-animated-bg">
         <div class="badge-container">
           <span class="hot-badge">
             <span class="en-content">HOT</span>
@@ -1034,7 +1040,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- AP CSA -->
     <div class="course-card">
-      <div class="course-image" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
+      <div class="course-image gradient-animated-bg">
         📘
       </div>
       <div class="course-content">
@@ -1083,7 +1089,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- AP CSP -->
     <div class="course-card">
-      <div class="course-image" style="background: linear-gradient(135deg, #10B981 0%, #0891B2 100%);">
+      <div class="course-image gradient-animated-bg">
         <div class="badge-container">
           <span class="new-badge">
             <span class="en-content">NEW</span>
@@ -1138,7 +1144,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- Web Development - New Course -->
     <div class="course-card">
-      <div class="course-image" style="background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);">
+      <div class="course-image gradient-animated-bg">
         <div class="badge-container">
           <span class="popular-badge">
             <span class="en-content">TRENDING</span>
