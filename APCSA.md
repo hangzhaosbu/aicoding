@@ -348,28 +348,40 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
   
   <div class="exam-stats">
     <div class="stat-card">
-      <span class="stat-number">May 7</span>
+      <span class="stat-number">
+        <span class="en-content">May 7</span>
+        <span class="zh-content">5月7日</span>
+      </span>
       <div class="stat-label">
         <span class="en-content">2025 Exam Date</span>
         <span class="zh-content">2025考试日期</span>
       </div>
     </div>
     <div class="stat-card">
-      <span class="stat-number">3 Hours</span>
+      <span class="stat-number">
+        <span class="en-content">3 Hours</span>
+        <span class="zh-content">3小时</span>
+      </span>
       <div class="stat-label">
         <span class="en-content">Exam Duration</span>
         <span class="zh-content">考试时长</span>
       </div>
     </div>
     <div class="stat-card">
-      <span class="stat-number">40 MCQ</span>
+      <span class="stat-number">
+        <span class="en-content">40 MCQ</span>
+        <span class="zh-content">40道选择题</span>
+      </span>
       <div class="stat-label">
         <span class="en-content">Multiple Choice</span>
         <span class="zh-content">选择题</span>
       </div>
     </div>
     <div class="stat-card">
-      <span class="stat-number">4 FRQ</span>
+      <span class="stat-number">
+        <span class="en-content">4 FRQ</span>
+        <span class="zh-content">4道问答题</span>
+      </span>
       <div class="stat-label">
         <span class="en-content">Free Response</span>
         <span class="zh-content">自由回答题</span>
@@ -397,9 +409,18 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <span class="zh-content">占考试分数的2.5-5%</span>
     </p>
     <ul class="topic-list">
-      <li>Variables and Data Types</li>
-      <li>Operations and Expressions</li>
-      <li>Type Casting</li>
+      <li>
+        <span class="en-content">Variables and Data Types</span>
+        <span class="zh-content">变量和数据类型</span>
+      </li>
+      <li>
+        <span class="en-content">Operations and Expressions</span>
+        <span class="zh-content">运算和表达式</span>
+      </li>
+      <li>
+        <span class="en-content">Type Casting</span>
+        <span class="zh-content">类型转换</span>
+      </li>
     </ul>
   </div>
 
@@ -415,10 +436,22 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <span class="zh-content">占考试分数的5-7.5%</span>
     </p>
     <ul class="topic-list">
-      <li>Object Instantiation</li>
-      <li>Calling Methods</li>
-      <li>String Objects and Methods</li>
-      <li>Wrapper Classes</li>
+      <li>
+        <span class="en-content">Object Instantiation</span>
+        <span class="zh-content">对象实例化</span>
+      </li>
+      <li>
+        <span class="en-content">Calling Methods</span>
+        <span class="zh-content">调用方法</span>
+      </li>
+      <li>
+        <span class="en-content">String Objects and Methods</span>
+        <span class="zh-content">字符串对象和方法</span>
+      </li>
+      <li>
+        <span class="en-content">Wrapper Classes</span>
+        <span class="zh-content">包装类</span>
+      </li>
     </ul>
   </div>
 
@@ -434,10 +467,22 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <span class="zh-content">占考试分数的15-17.5%</span>
     </p>
     <ul class="topic-list">
-      <li>Boolean Expressions</li>
-      <li>if, else if, else</li>
-      <li>Compound Boolean Expressions</li>
-      <li>De Morgan's Laws</li>
+      <li>
+        <span class="en-content">Boolean Expressions</span>
+        <span class="zh-content">布尔表达式</span>
+      </li>
+      <li>
+        <span class="en-content">if, else if, else</span>
+        <span class="zh-content">if, else if, else语句</span>
+      </li>
+      <li>
+        <span class="en-content">Compound Boolean Expressions</span>
+        <span class="zh-content">复合布尔表达式</span>
+      </li>
+      <li>
+        <span class="en-content">De Morgan's Laws</span>
+        <span class="zh-content">德摩根定律</span>
+      </li>
     </ul>
   </div>
 
@@ -453,10 +498,22 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <span class="zh-content">占考试分数的17.5-22.5%</span>
     </p>
     <ul class="topic-list">
-      <li>while Loops</li>
-      <li>for Loops</li>
-      <li>Enhanced for Loops</li>
-      <li>Nested Loops</li>
+      <li>
+        <span class="en-content">while Loops</span>
+        <span class="zh-content">while循环</span>
+      </li>
+      <li>
+        <span class="en-content">for Loops</span>
+        <span class="zh-content">for循环</span>
+      </li>
+      <li>
+        <span class="en-content">Enhanced for Loops</span>
+        <span class="zh-content">增强for循环</span>
+      </li>
+      <li>
+        <span class="en-content">Nested Loops</span>
+        <span class="zh-content">嵌套循环</span>
+      </li>
     </ul>
   </div>
 
@@ -472,11 +529,26 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <span class="zh-content">占考试分数的5-7.5%</span>
     </p>
     <ul class="topic-list">
-      <li>Class Anatomy</li>
-      <li>Constructors</li>
-      <li>Instance Variables & Methods</li>
-      <li>Static Variables & Methods</li>
-      <li>Scope and Access</li>
+      <li>
+        <span class="en-content">Class Anatomy</span>
+        <span class="zh-content">类结构</span>
+      </li>
+      <li>
+        <span class="en-content">Constructors</span>
+        <span class="zh-content">构造函数</span>
+      </li>
+      <li>
+        <span class="en-content">Instance Variables & Methods</span>
+        <span class="zh-content">实例变量和方法</span>
+      </li>
+      <li>
+        <span class="en-content">Static Variables & Methods</span>
+        <span class="zh-content">静态变量和方法</span>
+      </li>
+      <li>
+        <span class="en-content">Scope and Access</span>
+        <span class="zh-content">作用域和访问控制</span>
+      </li>
     </ul>
   </div>
 
@@ -492,10 +564,22 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <span class="zh-content">占考试分数的10-15%</span>
     </p>
     <ul class="topic-list">
-      <li>Array Creation</li>
-      <li>Traversing Arrays</li>
-      <li>Array Algorithms</li>
-      <li>Enhanced for Loop with Arrays</li>
+      <li>
+        <span class="en-content">Array Creation</span>
+        <span class="zh-content">数组创建</span>
+      </li>
+      <li>
+        <span class="en-content">Traversing Arrays</span>
+        <span class="zh-content">遍历数组</span>
+      </li>
+      <li>
+        <span class="en-content">Array Algorithms</span>
+        <span class="zh-content">数组算法</span>
+      </li>
+      <li>
+        <span class="en-content">Enhanced for Loop with Arrays</span>
+        <span class="zh-content">数组的增强for循环</span>
+      </li>
     </ul>
   </div>
 
@@ -511,10 +595,22 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <span class="zh-content">占考试分数的2.5-7.5%</span>
     </p>
     <ul class="topic-list">
-      <li>ArrayList Methods</li>
-      <li>Traversing ArrayLists</li>
-      <li>ArrayList Algorithms</li>
-      <li>Searching and Sorting</li>
+      <li>
+        <span class="en-content">ArrayList Methods</span>
+        <span class="zh-content">ArrayList方法</span>
+      </li>
+      <li>
+        <span class="en-content">Traversing ArrayLists</span>
+        <span class="zh-content">遍历ArrayList</span>
+      </li>
+      <li>
+        <span class="en-content">ArrayList Algorithms</span>
+        <span class="zh-content">ArrayList算法</span>
+      </li>
+      <li>
+        <span class="en-content">Searching and Sorting</span>
+        <span class="zh-content">搜索和排序</span>
+      </li>
     </ul>
   </div>
 
@@ -530,9 +626,18 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <span class="zh-content">占考试分数的7.5-10%</span>
     </p>
     <ul class="topic-list">
-      <li>2D Array Declaration</li>
-      <li>Nested Loops for 2D Arrays</li>
-      <li>Row-Major vs Column-Major</li>
+      <li>
+        <span class="en-content">2D Array Declaration</span>
+        <span class="zh-content">二维数组声明</span>
+      </li>
+      <li>
+        <span class="en-content">Nested Loops for 2D Arrays</span>
+        <span class="zh-content">二维数组的嵌套循环</span>
+      </li>
+      <li>
+        <span class="en-content">Row-Major vs Column-Major</span>
+        <span class="zh-content">行优先vs列优先</span>
+      </li>
     </ul>
   </div>
 
@@ -548,11 +653,26 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <span class="zh-content">占考试分数的5-10%</span>
     </p>
     <ul class="topic-list">
-      <li>Superclasses and Subclasses</li>
-      <li>Method Overriding</li>
-      <li>super Keyword</li>
-      <li>Polymorphism</li>
-      <li>Object Class</li>
+      <li>
+        <span class="en-content">Superclasses and Subclasses</span>
+        <span class="zh-content">父类和子类</span>
+      </li>
+      <li>
+        <span class="en-content">Method Overriding</span>
+        <span class="zh-content">方法重写</span>
+      </li>
+      <li>
+        <span class="en-content">super Keyword</span>
+        <span class="zh-content">super关键字</span>
+      </li>
+      <li>
+        <span class="en-content">Polymorphism</span>
+        <span class="zh-content">多态性</span>
+      </li>
+      <li>
+        <span class="en-content">Object Class</span>
+        <span class="zh-content">Object类</span>
+      </li>
     </ul>
   </div>
 
@@ -568,10 +688,22 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <span class="zh-content">占考试分数的5-7.5%</span>
     </p>
     <ul class="topic-list">
-      <li>Recursive Methods</li>
-      <li>Base Case & Recursive Call</li>
-      <li>Binary Search</li>
-      <li>Merge Sort</li>
+      <li>
+        <span class="en-content">Recursive Methods</span>
+        <span class="zh-content">递归方法</span>
+      </li>
+      <li>
+        <span class="en-content">Base Case & Recursive Call</span>
+        <span class="zh-content">基本情况和递归调用</span>
+      </li>
+      <li>
+        <span class="en-content">Binary Search</span>
+        <span class="zh-content">二分搜索</span>
+      </li>
+      <li>
+        <span class="en-content">Merge Sort</span>
+        <span class="zh-content">归并排序</span>
+      </li>
     </ul>
   </div>
 
@@ -587,11 +719,26 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <span class="zh-content">FRQ必备技能</span>
     </p>
     <ul class="topic-list">
-      <li>Linear/Sequential Search</li>
-      <li>Binary Search Implementation</li>
-      <li>Search in 2D Arrays</li>
-      <li>Efficiency Analysis</li>
-      <li>Common FRQ Patterns</li>
+      <li>
+        <span class="en-content">Linear/Sequential Search</span>
+        <span class="zh-content">线性/顺序搜索</span>
+      </li>
+      <li>
+        <span class="en-content">Binary Search Implementation</span>
+        <span class="zh-content">二分搜索实现</span>
+      </li>
+      <li>
+        <span class="en-content">Search in 2D Arrays</span>
+        <span class="zh-content">二维数组搜索</span>
+      </li>
+      <li>
+        <span class="en-content">Efficiency Analysis</span>
+        <span class="zh-content">效率分析</span>
+      </li>
+      <li>
+        <span class="en-content">Common FRQ Patterns</span>
+        <span class="zh-content">常见FRQ模式</span>
+      </li>
     </ul>
   </div>
 
@@ -607,11 +754,26 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <span class="zh-content">成功的关键</span>
     </p>
     <ul class="topic-list">
-      <li>Selection Sort</li>
-      <li>Insertion Sort</li>
-      <li>Merge Sort (Recursive)</li>
-      <li>Quick Sort Concepts</li>
-      <li>Sorting Efficiency</li>
+      <li>
+        <span class="en-content">Selection Sort</span>
+        <span class="zh-content">选择排序</span>
+      </li>
+      <li>
+        <span class="en-content">Insertion Sort</span>
+        <span class="zh-content">插入排序</span>
+      </li>
+      <li>
+        <span class="en-content">Merge Sort (Recursive)</span>
+        <span class="zh-content">归并排序（递归）</span>
+      </li>
+      <li>
+        <span class="en-content">Quick Sort Concepts</span>
+        <span class="zh-content">快速排序概念</span>
+      </li>
+      <li>
+        <span class="en-content">Sorting Efficiency</span>
+        <span class="zh-content">排序效率</span>
+      </li>
     </ul>
   </div>
 </div>
