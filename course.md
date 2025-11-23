@@ -14,10 +14,161 @@ description_zh: 全方位编程课程，适合各个水平
     100% { background-position: 0% 50%; }
   }
 
+  @keyframes gradientPulse {
+    0%, 100% { background-position: 0% 0%; }
+    25% { background-position: 100% 100%; }
+    50% { background-position: 0% 100%; }
+    75% { background-position: 100% 0%; }
+  }
+
+  @keyframes gradientRotate {
+    0% { background-position: 0% 0%; transform: rotate(0deg); }
+    100% { background-position: 100% 100%; transform: rotate(360deg); }
+  }
+
+  @keyframes gradientDiagonal {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+
+  @keyframes curvedShimmer {
+    0% { 
+      left: -100%;
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    100% { 
+      left: 100%;
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes waveShimmer {
+    0% { 
+      left: -100%;
+      top: 0%;
+    }
+    25% {
+      top: 20%;
+    }
+    50% {
+      top: -20%;
+    }
+    75% {
+      top: 10%;
+    }
+    100% { 
+      left: 100%;
+      top: 0%;
+    }
+  }
+
+  @keyframes spiralShimmer {
+    0% { 
+      left: -100%;
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.2);
+    }
+    100% { 
+      left: 100%;
+      transform: rotate(360deg) scale(1);
+    }
+  }
+
+  /* Different gradient backgrounds */
   .gradient-animated-bg {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 100%);
     background-size: 300% 300%;
     animation: gradientWave 12s ease infinite;
+  }
+
+  .gradient-sunset {
+    background: linear-gradient(135deg, #FA709A 0%, #FEE140 30%, #FA709A 60%, #E8526F 100%);
+    background-size: 400% 400%;
+    animation: gradientPulse 15s ease infinite;
+  }
+
+  .gradient-ocean {
+    background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 25%, #00C9FF 50%, #FC466B 100%);
+    background-size: 300% 300%;
+    animation: gradientWave 10s ease infinite;
+  }
+
+  .gradient-aurora {
+    background: linear-gradient(135deg, #3BF0E4 0%, #BCA1F7 25%, #FFB2E6 50%, #3BF0E4 100%);
+    background-size: 400% 400%;
+    animation: gradientDiagonal 14s ease infinite;
+  }
+
+  .gradient-fire {
+    background: linear-gradient(135deg, #F093FB 0%, #F5576C 25%, #FFA500 50%, #FFEB3B 100%);
+    background-size: 300% 300%;
+    animation: gradientWave 11s ease infinite;
+  }
+
+  .gradient-forest {
+    background: linear-gradient(135deg, #00B09B 0%, #96C93D 25%, #00B09B 50%, #52C234 100%);
+    background-size: 350% 350%;
+    animation: gradientPulse 13s ease infinite;
+  }
+
+  .gradient-cosmic {
+    background: linear-gradient(135deg, #8E2DE2 0%, #4A00E0 25%, #8E2DE2 50%, #000428 100%);
+    background-size: 400% 400%;
+    animation: gradientDiagonal 16s ease infinite;
+  }
+
+  .gradient-candy {
+    background: linear-gradient(135deg, #FF6B9D 0%, #C44569 25%, #FFC0CB 50%, #F06292 100%);
+    background-size: 300% 300%;
+    animation: gradientWave 12s ease infinite;
+  }
+
+  .gradient-neon {
+    background: linear-gradient(135deg, #00FFF0 0%, #FF00E4 25%, #7000FF 50%, #00FFF0 100%);
+    background-size: 400% 400%;
+    animation: gradientPulse 10s ease infinite;
+  }
+
+  /* Curved shimmer effects */
+  .course-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: none;
+    animation: curvedShimmer 4s infinite;
+  }
+
+  .course-card:nth-child(2)::before {
+    animation: waveShimmer 4.5s infinite;
+  }
+
+  .course-card:nth-child(3)::before {
+    animation: spiralShimmer 5s infinite;
+  }
+
+  .course-card:nth-child(4)::before {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 70%);
+    animation: curvedShimmer 3.5s infinite;
+  }
+
+  .course-card:nth-child(5)::before {
+    background: conic-gradient(from 45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: waveShimmer 4s infinite;
+  }
+
+  .course-card:nth-child(6)::before {
+    background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: spiralShimmer 4.5s infinite;
   }
 
   @keyframes float {
@@ -180,17 +331,20 @@ description_zh: 全方位编程课程，适合各个水平
   }
 
   .step-title {
-    font-weight: 600;
-    color: white;
+    font-weight: 700;
+    color: #FFFFFF;
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
   }
 
   .step-description {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    font-weight: 500;
+    opacity: 1;
   }
 
   /* Course Categories - Ultra Modern */
@@ -712,7 +866,7 @@ description_zh: 全方位编程课程，适合各个水平
   <div class="courses-grid">
     <!-- Python Course -->
     <div class="course-card">
-      <div class="course-image gradient-animated-bg">
+      <div class="course-image gradient-sunset">
         <div class="badge-container">
           <span class="popular-badge">
             <span class="en-content">POPULAR</span>
@@ -767,7 +921,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- Java Course -->
     <div class="course-card">
-      <div class="course-image gradient-animated-bg">
+      <div class="course-image gradient-ocean">
         <div class="badge-container">
           <span class="popular-badge">
             <span class="en-content">POPULAR</span>
@@ -822,7 +976,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- C++ Course -->
     <div class="course-card">
-      <div class="course-image gradient-animated-bg">
+      <div class="course-image gradient-cosmic">
         ⚙️
       </div>
       <div class="course-content">
@@ -887,7 +1041,7 @@ description_zh: 全方位编程课程，适合各个水平
   <div class="courses-grid-2x3">
     <!-- Data Structures -->
     <div class="course-card">
-      <div class="course-image gradient-animated-bg">
+      <div class="course-image gradient-aurora">
         🗂️
       </div>
       <div class="course-content">
@@ -936,7 +1090,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- Algorithms -->
     <div class="course-card">
-      <div class="course-image gradient-animated-bg">
+      <div class="course-image gradient-fire">
         🧮
       </div>
       <div class="course-content">
@@ -985,7 +1139,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- Machine Learning -->
     <div class="course-card">
-      <div class="course-image gradient-animated-bg">
+      <div class="course-image gradient-neon">
         <div class="badge-container">
           <span class="hot-badge">
             <span class="en-content">HOT</span>
@@ -1040,7 +1194,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- AP CSA -->
     <div class="course-card">
-      <div class="course-image gradient-animated-bg">
+      <div class="course-image gradient-forest">
         📘
       </div>
       <div class="course-content">
@@ -1089,7 +1243,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- AP CSP -->
     <div class="course-card">
-      <div class="course-image gradient-animated-bg">
+      <div class="course-image gradient-candy">
         <div class="badge-container">
           <span class="new-badge">
             <span class="en-content">NEW</span>
