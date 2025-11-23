@@ -191,10 +191,22 @@ description_zh: 掌握人工智能，征服竞赛与未来
 
   .competition-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 3rem;
     padding: 0 2rem;
+  }
+
+  @media (max-width: 1200px) {
+    .competition-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .competition-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   .competition-card {
@@ -332,9 +344,21 @@ description_zh: 掌握人工智能，征服竞赛与未来
 
   .outcome-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 2rem;
+  }
+
+  @media (max-width: 1200px) {
+    .outcome-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .outcome-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   .outcome-item {
