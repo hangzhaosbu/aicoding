@@ -7,96 +7,294 @@ description_zh: 全方位编程课程，适合各个水平
 ---
 
 <style>
-  /* Page Header */
+  /* Advanced Animations */
+  @keyframes gradientWave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-2deg); }
+    75% { transform: translateY(10px) rotate(2deg); }
+  }
+
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  /* Page Header - Ultra Premium */
   .page-header-custom {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    border-radius: 15px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 100%);
+    background-size: 300% 300%;
+    animation: gradientWave 12s ease infinite;
+    border-radius: 30px;
+    margin-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.4);
+  }
+
+  .page-header-custom::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1), transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08), transparent 50%);
+    animation: pulse 8s ease-in-out infinite;
   }
 
   .page-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    animation: float 6s ease-in-out infinite;
   }
 
   .page-description {
-    font-size: 1.2rem;
-    color: #6B7280;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
   }
 
+  /* Learning Path - Premium Design */
+  .learning-path {
+    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+    border-radius: 30px;
+    padding: 4rem 3rem;
+    margin: 5rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  }
+
+  .learning-path::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    animation: shimmer 8s infinite;
+  }
+
+  .path-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .path-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 1200px) {
+    .path-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .path-steps {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .path-step {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .path-step:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .step-number {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  }
+
+  .step-title {
+    font-weight: 600;
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Course Categories - Ultra Modern */
   .course-category {
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  .category-header {
+    text-align: center;
+    margin-bottom: 3rem;
   }
 
   .category-title {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 3rem;
+    font-weight: 800;
     color: #1F2937;
-    margin-bottom: 2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid #4F46E5;
+    margin-bottom: 1rem;
+    position: relative;
     display: inline-block;
   }
 
+  .category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 3px;
+  }
+
+  .category-subtitle {
+    color: #6B7280;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  /* Course Grid - Premium Cards */
   .courses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2.5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
   }
 
   .course-card {
     background: white;
-    border-radius: 15px;
+    border-radius: 25px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-    transition: all 0.3s ease;
-    border: 1px solid #E5E7EB;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(229, 231, 235, 0.5);
     display: flex;
     flex-direction: column;
+    position: relative;
+    animation: slideIn 0.6s ease-out;
+  }
+
+  .course-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+  }
+
+  .course-card:hover::before {
+    left: 100%;
   }
 
   .course-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
   }
 
   .course-image {
     width: 100%;
-    height: 220px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
+    font-size: 5rem;
     color: white;
     position: relative;
+    background-size: 300% 300%;
+    animation: gradientWave 10s ease infinite;
   }
 
   .course-content {
-    padding: 1.5rem;
+    padding: 2rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
   }
 
   .course-title {
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 700;
     color: #1F2937;
     margin-bottom: 0.5rem;
   }
 
   .course-subtitle {
     color: #6B7280;
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
   }
 
   .course-features {
@@ -106,193 +304,305 @@ description_zh: 全方位编程课程，适合各个水平
   }
 
   .course-features li {
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
     color: #4B5563;
     display: flex;
     align-items: center;
+    font-size: 0.95rem;
+    transition: transform 0.3s;
+  }
+
+  .course-features li:hover {
+    transform: translateX(5px);
   }
 
   .course-features li::before {
-    content: "✓";
+    content: "→";
     color: #10B981;
     font-weight: bold;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
   }
 
   .enroll-btn {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white !important;
-    padding: 0.5rem 1.5rem;
-    border-radius: 8px;
+    padding: 1rem 2rem;
+    border-radius: 50px;
     text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: inline-block;
     text-align: center;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .enroll-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+  }
+
+  .enroll-btn:hover::before {
+    left: 100%;
   }
 
   .enroll-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
     color: white !important;
   }
 
   .age-tag {
-    background: #EEF2FF;
+    background: linear-gradient(135deg, #EEF2FF 0%, #DDD6FE 100%);
     color: #4F46E5;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(79, 70, 229, 0.1);
   }
 
   .level-tag {
-    background: #ECFDF5;
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
     color: #10B981;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(16, 185, 129, 0.1);
   }
 
   .course-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     border-top: 1px solid #E5E7EB;
     margin-top: auto;
+    margin-bottom: 1.5rem;
   }
 
   .badge-container {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    z-index: 1;
+    z-index: 2;
   }
 
   .popular-badge {
-    background: #EF4444;
+    background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
     color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+    animation: pulse 2s ease-in-out infinite;
   }
 
   .new-badge {
-    background: #10B981;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
     color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+    animation: pulse 2s ease-in-out infinite;
   }
 
-  /* Learning Path Section */
-  .learning-path {
-    background: #F9FAFB;
-    border-radius: 15px;
-    padding: 2rem;
-    margin: 3rem 0;
+  .hot-badge {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
+    animation: pulse 2s ease-in-out infinite;
   }
 
-  .path-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1F2937;
-    margin-bottom: 1.5rem;
-    text-align: center;
+  /* Competition Grid - Special Design */
+  .competition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
   }
 
-  .path-steps {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .path-step {
-    flex: 1;
-    min-width: 150px;
-    text-align: center;
-    padding: 1rem;
+  .competition-card {
     background: white;
-    border-radius: 10px;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
   }
 
-  .path-step::after {
-    content: "→";
+  .competition-card::before {
+    content: '';
     position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #9CA3AF;
-    font-size: 1.5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
   }
 
-  .path-step:last-child::after {
-    display: none;
+  .competition-card:hover::before {
+    transform: scaleX(1);
   }
 
-  .step-number {
-    background: #4F46E5;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 0.5rem;
-    font-weight: 600;
+  .competition-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
   }
 
-  .step-title {
-    font-weight: 600;
+  .competition-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .competition-name {
+    font-size: 1.3rem;
+    font-weight: 700;
     color: #1F2937;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 
-  .step-description {
-    font-size: 0.9rem;
+  .competition-desc {
     color: #6B7280;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* CTA Section - Ultimate Premium */
+  .cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 100%);
+    background-size: 300% 300%;
+    animation: gradientWave 10s ease infinite;
+    border-radius: 30px;
+    padding: 5rem 3rem;
+    text-align: center;
+    color: white;
+    margin: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.4);
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 15s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: white !important;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-description {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    color: white !important;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-button {
+    background: white;
+    color: #667eea;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    color: #667eea;
   }
 
   /* Responsive Design */
   @media (max-width: 768px) {
+    .page-title {
+      font-size: 2.5rem;
+    }
+
     .courses-grid {
       grid-template-columns: 1fr;
     }
 
-    .path-steps {
-      flex-direction: column;
+    .competition-grid {
+      grid-template-columns: 1fr;
     }
 
-    .path-step::after {
-      display: none;
+    .category-title {
+      font-size: 2rem;
+    }
+
+    .cta-title {
+      font-size: 2rem;
     }
   }
 </style>
 
 <div class="page-header-custom">
   <h1 class="page-title">
-    <span class="en-content">Our Course Catalog</span>
+    <span class="en-content">Course Catalog</span>
     <span class="zh-content">课程目录</span>
   </h1>
   <p class="page-description">
-    <span class="en-content">From Fundamentals to Advanced - Your Complete Learning Journey</span>
-    <span class="zh-content">从基础到高级 - 您的完整学习之旅</span>
+    <span class="en-content">World-Class Programming Education for Future Innovators</span>
+    <span class="zh-content">为未来创新者提供世界级编程教育</span>
   </p>
 </div>
 
 <!-- Learning Path -->
 <div class="learning-path">
   <h2 class="path-title">
-    <span class="en-content">🎯 Recommended Learning Path</span>
-    <span class="zh-content">🎯 推荐学习路径</span>
+    <span class="en-content">🚀 Your Learning Journey</span>
+    <span class="zh-content">🚀 您的学习之旅</span>
   </h2>
   <div class="path-steps">
     <div class="path-step">
@@ -344,15 +654,21 @@ description_zh: 全方位编程课程，适合各个水平
 
 <!-- Programming Languages -->
 <div class="course-category">
-  <h2 class="category-title">
-    <span class="en-content">💻 Programming Languages</span>
-    <span class="zh-content">💻 编程语言</span>
-  </h2>
+  <div class="category-header">
+    <h2 class="category-title">
+      <span class="en-content">💻 Programming Languages</span>
+      <span class="zh-content">💻 编程语言</span>
+    </h2>
+    <p class="category-subtitle">
+      <span class="en-content">Master the world's most powerful programming languages</span>
+      <span class="zh-content">掌握世界上最强大的编程语言</span>
+    </p>
+  </div>
   
   <div class="courses-grid">
     <!-- Python Course -->
     <div class="course-card">
-      <div class="course-image">
+      <div class="course-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
         <div class="badge-container">
           <span class="popular-badge">
             <span class="en-content">POPULAR</span>
@@ -407,7 +723,7 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- Java Course -->
     <div class="course-card">
-      <div class="course-image">
+      <div class="course-image" style="background: linear-gradient(135deg, #EA580C 0%, #DC2626 100%);">
         <div class="badge-container">
           <span class="popular-badge">
             <span class="en-content">POPULAR</span>
@@ -462,7 +778,9 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- C++ Course -->
     <div class="course-card">
-      <div class="course-image">⚙️</div>
+      <div class="course-image" style="background: linear-gradient(135deg, #1E40AF 0%, #7C3AED 100%);">
+        ⚙️
+      </div>
       <div class="course-content">
         <h3 class="course-title">
           <span class="en-content">C++ Fundamental I & II</span>
@@ -509,12 +827,18 @@ description_zh: 全方位编程课程，适合各个水平
   </div>
 </div>
 
-<!-- Computer Science Fundamentals -->
+<!-- Computer Science Core -->
 <div class="course-category">
-  <h2 class="category-title">
-    <span class="en-content">📚 Computer Science Core</span>
-    <span class="zh-content">📚 计算机科学核心</span>
-  </h2>
+  <div class="category-header">
+    <h2 class="category-title">
+      <span class="en-content">📚 Computer Science Core</span>
+      <span class="zh-content">📚 计算机科学核心</span>
+    </h2>
+    <p class="category-subtitle">
+      <span class="en-content">Essential foundations for every programmer</span>
+      <span class="zh-content">每个程序员的必备基础</span>
+    </p>
+  </div>
   
   <div class="courses-grid">
     <!-- Data Structures -->
@@ -617,11 +941,11 @@ description_zh: 全方位编程课程，适合各个水平
 
     <!-- Machine Learning -->
     <div class="course-card">
-      <div class="course-image" style="background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);">
+      <div class="course-image" style="background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);">
         <div class="badge-container">
-          <span class="new-badge">
-            <span class="en-content">NEW</span>
-            <span class="zh-content">新</span>
+          <span class="hot-badge">
+            <span class="en-content">HOT</span>
+            <span class="zh-content">热门</span>
           </span>
         </div>
         🤖
@@ -669,17 +993,7 @@ description_zh: 全方位编程课程，适合各个水平
         </a>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Competition & Exam Prep -->
-<div class="course-category">
-  <h2 class="category-title">
-    <span class="en-content">🏆 Competition & Exam Preparation</span>
-    <span class="zh-content">🏆 竞赛与考试准备</span>
-  </h2>
-  
-  <div class="courses-grid">
     <!-- AP CSA -->
     <div class="course-card">
       <div class="course-image" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
@@ -708,8 +1022,8 @@ description_zh: 全方位编程课程，适合各个水平
             <span class="zh-content">自由回答题训练</span>
           </li>
           <li>
-            <span class="en-content">Score 5 Guarantee Program</span>
-            <span class="zh-content">5分保证计划</span>
+            <span class="en-content">Score 5 Guarantee</span>
+            <span class="zh-content">5分保证</span>
           </li>
         </ul>
         <div class="course-footer">
@@ -729,97 +1043,42 @@ description_zh: 全方位编程课程，适合各个水平
       </div>
     </div>
 
-    <!-- USACO -->
+    <!-- AP CSP -->
     <div class="course-card">
-      <div class="course-image" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);">
-        <div class="badge-container">
-          <span class="popular-badge">
-            <span class="en-content">HOT</span>
-            <span class="zh-content">热门</span>
-          </span>
-        </div>
-        🥇
-      </div>
-      <div class="course-content">
-        <h3 class="course-title">
-          <span class="en-content">USA Computing Olympiad</span>
-          <span class="zh-content">美国计算机奥林匹克</span>
-        </h3>
-        <p class="course-subtitle">
-          <span class="en-content">Path to Gold & Platinum</span>
-          <span class="zh-content">通往金牌与白金之路</span>
-        </p>
-        <ul class="course-features">
-          <li>
-            <span class="en-content">Bronze to Platinum Training</span>
-            <span class="zh-content">从铜牌到白金培训</span>
-          </li>
-          <li>
-            <span class="en-content">Contest Strategy</span>
-            <span class="zh-content">竞赛策略</span>
-          </li>
-          <li>
-            <span class="en-content">1000+ Practice Problems</span>
-            <span class="zh-content">1000+练习题</span>
-          </li>
-          <li>
-            <span class="en-content">Mock Competitions</span>
-            <span class="zh-content">模拟竞赛</span>
-          </li>
-        </ul>
-        <div class="course-footer">
-          <span class="age-tag">
-            <span class="en-content">Age: 12-18</span>
-            <span class="zh-content">年龄: 12-18</span>
-          </span>
-          <span class="level-tag">
-            <span class="en-content">All Levels</span>
-            <span class="zh-content">所有级别</span>
-          </span>
-        </div>
-        <a href="./USACO.html" class="enroll-btn">
-          <span class="en-content">Learn More</span>
-          <span class="zh-content">了解更多</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- USAAIO -->
-    <div class="course-card">
-      <div class="course-image" style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);">
+      <div class="course-image" style="background: linear-gradient(135deg, #10B981 0%, #0891B2 100%);">
         <div class="badge-container">
           <span class="new-badge">
             <span class="en-content">NEW</span>
             <span class="zh-content">新</span>
           </span>
         </div>
-        🧠
+        💡
       </div>
       <div class="course-content">
         <h3 class="course-title">
-          <span class="en-content">AI Olympiad Prep</span>
-          <span class="zh-content">人工智能奥林匹克准备</span>
+          <span class="en-content">AP Computer Science Principles</span>
+          <span class="zh-content">AP计算机科学原理</span>
         </h3>
         <p class="course-subtitle">
-          <span class="en-content">USAAIO Competition Training</span>
-          <span class="zh-content">USAAIO竞赛训练</span>
+          <span class="en-content">Computational Thinking & Creativity</span>
+          <span class="zh-content">计算思维与创造力</span>
         </p>
         <ul class="course-features">
           <li>
-            <span class="en-content">AI & ML Fundamentals</span>
-            <span class="zh-content">人工智能与机器学习基础</span>
+            <span class="en-content">Computational Thinking</span>
+            <span class="zh-content">计算思维</span>
           </li>
           <li>
-            <span class="en-content">Model Building</span>
-            <span class="zh-content">模型构建</span>
+            <span class="en-content">Data & Information</span>
+            <span class="zh-content">数据与信息</span>
           </li>
           <li>
-            <span class="en-content">Competition Projects</span>
-            <span class="zh-content">竞赛项目</span>
+            <span class="en-content">Internet & Computing</span>
+            <span class="zh-content">互联网与计算</span>
           </li>
           <li>
-            <span class="en-content">Research Paper Writing</span>
-            <span class="zh-content">研究论文写作</span>
+            <span class="en-content">Creative Performance Task</span>
+            <span class="zh-content">创意表现任务</span>
           </li>
         </ul>
         <div class="course-footer">
@@ -828,11 +1087,11 @@ description_zh: 全方位编程课程，适合各个水平
             <span class="zh-content">年龄: 14-18</span>
           </span>
           <span class="level-tag">
-            <span class="en-content">Advanced</span>
-            <span class="zh-content">高级</span>
+            <span class="en-content">Beginner</span>
+            <span class="zh-content">初级</span>
           </span>
         </div>
-        <a href="#" class="enroll-btn">
+        <a href="./APCSP.html" class="enroll-btn">
           <span class="en-content">Learn More</span>
           <span class="zh-content">了解更多</span>
         </a>
@@ -841,18 +1100,160 @@ description_zh: 全方位编程课程，适合各个水平
   </div>
 </div>
 
+<!-- Competition Training -->
+<div class="course-category">
+  <div class="category-header">
+    <h2 class="category-title">
+      <span class="en-content">🏆 Competition Training</span>
+      <span class="zh-content">🏆 竞赛培训</span>
+    </h2>
+    <p class="category-subtitle">
+      <span class="en-content">Excel in world-renowned competitions</span>
+      <span class="zh-content">在世界知名竞赛中脱颖而出</span>
+    </p>
+  </div>
+  
+  <div class="competition-grid">
+    <!-- USACO -->
+    <div class="competition-card">
+      <span class="competition-icon">🥇</span>
+      <h3 class="competition-name">USACO</h3>
+      <p class="competition-desc">
+        <span class="en-content">USA Computing Olympiad</span>
+        <span class="zh-content">美国计算机奥林匹克</span>
+      </p>
+      <a href="./USACO.html" class="enroll-btn">
+        <span class="en-content">Learn More</span>
+        <span class="zh-content">了解更多</span>
+      </a>
+    </div>
+
+    <!-- USAAIO -->
+    <div class="competition-card">
+      <span class="competition-icon">🤖</span>
+      <h3 class="competition-name">USAAIO</h3>
+      <p class="competition-desc">
+        <span class="en-content">USA AI Olympiad</span>
+        <span class="zh-content">美国人工智能奥林匹克</span>
+      </p>
+      <a href="#" class="enroll-btn">
+        <span class="en-content">Learn More</span>
+        <span class="zh-content">了解更多</span>
+      </a>
+    </div>
+
+    <!-- Kaggle -->
+    <div class="competition-card">
+      <span class="competition-icon">📊</span>
+      <h3 class="competition-name">Kaggle</h3>
+      <p class="competition-desc">
+        <span class="en-content">Data Science Competitions</span>
+        <span class="zh-content">数据科学竞赛</span>
+      </p>
+      <a href="#" class="enroll-btn">
+        <span class="en-content">Learn More</span>
+        <span class="zh-content">了解更多</span>
+      </a>
+    </div>
+
+    <!-- AMC 8/10/12 -->
+    <div class="competition-card">
+      <span class="competition-icon">🔢</span>
+      <h3 class="competition-name">AMC 8/10/12</h3>
+      <p class="competition-desc">
+        <span class="en-content">American Mathematics Competitions</span>
+        <span class="zh-content">美国数学竞赛</span>
+      </p>
+      <a href="#" class="enroll-btn">
+        <span class="en-content">Learn More</span>
+        <span class="zh-content">了解更多</span>
+      </a>
+    </div>
+
+    <!-- AIME -->
+    <div class="competition-card">
+      <span class="competition-icon">📐</span>
+      <h3 class="competition-name">AIME</h3>
+      <p class="competition-desc">
+        <span class="en-content">American Invitational Math Exam</span>
+        <span class="zh-content">美国数学邀请赛</span>
+      </p>
+      <a href="#" class="enroll-btn">
+        <span class="en-content">Learn More</span>
+        <span class="zh-content">了解更多</span>
+      </a>
+    </div>
+
+    <!-- USAMO -->
+    <div class="competition-card">
+      <span class="competition-icon">🎯</span>
+      <h3 class="competition-name">USAMO</h3>
+      <p class="competition-desc">
+        <span class="en-content">USA Mathematical Olympiad</span>
+        <span class="zh-content">美国数学奥林匹克</span>
+      </p>
+      <a href="#" class="enroll-btn">
+        <span class="en-content">Learn More</span>
+        <span class="zh-content">了解更多</span>
+      </a>
+    </div>
+
+    <!-- ACSL -->
+    <div class="competition-card">
+      <span class="competition-icon">💻</span>
+      <h3 class="competition-name">ACSL</h3>
+      <p class="competition-desc">
+        <span class="en-content">Computer Science League</span>
+        <span class="zh-content">计算机科学联赛</span>
+      </p>
+      <a href="#" class="enroll-btn">
+        <span class="en-content">Learn More</span>
+        <span class="zh-content">了解更多</span>
+      </a>
+    </div>
+
+    <!-- WorldQuant -->
+    <div class="competition-card">
+      <span class="competition-icon">📈</span>
+      <h3 class="competition-name">WorldQuant</h3>
+      <p class="competition-desc">
+        <span class="en-content">Quantitative Finance Challenge</span>
+        <span class="zh-content">量化金融挑战赛</span>
+      </p>
+      <a href="#" class="enroll-btn">
+        <span class="en-content">Learn More</span>
+        <span class="zh-content">了解更多</span>
+      </a>
+    </div>
+
+    <!-- HiMCM -->
+    <div class="competition-card">
+      <span class="competition-icon">📋</span>
+      <h3 class="competition-name">HiMCM</h3>
+      <p class="competition-desc">
+        <span class="en-content">Mathematical Modeling Contest</span>
+        <span class="zh-content">数学建模竞赛</span>
+      </p>
+      <a href="#" class="enroll-btn">
+        <span class="en-content">Learn More</span>
+        <span class="zh-content">了解更多</span>
+      </a>
+    </div>
+  </div>
+</div>
+
 <!-- CTA Section -->
-<div style="background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); border-radius: 20px; padding: 3rem; text-align: center; color: white; margin: 4rem 0;">
-  <h2 style="font-size: 2rem; margin-bottom: 1rem; color: white;">
-    <span class="en-content">Can't Find What You're Looking For?</span>
-    <span class="zh-content">找不到您需要的课程？</span>
+<div class="cta-section">
+  <h2 class="cta-title">
+    <span class="en-content">Ready to Excel?</span>
+    <span class="zh-content">准备好卓越了吗？</span>
   </h2>
-  <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95; color: white;">
-    <span class="en-content">We offer customized courses tailored to your specific needs and goals</span>
-    <span class="zh-content">我们提供根据您的具体需求和目标定制的课程</span>
+  <p class="cta-description">
+    <span class="en-content">Customized learning paths for every student's unique journey</span>
+    <span class="zh-content">为每个学生的独特旅程定制学习路径</span>
   </p>
-  <a href="./contact.html" style="background: white; color: #4F46E5; padding: 0.8rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 600; display: inline-block;">
-    <span class="en-content">Contact Us for Custom Programs</span>
-    <span class="zh-content">联系我们定制课程</span>
+  <a href="./contact.html" class="cta-button">
+    <span class="en-content">Start Your Journey Today</span>
+    <span class="zh-content">今天开始您的旅程</span>
   </a>
 </div>
