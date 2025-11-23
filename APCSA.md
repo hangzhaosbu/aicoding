@@ -574,6 +574,46 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
       <li>Merge Sort</li>
     </ul>
   </div>
+
+  <!-- Unit 11 - Searching Algorithms -->
+  <div class="unit-card">
+    <div class="unit-number">11</div>
+    <h3 class="unit-title">
+      <span class="en-content">Searching Algorithms</span>
+      <span class="zh-content">搜索算法</span>
+    </h3>
+    <p class="unit-description">
+      <span class="en-content">Essential for FRQs</span>
+      <span class="zh-content">FRQ必备技能</span>
+    </p>
+    <ul class="topic-list">
+      <li>Linear/Sequential Search</li>
+      <li>Binary Search Implementation</li>
+      <li>Search in 2D Arrays</li>
+      <li>Efficiency Analysis</li>
+      <li>Common FRQ Patterns</li>
+    </ul>
+  </div>
+
+  <!-- Unit 12 - Sorting Algorithms -->
+  <div class="unit-card">
+    <div class="unit-number">12</div>
+    <h3 class="unit-title">
+      <span class="en-content">Sorting Algorithms</span>
+      <span class="zh-content">排序算法</span>
+    </h3>
+    <p class="unit-description">
+      <span class="en-content">Critical for Success</span>
+      <span class="zh-content">成功的关键</span>
+    </p>
+    <ul class="topic-list">
+      <li>Selection Sort</li>
+      <li>Insertion Sort</li>
+      <li>Merge Sort (Recursive)</li>
+      <li>Quick Sort Concepts</li>
+      <li>Sorting Efficiency</li>
+    </ul>
+  </div>
 </div>
 
 <!-- Features Section -->
