@@ -544,6 +544,26 @@ description_zh: 掌握基础数据结构，实现编程卓越
       <li>PriorityQueue & ArrayDeque</li>
     </ul>
   </div>
+
+  <!-- Module 12 -->
+  <div class="module-card">
+    <div class="module-number">12</div>
+    <h3 class="module-title">
+      <span class="en-content">Advanced Topics & Applications</span>
+      <span class="zh-content">高级主题与应用</span>
+    </h3>
+    <p class="module-content">
+      <span class="en-content">Real-world Problem Solving</span>
+      <span class="zh-content">实际问题解决</span>
+    </p>
+    <ul class="module-topics">
+      <li>Trie (Prefix Tree)</li>
+      <li>Disjoint Set Union</li>
+      <li>Segment Trees</li>
+      <li>LRU Cache Design</li>
+      <li>System Design Applications</li>
+    </ul>
+  </div>
 </div>
 
 <!-- Learning Outcomes -->
