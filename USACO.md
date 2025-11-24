@@ -1193,7 +1193,7 @@ description_zh: 美国计算机奥林匹克竞赛准备
   
   <div class="stats-grid">
     <div class="stat-item">
-      <div class="stat-number">300+</div>
+      <div class="stat-number">30+</div>
       <div class="stat-label">
         <span class="en-content">Students Trained</span>
         <span class="zh-content">培训学生</span>
@@ -1207,14 +1207,14 @@ description_zh: 美国计算机奥林匹克竞赛准备
       </div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">85+</div>
+      <div class="stat-number">5+</div>
       <div class="stat-label">
         <span class="en-content">Gold & Above</span>
         <span class="zh-content">金牌及以上</span>
       </div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">23</div>
+      <div class="stat-number">2</div>
       <div class="stat-label">
         <span class="en-content">Platinum Students</span>
         <span class="zh-content">白金学生</span>
