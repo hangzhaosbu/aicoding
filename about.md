@@ -359,19 +359,11 @@ description_zh: 由计算机科学博士提供的精英编程教育
   }
 
   .instructor-content {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin-top: 3rem;
-    justify-items: center;
-  }
-
-  @media (max-width: 900px) {
-    .instructor-content {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
+    gap: 3rem;
   }
 
   .instructor-image-container {
@@ -655,6 +647,9 @@ description_zh: 由计算机科学博士提供的精英编程教育
 
   .instructor-info {
     padding: 0 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .instructor-name {
@@ -664,6 +659,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   .instructor-title {
@@ -671,6 +667,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     color: #6B7280;
     margin-bottom: 2rem;
     font-weight: 600;
+    text-align: center;
   }
 
   .instructor-bio {
@@ -678,6 +675,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     line-height: 1.8;
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    text-align: left;
   }
 
   .instructor-highlights {
@@ -685,6 +683,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2rem;
+    justify-content: center;
   }
 
   .highlight-badge {
@@ -1002,7 +1001,6 @@ description_zh: 由计算机科学博士提供的精英编程教育
         </div>
       </div>
     </div>
-    </div>
     
     <div class="instructor-info">
       <h3 class="instructor-name">
@@ -1125,7 +1123,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
   
   <div class="stats-grid">
     <div class="stat-item">
-      <div class="stat-number">50+</div>
+      <div class="stat-number">500+</div>
       <div class="stat-label">
         <span class="en-content">Students Taught</span>
         <span class="zh-content">教授学生</span>
@@ -1133,7 +1131,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     </div>
     
     <div class="stat-item">
-      <div class="stat-number">20+</div>
+      <div class="stat-number">50+</div>
       <div class="stat-label">
         <span class="en-content">Competition Winners</span>
         <span class="zh-content">竞赛获奖者</span>
@@ -1141,7 +1139,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     </div>
     
     <div class="stat-item">
-      <div class="stat-number">90%</div>
+      <div class="stat-number">95%</div>
       <div class="stat-label">
         <span class="en-content">AP Score 5 Rate</span>
         <span class="zh-content">AP 5分率</span>
