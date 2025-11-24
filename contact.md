@@ -202,11 +202,23 @@ description_zh: 与 AIcoding 学院取得联系
   /* Quick Contact Cards - Premium */
   .quick-contact-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
     margin: 5rem 0;
     position: relative;
     z-index: 1;
+  }
+
+  @media (max-width: 1200px) {
+    .quick-contact-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .quick-contact-cards {
+      grid-template-columns: 1fr;
+    }
   }
 
   .quick-card {
@@ -766,7 +778,8 @@ description_zh: 与 AIcoding 学院取得联系
       <span class="zh-content">❌ 发送消息时出错。请重试。</span>
     </div>
     
-    <form id="contactForm" action="https://formspree.io/f/xanyowdv" method="POST">
+    <form id="contactForm">
+      <input type="hidden" name="_subject" value="New contact from AIcoding Academy">
       <div class="form-group">
         <label class="form-label" for="name">
           <span class="en-content">Full Name <span class="required">*</span></span>
@@ -955,8 +968,17 @@ description_zh: 与 AIcoding 学院取得联系
   </div>
 </div>
 
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 <script>
-  // Form submission handler with Formspree
+  // Initialize EmailJS with your public key
+  (function(){
+    // Your EmailJS public key
+    emailjs.init("AoNX_tjdsa7y4pIhr"); 
+  })();
+  
+  // Form submission handler with EmailJS
   const form = document.getElementById('contactForm');
   const submitBtn = document.getElementById('submitBtn');
   const successMessage = document.getElementById('successMessage');
@@ -969,20 +991,23 @@ description_zh: 与 AIcoding 学院取得联系
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<span class="en-content">Sending...</span><span class="zh-content">发送中...</span>';
     
-    // Get form data
-    const formData = new FormData(form);
+    // Prepare template params
+    const templateParams = {
+      from_name: form.name.value,
+      from_email: form.email.value,
+      phone: form.phone.value || 'Not provided',
+      course: form.course.value || 'Not specified',
+      message: form.message.value,
+      to_email: 'hangzhao2021@gmail.com'
+    };
     
     try {
-      // Send to Formspree
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
+      // Send email using EmailJS
+      // REPLACE: "YOUR_SERVICE_ID" with "service_pgmmr85" (your Gmail service ID)
+      // REPLACE: "YOUR_TEMPLATE_ID" with your actual template ID
+      const response = await emailjs.send("service_pgmmr85", "template_iaomvs8", templateParams);
       
-      if (response.ok) {
+      if (response.status === 200) {
         // Show success message
         successMessage.classList.add('show');
         errorMessage.classList.remove('show');
@@ -995,14 +1020,36 @@ description_zh: 与 AIcoding 学院取得联系
           successMessage.classList.remove('show');
         }, 5000);
       } else {
-        // Show error message
-        errorMessage.classList.add('show');
-        successMessage.classList.remove('show');
+        throw new Error('Failed to send email');
       }
+      
     } catch (error) {
-      // Show error message
+      console.error('EmailJS Error:', error);
+      
+      // Fallback to mailto if EmailJS fails
+      const subject = `New Contact from AIcoding Academy - ${form.name.value}`;
+      const body = `
+Name: ${form.name.value}
+Email: ${form.email.value}
+Phone: ${form.phone.value || 'Not provided'}
+Course Interest: ${form.course.value || 'Not specified'}
+
+Message:
+${form.message.value}
+      `;
+      
+      // Create mailto link as fallback
+      const mailtoLink = `mailto:hangzhao2021@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+      
+      // Show error but explain fallback was used
+      errorMessage.innerHTML = '<span class="en-content">⚠️ Direct send failed. Opening your email client instead.</span><span class="zh-content">⚠️ 直接发送失败。正在打开您的邮件客户端。</span>';
       errorMessage.classList.add('show');
       successMessage.classList.remove('show');
+      
+      setTimeout(() => {
+        errorMessage.classList.remove('show');
+      }, 5000);
     } finally {
       // Re-enable submit button
       submitBtn.disabled = false;
