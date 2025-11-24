@@ -227,6 +227,31 @@ description_zh: 全方位编程课程，适合各个水平
     animation: rotate 15s linear infinite;
   }
 
+  .page-header-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.15) 20%, transparent 60%);
+    transform: translate(-50%, -50%);
+    filter: blur(40px);
+    animation: shimmerGlow 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes shimmerGlow {
+    0%, 100% {
+      opacity: 0.3;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+      opacity: 0.6;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+
   .page-title {
     font-size: 4rem;
     font-weight: 800;
@@ -619,18 +644,26 @@ description_zh: 全方位编程课程，适合各个水平
   /* Competition Grid - Special Design */
   .competition-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    justify-content: center;
   }
 
   @media (max-width: 1200px) {
+    .competition-grid {
+      grid-template-columns: repeat(3, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 900px) {
     .competition-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .competition-grid {
       grid-template-columns: 1fr;
     }
@@ -725,6 +758,31 @@ description_zh: 全方位编程课程，适合各个水平
     height: 200%;
     background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
     animation: rotate 15s linear infinite;
+  }
+
+  .cta-section::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.15) 20%, transparent 60%);
+    transform: translate(-50%, -50%);
+    filter: blur(40px);
+    animation: shimmerGlow 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes shimmerGlow {
+    0%, 100% {
+      opacity: 0.3;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+      opacity: 0.6;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
   }
 
   @keyframes rotate {
