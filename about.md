@@ -378,28 +378,276 @@ description_zh: 由计算机科学博士提供的精英编程教育
     animation: float 6s ease-in-out infinite;
   }
 
-  .instructor-image {
+  .instructor-image-wrapper {
+    position: relative;
     width: 280px;
     height: 280px;
-    border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
-    object-fit: cover;
     margin: 0 auto;
-    display: block;
   }
 
-  .instructor-image-container::after {
+  .instructor-image-frame {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(245,242,235,0.9), white);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 
+      0 10px 40px rgba(0, 0, 0, 0.1),
+      inset 0 0 40px rgba(0, 0, 0, 0.05);
+    transform: rotate(-2deg);
+    transition: transform 0.5s ease;
+    animation: morphShape 15s ease-in-out infinite, imageFloat 6s ease-in-out infinite;
+  }
+
+  @keyframes morphShape {
+    0%, 100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    20% {
+      border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
+    }
+    40% {
+      border-radius: 70% 30% 50% 50% / 50% 60% 40% 60%;
+    }
+    60% {
+      border-radius: 40% 60% 30% 70% / 70% 50% 50% 30%;
+    }
+    80% {
+      border-radius: 60% 40% 60% 40% / 40% 70% 30% 60%;
+    }
+  }
+
+  @keyframes imageFloat {
+    0%, 100% { 
+      transform: rotate(-2deg) translateY(0px);
+    }
+    50% { 
+      transform: rotate(-2deg) translateY(-10px);
+    }
+  }
+
+  .instructor-image-frame::before {
     content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, 
+      #667eea 0%,
+      #764ba2 25%,
+      #f093fb 50%,
+      #f5576c 75%,
+      #667eea 100%);
+    background-size: 400% 400%;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.7;
+    animation: borderGradient 8s ease infinite, morphShapeBorder 15s ease-in-out infinite;
+  }
+
+  @keyframes morphShapeBorder {
+    0%, 100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    20% {
+      border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
+    }
+    40% {
+      border-radius: 70% 30% 50% 50% / 50% 60% 40% 60%;
+    }
+    60% {
+      border-radius: 40% 60% 30% 70% / 70% 50% 50% 30%;
+    }
+    80% {
+      border-radius: 60% 40% 60% 40% / 40% 70% 30% 60%;
+    }
+  }
+
+  @keyframes borderGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Wind Effect Layers */
+  .wind-effect {
     position: absolute;
     top: -10px;
     left: -10px;
     right: -10px;
     bottom: -10px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 100%);
-    border-radius: 30px;
-    z-index: -1;
-    opacity: 0.6;
-    animation: gradientWave 8s ease infinite;
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    opacity: 0.3;
+    animation: windMorph 12s ease-in-out infinite;
+    z-index: -2;
+  }
+
+  @keyframes windMorph {
+    0%, 100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      transform: scale(1) rotate(0deg);
+    }
+    25% {
+      border-radius: 60% 40% 50% 50% / 40% 60% 40% 60%;
+      transform: scale(1.02) rotate(5deg);
+    }
+    50% {
+      border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%;
+      transform: scale(1) rotate(-5deg);
+    }
+    75% {
+      border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
+      transform: scale(1.02) rotate(3deg);
+    }
+  }
+
+  .wind-effect-2 {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 1px solid rgba(240, 147, 251, 0.2);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    opacity: 0.2;
+    animation: windMorph2 10s ease-in-out infinite;
+    animation-delay: -2s;
+    z-index: -3;
+  }
+
+  @keyframes windMorph2 {
+    0%, 100% {
+      border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
+      transform: scale(1) rotate(0deg);
+    }
+    33% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      transform: scale(1.03) rotate(-8deg);
+    }
+    66% {
+      border-radius: 70% 30% 30% 70% / 40% 60% 40% 60%;
+      transform: scale(1) rotate(6deg);
+    }
+  }
+
+  .instructor-image-frame:hover {
+    animation-play-state: paused;
+    transform: rotate(0deg) scale(1.05);
+  }
+
+  .instructor-image-frame:hover::before {
+    animation-duration: 3s;
+    opacity: 0.9;
+  }
+
+  .instructor-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(5%) contrast(1.05);
+    border: 3px solid white;
+    border-radius: inherit;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Decorative Corner Elements */
+  .image-corner {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgba(245, 87, 108, 0.6);
+    z-index: 2;
+    animation: cornerGlow 4s ease-in-out infinite;
+    opacity: 0.7;
+  }
+
+  .image-corner.top-left {
+    top: 10px;
+    left: 10px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 30% 0 0 0;
+  }
+
+  .image-corner.top-right {
+    top: 10px;
+    right: 10px;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0 30% 0 0;
+  }
+
+  .image-corner.bottom-left {
+    bottom: 10px;
+    left: 10px;
+    border-right: none;
+    border-top: none;
+    border-radius: 0 0 0 30%;
+  }
+
+  .image-corner.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    border-left: none;
+    border-top: none;
+    border-radius: 0 0 30% 0;
+  }
+
+  @keyframes cornerGlow {
+    0%, 100% {
+      opacity: 0.7;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  .image-seal {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 3px 15px rgba(245, 87, 108, 0.4);
+    transform: rotate(15deg);
+    animation: sealRotate 10s ease-in-out infinite;
+    z-index: 3;
+  }
+
+  @keyframes sealRotate {
+    0%, 100% {
+      transform: rotate(15deg) scale(1);
+    }
+    25% {
+      transform: rotate(10deg) scale(1.05);
+    }
+    50% {
+      transform: rotate(20deg) scale(1);
+    }
+    75% {
+      transform: rotate(12deg) scale(1.05);
+    }
   }
 
   .instructor-info {
@@ -739,7 +987,19 @@ description_zh: 由计算机科学博士提供的精英编程教育
   
   <div class="instructor-content">
     <div class="instructor-image-container">
-      <img src="{{ site.baseurl }}/images/h.png" alt="H Teacher" class="instructor-image">
+      <div class="instructor-image-wrapper">
+        <div class="instructor-image-frame">
+          <div class="wind-effect"></div>
+          <div class="wind-effect-2"></div>
+          <div class="image-corner top-left"></div>
+          <div class="image-corner top-right"></div>
+          <div class="image-corner bottom-left"></div>
+          <div class="image-corner bottom-right"></div>
+          <img src="{{ site.baseurl }}/images/h.png" alt="H Teacher" class="instructor-image">
+          <div class="image-seal">H</div>
+        </div>
+      </div>
+    </div>
     </div>
     
     <div class="instructor-info">
