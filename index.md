@@ -699,8 +699,8 @@ description_zh: 为未来科技领袖提供的精英编程教育
         <span class="zh-content">💻 编程精通</span>
       </h3>
       <p>
-        <span class="en-content">Python, Java, C++, Web Development</span>
-        <span class="zh-content">Python, Java, C++, 网页开发</span>
+        <span class="en-content">Python, Java, C++, APCSA, APCSP, Web Development</span>
+        <span class="zh-content">Python, Java, C++, AP计算机A, AP计算机原理，网页开发</span>
       </p>
     </div>
     
