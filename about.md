@@ -360,10 +360,11 @@ description_zh: 由计算机科学博士提供的精英编程教育
 
   .instructor-content {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 320px 1fr;
     gap: 4rem;
     align-items: center;
     margin-top: 3rem;
+    justify-items: center;
   }
 
   @media (max-width: 900px) {
@@ -376,13 +377,15 @@ description_zh: 由计算机科学博士提供的精英编程教育
   .instructor-image-container {
     position: relative;
     animation: float 6s ease-in-out infinite;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .instructor-image-wrapper {
     position: relative;
     width: 280px;
     height: 280px;
-    margin: 0 auto;
   }
 
   .instructor-image-frame {
@@ -996,7 +999,6 @@ description_zh: 由计算机科学博士提供的精英编程教育
           <div class="image-corner bottom-left"></div>
           <div class="image-corner bottom-right"></div>
           <img src="{{ site.baseurl }}/images/h.png" alt="H Teacher" class="instructor-image">
-          <div class="image-seal">H</div>
         </div>
       </div>
     </div>
@@ -1123,7 +1125,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
   
   <div class="stats-grid">
     <div class="stat-item">
-      <div class="stat-number">50+</div>
+      <div class="stat-number">500+</div>
       <div class="stat-label">
         <span class="en-content">Students Taught</span>
         <span class="zh-content">教授学生</span>
@@ -1131,7 +1133,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     </div>
     
     <div class="stat-item">
-      <div class="stat-number">20+</div>
+      <div class="stat-number">50+</div>
       <div class="stat-label">
         <span class="en-content">Competition Winners</span>
         <span class="zh-content">竞赛获奖者</span>
@@ -1139,7 +1141,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     </div>
     
     <div class="stat-item">
-      <div class="stat-number">90%</div>
+      <div class="stat-number">95%</div>
       <div class="stat-label">
         <span class="en-content">AP Score 5 Rate</span>
         <span class="zh-content">AP 5分率</span>
