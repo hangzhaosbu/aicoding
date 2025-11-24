@@ -863,7 +863,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
   
   <div class="stats-grid">
     <div class="stat-item">
-      <div class="stat-number">500+</div>
+      <div class="stat-number">50+</div>
       <div class="stat-label">
         <span class="en-content">Students Taught</span>
         <span class="zh-content">教授学生</span>
@@ -871,7 +871,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     </div>
     
     <div class="stat-item">
-      <div class="stat-number">50+</div>
+      <div class="stat-number">20+</div>
       <div class="stat-label">
         <span class="en-content">Competition Winners</span>
         <span class="zh-content">竞赛获奖者</span>
@@ -879,7 +879,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     </div>
     
     <div class="stat-item">
-      <div class="stat-number">95%</div>
+      <div class="stat-number">90%</div>
       <div class="stat-label">
         <span class="en-content">AP Score 5 Rate</span>
         <span class="zh-content">AP 5分率</span>
