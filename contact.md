@@ -729,8 +729,8 @@ description_zh: 与 AIcoding 学院取得联系
       <span class="zh-content">全球服务</span>
     </h3>
     <p class="quick-card-content">
-      <span class="en-content">Supporting students from US & China</span>
-      <span class="zh-content">为美国和中国的学生提供支持</span>
+      <span class="en-content">Supporting students from US, Canada & China</span>
+      <span class="zh-content">为美国，加拿大和中国的学生提供支持</span>
     </p>
   </div>
   
@@ -1057,3 +1057,4 @@ ${form.message.value}
     }
   });
 </script>
+
