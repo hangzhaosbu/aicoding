@@ -241,6 +241,60 @@ description_zh: 全方位编程课程，适合各个水平
     pointer-events: none;
   }
 
+  /* Diagonal corner shimmer effect */
+  .page-header-custom .diagonal-shimmer-1,
+  .page-header-custom .diagonal-shimmer-2 {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+      transparent 40%, 
+      rgba(255,255,255,0.2) 45%, 
+      rgba(255,255,255,0.4) 50%, 
+      rgba(255,255,255,0.2) 55%, 
+      transparent 60%);
+    animation: diagonalSweep 6s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .page-header-custom .diagonal-shimmer-1 {
+    top: -100%;
+    left: -100%;
+  }
+
+  .page-header-custom .diagonal-shimmer-2 {
+    bottom: -100%;
+    right: -100%;
+    animation-delay: 3s;
+    background: linear-gradient(-45deg, 
+      transparent 40%, 
+      rgba(255,255,255,0.2) 45%, 
+      rgba(255,255,255,0.4) 50%, 
+      rgba(255,255,255,0.2) 55%, 
+      transparent 60%);
+  }
+
+  @keyframes diagonalSweep {
+    0% {
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    50% {
+      transform: translate(25%, 25%);
+      opacity: 0.8;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      transform: translate(100%, 100%);
+      opacity: 0;
+    }
+  }
+
   @keyframes shimmerGlow {
     0%, 100% {
       opacity: 0.3;
@@ -679,6 +733,10 @@ description_zh: 全方位编程课程，适合各个水平
     position: relative;
     overflow: hidden;
     border: 2px solid transparent;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .competition-card::before {
@@ -708,6 +766,10 @@ description_zh: 全方位编程课程，适合各个水平
     margin-bottom: 1rem;
     display: block;
     animation: float 4s ease-in-out infinite;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .kaggle-logo {
@@ -719,6 +781,10 @@ description_zh: 全方位编程课程，适合各个水平
     text-shadow: 0 2px 10px rgba(32, 190, 255, 0.4);
     margin-bottom: 1rem;
     animation: float 4s ease-in-out infinite;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .competition-name {
@@ -726,12 +792,15 @@ description_zh: 全方位编程课程，适合各个水平
     font-weight: 700;
     color: #1F2937;
     margin-bottom: 0.5rem;
+    min-height: 35px;
   }
 
   .competition-desc {
     color: #6B7280;
     font-size: 0.95rem;
     line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
   }
 
   /* CTA Section - Ultimate Premium */
@@ -772,6 +841,60 @@ description_zh: 全方位编程课程，适合各个水平
     filter: blur(40px);
     animation: shimmerGlow 4s ease-in-out infinite;
     pointer-events: none;
+  }
+
+  /* Diagonal corner shimmer effect */
+  .cta-section .diagonal-shimmer-1,
+  .cta-section .diagonal-shimmer-2 {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+      transparent 40%, 
+      rgba(255,255,255,0.2) 45%, 
+      rgba(255,255,255,0.4) 50%, 
+      rgba(255,255,255,0.2) 55%, 
+      transparent 60%);
+    animation: diagonalSweep 6s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .cta-section .diagonal-shimmer-1 {
+    top: -100%;
+    left: -100%;
+  }
+
+  .cta-section .diagonal-shimmer-2 {
+    bottom: -100%;
+    right: -100%;
+    animation-delay: 3s;
+    background: linear-gradient(-45deg, 
+      transparent 40%, 
+      rgba(255,255,255,0.2) 45%, 
+      rgba(255,255,255,0.4) 50%, 
+      rgba(255,255,255,0.2) 55%, 
+      transparent 60%);
+  }
+
+  @keyframes diagonalSweep {
+    0% {
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    50% {
+      transform: translate(25%, 25%);
+      opacity: 0.8;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      transform: translate(100%, 100%);
+      opacity: 0;
+    }
   }
 
   @keyframes shimmerGlow {
@@ -855,6 +978,8 @@ description_zh: 全方位编程课程，适合各个水平
 </style>
 
 <div class="page-header-custom">
+  <div class="diagonal-shimmer-1"></div>
+  <div class="diagonal-shimmer-2"></div>
   <h1 class="page-title">
     <span class="en-content">Course Catalog</span>
     <span class="zh-content">课程目录</span>
@@ -1566,6 +1691,8 @@ description_zh: 全方位编程课程，适合各个水平
 
 <!-- CTA Section -->
 <div class="cta-section">
+  <div class="diagonal-shimmer-1"></div>
+  <div class="diagonal-shimmer-2"></div>
   <h2 class="cta-title">
     <span class="en-content">Ready to Excel?</span>
     <span class="zh-content">准备好卓越了吗？</span>
