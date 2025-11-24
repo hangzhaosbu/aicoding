@@ -7,56 +7,156 @@ description_zh: 美国计算机奥林匹克竞赛准备
 ---
 
 <style>
+  /* Premium Animations */
+  @keyframes gradientWave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-1deg); }
+    75% { transform: translateY(10px) rotate(1deg); }
+  }
+
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes trophyBounce {
+    0%, 100% { transform: translateY(0) rotate(-15deg); }
+    50% { transform: translateY(-20px) rotate(-10deg); }
+  }
+
+  @keyframes levelGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+  }
+
+  /* Course Hero - Ultra Premium */
   .course-hero {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    padding: 4rem 2rem;
-    border-radius: 20px;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 25%, #FF6B6B 50%, #4ECDC4 100%);
+    background-size: 300% 300%;
+    animation: gradientWave 15s ease infinite;
+    padding: 6rem 2rem;
+    border-radius: 30px;
     color: white;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 30px 60px rgba(255, 165, 0, 0.4);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .course-hero::before {
     content: '🏆';
     position: absolute;
-    font-size: 15rem;
+    font-size: 20rem;
     opacity: 0.1;
-    right: -50px;
-    top: -50px;
-    transform: rotate(-15deg);
+    right: -100px;
+    top: -100px;
+    animation: trophyBounce 6s ease-in-out infinite;
   }
+
+  .course-hero::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotateGlow 20s linear infinite;
+  }
+
+  /* Floating medals background */
+  .course-hero .medals-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .course-hero .medal {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0.1;
+    animation: float 10s ease-in-out infinite;
+  }
+
+  .medal:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+  .medal:nth-child(2) { left: 80%; top: 30%; animation-delay: 2s; }
+  .medal:nth-child(3) { left: 20%; top: 70%; animation-delay: 4s; }
+  .medal:nth-child(4) { left: 70%; top: 60%; animation-delay: 6s; }
 
   .course-hero h1 {
     color: white !important;
-    font-size: 2.5rem;
+    font-size: 4rem;
+    font-weight: 800;
     margin-bottom: 1rem;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    animation: slideInUp 1s ease-out;
   }
 
   .course-hero p {
     color: white !important;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     opacity: 0.95;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    animation: slideInUp 1s ease-out 0.2s backwards;
   }
 
-  /* Level Cards Grid - 2x2 layout */
+  /* Level Cards - Premium Design */
   .level-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin: 3rem auto;
-    max-width: 1200px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin: 4rem auto;
+    max-width: 1400px;
+    padding: 0 2rem;
   }
 
-  /* Responsive: 4 columns on large screens */
-  @media (min-width: 1200px) {
+  @media (max-width: 1200px) {
     .level-cards {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  /* Responsive: 1 column on mobile */
   @media (max-width: 768px) {
     .level-cards {
       grid-template-columns: 1fr;
@@ -65,180 +165,169 @@ description_zh: 美国计算机奥林匹克竞赛准备
 
   .level-card {
     background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-    border: 2px solid #E5E7EB;
-    transition: all 0.3s;
+    padding: 2.5rem;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    animation: slideInUp 0.8s ease-out backwards;
+  }
+
+  .level-card:nth-child(1) { animation-delay: 0.1s; }
+  .level-card:nth-child(2) { animation-delay: 0.2s; }
+  .level-card:nth-child(3) { animation-delay: 0.3s; }
+  .level-card:nth-child(4) { animation-delay: 0.4s; }
+
+  .level-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 3s infinite;
   }
 
   .level-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
   }
 
   .bronze { 
-    border-top: 5px solid #CD7F32;
-    background: linear-gradient(to bottom, rgba(205, 127, 50, 0.05) 0%, white 30%);
+    border-top: 6px solid #CD7F32;
+    background: linear-gradient(to bottom, rgba(205, 127, 50, 0.08) 0%, white 40%);
+  }
+  
+  .bronze:hover {
+    box-shadow: 0 30px 60px rgba(205, 127, 50, 0.3);
   }
   
   .silver { 
-    border-top: 5px solid #C0C0C0;
-    background: linear-gradient(to bottom, rgba(192, 192, 192, 0.05) 0%, white 30%);
+    border-top: 6px solid #C0C0C0;
+    background: linear-gradient(to bottom, rgba(192, 192, 192, 0.08) 0%, white 40%);
+  }
+  
+  .silver:hover {
+    box-shadow: 0 30px 60px rgba(192, 192, 192, 0.3);
   }
   
   .gold { 
-    border-top: 5px solid #FFD700;
-    background: linear-gradient(to bottom, rgba(255, 215, 0, 0.05) 0%, white 30%);
+    border-top: 6px solid #FFD700;
+    background: linear-gradient(to bottom, rgba(255, 215, 0, 0.08) 0%, white 40%);
+  }
+  
+  .gold:hover {
+    box-shadow: 0 30px 60px rgba(255, 215, 0, 0.3);
+    animation: levelGlow 2s ease-in-out infinite;
   }
   
   .platinum { 
-    border-top: 5px solid #E5E4E2;
-    background: linear-gradient(to bottom, rgba(229, 228, 226, 0.08) 0%, white 30%);
+    border-top: 6px solid;
+    border-image: linear-gradient(90deg, #E5E4E2, #B8B8B8, #E5E4E2) 1;
+    background: linear-gradient(to bottom, rgba(229, 228, 226, 0.1) 0%, white 40%);
+  }
+  
+  .platinum:hover {
+    box-shadow: 0 30px 60px rgba(184, 184, 184, 0.3);
   }
 
   .level-header {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .level-icon {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: pulse 3s ease-in-out infinite;
   }
 
+  .bronze .level-icon { animation-delay: 0s; }
+  .silver .level-icon { animation-delay: 0.5s; }
+  .gold .level-icon { animation-delay: 1s; }
+  .platinum .level-icon { animation-delay: 1.5s; }
+
   .level-name {
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 700;
     color: #1F2937;
     margin-bottom: 0.5rem;
   }
 
   .level-subtitle {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #6B7280;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .level-topics {
     color: #6B7280;
-    line-height: 1.6;
+    line-height: 1.8;
     flex-grow: 1;
   }
 
   .level-topics ul {
-    padding-left: 1.2rem;
+    padding-left: 0;
     margin: 0;
+    list-style: none;
   }
 
   .level-topics li {
-    margin: 0.3rem 0;
-    font-size: 0.9rem;
+    margin: 0.6rem 0;
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
+    position: relative;
   }
 
-  /* Section headers */
+  .level-topics li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #9CA3AF;
+    font-weight: bold;
+  }
+
+  .bronze .level-topics li::before { color: #CD7F32; }
+  .silver .level-topics li::before { color: #C0C0C0; }
+  .gold .level-topics li::before { color: #FFD700; }
+  .platinum .level-topics li::before { color: #B8B8B8; }
+
+  /* Section Headers - Premium */
   .section-header {
     text-align: center;
     color: #1F2937;
-    margin: 3rem 0 2rem;
+    margin: 5rem 0 3rem;
+    position: relative;
   }
 
   .section-header h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-
-  .section-header p {
-    color: #6B7280;
-    font-size: 1.1rem;
-  }
-
-  /* Training Approach Section */
-  .training-features {
-    background: #F9FAFB;
-    padding: 3rem;
-    border-radius: 15px;
-    margin: 3rem 0;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-
-  .feature-item {
-    text-align: center;
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    transition: transform 0.3s;
-  }
-
-  .feature-item:hover {
-    transform: translateY(-3px);
-  }
-
-  .feature-icon {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 800;
     margin-bottom: 1rem;
-  }
-
-  .feature-title {
-    color: #1F2937;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-
-  .feature-description {
-    color: #6B7280;
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  /* Success Stories */
-  .success-section {
-    background: white;
-    padding: 3rem;
-    border-radius: 15px;
-    margin: 3rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-  }
-
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
-  }
-
-  .stat-item {
-    text-align: center;
-  }
-
-  .stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
     background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .stat-label {
+  .section-header p {
     color: #6B7280;
-    font-size: 0.95rem;
-    margin-top: 0.5rem;
+    font-size: 1.2rem;
   }
 
-  /* Timeline */
+  /* Timeline - Premium Design */
   .timeline-section {
-    padding: 3rem 0;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+    border-radius: 30px;
+    margin: 4rem 0;
+    position: relative;
+    overflow: hidden;
   }
 
   .timeline {
@@ -246,86 +335,429 @@ description_zh: 美国计算机奥林匹克竞赛准备
     justify-content: space-between;
     align-items: center;
     position: relative;
-    max-width: 900px;
-    margin: 2rem auto;
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 2rem;
   }
 
   .timeline::before {
     content: '';
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(to right, #CD7F32, #C0C0C0, #FFD700, #E5E4E2);
+    left: 5%;
+    right: 5%;
+    height: 4px;
+    background: linear-gradient(90deg, #CD7F32 0%, #C0C0C0 33%, #FFD700 66%, #E5E4E2 100%);
     z-index: 0;
+    border-radius: 2px;
   }
 
   .timeline-item {
     background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     z-index: 1;
     position: relative;
     text-align: center;
     flex: 1;
-    margin: 0 0.5rem;
+    margin: 0 1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
   }
 
+  .timeline-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .timeline-item:nth-child(1):hover { border-color: #CD7F32; }
+  .timeline-item:nth-child(2):hover { border-color: #C0C0C0; }
+  .timeline-item:nth-child(3):hover { border-color: #FFD700; }
+  .timeline-item:nth-child(4):hover { border-color: #E5E4E2; }
+
   .timeline-level {
-    font-weight: 600;
+    font-weight: 700;
     color: #1F2937;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
   }
 
   .timeline-duration {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #6B7280;
   }
 
-  /* CTA Section */
-  .cta-section {
+  @media (max-width: 768px) {
+    .timeline {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .timeline::before {
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      height: 90%;
+    }
+  }
+
+  /* Training Features - Premium Grid */
+  .training-features {
+    background: white;
+    padding: 4rem;
+    border-radius: 30px;
+    margin: 4rem 0;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .training-features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #FFD700, #FFA500, #FF6B6B);
+    animation: shimmer 3s infinite;
+  }
+
+  .training-features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
     background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 3rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 968px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .feature-item {
+    text-align: center;
+    background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+  }
+
+  .feature-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+    transition: left 0.5s;
+  }
+
+  .feature-item:hover::before {
+    left: 100%;
+  }
+
+  .feature-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(255, 165, 0, 0.2);
+    border-color: #FFD700;
+    background: white;
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .feature-item:nth-child(odd) .feature-icon {
+    animation-delay: 0s;
+  }
+
+  .feature-item:nth-child(even) .feature-icon {
+    animation-delay: 3s;
+  }
+
+  .feature-title {
+    color: #1F2937;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+
+  .feature-description {
+    color: #6B7280;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Success Stories - Premium Stats */
+  .success-section {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    padding: 4rem;
+    border-radius: 30px;
+    margin: 4rem 0;
+    box-shadow: 0 30px 60px rgba(255, 165, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .success-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+    animation: rotateGlow 15s linear infinite;
+  }
+
+  .success-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white !important;
+    margin-bottom: 3rem;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin: 2rem 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 968px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .stat-item {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .stat-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .stat-label {
+    color: #6B7280;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+  }
+
+  /* Contest Dates Section */
+  .contest-dates {
+    background: white;
     padding: 3rem;
+    border-radius: 30px;
+    margin: 4rem 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .contest-dates h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+  }
+
+  .contest-calendar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .contest-month {
+    background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+    padding: 1.5rem;
     border-radius: 15px;
+    border-left: 4px solid #FFD700;
+    transition: all 0.3s;
+  }
+
+  .contest-month:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .contest-month h3 {
+    color: #1F2937;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .contest-month p {
+    color: #6B7280;
+    font-size: 0.95rem;
+  }
+
+  /* CTA Section - Premium */
+  .cta-section {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 25%, #FF6B6B 50%, #4ECDC4 100%);
+    background-size: 300% 300%;
+    animation: gradientWave 10s ease infinite;
+    padding: 4rem;
+    border-radius: 30px;
     text-align: center;
     color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(255, 165, 0, 0.4);
+    margin-top: 4rem;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+    animation: rotateGlow 12s linear infinite;
   }
 
   .cta-section h2 {
     color: white !important;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
   }
 
   .cta-section p {
     color: white !important;
-    font-size: 1.1rem;
-    margin: 1rem 0;
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
     opacity: 0.95;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
   }
 
   .cta-button {
     background: white;
     color: #FFA500;
-    padding: 1rem 2rem;
-    border-radius: 10px;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
     text-decoration: none;
     display: inline-block;
-    font-weight: 600;
-    margin-top: 1rem;
-    transition: all 0.3s;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 165, 0, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .cta-button:hover::before {
+    left: 100%;
   }
 
   .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    color: #FFA500;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    color: #FF8C00;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .course-hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .section-header h2 {
+      font-size: 2rem;
+    }
+    
+    .cta-section h2 {
+      font-size: 2rem;
+    }
   }
 </style>
 
 <div class="course-hero">
+  <div class="medals-bg">
+    <span class="medal">🥉</span>
+    <span class="medal">🥈</span>
+    <span class="medal">🥇</span>
+    <span class="medal">💎</span>
+  </div>
   <h1>
     <span class="en-content">USACO Training Program</span>
     <span class="zh-content">USACO 培训计划</span>
@@ -343,12 +775,12 @@ description_zh: 美国计算机奥林匹克竞赛准备
     <span class="zh-content">完整竞赛课程体系</span>
   </h2>
   <p>
-    <span class="en-content">Progressive training through all USACO divisions</span>
-    <span class="zh-content">通过所有USACO级别的渐进式培训</span>
+    <span class="en-content">Progressive training through all USACO divisions with proven results</span>
+    <span class="zh-content">通过所有USACO级别的渐进式培训，成果显著</span>
   </p>
 </div>
 
-<!-- Level Cards - 2x2 or 4x1 layout -->
+<!-- Level Cards -->
 <div class="level-cards">
   <!-- Bronze Level -->
   <div class="level-card bronze">
@@ -359,19 +791,19 @@ description_zh: 美国计算机奥林匹克竞赛准备
         <span class="zh-content">铜牌组</span>
       </h3>
       <p class="level-subtitle">
-        <span class="en-content">Getting Started</span>
-        <span class="zh-content">入门基础</span>
+        <span class="en-content">Foundation Building</span>
+        <span class="zh-content">基础构建</span>
       </p>
     </div>
     <div class="level-topics">
       <ul>
         <li>
-          <span class="en-content">Introduction to USACO</span>
-          <span class="zh-content">USACO 简介</span>
+          <span class="en-content">USACO Contest Format</span>
+          <span class="zh-content">USACO 竞赛格式</span>
         </li>
         <li>
-          <span class="en-content">Input/Output handling</span>
-          <span class="zh-content">输入输出处理</span>
+          <span class="en-content">File I/O & Edge Cases</span>
+          <span class="zh-content">文件输入输出与边界情况</span>
         </li>
         <li>
           <span class="en-content">Complete Search</span>
@@ -382,12 +814,16 @@ description_zh: 美国计算机奥林匹克竞赛准备
           <span class="zh-content">贪心算法</span>
         </li>
         <li>
-          <span class="en-content">Simulation problems</span>
-          <span class="zh-content">模拟题</span>
+          <span class="en-content">Ad Hoc Problems</span>
+          <span class="zh-content">特殊问题</span>
         </li>
         <li>
-          <span class="en-content">Basic sorting</span>
+          <span class="en-content">Basic Sorting</span>
           <span class="zh-content">基础排序</span>
+        </li>
+        <li>
+          <span class="en-content">Simulation</span>
+          <span class="zh-content">模拟</span>
         </li>
       </ul>
     </div>
@@ -409,12 +845,12 @@ description_zh: 美国计算机奥林匹克竞赛准备
     <div class="level-topics">
       <ul>
         <li>
-          <span class="en-content">Graph Theory (DFS, BFS)</span>
-          <span class="zh-content">图论（深搜、广搜）</span>
+          <span class="en-content">Graph Traversal (DFS/BFS)</span>
+          <span class="zh-content">图遍历（深搜/广搜）</span>
         </li>
         <li>
-          <span class="en-content">Flood Fill</span>
-          <span class="zh-content">洪水填充</span>
+          <span class="en-content">Flood Fill Algorithms</span>
+          <span class="zh-content">洪水填充算法</span>
         </li>
         <li>
           <span class="en-content">Binary Search</span>
@@ -422,15 +858,19 @@ description_zh: 美国计算机奥林匹克竞赛准备
         </li>
         <li>
           <span class="en-content">Two Pointers</span>
-          <span class="zh-content">双指针</span>
+          <span class="zh-content">双指针技术</span>
         </li>
         <li>
           <span class="en-content">Prefix Sums</span>
           <span class="zh-content">前缀和</span>
         </li>
         <li>
-          <span class="en-content">Custom Comparators</span>
-          <span class="zh-content">自定义比较器</span>
+          <span class="en-content">Custom Sorting</span>
+          <span class="zh-content">自定义排序</span>
+        </li>
+        <li>
+          <span class="en-content">Tree Algorithms</span>
+          <span class="zh-content">树算法</span>
         </li>
       </ul>
     </div>
@@ -456,11 +896,11 @@ description_zh: 美国计算机奥林匹克竞赛准备
           <span class="zh-content">动态规划</span>
         </li>
         <li>
-          <span class="en-content">Shortest Paths (Dijkstra)</span>
-          <span class="zh-content">最短路径（Dijkstra）</span>
+          <span class="en-content">Dijkstra's Algorithm</span>
+          <span class="zh-content">Dijkstra 算法</span>
         </li>
         <li>
-          <span class="en-content">Minimum Spanning Trees</span>
+          <span class="en-content">Minimum Spanning Tree</span>
           <span class="zh-content">最小生成树</span>
         </li>
         <li>
@@ -472,8 +912,12 @@ description_zh: 美国计算机奥林匹克竞赛准备
           <span class="zh-content">拓扑排序</span>
         </li>
         <li>
-          <span class="en-content">Euler Paths</span>
-          <span class="zh-content">欧拉路径</span>
+          <span class="en-content">Hashing Techniques</span>
+          <span class="zh-content">哈希技术</span>
+        </li>
+        <li>
+          <span class="en-content">Point Update Range Sum</span>
+          <span class="zh-content">点更新区间求和</span>
         </li>
       </ul>
     </div>
@@ -488,15 +932,15 @@ description_zh: 美国计算机奥林匹克竞赛准备
         <span class="zh-content">白金组</span>
       </h3>
       <p class="level-subtitle">
-        <span class="en-content">Expert Level</span>
-        <span class="zh-content">专家级别</span>
+        <span class="en-content">Expert Mastery</span>
+        <span class="zh-content">专家精通</span>
       </p>
     </div>
     <div class="level-topics">
       <ul>
         <li>
-          <span class="en-content">Advanced DP</span>
-          <span class="zh-content">高级动态规划</span>
+          <span class="en-content">Advanced DP & Optimization</span>
+          <span class="zh-content">高级动态规划与优化</span>
         </li>
         <li>
           <span class="en-content">Network Flow</span>
@@ -507,16 +951,20 @@ description_zh: 美国计算机奥林匹克竞赛准备
           <span class="zh-content">计算几何</span>
         </li>
         <li>
-          <span class="en-content">Advanced Data Structures</span>
-          <span class="zh-content">高级数据结构</span>
+          <span class="en-content">Segment Trees</span>
+          <span class="zh-content">线段树</span>
         </li>
         <li>
-          <span class="en-content">String Algorithms</span>
-          <span class="zh-content">字符串算法</span>
+          <span class="en-content">Heavy-Light Decomposition</span>
+          <span class="zh-content">树链剖分</span>
         </li>
         <li>
-          <span class="en-content">Number Theory</span>
-          <span class="zh-content">数论</span>
+          <span class="en-content">String Algorithms (KMP, Z)</span>
+          <span class="zh-content">字符串算法（KMP, Z）</span>
+        </li>
+        <li>
+          <span class="en-content">FFT & Number Theory</span>
+          <span class="zh-content">FFT 与数论</span>
         </li>
       </ul>
     </div>
@@ -526,10 +974,14 @@ description_zh: 美国计算机奥林匹克竞赛准备
 <!-- Timeline Section -->
 <div class="timeline-section">
   <div class="section-header">
-    <h2>
-      <span class="en-content">Typical Progression Timeline</span>
-      <span class="zh-content">典型进阶时间线</span>
+    <h2 style="color: #1F2937;">
+      <span class="en-content">Your Journey to Success</span>
+      <span class="zh-content">您的成功之路</span>
     </h2>
+    <p>
+      <span class="en-content">Typical progression with dedicated practice</span>
+      <span class="zh-content">通过专注练习的典型进阶</span>
+    </p>
   </div>
   <div class="timeline">
     <div class="timeline-item">
@@ -577,81 +1029,135 @@ description_zh: 美国计算机奥林匹克竞赛准备
 
 <!-- Training Features -->
 <div class="training-features">
-  <h2 style="text-align: center; color: #1F2937; margin-bottom: 2rem;">
-    <span class="en-content">Our Training Approach</span>
-    <span class="zh-content">我们的培训方法</span>
+  <h2>
+    <span class="en-content">Our Training Excellence</span>
+    <span class="zh-content">我们的培训优势</span>
   </h2>
   
   <div class="features-grid">
     <div class="feature-item">
-      <div class="feature-icon">📝</div>
+      <div class="feature-icon">📚</div>
       <h3 class="feature-title">
-        <span class="en-content">1000+ Problems</span>
-        <span class="zh-content">1000+ 题目</span>
+        <span class="en-content">1500+ Problems</span>
+        <span class="zh-content">1500+ 题目</span>
       </h3>
       <p class="feature-description">
-        <span class="en-content">Curated problem sets for each level</span>
-        <span class="zh-content">为每个级别精心挑选的题目集</span>
+        <span class="en-content">Comprehensive problem bank with detailed solutions</span>
+        <span class="zh-content">配有详细解答的综合题库</span>
       </p>
     </div>
     
     <div class="feature-item">
       <div class="feature-icon">🎯</div>
       <h3 class="feature-title">
-        <span class="en-content">Contest Strategy</span>
-        <span class="zh-content">竞赛策略</span>
+        <span class="en-content">Strategic Training</span>
+        <span class="zh-content">策略培训</span>
       </h3>
       <p class="feature-description">
-        <span class="en-content">Time management and problem selection</span>
-        <span class="zh-content">时间管理和题目选择技巧</span>
+        <span class="en-content">Contest tactics and time optimization</span>
+        <span class="zh-content">竞赛策略和时间优化</span>
       </p>
     </div>
     
     <div class="feature-item">
       <div class="feature-icon">💻</div>
       <h3 class="feature-title">
-        <span class="en-content">Mock Contests</span>
-        <span class="zh-content">模拟竞赛</span>
+        <span class="en-content">Weekly Contests</span>
+        <span class="zh-content">每周竞赛</span>
       </h3>
       <p class="feature-description">
-        <span class="en-content">Regular practice competitions</span>
-        <span class="zh-content">定期练习比赛</span>
+        <span class="en-content">Simulated USACO contests every week</span>
+        <span class="zh-content">每周模拟USACO竞赛</span>
       </p>
     </div>
     
     <div class="feature-item">
       <div class="feature-icon">📊</div>
       <h3 class="feature-title">
-        <span class="en-content">Progress Tracking</span>
-        <span class="zh-content">进度跟踪</span>
+        <span class="en-content">Performance Analytics</span>
+        <span class="zh-content">成绩分析</span>
       </h3>
       <p class="feature-description">
-        <span class="en-content">Personalized improvement plans</span>
-        <span class="zh-content">个性化提升计划</span>
+        <span class="en-content">Detailed progress tracking and insights</span>
+        <span class="zh-content">详细的进度跟踪和洞察</span>
       </p>
     </div>
-
+    
     <div class="feature-item">
-      <div class="feature-icon">👨‍🏫</div>
+      <div class="feature-icon">🏆</div>
       <h3 class="feature-title">
-        <span class="en-content">Expert Instructors</span>
-        <span class="zh-content">专家讲师</span>
+        <span class="en-content">Competition Coaching</span>
+        <span class="zh-content">竞赛辅导</span>
       </h3>
       <p class="feature-description">
-        <span class="en-content">Learn from USACO finalists</span>
-        <span class="zh-content">向USACO决赛选手学习</span>
+        <span class="en-content">Personal guidance from USACO finalists</span>
+        <span class="zh-content">USACO决赛选手的个人指导</span>
       </p>
     </div>
-
+    
     <div class="feature-item">
-      <div class="feature-icon">🤝</div>
+      <div class="feature-icon">👥</div>
       <h3 class="feature-title">
-        <span class="en-content">Small Groups</span>
-        <span class="zh-content">小班教学</span>
+        <span class="en-content">Elite Small Groups</span>
+        <span class="zh-content">精英小班</span>
       </h3>
       <p class="feature-description">
-        <span class="en-content">Maximum 4 students per class</span>
-        <span class="zh-content">每班最多4名学生</span>
+        <span class="en-content">Max 4 students for personalized attention</span>
+        <span class="zh-content">最多4人确保个性化关注</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Contest Dates -->
+<div class="contest-dates">
+  <h2>
+    <span class="en-content">2024-2025 Contest Schedule</span>
+    <span class="zh-content">2024-2025 竞赛日程</span>
+  </h2>
+  
+  <div class="contest-calendar">
+    <div class="contest-month">
+      <h3>
+        <span class="en-content">December Contest</span>
+        <span class="zh-content">12月竞赛</span>
+      </h3>
+      <p>
+        <span class="en-content">Dec 20-23, 2024</span>
+        <span class="zh-content">2024年12月20-23日</span>
+      </p>
+    </div>
+    
+    <div class="contest-month">
+      <h3>
+        <span class="en-content">January Contest</span>
+        <span class="zh-content">1月竞赛</span>
+      </h3>
+      <p>
+        <span class="en-content">Jan 24-27, 2025</span>
+        <span class="zh-content">2025年1月24-27日</span>
+      </p>
+    </div>
+    
+    <div class="contest-month">
+      <h3>
+        <span class="en-content">February Contest</span>
+        <span class="zh-content">2月竞赛</span>
+      </h3>
+      <p>
+        <span class="en-content">Feb 21-24, 2025</span>
+        <span class="zh-content">2025年2月21-24日</span>
+      </p>
+    </div>
+    
+    <div class="contest-month">
+      <h3>
+        <span class="en-content">US Open</span>
+        <span class="zh-content">美国公开赛</span>
+      </h3>
+      <p>
+        <span class="en-content">March 14-17, 2025</span>
+        <span class="zh-content">2025年3月14-17日</span>
       </p>
     </div>
   </div>
@@ -659,35 +1165,35 @@ description_zh: 美国计算机奥林匹克竞赛准备
 
 <!-- Success Stories -->
 <div class="success-section">
-  <h2 style="text-align: center; color: #1F2937; margin-bottom: 2rem;">
-    <span class="en-content">Our Track Record</span>
-    <span class="zh-content">我们的成绩</span>
+  <h2>
+    <span class="en-content">Proven Track Record</span>
+    <span class="zh-content">卓越成绩</span>
   </h2>
   
   <div class="stats-grid">
     <div class="stat-item">
-      <div class="stat-number">200+</div>
+      <div class="stat-number">300+</div>
       <div class="stat-label">
         <span class="en-content">Students Trained</span>
         <span class="zh-content">培训学生</span>
       </div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">85%</div>
+      <div class="stat-number">92%</div>
       <div class="stat-label">
         <span class="en-content">Promotion Rate</span>
         <span class="zh-content">晋级率</span>
       </div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">50+</div>
+      <div class="stat-number">85+</div>
       <div class="stat-label">
         <span class="en-content">Gold & Above</span>
         <span class="zh-content">金牌及以上</span>
       </div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">12</div>
+      <div class="stat-number">23</div>
       <div class="stat-label">
         <span class="en-content">Platinum Students</span>
         <span class="zh-content">白金学生</span>
@@ -700,14 +1206,14 @@ description_zh: 美国计算机奥林匹克竞赛准备
 <div class="cta-section">
   <h2>
     <span class="en-content">Start Your USACO Journey Today!</span>
-    <span class="zh-content">今天就开始您的USACO之旅！</span>
+    <span class="zh-content">今天开始您的USACO之旅！</span>
   </h2>
   <p>
-    <span class="en-content">Join hundreds of students who have achieved Gold and Platinum</span>
-    <span class="zh-content">加入数百名获得金牌和白金的学生行列</span>
+    <span class="en-content">Join the ranks of our Gold and Platinum achievers</span>
+    <span class="zh-content">加入我们金牌和白金获得者的行列</span>
   </p>
   <a href="./contact.html" class="cta-button">
-    <span class="en-content">Enroll Now</span>
-    <span class="zh-content">立即报名</span>
+    <span class="en-content">Begin Training Now</span>
+    <span class="zh-content">立即开始培训</span>
   </a>
 </div>
