@@ -515,6 +515,18 @@ description_zh: 与 AIcoding 学院取得联系
     box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
     animation: float 6s ease-in-out infinite;
   }
+  
+  /* iOS-style Phone Icon */
+  .contact-icon.phone-icon {
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+  }
+  
+  /* WeChat Icon */
+  .contact-icon.wechat-icon {
+    background: linear-gradient(135deg, #07c160 0%, #06ae56 100%);
+    box-shadow: 0 10px 25px rgba(7, 193, 96, 0.3);
+  }
 
   .contact-details h3 {
     color: #1F2937;
@@ -876,7 +888,11 @@ description_zh: 与 AIcoding 学院取得联系
     
     <!-- Phone -->
     <div class="contact-method">
-      <div class="contact-icon">📱</div>
+      <div class="contact-icon phone-icon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+          <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+        </svg>
+      </div>
       <div class="contact-details">
         <h3>
           <span class="en-content">Phone</span>
@@ -892,7 +908,12 @@ description_zh: 与 AIcoding 学院取得联系
     
     <!-- WeChat -->
     <div class="contact-method">
-      <div class="contact-icon">💬</div>
+      <div class="contact-icon wechat-icon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+          <path d="M15.85 8.14c.39 0 .77.03 1.14.08C16.31 5.25 13.19 3 9.44 3c-4.25 0-7.7 2.88-7.7 6.43 0 2.05 1.15 3.86 2.94 5.04L3.67 16.5l2.76-1.19c.59.21 1.21.38 1.87.47-.09-.39-.14-.79-.14-1.21-.01-3.77 3.69-6.43 7.69-6.43zM12 5.89c.57 0 1.04.46 1.04 1.04s-.46 1.04-1.04 1.04-1.04-.46-1.04-1.04.47-1.04 1.04-1.04zM6.63 7.96c-.57 0-1.04-.46-1.04-1.04s.46-1.04 1.04-1.04c.57 0 1.04.46 1.04 1.04s-.46 1.04-1.04 1.04z"/>
+          <path d="M22.26 14.57c0-2.84-2.87-5.14-6.41-5.14s-6.41 2.3-6.41 5.14 2.87 5.14 6.41 5.14c.58 0 1.14-.08 1.67-.2L20.98 21l-1.2-2.4c1.5-.94 2.48-2.38 2.48-4.03zm-8.34-.51c-.41 0-.74-.33-.74-.74s.33-.74.74-.74.74.33.74.74-.33.74-.74.74zm3.85 0c-.41 0-.74-.33-.74-.74s.33-.74.74-.74.74.33.74.74-.32.74-.74.74z"/>
+        </svg>
+      </div>
       <div class="contact-details">
         <h3>
           <span class="en-content">WeChat</span>
@@ -1009,7 +1030,7 @@ description_zh: 与 AIcoding 学院取得联系
     // Function to update select options based on language
     function updateSelectOptions() {
       const selects = document.querySelectorAll('select');
-      const isZh = document.body.classList.contains('zh-active');
+      const isZh = localStorage.getItem('language') === 'zh';
       
       selects.forEach(select => {
         const options = select.querySelectorAll('option');
@@ -1026,7 +1047,7 @@ description_zh: 与 AIcoding 学院取得联系
     
     // Function to update placeholder based on language
     function updatePlaceholders() {
-      const isZh = document.body.classList.contains('zh-active');
+      const isZh = localStorage.getItem('language') === 'zh';
       const textarea = document.getElementById('message');
       
       if (textarea) {
@@ -1040,17 +1061,29 @@ description_zh: 与 AIcoding 学院取得联系
     updateSelectOptions();
     updatePlaceholders();
     
-    // Listen for language changes (assuming you have a language toggle)
-    const observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        if (mutation.attributeName === 'class') {
-          updateSelectOptions();
-          updatePlaceholders();
-        }
-      });
+    // Listen for storage changes (language toggle)
+    window.addEventListener('storage', function(e) {
+      if (e.key === 'language') {
+        updateSelectOptions();
+        updatePlaceholders();
+      }
     });
     
-    observer.observe(document.body, { attributes: true });
+    // Also check periodically for language changes
+    setInterval(function() {
+      const currentLang = localStorage.getItem('language');
+      const textarea = document.getElementById('message');
+      if (textarea) {
+        const isZh = currentLang === 'zh' || document.documentElement.lang === 'zh';
+        const enPlaceholder = textarea.getAttribute('data-placeholder-en');
+        const zhPlaceholder = textarea.getAttribute('data-placeholder-zh');
+        const newPlaceholder = isZh ? zhPlaceholder : enPlaceholder;
+        if (textarea.placeholder !== newPlaceholder) {
+          textarea.placeholder = newPlaceholder;
+          updateSelectOptions();
+        }
+      }
+    }, 500);
   });
   
   // Form submission handler with EmailJS
