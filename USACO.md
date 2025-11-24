@@ -51,11 +51,6 @@ description_zh: 美国计算机奥林匹克竞赛准备
     50% { transform: translateY(-20px) rotate(-10deg); }
   }
 
-  @keyframes levelGlow {
-    0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
-    50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
-  }
-
   /* Course Hero - Ultra Premium */
   .course-hero {
     background: linear-gradient(135deg, #FFD700 0%, #FFA500 25%, #FF6B6B 50%, #4ECDC4 100%);
@@ -145,15 +140,16 @@ description_zh: 美国计算机奥林匹克竞赛准备
   .level-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
     margin: 4rem auto;
-    max-width: 1400px;
+    max-width: 1600px; /* Increased from 1400px */
     padding: 0 2rem;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1400px) {
     .level-cards {
       grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
     }
   }
 
@@ -165,7 +161,7 @@ description_zh: 美国计算机奥林匹克竞赛准备
 
   .level-card {
     background: white;
-    padding: 2.5rem;
+    padding: 2rem 1.5rem; /* Adjusted padding */
     border-radius: 25px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -174,6 +170,7 @@ description_zh: 美国计算机奥林匹克竞赛准备
     position: relative;
     overflow: hidden;
     animation: slideInUp 0.8s ease-out backwards;
+    min-width: 0; /* Prevent overflow */
   }
 
   .level-card:nth-child(1) { animation-delay: 0.1s; }
@@ -221,8 +218,7 @@ description_zh: 美国计算机奥林匹克竞赛准备
   }
   
   .gold:hover {
-    box-shadow: 0 30px 60px rgba(255, 215, 0, 0.3);
-    animation: levelGlow 2s ease-in-out infinite;
+    box-shadow: 0 30px 60px rgba(255, 215, 0, 0.4);
   }
   
   .platinum { 
@@ -237,12 +233,12 @@ description_zh: 美国计算机奥林匹克竞赛准备
 
   .level-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .level-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-bottom: 0.8rem;
     display: inline-block;
     animation: pulse 3s ease-in-out infinite;
   }
@@ -253,22 +249,24 @@ description_zh: 美国计算机奥林匹克竞赛准备
   .platinum .level-icon { animation-delay: 1.5s; }
 
   .level-name {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #1F2937;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
+    white-space: nowrap;
   }
 
   .level-subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 500;
     color: #6B7280;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
+    white-space: nowrap;
   }
 
   .level-topics {
     color: #6B7280;
-    line-height: 1.8;
+    line-height: 1.6;
     flex-grow: 1;
   }
 
@@ -279,10 +277,21 @@ description_zh: 美国计算机奥林匹克竞赛准备
   }
 
   .level-topics li {
-    margin: 0.6rem 0;
-    font-size: 0.95rem;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
     padding-left: 1.5rem;
     position: relative;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Allow wrapping on smaller screens */
+  @media (max-width: 1600px) {
+    .level-topics li {
+      white-space: normal;
+      font-size: 0.85rem;
+    }
   }
 
   .level-topics li::before {
@@ -621,9 +630,21 @@ description_zh: 美国计算机奥林匹克竞赛准备
 
   .contest-calendar {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 2rem;
+  }
+
+  @media (max-width: 1200px) {
+    .contest-calendar {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .contest-calendar {
+      grid-template-columns: 1fr;
+    }
   }
 
   .contest-month {
@@ -1038,8 +1059,8 @@ description_zh: 美国计算机奥林匹克竞赛准备
     <div class="feature-item">
       <div class="feature-icon">📚</div>
       <h3 class="feature-title">
-        <span class="en-content">1500+ Problems</span>
-        <span class="zh-content">1500+ 题目</span>
+        <span class="en-content">1000+ Problems</span>
+        <span class="zh-content">1000+ 题目</span>
       </h3>
       <p class="feature-description">
         <span class="en-content">Comprehensive problem bank with detailed solutions</span>
