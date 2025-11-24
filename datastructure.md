@@ -241,18 +241,12 @@ description_zh: 掌握基础数据结构，实现编程卓越
   /* Module Cards - Premium Grid */
   .modules-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
     margin: 3rem 0;
   }
 
-  @media (max-width: 1200px) {
-    .modules-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 768px) {
+  @media (max-width: 968px) {
     .modules-container {
       grid-template-columns: 1fr;
     }
@@ -260,7 +254,7 @@ description_zh: 掌握基础数据结构，实现编程卓越
 
   .module-card {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     border-left: 5px solid;
@@ -307,21 +301,21 @@ description_zh: 掌握基础数据结构，实现编程卓越
   .module-number {
     background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%);
     color: white;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 1.3rem;
-    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
     animation: nodeConnect 3s ease-in-out infinite;
     box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);
   }
 
   .module-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: #0C4A6E;
     margin-bottom: 0.8rem;
@@ -330,20 +324,20 @@ description_zh: 掌握基础数据结构，实现编程卓越
   .module-content {
     color: #64748B;
     line-height: 1.6;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
   }
 
   .module-topics {
     list-style: none;
     padding: 0;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
   }
 
   .module-topics li {
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
     color: #475569;
-    font-size: 0.9rem;
+    font-size: 1rem;
     display: flex;
     align-items: flex-start;
     transition: all 0.3s ease;
