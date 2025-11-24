@@ -1,142 +1,852 @@
 ---
 layout: default
 title: About AIcoding
+title_zh: 关于 AIcoding
 description: Elite Programming Education by PhD Computer Scientists
+description_zh: 由计算机科学博士提供的精英编程教育
 ---
 
 <style>
+  /* Advanced Animations */
+  @keyframes gradientWave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-2deg); }
+    75% { transform: translateY(10px) rotate(2deg); }
+  }
+
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes shimmerGlow {
+    0%, 100% {
+      opacity: 0.3;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+      opacity: 0.6;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+
+  @keyframes diagonalSweep1 {
+    0% {
+      left: -150%;
+      top: -10px;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      left: 50%;
+      top: 50%;
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      left: 150%;
+      top: 110%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes diagonalSweep2 {
+    0% {
+      right: -150%;
+      bottom: -10px;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      right: 50%;
+      bottom: 50%;
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      right: 150%;
+      bottom: 110%;
+      opacity: 0;
+    }
+  }
+
+  /* About Hero - Ultra Premium */
   .about-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 4rem 2rem;
-    border-radius: 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 100%);
+    background-size: 300% 300%;
+    animation: gradientWave 10s ease infinite;
+    border-radius: 30px;
+    margin-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.4);
+  }
+
+  .about-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 15s linear infinite;
+    pointer-events: none;
+  }
+
+  .about-hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.15) 20%, transparent 60%);
+    transform: translate(-50%, -50%);
+    filter: blur(40px);
+    animation: shimmerGlow 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* Diagonal corner shimmer effect */
+  .about-hero .diagonal-shimmer-1,
+  .about-hero .diagonal-shimmer-2 {
+    position: absolute;
+    width: 150%;
+    height: 20px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(255,255,255,0.1) 20%,
+      rgba(255,255,255,0.3) 50%, 
+      rgba(255,255,255,0.1) 80%,
+      transparent 100%);
+    filter: blur(20px);
+    pointer-events: none;
+  }
+
+  .about-hero .diagonal-shimmer-1 {
+    top: -10px;
+    left: -150%;
+    transform: rotate(45deg);
+    animation: diagonalSweep1 8s ease-in-out infinite;
+  }
+
+  .about-hero .diagonal-shimmer-2 {
+    bottom: -10px;
+    right: -150%;
+    transform: rotate(-45deg);
+    animation: diagonalSweep2 8s ease-in-out infinite;
+    animation-delay: 4s;
+  }
+
+  .about-hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
     color: white;
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .about-hero p {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Mission Section - Premium Design */
+  .mission-section {
+    background: white;
+    padding: 4rem 3rem;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.8s ease-out;
+  }
+
+  .mission-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+    animation: shimmer 3s infinite;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1F2937;
+    margin-bottom: 2rem;
     text-align: center;
-    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+    width: 100%;
   }
 
-  .about-hero h1, .about-hero p {
-    color: white !important;
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 3px;
   }
 
-  .team-section {
-    background: #F9FAFB;
-    padding: 3rem;
-    border-radius: 15px;
-    margin: 3rem 0;
+  .mission-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #4B5563;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Values Section - Premium Cards */
+  .values-section {
+    background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+    padding: 5rem 3rem;
+    border-radius: 30px;
+    margin: 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .values-section::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 70%, rgba(102, 126, 234, 0.05), transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(236, 72, 153, 0.05), transparent 50%);
+    animation: pulse 15s ease-in-out infinite;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 3rem;
   }
 
   .value-card {
     background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
+    padding: 3rem;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.6s ease-out;
+  }
+
+  .value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    animation: shimmer 3s infinite;
   }
 
   .value-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.3);
+  }
+
+  .value-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .value-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1F2937;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .value-description {
+    color: #6B7280;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* Instructor Section - Premium Design */
+  .instructor-section {
+    background: white;
+    padding: 5rem 3rem;
+    border-radius: 30px;
+    margin: 5rem 0;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .instructor-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+    transform: scaleX(0);
+    animation: expand 2s ease-out forwards;
+  }
+
+  @keyframes expand {
+    to { transform: scaleX(1); }
+  }
+
+  .instructor-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 900px) {
+    .instructor-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  .instructor-image-container {
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .instructor-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .instructor-image-container::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 100%);
+    border-radius: 30px;
+    z-index: -1;
+    opacity: 0.6;
+    animation: gradientWave 8s ease infinite;
+  }
+
+  .instructor-info {
+    padding: 0 2rem;
+  }
+
+  .instructor-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+
+  .instructor-title {
+    font-size: 1.3rem;
+    color: #6B7280;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+
+  .instructor-bio {
+    color: #4B5563;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .instructor-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .highlight-badge {
+    background: linear-gradient(135deg, #EEF2FF 0%, #DDD6FE 100%);
+    color: #4F46E5;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(79, 70, 229, 0.1);
+    transition: all 0.3s;
+  }
+
+  .highlight-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
+  }
+
+  /* Success Stats - Premium */
+  .stats-section {
+    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+    border-radius: 30px;
+    padding: 5rem 3rem;
+    margin: 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    animation: shimmer 8s infinite;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 3rem;
+  }
+
+  .stat-item {
+    text-align: center;
+    animation: slideIn 1s ease-out;
+  }
+
+  .stat-number {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea 0%, #EC4899 50%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .stat-label {
+    color: #9CA3AF;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+  /* Philosophy Section - Premium */
+  .philosophy-section {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    padding: 4rem 3rem;
+    border-radius: 30px;
+    margin: 5rem 0;
+    border-left: 5px solid #F59E0B;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .philosophy-section::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  .philosophy-list {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .philosophy-item {
+    padding: 1.5rem 0;
+    color: #78350F;
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.3s;
+  }
+
+  .philosophy-item:hover {
+    transform: translateX(10px);
+  }
+
+  .philosophy-check {
+    color: #F59E0B;
+    font-weight: bold;
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  /* CTA Section - Premium */
+  .cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 100%);
+    background-size: 300% 300%;
+    animation: gradientWave 10s ease infinite;
+    border-radius: 30px;
+    padding: 5rem 3rem;
+    text-align: center;
+    color: white;
+    margin: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.4);
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 15s linear infinite;
+  }
+
+  .cta-section::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.15) 20%, transparent 60%);
+    transform: translate(-50%, -50%);
+    filter: blur(40px);
+    animation: shimmerGlow 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* Diagonal shimmer for CTA */
+  .cta-section .diagonal-shimmer-1,
+  .cta-section .diagonal-shimmer-2 {
+    position: absolute;
+    width: 150%;
+    height: 20px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(255,255,255,0.1) 20%,
+      rgba(255,255,255,0.3) 50%, 
+      rgba(255,255,255,0.1) 80%,
+      transparent 100%);
+    filter: blur(20px);
+    pointer-events: none;
+  }
+
+  .cta-section .diagonal-shimmer-1 {
+    top: -10px;
+    left: -150%;
+    transform: rotate(45deg);
+    animation: diagonalSweep1 8s ease-in-out infinite;
+  }
+
+  .cta-section .diagonal-shimmer-2 {
+    bottom: -10px;
+    right: -150%;
+    transform: rotate(-45deg);
+    animation: diagonalSweep2 8s ease-in-out infinite;
+    animation-delay: 4s;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: white !important;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-description {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    color: white !important;
+  }
+
+  .cta-button {
+    background: white;
+    color: #667eea;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .cta-button:hover::before {
+    left: 100%;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    color: #667eea;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .instructor-content {
+      grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+    }
   }
 </style>
 
 <div class="about-hero">
+  <div class="diagonal-shimmer-1"></div>
+  <div class="diagonal-shimmer-2"></div>
   <h1>
     <span class="en-content">About AIcoding Academy</span>
     <span class="zh-content">关于 AIcoding 学院</span>
   </h1>
-  <p style="font-size: 1.2rem; margin-top: 1rem;">
+  <p>
     <span class="en-content">An educational brand created by Ph.D. computer science majors dedicated to excellence</span>
     <span class="zh-content">由计算机科学博士创立的致力于卓越的教育品牌</span>
   </p>
 </div>
 
 <!-- Mission Statement -->
-<div style="background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); margin-bottom: 3rem;">
-  <h2 style="color: #1F2937; text-align: center; margin-bottom: 2rem;">
+<div class="mission-section">
+  <h2 class="section-title">
     <span class="en-content">Our Mission</span>
     <span class="zh-content">我们的使命</span>
   </h2>
-  <p style="font-size: 1.15rem; line-height: 1.8; color: #4B5563; text-align: center; max-width: 800px; margin: 0 auto;">
+  <p class="mission-text">
     <span class="en-content">AIcoding is an educational brand created by a group of Ph.D. computer science majors to provide premium tutoring and background improvement services to K-12 students. We bridge the gap between academic excellence and practical programming skills, preparing the next generation of tech innovators.</span>
     <span class="zh-content">AIcoding 是由一群计算机科学博士创立的教育品牌，为K-12学生提供优质的辅导和背景提升服务。我们在学术卓越与实践编程技能之间架起桥梁，培养下一代科技创新者。</span>
   </p>
 </div>
 
+<!-- Instructor Introduction -->
+<div class="instructor-section">
+  <h2 class="section-title">
+    <span class="en-content">Meet Our Lead Instructor</span>
+    <span class="zh-content">认识我们的首席讲师</span>
+  </h2>
+  
+  <div class="instructor-content">
+    <div class="instructor-image-container">
+      <img src="{{ site.baseurl }}/images/h.png" alt="H Teacher" class="instructor-image">
+    </div>
+    
+    <div class="instructor-info">
+      <h3 class="instructor-name">
+        <span class="en-content">Dr. H</span>
+        <span class="zh-content">H 老师</span>
+      </h3>
+      <p class="instructor-title">
+        <span class="en-content">Machine Learning Engineer & Research Scientist</span>
+        <span class="zh-content">机器学习工程师与科研研究员</span>
+      </p>
+      <p class="instructor-bio">
+        <span class="en-content">H is a machine learning engineer and research scientist with a Ph.D. in Computer Science. He was a research assistant in the Human-Computer Interaction Lab and has served as a teaching assistant for graduate-level computer science courses twice at Stony Brook University. His research interests include machine learning, deep learning, medical diagnosis through artificial intelligence, and Large Language Models. He has published academic papers eight times in top-tier conferences in the fields of machine learning and human-computer interaction (CHI, UIST, Ubicomp, etc.) and has won the best paper award twice. He has been invited multiple times to serve as a paper reviewer for CHI and UIST.</span>
+        <span class="zh-content">H老师是机器学习工程师和科研研究员，拥有美国计算机博士学位，曾任人机交互实验室研究助理。他两次任职石溪大学计算机研究生课助教。他的研究方向包括机器学习、深度学习、人工智能医学诊断和大语言模型。八次在计算机机器学习和人机交互顶会 (CHI, UIST, UBICOMP等) 发表学术论文并两次获得最佳论文奖。他曾多次被邀请作为CHI和UIST论文审稿人。</span>
+      </p>
+      <p class="instructor-bio">
+        <span class="en-content">With years of experience in both 1-on-1 and group instruction entirely in English, he is proficient in Python, Java, C++, AP Computer Science A, AP Computer Science Principles, object-oriented programming, data structures, algorithms, machine learning, artificial intelligence, and competition preparation for USACO, AMC/AIME, and USAAIO.</span>
+        <span class="zh-content">他有多年的1v1和1v多全英文教学经验，擅长Python、Java、C++、APCSA、APCSP、面向对象编程、数据结构、算法、机器学习、人工智能，以及USACO竞赛、AMC/AIME竞赛和USAAIO竞赛的培训。</span>
+      </p>
+      
+      <div class="instructor-highlights">
+        <span class="highlight-badge">Ph.D. Computer Science</span>
+        <span class="highlight-badge">8x Published Author</span>
+        <span class="highlight-badge">2x Best Paper Award</span>
+        <span class="highlight-badge">CHI & UIST Reviewer</span>
+        <span class="highlight-badge">ML/AI Expert</span>
+        <span class="highlight-badge">Competition Coach</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Our Values -->
-<div class="team-section">
-  <h2 style="text-align: center; color: #1F2937; margin-bottom: 3rem;">
+<div class="values-section">
+  <h2 class="section-title">
     <span class="en-content">What Sets Us Apart</span>
     <span class="zh-content">我们的独特之处</span>
   </h2>
   
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+  <div class="values-grid">
     <div class="value-card">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">🎓</div>
-      <h3 style="color: #1F2937; text-align: center; margin-bottom: 1rem;">
+      <div class="value-icon">🎓</div>
+      <h3 class="value-title">
         <span class="en-content">PhD-Level Expertise</span>
         <span class="zh-content">博士级专业知识</span>
       </h3>
-      <p style="color: #6B7280; text-align: center;">
+      <p class="value-description">
         <span class="en-content">Our instructors are PhD holders from top computer science programs, bringing cutting-edge knowledge to every lesson.</span>
         <span class="zh-content">我们的导师是来自顶尖计算机科学项目的博士，为每堂课带来前沿知识。</span>
       </p>
     </div>
     
     <div class="value-card">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">🏆</div>
-      <h3 style="color: #1F2937; text-align: center; margin-bottom: 1rem;">
+      <div class="value-icon">🏆</div>
+      <h3 class="value-title">
         <span class="en-content">Competition Success</span>
         <span class="zh-content">竞赛成就</span>
       </h3>
-      <p style="color: #6B7280; text-align: center;">
+      <p class="value-description">
         <span class="en-content">Proven track record in USACO, USAAIO, AMC, and other prestigious competitions with multiple students reaching Gold and Platinum levels.</span>
         <span class="zh-content">在USACO、USAAIO、AMC和其他知名竞赛中有着卓越的成绩，多名学生达到金牌和白金级别。</span>
       </p>
     </div>
     
     <div class="value-card">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">🎯</div>
-      <h3 style="color: #1F2937; text-align: center; margin-bottom: 1rem;">
+      <div class="value-icon">🎯</div>
+      <h3 class="value-title">
         <span class="en-content">Personalized Learning</span>
         <span class="zh-content">个性化学习</span>
       </h3>
-      <p style="color: #6B7280; text-align: center;">
+      <p class="value-description">
         <span class="en-content">Customized curriculum tailored to each student's goals, whether it's competition prep, college applications, or skill development.</span>
         <span class="zh-content">根据每个学生的目标定制课程，无论是竞赛准备、大学申请还是技能发展。</span>
       </p>
     </div>
     
     <div class="value-card">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">🌍</div>
-      <h3 style="color: #1F2937; text-align: center; margin-bottom: 1rem;">
+      <div class="value-icon">🌍</div>
+      <h3 class="value-title">
         <span class="en-content">Global Reach</span>
         <span class="zh-content">全球服务</span>
       </h3>
-      <p style="color: #6B7280; text-align: center;">
+      <p class="value-description">
         <span class="en-content">Supporting students from both the US and China with bilingual instruction and flexible scheduling across time zones.</span>
         <span class="zh-content">为美国和中国的学生提供双语教学和跨时区的灵活安排。</span>
       </p>
     </div>
     
     <div class="value-card">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">💼</div>
-      <h3 style="color: #1F2937; text-align: center; margin-bottom: 1rem;">
+      <div class="value-icon">💼</div>
+      <h3 class="value-title">
         <span class="en-content">Industry Connection</span>
         <span class="zh-content">行业联系</span>
       </h3>
-      <p style="color: #6B7280; text-align: center;">
+      <p class="value-description">
         <span class="en-content">Our instructors work at leading tech companies, bringing real-world experience and industry best practices to education.</span>
         <span class="zh-content">我们的导师在领先的科技公司工作，将实际经验和行业最佳实践带入教育。</span>
       </p>
     </div>
     
     <div class="value-card">
-      <div style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">📈</div>
-      <h3 style="color: #1F2937; text-align: center; margin-bottom: 1rem;">
+      <div class="value-icon">📈</div>
+      <h3 class="value-title">
         <span class="en-content">Proven Results</span>
         <span class="zh-content">成果验证</span>
       </h3>
-      <p style="color: #6B7280; text-align: center;">
+      <p class="value-description">
         <span class="en-content">95% success rate in competition advancement and AP exam scores, with many students receiving college recommendation letters.</span>
         <span class="zh-content">95%的竞赛晋级和AP考试成功率，许多学生获得大学推荐信。</span>
       </p>
@@ -144,54 +854,58 @@ description: Elite Programming Education by PhD Computer Scientists
   </div>
 </div>
 
-<!-- Student Success -->
-<div style="background: white; padding: 3rem; border-radius: 15px; margin: 3rem 0;">
-  <h2 style="text-align: center; color: #1F2937; margin-bottom: 2rem;">
+<!-- Student Success Stats -->
+<div class="stats-section">
+  <h2 class="section-title" style="color: white;">
     <span class="en-content">Student Success Stories</span>
     <span class="zh-content">学生成功故事</span>
   </h2>
   
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
-    <div>
-      <div style="font-size: 3rem; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">500+</div>
-      <p style="color: #6B7280; margin-top: 0.5rem;">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-number">500+</div>
+      <div class="stat-label">
         <span class="en-content">Students Taught</span>
         <span class="zh-content">教授学生</span>
-      </p>
+      </div>
     </div>
-    <div>
-      <div style="font-size: 3rem; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">50+</div>
-      <p style="color: #6B7280; margin-top: 0.5rem;">
+    
+    <div class="stat-item">
+      <div class="stat-number">50+</div>
+      <div class="stat-label">
         <span class="en-content">Competition Winners</span>
         <span class="zh-content">竞赛获奖者</span>
-      </p>
+      </div>
     </div>
-    <div>
-      <div style="font-size: 3rem; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">95%</div>
-      <p style="color: #6B7280; margin-top: 0.5rem;">
+    
+    <div class="stat-item">
+      <div class="stat-number">95%</div>
+      <div class="stat-label">
         <span class="en-content">AP Score 5 Rate</span>
         <span class="zh-content">AP 5分率</span>
-      </p>
+      </div>
     </div>
-    <div>
-      <div style="font-size: 3rem; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">100%</div>
-      <p style="color: #6B7280; margin-top: 0.5rem;">
+    
+    <div class="stat-item">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">
         <span class="en-content">College Acceptance</span>
         <span class="zh-content">大学录取率</span>
-      </p>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- Educational Philosophy -->
-<div style="background: #FEF3C7; padding: 2.5rem; border-radius: 15px; margin: 3rem 0; border-left: 4px solid #F59E0B;">
-  <h2 style="color: #92400E; margin-bottom: 1.5rem;">
+<div class="philosophy-section">
+  <h2 class="section-title" style="color: #92400E;">
     <span class="en-content">Our Educational Philosophy</span>
     <span class="zh-content">我们的教育理念</span>
   </h2>
-  <ul style="list-style: none; padding: 0;">
-    <li style="padding: 0.75rem 0; color: #78350F; display: flex; align-items: flex-start;">
-      <span style="color: #F59E0B; font-weight: bold; margin-right: 1rem;">✓</span>
+  
+  <ul class="philosophy-list">
+    <li class="philosophy-item">
+      <span class="philosophy-check">✓</span>
       <span>
         <strong class="en-content">Learning by Doing:</strong>
         <strong class="zh-content">实践学习：</strong>
@@ -199,8 +913,8 @@ description: Elite Programming Education by PhD Computer Scientists
         <span class="zh-content">从第一天起就通过真实项目和实际应用进行编程实践</span>
       </span>
     </li>
-    <li style="padding: 0.75rem 0; color: #78350F; display: flex; align-items: flex-start;">
-      <span style="color: #F59E0B; font-weight: bold; margin-right: 1rem;">✓</span>
+    <li class="philosophy-item">
+      <span class="philosophy-check">✓</span>
       <span>
         <strong class="en-content">Conceptual Understanding:</strong>
         <strong class="zh-content">概念理解：</strong>
@@ -208,8 +922,8 @@ description: Elite Programming Education by PhD Computer Scientists
         <span class="zh-content">深入理解算法和数据结构，而不仅仅是死记硬背</span>
       </span>
     </li>
-    <li style="padding: 0.75rem 0; color: #78350F; display: flex; align-items: flex-start;">
-      <span style="color: #F59E0B; font-weight: bold; margin-right: 1rem;">✓</span>
+    <li class="philosophy-item">
+      <span class="philosophy-check">✓</span>
       <span>
         <strong class="en-content">Competitive Edge:</strong>
         <strong class="zh-content">竞争优势：</strong>
@@ -217,8 +931,8 @@ description: Elite Programming Education by PhD Computer Scientists
         <span class="zh-content">培训学生在竞赛中脱颖而出，在大学申请中崭露头角</span>
       </span>
     </li>
-    <li style="padding: 0.75rem 0; color: #78350F; display: flex; align-items: flex-start;">
-      <span style="color: #F59E0B; font-weight: bold; margin-right: 1rem;">✓</span>
+    <li class="philosophy-item">
+      <span class="philosophy-check">✓</span>
       <span>
         <strong class="en-content">Lifelong Skills:</strong>
         <strong class="zh-content">终身技能：</strong>
@@ -229,18 +943,22 @@ description: Elite Programming Education by PhD Computer Scientists
   </ul>
 </div>
 
-<!-- CTA -->
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem; border-radius: 15px; text-align: center; color: white;">
-  <h2 style="color: white !important;">
-    <span class="en-content">Join the AIcoding Family</span>
-    <span class="zh-content">加入 AIcoding 大家庭</span>
-  </h2>
-  <p style="font-size: 1.1rem; margin: 1rem 0; color: white !important;">
-    <span class="en-content">Experience the difference that expert instruction makes</span>
-    <span class="zh-content">体验专家指导的不同之处</span>
-  </p>
-  <a href="{{ site.baseurl }}/contact.html" style="background: white; color: #667eea; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; display: inline-block; font-weight: 600; margin-top: 1rem;">
-    <span class="en-content">Get Started Today</span>
-    <span class="zh-content">立即开始</span>
-  </a>
+<!-- CTA Section -->
+<div class="cta-section">
+  <div class="diagonal-shimmer-1"></div>
+  <div class="diagonal-shimmer-2"></div>
+  <div class="cta-content">
+    <h2 class="cta-title">
+      <span class="en-content">Join the AIcoding Family</span>
+      <span class="zh-content">加入 AIcoding 大家庭</span>
+    </h2>
+    <p class="cta-description">
+      <span class="en-content">Experience the difference that expert instruction makes</span>
+      <span class="zh-content">体验专家指导的不同之处</span>
+    </p>
+    <a href="{{ site.baseurl }}/contact.html" class="cta-button">
+      <span class="en-content">Get Started Today</span>
+      <span class="zh-content">立即开始</span>
+    </a>
+  </div>
 </div>
