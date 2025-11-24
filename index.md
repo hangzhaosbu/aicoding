@@ -743,17 +743,17 @@ description_zh: 为未来科技领袖提供的精英编程教育
   
   <div class="competition-badges">
     <span class="badge badge-gold">
-      <span class="en-content">🥇 USACO Platinum</span>
-      <span class="zh-content">🥇 USACO 白金</span>
+      <span class="en-content">🥇 USACO</span>
+      <span class="zh-content">🥇 USACO</span>
     </span>
     <span class="badge">USAAIO</span>
+    <span class="badge">Kaggle</span>
     <span class="badge">AMC 8/10/12</span>
     <span class="badge">AIME</span>
+    <span class="badge">USAMO</span>
     <span class="badge">ACSL</span>
-    <span class="badge">Kaggle</span>
-    <span class="badge">Google Code Jam</span>
-    <span class="badge">AP CSA (5)</span>
-    <span class="badge">IOI Training</span>
+    <span class="badge">WorldQuant</span>
+    <span class="badge">HiMCM</span>
   </div>
 </section>
 
@@ -761,7 +761,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
 <section class="stats-section">
   <div class="stats-grid">
     <div class="stat-item">
-      <div class="stat-number">50+</div>
+      <div class="stat-number">500+</div>
       <div class="stat-label">
         <span class="en-content">Students</span>
         <span class="zh-content">学生</span>
@@ -769,7 +769,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
     </div>
     
     <div class="stat-item">
-      <div class="stat-number">90%</div>
+      <div class="stat-number">95%</div>
       <div class="stat-label">
         <span class="en-content">Success Rate</span>
         <span class="zh-content">成功率</span>
@@ -777,7 +777,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
     </div>
     
     <div class="stat-item">
-      <div class="stat-number">20+</div>
+      <div class="stat-number">200+</div>
       <div class="stat-label">
         <span class="en-content">Awards Won</span>
         <span class="zh-content">获得奖项</span>
@@ -785,7 +785,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
     </div>
     
     <div class="stat-item">
-      <div class="stat-number">5+</div>
+      <div class="stat-number">15+</div>
       <div class="stat-label">
         <span class="en-content">Years Experience</span>
         <span class="zh-content">年经验</span>
