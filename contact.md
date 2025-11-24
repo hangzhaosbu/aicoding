@@ -1,282 +1,34 @@
 ---
 layout: default
 title: Contact Us
+title_zh: 联系我们
 description: Get in Touch with AIcoding Academy
+description_zh: 与 AIcoding 学院取得联系
 ---
 
 <style>
-  /* Contact Page Styles */
-  .contact-hero {
-    text-align: center;
-    padding: 3rem 0;
-    margin-bottom: 3rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    border-radius: 20px;
+  /* Advanced Animations */
+  @keyframes gradientWave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
-  .contact-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-2deg); }
+    75% { transform: translateY(10px) rotate(2deg); }
   }
 
-  .contact-subtitle {
-    font-size: 1.2rem;
-    color: #6B7280;
-  }
-
-  .contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  /* Contact Form */
-  .contact-form-section {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-    border: 1px solid #E5E7EB;
-  }
-
-  .form-title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #1F2937;
-    margin-bottom: 1.5rem;
-  }
-
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-
-  .form-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #4B5563;
-    font-weight: 500;
-  }
-
-  .form-input, .form-textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #D1D5DB;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.3s;
-    font-family: inherit;
-  }
-
-  .form-input:focus, .form-textarea:focus {
-    outline: none;
-    border-color: #4F46E5;
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
-  }
-
-  .form-textarea {
-    min-height: 120px;
-    resize: vertical;
-  }
-
-  .form-select {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #D1D5DB;
-    border-radius: 8px;
-    font-size: 1rem;
-    background: white;
-    cursor: pointer;
-  }
-
-  .submit-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    width: 100%;
-  }
-
-  .submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-  }
-
-  /* Contact Info Section */
-  .contact-info-section {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-    border: 1px solid #E5E7EB;
-  }
-
-  .info-title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #1F2937;
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-method {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #F9FAFB;
-    border-radius: 12px;
-    transition: all 0.3s;
-  }
-
-  .contact-method:hover {
-    background: #F3F4F6;
-    transform: translateX(5px);
-  }
-
-  .contact-icon {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin-right: 1.5rem;
-    flex-shrink: 0;
-  }
-
-  .contact-details h3 {
-    color: #1F2937;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-
-  .contact-details p {
-    color: #6B7280;
-    margin: 0;
-    font-size: 1.1rem;
-  }
-
-  .contact-details .action-link {
-    color: #4F46E5;
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    margin-top: 0.5rem;
-  }
-
-  .contact-details .action-link:hover {
-    text-decoration: underline;
-  }
-
-  /* Quick Contact Cards */
-  .quick-contact-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin: 3rem 0;
-  }
-
-  .quick-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    border: 2px solid #E5E7EB;
-    transition: all 0.3s;
-  }
-
-  .quick-card:hover {
-    border-color: #4F46E5;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .quick-card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .quick-card-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #1F2937;
-    margin-bottom: 0.5rem;
-  }
-
-  .quick-card-content {
-    color: #6B7280;
-    line-height: 1.6;
-  }
-
-  /* FAQ Section */
-  .faq-section {
-    background: #F9FAFB;
-    padding: 3rem;
-    border-radius: 15px;
-    margin: 3rem 0;
-  }
-
-  .faq-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #1F2937;
-    margin-bottom: 2rem;
-  }
-
-  .faq-item {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: 1px solid #E5E7EB;
-  }
-
-  .faq-question {
-    font-weight: 600;
-    color: #1F2937;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-  }
-
-  .faq-answer {
-    color: #6B7280;
-    line-height: 1.6;
-  }
-
-  /* Response Message */
-  .response-message {
-    background: #ECFDF5;
-    border: 1px solid #10B981;
-    color: #065F46;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    display: none;
-  }
-
-  .response-message.show {
-    display: block;
-    animation: slideIn 0.3s ease;
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
   }
 
   @keyframes slideIn {
     from {
       opacity: 0;
-      transform: translateY(-10px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -284,49 +36,656 @@ description: Get in Touch with AIcoding Academy
     }
   }
 
-  /* Office Hours */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes shimmerGlow {
+    0%, 100% {
+      opacity: 0.3;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+      opacity: 0.6;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+
+  @keyframes diagonalSweep1 {
+    0% {
+      left: -150%;
+      top: -10px;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      left: 50%;
+      top: 50%;
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      left: 150%;
+      top: 110%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes diagonalSweep2 {
+    0% {
+      right: -150%;
+      bottom: -10px;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      right: 50%;
+      bottom: 50%;
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      right: 150%;
+      bottom: 110%;
+      opacity: 0;
+    }
+  }
+
+  /* Contact Hero - Ultra Premium */
+  .contact-hero {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 100%);
+    background-size: 300% 300%;
+    animation: gradientWave 10s ease infinite;
+    border-radius: 30px;
+    margin-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.4);
+  }
+
+  .contact-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 15s linear infinite;
+    pointer-events: none;
+  }
+
+  .contact-hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.15) 20%, transparent 60%);
+    transform: translate(-50%, -50%);
+    filter: blur(40px);
+    animation: shimmerGlow 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* Diagonal shimmer effects */
+  .contact-hero .diagonal-shimmer-1,
+  .contact-hero .diagonal-shimmer-2 {
+    position: absolute;
+    width: 150%;
+    height: 20px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(255,255,255,0.1) 20%,
+      rgba(255,255,255,0.3) 50%, 
+      rgba(255,255,255,0.1) 80%,
+      transparent 100%);
+    filter: blur(20px);
+    pointer-events: none;
+  }
+
+  .contact-hero .diagonal-shimmer-1 {
+    top: -10px;
+    left: -150%;
+    transform: rotate(45deg);
+    animation: diagonalSweep1 8s ease-in-out infinite;
+  }
+
+  .contact-hero .diagonal-shimmer-2 {
+    bottom: -10px;
+    right: -150%;
+    transform: rotate(-45deg);
+    animation: diagonalSweep2 8s ease-in-out infinite;
+    animation-delay: 4s;
+  }
+
+  .contact-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .contact-subtitle {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Quick Contact Cards - Premium */
+  .quick-contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin: 5rem 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .quick-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.6s ease-out;
+    border: 1px solid rgba(229, 231, 235, 0.5);
+  }
+
+  .quick-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    animation: shimmer 3s infinite;
+  }
+
+  .quick-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.3);
+    border-color: #667eea;
+  }
+
+  .quick-card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .quick-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 1rem;
+  }
+
+  .quick-card-content {
+    color: #6B7280;
+    line-height: 1.6;
+    font-size: 1.05rem;
+  }
+
+  /* Main Contact Container */
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  @media (max-width: 968px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Contact Form - Premium */
+  .contact-form-section {
+    background: white;
+    padding: 3.5rem;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(229, 231, 235, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.8s ease-out;
+  }
+
+  .contact-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+    animation: shimmer 3s infinite;
+  }
+
+  .form-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 2rem;
+  }
+
+  .form-label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #4B5563;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+
+  .form-label .required {
+    color: #EF4444;
+  }
+
+  .form-input, .form-textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    background: rgba(249, 250, 251, 0.5);
+  }
+
+  .form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    background: white;
+  }
+
+  .form-textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  .form-select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: rgba(249, 250, 251, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .form-select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    background: white;
+  }
+
+  .submit-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.2rem 3rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+  }
+
+  .submit-btn:hover::before {
+    left: 100%;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* Success/Error Messages */
+  .message {
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    display: none;
+    animation: slideIn 0.3s ease;
+    font-weight: 500;
+  }
+
+  .message.success {
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+    border: 2px solid #10B981;
+    color: #065F46;
+  }
+
+  .message.error {
+    background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
+    border: 2px solid #EF4444;
+    color: #991B1B;
+  }
+
+  .message.show {
+    display: block;
+  }
+
+  /* Contact Info Section - Premium */
+  .contact-info-section {
+    background: white;
+    padding: 3.5rem;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(229, 231, 235, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.8s ease-out;
+    animation-delay: 0.2s;
+  }
+
+  .info-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .contact-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-method::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.05), transparent);
+    transition: left 0.5s;
+  }
+
+  .contact-method:hover::before {
+    left: 100%;
+  }
+
+  .contact-method:hover {
+    transform: translateX(10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+    background: linear-gradient(135deg, white 0%, #EEF2FF 100%);
+  }
+
+  .contact-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-right: 2rem;
+    flex-shrink: 0;
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .contact-details h3 {
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .contact-details p {
+    color: #6B7280;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .contact-details .action-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.75rem;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+  }
+
+  .contact-details .action-link:hover {
+    color: #764ba2;
+    transform: translateX(5px);
+  }
+
+  /* Office Hours - Premium */
   .office-hours {
-    background: #EEF2FF;
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #EEF2FF 0%, #DDD6FE 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+    border: 2px solid rgba(139, 92, 246, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .office-hours::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+    animation: shimmer 8s infinite;
   }
 
   .office-hours h3 {
     color: #4F46E5;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
   }
 
   .hours-list {
     list-style: none;
+    position: relative;
+    z-index: 1;
   }
 
   .hours-list li {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     color: #4B5563;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .hours-list li:hover {
+    padding-left: 1rem;
+    color: #1F2937;
+  }
+
+  .hours-list li:last-child {
+    border-bottom: none;
+  }
+
+  /* FAQ Section - Premium */
+  .faq-section {
+    background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+    padding: 5rem 3rem;
+    border-radius: 30px;
+    margin: 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .faq-section::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 70%, rgba(102, 126, 234, 0.05), transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(236, 72, 153, 0.05), transparent 50%);
+    animation: pulse 15s ease-in-out infinite;
+  }
+
+  .faq-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1F2937;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .faq-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 3px;
+  }
+
+  .faq-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    border-left: 4px solid #667eea;
+  }
+
+  .faq-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .faq-question {
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .faq-answer {
+    color: #6B7280;
+    line-height: 1.8;
+    font-size: 1.05rem;
   }
 
   /* Responsive Design */
   @media (max-width: 768px) {
-    .contact-container {
-      grid-template-columns: 1fr;
-    }
-
     .contact-title {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
     .quick-contact-cards {
       grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+
+    .faq-title {
+      font-size: 2rem;
     }
   }
 </style>
 
 <!-- Contact Hero -->
 <div class="contact-hero">
+  <div class="diagonal-shimmer-1"></div>
+  <div class="diagonal-shimmer-2"></div>
   <h1 class="contact-title">
     <span class="en-content">Let's Start Your Coding Journey</span>
     <span class="zh-content">开启您的编程之旅</span>
@@ -397,26 +756,31 @@ description: Get in Touch with AIcoding Academy
       <span class="zh-content">发送消息</span>
     </h2>
     
-    <div id="responseMessage" class="response-message">
-      <span class="en-content">Thank you for your message! We'll get back to you soon.</span>
-      <span class="zh-content">感谢您的消息！我们会尽快回复您。</span>
+    <div id="successMessage" class="message success">
+      <span class="en-content">✅ Thank you for your message! We'll get back to you soon.</span>
+      <span class="zh-content">✅ 感谢您的消息！我们会尽快回复您。</span>
     </div>
     
-    <form id="contactForm">
+    <div id="errorMessage" class="message error">
+      <span class="en-content">❌ There was an error sending your message. Please try again.</span>
+      <span class="zh-content">❌ 发送消息时出错。请重试。</span>
+    </div>
+    
+    <form id="contactForm" action="https://formspree.io/f/xanyowdv" method="POST">
       <div class="form-group">
         <label class="form-label" for="name">
-          <span class="en-content">Full Name *</span>
-          <span class="zh-content">姓名 *</span>
+          <span class="en-content">Full Name <span class="required">*</span></span>
+          <span class="zh-content">姓名 <span class="required">*</span></span>
         </label>
-        <input type="text" id="name" class="form-input" required>
+        <input type="text" id="name" name="name" class="form-input" required>
       </div>
       
       <div class="form-group">
         <label class="form-label" for="email">
-          <span class="en-content">Email Address *</span>
-          <span class="zh-content">电子邮箱 *</span>
+          <span class="en-content">Email Address <span class="required">*</span></span>
+          <span class="zh-content">电子邮箱 <span class="required">*</span></span>
         </label>
-        <input type="email" id="email" class="form-input" required>
+        <input type="email" id="email" name="email" class="form-input" required>
       </div>
       
       <div class="form-group">
@@ -424,7 +788,7 @@ description: Get in Touch with AIcoding Academy
           <span class="en-content">Phone Number</span>
           <span class="zh-content">电话号码</span>
         </label>
-        <input type="tel" id="phone" class="form-input">
+        <input type="tel" id="phone" name="phone" class="form-input">
       </div>
       
       <div class="form-group">
@@ -432,49 +796,32 @@ description: Get in Touch with AIcoding Academy
           <span class="en-content">Course Interest</span>
           <span class="zh-content">感兴趣的课程</span>
         </label>
-        <select id="course" class="form-select">
+        <select id="course" name="course" class="form-select">
           <option value="">
             <span class="en-content">Select a course...</span>
             <span class="zh-content">选择课程...</span>
           </option>
-          <option value="python">
-            <span class="en-content">Python Programming</span>
-            <span class="zh-content">Python编程</span>
-          </option>
-          <option value="java">
-            <span class="en-content">Java Programming</span>
-            <span class="zh-content">Java编程</span>
-          </option>
-          <option value="cpp">
-            <span class="en-content">C++ Programming</span>
-            <span class="zh-content">C++编程</span>
-          </option>
-          <option value="usaco">
-            <span class="en-content">USACO Prep</span>
-            <span class="zh-content">USACO准备</span>
-          </option>
+          <option value="python">Python Programming</option>
+          <option value="java">Java Programming</option>
+          <option value="cpp">C++ Programming</option>
+          <option value="usaco">USACO Prep</option>
           <option value="apcsa">AP Computer Science A</option>
-          <option value="ml">
-            <span class="en-content">Machine Learning & AI</span>
-            <span class="zh-content">机器学习与人工智能</span>
-          </option>
-          <option value="other">
-            <span class="en-content">Other / Custom Program</span>
-            <span class="zh-content">其他/定制课程</span>
-          </option>
+          <option value="apcsp">AP Computer Science Principles</option>
+          <option value="ml">Machine Learning & AI</option>
+          <option value="other">Other / Custom Program</option>
         </select>
       </div>
       
       <div class="form-group">
         <label class="form-label" for="message">
-          <span class="en-content">Message *</span>
-          <span class="zh-content">留言 *</span>
+          <span class="en-content">Message <span class="required">*</span></span>
+          <span class="zh-content">留言 <span class="required">*</span></span>
         </label>
-        <textarea id="message" class="form-textarea" required 
+        <textarea id="message" name="message" class="form-textarea" required 
           placeholder="Tell us about your goals and how we can help..."></textarea>
       </div>
       
-      <button type="submit" class="submit-btn">
+      <button type="submit" class="submit-btn" id="submitBtn">
         <span class="en-content">Send Message</span>
         <span class="zh-content">发送消息</span>
       </button>
@@ -517,22 +864,6 @@ description: Get in Touch with AIcoding Academy
           <span class="en-content">Add on WeChat →</span>
           <span class="zh-content">添加微信 →</span>
         </span>
-      </div>
-    </div>
-    
-    <!-- Email -->
-    <div class="contact-method">
-      <div class="contact-icon">✉️</div>
-      <div class="contact-details">
-        <h3>
-          <span class="en-content">Email</span>
-          <span class="zh-content">邮箱</span>
-        </h3>
-        <p>hangzhao2021@gmail.com</p>
-        <a href="mailto:hangzhao2021@gmail.com" class="action-link">
-          <span class="en-content">Send Email →</span>
-          <span class="zh-content">发送邮件 →</span>
-        </a>
       </div>
     </div>
     
@@ -625,22 +956,57 @@ description: Get in Touch with AIcoding Academy
 </div>
 
 <script>
-  // Form submission handler
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
+  // Form submission handler with Formspree
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const successMessage = document.getElementById('successMessage');
+  const errorMessage = document.getElementById('errorMessage');
+  
+  form.addEventListener('submit', async function(e) {
     e.preventDefault();
     
-    // Show success message
-    const message = document.getElementById('responseMessage');
-    message.classList.add('show');
+    // Disable submit button
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="en-content">Sending...</span><span class="zh-content">发送中...</span>';
     
-    // Reset form
-    this.reset();
+    // Get form data
+    const formData = new FormData(form);
     
-    // Hide message after 5 seconds
-    setTimeout(() => {
-      message.classList.remove('show');
-    }, 5000);
+    try {
+      // Send to Formspree
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        // Show success message
+        successMessage.classList.add('show');
+        errorMessage.classList.remove('show');
+        
+        // Reset form
+        form.reset();
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          successMessage.classList.remove('show');
+        }, 5000);
+      } else {
+        // Show error message
+        errorMessage.classList.add('show');
+        successMessage.classList.remove('show');
+      }
+    } catch (error) {
+      // Show error message
+      errorMessage.classList.add('show');
+      successMessage.classList.remove('show');
+    } finally {
+      // Re-enable submit button
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<span class="en-content">Send Message</span><span class="zh-content">发送消息</span>';
+    }
   });
 </script>
-
-
