@@ -729,8 +729,8 @@ description_zh: 与 AIcoding 学院取得联系
       <span class="zh-content">全球服务</span>
     </h3>
     <p class="quick-card-content">
-      <span class="en-content">Supporting students from US, Canada & China</span>
-      <span class="zh-content">为美国，加拿大和中国的学生提供支持</span>
+      <span class="en-content">Supporting students from US & China</span>
+      <span class="zh-content">为美国和中国的学生提供支持</span>
     </p>
   </div>
   
@@ -814,14 +814,38 @@ description_zh: 与 AIcoding 学院取得联系
             <span class="en-content">Select a course...</span>
             <span class="zh-content">选择课程...</span>
           </option>
-          <option value="python">Python Programming</option>
-          <option value="java">Java Programming</option>
-          <option value="cpp">C++ Programming</option>
-          <option value="usaco">USACO Prep</option>
-          <option value="apcsa">AP Computer Science A</option>
-          <option value="apcsp">AP Computer Science Principles</option>
-          <option value="ml">Machine Learning & AI</option>
-          <option value="other">Other / Custom Program</option>
+          <option value="python">
+            <span class="en-content">Python Programming</span>
+            <span class="zh-content">Python 编程</span>
+          </option>
+          <option value="java">
+            <span class="en-content">Java Programming</span>
+            <span class="zh-content">Java 编程</span>
+          </option>
+          <option value="cpp">
+            <span class="en-content">C++ Programming</span>
+            <span class="zh-content">C++ 编程</span>
+          </option>
+          <option value="usaco">
+            <span class="en-content">USACO Prep</span>
+            <span class="zh-content">USACO 准备</span>
+          </option>
+          <option value="apcsa">
+            <span class="en-content">AP Computer Science A</span>
+            <span class="zh-content">AP 计算机科学 A</span>
+          </option>
+          <option value="apcsp">
+            <span class="en-content">AP Computer Science Principles</span>
+            <span class="zh-content">AP 计算机科学原理</span>
+          </option>
+          <option value="ml">
+            <span class="en-content">Machine Learning & AI</span>
+            <span class="zh-content">机器学习与人工智能</span>
+          </option>
+          <option value="other">
+            <span class="en-content">Other / Custom Program</span>
+            <span class="zh-content">其他 / 定制课程</span>
+          </option>
         </select>
       </div>
       
@@ -831,7 +855,9 @@ description_zh: 与 AIcoding 学院取得联系
           <span class="zh-content">留言 <span class="required">*</span></span>
         </label>
         <textarea id="message" name="message" class="form-textarea" required 
-          placeholder="Tell us about your goals and how we can help..."></textarea>
+          placeholder="Tell us about your goals and how we can help..."
+          data-placeholder-en="Tell us about your goals and how we can help..."
+          data-placeholder-zh="请告诉我们您的目标以及我们如何帮助您..."></textarea>
       </div>
       
       <button type="submit" class="submit-btn" id="submitBtn">
@@ -978,6 +1004,55 @@ description_zh: 与 AIcoding 学院取得联系
     emailjs.init("AoNX_tjdsa7y4pIhr"); 
   })();
   
+  // Language switching functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to update select options based on language
+    function updateSelectOptions() {
+      const selects = document.querySelectorAll('select');
+      const isZh = document.body.classList.contains('zh-active');
+      
+      selects.forEach(select => {
+        const options = select.querySelectorAll('option');
+        options.forEach(option => {
+          const enText = option.querySelector('.en-content')?.textContent;
+          const zhText = option.querySelector('.zh-content')?.textContent;
+          
+          if (enText && zhText) {
+            option.textContent = isZh ? zhText : enText;
+          }
+        });
+      });
+    }
+    
+    // Function to update placeholder based on language
+    function updatePlaceholders() {
+      const isZh = document.body.classList.contains('zh-active');
+      const textarea = document.getElementById('message');
+      
+      if (textarea) {
+        const enPlaceholder = textarea.getAttribute('data-placeholder-en');
+        const zhPlaceholder = textarea.getAttribute('data-placeholder-zh');
+        textarea.placeholder = isZh ? zhPlaceholder : enPlaceholder;
+      }
+    }
+    
+    // Initial setup
+    updateSelectOptions();
+    updatePlaceholders();
+    
+    // Listen for language changes (assuming you have a language toggle)
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.attributeName === 'class') {
+          updateSelectOptions();
+          updatePlaceholders();
+        }
+      });
+    });
+    
+    observer.observe(document.body, { attributes: true });
+  });
+  
   // Form submission handler with EmailJS
   const form = document.getElementById('contactForm');
   const submitBtn = document.getElementById('submitBtn');
@@ -1057,4 +1132,3 @@ ${form.message.value}
     }
   });
 </script>
-
