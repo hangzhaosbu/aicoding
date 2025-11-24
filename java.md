@@ -676,7 +676,7 @@ description_zh: 掌握Java面向对象编程
       <div class="info-bar-icon">👥</div>
       <div class="info-bar-content">
         <h4><span class="en-content">Age Group</span><span class="zh-content">年龄组</span></h4>
-        <p>11-18 Years</p>
+        <p>10-18 Years</p>
       </div>
     </div>
     
