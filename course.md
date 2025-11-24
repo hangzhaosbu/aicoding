@@ -225,6 +225,7 @@ description_zh: 全方位编程课程，适合各个水平
     height: 200%;
     background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
     animation: rotate 15s linear infinite;
+    pointer-events: none;
   }
 
   .page-header-custom::after {
@@ -241,56 +242,81 @@ description_zh: 全方位编程课程，适合各个水平
     pointer-events: none;
   }
 
-  /* Diagonal corner shimmer effect */
+  /* Diagonal corner shimmer effect - improved */
   .page-header-custom .diagonal-shimmer-1,
   .page-header-custom .diagonal-shimmer-2 {
     position: absolute;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, 
-      transparent 40%, 
-      rgba(255,255,255,0.2) 45%, 
-      rgba(255,255,255,0.4) 50%, 
-      rgba(255,255,255,0.2) 55%, 
-      transparent 60%);
-    animation: diagonalSweep 6s ease-in-out infinite;
+    width: 150%;
+    height: 20px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(255,255,255,0.1) 20%,
+      rgba(255,255,255,0.3) 50%, 
+      rgba(255,255,255,0.1) 80%,
+      transparent 100%);
+    filter: blur(20px);
     pointer-events: none;
   }
 
   .page-header-custom .diagonal-shimmer-1 {
-    top: -100%;
-    left: -100%;
+    top: -10px;
+    left: -150%;
+    transform: rotate(45deg);
+    animation: diagonalSweep1 8s ease-in-out infinite;
   }
 
   .page-header-custom .diagonal-shimmer-2 {
-    bottom: -100%;
-    right: -100%;
-    animation-delay: 3s;
-    background: linear-gradient(-45deg, 
-      transparent 40%, 
-      rgba(255,255,255,0.2) 45%, 
-      rgba(255,255,255,0.4) 50%, 
-      rgba(255,255,255,0.2) 55%, 
-      transparent 60%);
+    bottom: -10px;
+    right: -150%;
+    transform: rotate(-45deg);
+    animation: diagonalSweep2 8s ease-in-out infinite;
+    animation-delay: 4s;
   }
 
-  @keyframes diagonalSweep {
+  @keyframes diagonalSweep1 {
     0% {
-      transform: translate(-50%, -50%);
+      left: -150%;
+      top: -10px;
       opacity: 0;
     }
-    20% {
+    10% {
       opacity: 1;
     }
     50% {
-      transform: translate(25%, 25%);
-      opacity: 0.8;
+      left: 50%;
+      top: 50%;
+      opacity: 1;
     }
-    80% {
-      opacity: 0;
+    90% {
+      opacity: 1;
     }
     100% {
-      transform: translate(100%, 100%);
+      left: 150%;
+      top: 110%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes diagonalSweep2 {
+    0% {
+      right: -150%;
+      bottom: -10px;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      right: 50%;
+      bottom: 50%;
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      right: 150%;
+      bottom: 110%;
       opacity: 0;
     }
   }
@@ -827,6 +853,7 @@ description_zh: 全方位编程课程，适合各个水平
     height: 200%;
     background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
     animation: rotate 15s linear infinite;
+    pointer-events: none;
   }
 
   .cta-section::after {
@@ -843,56 +870,81 @@ description_zh: 全方位编程课程，适合各个水平
     pointer-events: none;
   }
 
-  /* Diagonal corner shimmer effect */
+  /* Diagonal corner shimmer effect - improved */
   .cta-section .diagonal-shimmer-1,
   .cta-section .diagonal-shimmer-2 {
     position: absolute;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, 
-      transparent 40%, 
-      rgba(255,255,255,0.2) 45%, 
-      rgba(255,255,255,0.4) 50%, 
-      rgba(255,255,255,0.2) 55%, 
-      transparent 60%);
-    animation: diagonalSweep 6s ease-in-out infinite;
+    width: 150%;
+    height: 20px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(255,255,255,0.1) 20%,
+      rgba(255,255,255,0.3) 50%, 
+      rgba(255,255,255,0.1) 80%,
+      transparent 100%);
+    filter: blur(20px);
     pointer-events: none;
   }
 
   .cta-section .diagonal-shimmer-1 {
-    top: -100%;
-    left: -100%;
+    top: -10px;
+    left: -150%;
+    transform: rotate(45deg);
+    animation: diagonalSweep1 8s ease-in-out infinite;
   }
 
   .cta-section .diagonal-shimmer-2 {
-    bottom: -100%;
-    right: -100%;
-    animation-delay: 3s;
-    background: linear-gradient(-45deg, 
-      transparent 40%, 
-      rgba(255,255,255,0.2) 45%, 
-      rgba(255,255,255,0.4) 50%, 
-      rgba(255,255,255,0.2) 55%, 
-      transparent 60%);
+    bottom: -10px;
+    right: -150%;
+    transform: rotate(-45deg);
+    animation: diagonalSweep2 8s ease-in-out infinite;
+    animation-delay: 4s;
   }
 
-  @keyframes diagonalSweep {
+  @keyframes diagonalSweep1 {
     0% {
-      transform: translate(-50%, -50%);
+      left: -150%;
+      top: -10px;
       opacity: 0;
     }
-    20% {
+    10% {
       opacity: 1;
     }
     50% {
-      transform: translate(25%, 25%);
-      opacity: 0.8;
+      left: 50%;
+      top: 50%;
+      opacity: 1;
     }
-    80% {
-      opacity: 0;
+    90% {
+      opacity: 1;
     }
     100% {
-      transform: translate(100%, 100%);
+      left: 150%;
+      top: 110%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes diagonalSweep2 {
+    0% {
+      right: -150%;
+      bottom: -10px;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      right: 50%;
+      bottom: 50%;
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      right: 150%;
+      bottom: 110%;
       opacity: 0;
     }
   }
