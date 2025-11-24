@@ -206,9 +206,9 @@ description_zh: 全方位编程课程，适合各个水平
     justify-content: center;
     align-items: center;
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 100%);
     background-size: 300% 300%;
-    animation: gradientWave 12s ease infinite;
+    animation: gradientWave 10s ease infinite;
     border-radius: 30px;
     margin-bottom: 5rem;
     position: relative;
@@ -219,13 +219,12 @@ description_zh: 全方位编程课程，适合各个水平
   .page-header-custom::before {
     content: '';
     position: absolute;
+    top: -50%;
+    right: -50%;
     width: 200%;
     height: 200%;
-    top: -50%;
-    left: -50%;
-    background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1), transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08), transparent 50%);
-    animation: pulse 8s ease-in-out infinite;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 15s linear infinite;
   }
 
   .page-title {
@@ -620,9 +619,21 @@ description_zh: 全方位编程课程，适合各个水平
   /* Competition Grid - Special Design */
   .competition-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
+  }
+
+  @media (max-width: 1200px) {
+    .competition-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .competition-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   .competition-card {
