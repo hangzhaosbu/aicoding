@@ -130,35 +130,24 @@ description_zh: 从基础到高级的完整Python编程之旅
     animation: slideIn 1s ease-out 0.2s backwards;
   }
 
-  /* Course Info Grid - Premium Layout */
-  .course-info-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    margin-bottom: 4rem;
+  /* Course Info Grid - Premium Full Width Layout */
+  .course-container {
     max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding: 0 2rem;
-  }
-
-  @media (max-width: 968px) {
-    .course-info-grid {
-      grid-template-columns: 1fr;
-    }
   }
 
   /* Course Content Section - Enhanced */
   .course-content-section {
     background: white;
-    padding: 3rem;
+    padding: 3.5rem;
     border-radius: 25px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(229, 231, 235, 0.5);
     position: relative;
     overflow: hidden;
     animation: slideIn 0.8s ease-out;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
   .course-content-section::before {
@@ -260,99 +249,92 @@ description_zh: 从基础到高级的完整Python编程之旅
   }
 
   /* Course Sidebar - Premium Style */
-  .course-sidebar {
-    position: sticky;
-    top: 2rem;
-    height: fit-content;
-  }
-
-  .info-card {
-    background: white;
+  .info-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+    background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
     padding: 2.5rem;
     border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(229, 231, 235, 0.5);
-    margin-bottom: 2rem;
-    position: relative;
-    overflow: hidden;
-    animation: slideIn 0.8s ease-out 0.2s backwards;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   }
 
-  .info-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-    animation: shimmer 3s infinite;
+  @media (max-width: 968px) {
+    .info-bar {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
-  .info-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 2rem;
+  @media (max-width: 640px) {
+    .info-bar {
+      grid-template-columns: 1fr;
+    }
   }
 
-  .info-item {
+  .info-bar-item {
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
-    border-radius: 15px;
-    transition: all 0.3s ease;
+    gap: 1rem;
   }
 
-  .info-item:hover {
-    transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
-    background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
-  }
-
-  .info-item:last-child {
-    margin-bottom: 0;
-  }
-
-  .info-icon {
-    font-size: 2rem;
-    margin-right: 1rem;
+  .info-bar-icon {
+    font-size: 2.5rem;
     animation: pulse 3s ease-in-out infinite;
   }
 
-  .info-content h4 {
+  .info-bar-content h4 {
     font-size: 0.9rem;
     color: #6B7280;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.3rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-weight: 600;
   }
 
-  .info-content p {
-    font-size: 1.1rem;
+  .info-bar-content p {
+    font-size: 1.2rem;
     color: #1F2937;
     font-weight: 700;
   }
 
-  /* Enroll Section - Premium CTA */
-  .enroll-section {
-    text-align: center;
-    padding: 2.5rem;
+  /* Prerequisites and Enrollment Grid */
+  .prereq-enroll-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 3rem 0;
+  }
+
+  @media (max-width: 968px) {
+    .prereq-enroll-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .prereq-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+  }
+
+  .enroll-box {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 100%);
     background-size: 300% 300%;
     animation: gradientWave 10s ease infinite;
+    padding: 3rem;
     border-radius: 25px;
-    color: white;
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
   }
 
-  .enroll-section::before {
+  .enroll-box::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -363,29 +345,32 @@ description_zh: 从基础到高级的完整Python编程之旅
     animation: rotateGlow 12s linear infinite;
   }
 
-  .price {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  .enroll-content {
+    text-align: center;
     position: relative;
     z-index: 1;
+  }
+
+  .enroll-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 
   .enroll-button {
     background: white;
     color: #667eea;
-    padding: 1.2rem 2.5rem;
+    padding: 1.2rem 3rem;
     border-radius: 50px;
     text-decoration: none;
     display: inline-block;
     font-weight: 700;
     font-size: 1.2rem;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    width: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     position: relative;
-    z-index: 1;
     overflow: hidden;
   }
 
@@ -408,6 +393,13 @@ description_zh: 从基础到高级的完整Python编程之旅
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
     color: #764ba2;
+  }
+
+  .enroll-subtitle {
+    color: white;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    opacity: 0.95;
   }
 
   /* Learning Outcomes - Premium Cards */
@@ -621,285 +613,264 @@ description_zh: 从基础到高级的完整Python编程之旅
   </p>
 </div>
 
-<div class="course-info-grid">
-  <!-- Main Content -->
-  <div>
-    <!-- Course Overview -->
-    <div class="course-content-section">
-      <h2 class="section-title">
-        <span class="en-content">📘 Course Overview</span>
-        <span class="zh-content">📘 课程概述</span>
-      </h2>
-      <p style="color: #4B5563; line-height: 1.8; font-size: 1.1rem;">
-        <span class="en-content">
-          This comprehensive Python programming course is designed to take students from absolute beginners to confident programmers. Through 40 hours of intensive learning, students will master Python fundamentals, data structures, object-oriented programming, and real-world applications. Our proven curriculum combines theoretical knowledge with hands-on practice, ensuring students build a solid foundation for advanced computer science topics and competitive programming.
-        </span>
-        <span class="zh-content">
-          这门综合性的Python编程课程旨在将学生从零基础培养成自信的程序员。通过40小时的密集学习，学生将掌握Python基础知识、数据结构、面向对象编程和实际应用。我们经过验证的课程将理论知识与实践相结合，确保学生为高级计算机科学主题和竞赛编程打下坚实的基础。
-        </span>
-      </p>
-    </div>
+<div class="course-container">
+  <!-- Course Overview -->
+  <div class="course-content-section">
+    <h2 class="section-title">
+      <span class="en-content">📘 Course Overview</span>
+      <span class="zh-content">📘 课程概述</span>
+    </h2>
+    <p style="color: #4B5563; line-height: 1.8; font-size: 1.1rem;">
+      <span class="en-content">
+        This comprehensive Python programming course is designed to take students from absolute beginners to confident programmers. Through 40 hours of intensive learning, students will master Python fundamentals, data structures, object-oriented programming, and real-world applications. Our proven curriculum combines theoretical knowledge with hands-on practice, ensuring students build a solid foundation for advanced computer science topics and competitive programming.
+      </span>
+      <span class="zh-content">
+        这门综合性的Python编程课程旨在将学生从零基础培养成自信的程序员。通过40小时的密集学习，学生将掌握Python基础知识、数据结构、面向对象编程和实际应用。我们经过验证的课程将理论知识与实践相结合，确保学生为高级计算机科学主题和竞赛编程打下坚实的基础。
+      </span>
+    </p>
+  </div>
 
-    <!-- Detailed Syllabus -->
-    <div class="course-content-section">
-      <h2 class="section-title">
-        <span class="en-content">📚 Detailed Syllabus</span>
-        <span class="zh-content">📚 详细课程大纲</span>
-      </h2>
-      
-      <div class="syllabus-module">
-        <h3 class="module-title">
-          <span class="en-content">Module 1: Python Foundations (Hours 1-5)</span>
-          <span class="zh-content">模块 1：Python 基础（第1-5小时）</span>
-        </h3>
-        <ul class="module-topics">
-          <li>
-            <span class="en-content">Installing Python & IDE Setup (PyCharm/VS Code)</span>
-            <span class="zh-content">安装 Python 和 IDE 设置（PyCharm/VS Code）</span>
-          </li>
-          <li>
-            <span class="en-content">Understanding Programming Logic & Computational Thinking</span>
-            <span class="zh-content">理解编程逻辑与计算思维</span>
-          </li>
-          <li>
-            <span class="en-content">Variables, Data Types, and Type Conversion</span>
-            <span class="zh-content">变量、数据类型和类型转换</span>
-          </li>
-          <li>
-            <span class="en-content">Input/Output Operations and String Formatting</span>
-            <span class="zh-content">输入/输出操作和字符串格式化</span>
-          </li>
-          <li>
-            <span class="en-content">Building Your First Interactive Programs</span>
-            <span class="zh-content">构建您的第一个交互式程序</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="syllabus-module">
-        <h3 class="module-title">
-          <span class="en-content">Module 2: Control Structures (Hours 6-10)</span>
-          <span class="zh-content">模块 2：控制结构（第6-10小时）</span>
-        </h3>
-        <ul class="module-topics">
-          <li>
-            <span class="en-content">Conditional Statements (if/elif/else)</span>
-            <span class="zh-content">条件语句（if/elif/else）</span>
-          </li>
-          <li>
-            <span class="en-content">Boolean Logic and Complex Conditions</span>
-            <span class="zh-content">布尔逻辑和复杂条件</span>
-          </li>
-          <li>
-            <span class="en-content">For Loops and Range Function</span>
-            <span class="zh-content">For 循环和 Range 函数</span>
-          </li>
-          <li>
-            <span class="en-content">While Loops and Loop Control</span>
-            <span class="zh-content">While 循环和循环控制</span>
-          </li>
-          <li>
-            <span class="en-content">Nested Loops and Pattern Problems</span>
-            <span class="zh-content">嵌套循环和模式问题</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="syllabus-module">
-        <h3 class="module-title">
-          <span class="en-content">Module 3: Data Structures (Hours 11-20)</span>
-          <span class="zh-content">模块 3：数据结构（第11-20小时）</span>
-        </h3>
-        <ul class="module-topics">
-          <li>
-            <span class="en-content">Strings: Methods, Slicing, and Manipulation</span>
-            <span class="zh-content">字符串：方法、切片和操作</span>
-          </li>
-          <li>
-            <span class="en-content">Lists: Operations, Methods, and List Comprehensions</span>
-            <span class="zh-content">列表：操作、方法和列表推导式</span>
-          </li>
-          <li>
-            <span class="en-content">Dictionaries: Key-Value Pairs and Applications</span>
-            <span class="zh-content">字典：键值对和应用</span>
-          </li>
-          <li>
-            <span class="en-content">Tuples and Sets: Immutable and Unique Collections</span>
-            <span class="zh-content">元组和集合：不可变和唯一集合</span>
-          </li>
-          <li>
-            <span class="en-content">2D Arrays and Matrix Operations</span>
-            <span class="zh-content">二维数组和矩阵操作</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="syllabus-module">
-        <h3 class="module-title">
-          <span class="en-content">Module 4: Functions & OOP (Hours 21-30)</span>
-          <span class="zh-content">模块 4：函数与面向对象（第21-30小时）</span>
-        </h3>
-        <ul class="module-topics">
-          <li>
-            <span class="en-content">Functions: Parameters, Return Values, and Scope</span>
-            <span class="zh-content">函数：参数、返回值和作用域</span>
-          </li>
-          <li>
-            <span class="en-content">Lambda Functions and Higher-Order Functions</span>
-            <span class="zh-content">Lambda 函数和高阶函数</span>
-          </li>
-          <li>
-            <span class="en-content">Classes and Objects: Creating Custom Types</span>
-            <span class="zh-content">类和对象：创建自定义类型</span>
-          </li>
-          <li>
-            <span class="en-content">Inheritance, Polymorphism, and Encapsulation</span>
-            <span class="zh-content">继承、多态和封装</span>
-          </li>
-          <li>
-            <span class="en-content">Special Methods and Operator Overloading</span>
-            <span class="zh-content">特殊方法和运算符重载</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="syllabus-module">
-        <h3 class="module-title">
-          <span class="en-content">Module 5: Advanced Topics & Projects (Hours 31-40)</span>
-          <span class="zh-content">模块 5：高级主题与项目（第31-40小时）</span>
-        </h3>
-        <ul class="module-topics">
-          <li>
-            <span class="en-content">File Handling: Reading, Writing, and CSV/JSON Processing</span>
-            <span class="zh-content">文件处理：读取、写入和 CSV/JSON 处理</span>
-          </li>
-          <li>
-            <span class="en-content">Error Handling and Debugging Techniques</span>
-            <span class="zh-content">错误处理和调试技术</span>
-          </li>
-          <li>
-            <span class="en-content">Regular Expressions for Pattern Matching</span>
-            <span class="zh-content">正则表达式进行模式匹配</span>
-          </li>
-          <li>
-            <span class="en-content">Introduction to Popular Libraries (NumPy, Pandas)</span>
-            <span class="zh-content">流行库简介（NumPy、Pandas）</span>
-          </li>
-          <li>
-            <span class="en-content">Building a Complete Python Application</span>
-            <span class="zh-content">构建完整的 Python 应用程序</span>
-          </li>
-          <li>
-            <span class="en-content">Final Project: Game or Data Analysis Tool</span>
-            <span class="zh-content">最终项目：游戏或数据分析工具</span>
-          </li>
-        </ul>
+  <!-- Course Info Bar - Horizontal Layout -->
+  <div class="info-bar">
+    <div class="info-bar-item">
+      <div class="info-bar-icon">⏱️</div>
+      <div class="info-bar-content">
+        <h4><span class="en-content">Duration</span><span class="zh-content">课程时长</span></h4>
+        <p>40 Hours</p>
       </div>
     </div>
+    
+    <div class="info-bar-item">
+      <div class="info-bar-icon">👥</div>
+      <div class="info-bar-content">
+        <h4><span class="en-content">Age Group</span><span class="zh-content">年龄组</span></h4>
+        <p>10-18 Years</p>
+      </div>
+    </div>
+    
+    <div class="info-bar-item">
+      <div class="info-bar-icon">📊</div>
+      <div class="info-bar-content">
+        <h4><span class="en-content">Level</span><span class="zh-content">级别</span></h4>
+        <p>Beginner to Intermediate</p>
+      </div>
+    </div>
+    
+    <div class="info-bar-item">
+      <div class="info-bar-icon">🏫</div>
+      <div class="info-bar-content">
+        <h4><span class="en-content">Class Size</span><span class="zh-content">班级规模</span></h4>
+        <p>1-on-1 or Max 4</p>
+      </div>
+    </div>
+  </div>
 
-    <!-- Learning Outcomes -->
-    <div class="course-content-section">
-      <h2 class="section-title">
-        <span class="en-content">🎯 Learning Outcomes</span>
-        <span class="zh-content">🎯 学习成果</span>
-      </h2>
+  <!-- Detailed Syllabus -->
+  <div class="course-content-section">
+    <h2 class="section-title">
+      <span class="en-content">📚 Detailed Syllabus</span>
+      <span class="zh-content">📚 详细课程大纲</span>
+    </h2>
+    
+    <div class="syllabus-module">
+      <h3 class="module-title">
+        <span class="en-content">Module 1: Python Foundations (Hours 1-5)</span>
+        <span class="zh-content">模块 1：Python 基础（第1-5小时）</span>
+      </h3>
+      <ul class="module-topics">
+        <li>
+          <span class="en-content">Installing Python & IDE Setup (PyCharm/VS Code)</span>
+          <span class="zh-content">安装 Python 和 IDE 设置（PyCharm/VS Code）</span>
+        </li>
+        <li>
+          <span class="en-content">Understanding Programming Logic & Computational Thinking</span>
+          <span class="zh-content">理解编程逻辑与计算思维</span>
+        </li>
+        <li>
+          <span class="en-content">Variables, Data Types, and Type Conversion</span>
+          <span class="zh-content">变量、数据类型和类型转换</span>
+        </li>
+        <li>
+          <span class="en-content">Input/Output Operations and String Formatting</span>
+          <span class="zh-content">输入/输出操作和字符串格式化</span>
+        </li>
+        <li>
+          <span class="en-content">Building Your First Interactive Programs</span>
+          <span class="zh-content">构建您的第一个交互式程序</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="syllabus-module">
+      <h3 class="module-title">
+        <span class="en-content">Module 2: Control Structures (Hours 6-10)</span>
+        <span class="zh-content">模块 2：控制结构（第6-10小时）</span>
+      </h3>
+      <ul class="module-topics">
+        <li>
+          <span class="en-content">Conditional Statements (if/elif/else)</span>
+          <span class="zh-content">条件语句（if/elif/else）</span>
+        </li>
+        <li>
+          <span class="en-content">Boolean Logic and Complex Conditions</span>
+          <span class="zh-content">布尔逻辑和复杂条件</span>
+        </li>
+        <li>
+          <span class="en-content">For Loops and Range Function</span>
+          <span class="zh-content">For 循环和 Range 函数</span>
+        </li>
+        <li>
+          <span class="en-content">While Loops and Loop Control</span>
+          <span class="zh-content">While 循环和循环控制</span>
+        </li>
+        <li>
+          <span class="en-content">Nested Loops and Pattern Problems</span>
+          <span class="zh-content">嵌套循环和模式问题</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="syllabus-module">
+      <h3 class="module-title">
+        <span class="en-content">Module 3: Data Structures (Hours 11-20)</span>
+        <span class="zh-content">模块 3：数据结构（第11-20小时）</span>
+      </h3>
+      <ul class="module-topics">
+        <li>
+          <span class="en-content">Strings: Methods, Slicing, and Manipulation</span>
+          <span class="zh-content">字符串：方法、切片和操作</span>
+        </li>
+        <li>
+          <span class="en-content">Lists: Operations, Methods, and List Comprehensions</span>
+          <span class="zh-content">列表：操作、方法和列表推导式</span>
+        </li>
+        <li>
+          <span class="en-content">Dictionaries: Key-Value Pairs and Applications</span>
+          <span class="zh-content">字典：键值对和应用</span>
+        </li>
+        <li>
+          <span class="en-content">Tuples and Sets: Immutable and Unique Collections</span>
+          <span class="zh-content">元组和集合：不可变和唯一集合</span>
+        </li>
+        <li>
+          <span class="en-content">2D Arrays and Matrix Operations</span>
+          <span class="zh-content">二维数组和矩阵操作</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="syllabus-module">
+      <h3 class="module-title">
+        <span class="en-content">Module 4: Functions & OOP (Hours 21-30)</span>
+        <span class="zh-content">模块 4：函数与面向对象（第21-30小时）</span>
+      </h3>
+      <ul class="module-topics">
+        <li>
+          <span class="en-content">Functions: Parameters, Return Values, and Scope</span>
+          <span class="zh-content">函数：参数、返回值和作用域</span>
+        </li>
+        <li>
+          <span class="en-content">Lambda Functions and Higher-Order Functions</span>
+          <span class="zh-content">Lambda 函数和高阶函数</span>
+        </li>
+        <li>
+          <span class="en-content">Classes and Objects: Creating Custom Types</span>
+          <span class="zh-content">类和对象：创建自定义类型</span>
+        </li>
+        <li>
+          <span class="en-content">Inheritance, Polymorphism, and Encapsulation</span>
+          <span class="zh-content">继承、多态和封装</span>
+        </li>
+        <li>
+          <span class="en-content">Special Methods and Operator Overloading</span>
+          <span class="zh-content">特殊方法和运算符重载</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="syllabus-module">
+      <h3 class="module-title">
+        <span class="en-content">Module 5: Advanced Topics & Projects (Hours 31-40)</span>
+        <span class="zh-content">模块 5：高级主题与项目（第31-40小时）</span>
+      </h3>
+      <ul class="module-topics">
+        <li>
+          <span class="en-content">File Handling: Reading, Writing, and CSV/JSON Processing</span>
+          <span class="zh-content">文件处理：读取、写入和 CSV/JSON 处理</span>
+        </li>
+        <li>
+          <span class="en-content">Error Handling and Debugging Techniques</span>
+          <span class="zh-content">错误处理和调试技术</span>
+        </li>
+        <li>
+          <span class="en-content">Regular Expressions for Pattern Matching</span>
+          <span class="zh-content">正则表达式进行模式匹配</span>
+        </li>
+        <li>
+          <span class="en-content">Introduction to Popular Libraries (NumPy, Pandas)</span>
+          <span class="zh-content">流行库简介（NumPy、Pandas）</span>
+        </li>
+        <li>
+          <span class="en-content">Building a Complete Python Application</span>
+          <span class="zh-content">构建完整的 Python 应用程序</span>
+        </li>
+        <li>
+          <span class="en-content">Final Project: Game or Data Analysis Tool</span>
+          <span class="zh-content">最终项目：游戏或数据分析工具</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Learning Outcomes -->
+  <div class="course-content-section">
+    <h2 class="section-title">
+      <span class="en-content">🎯 Learning Outcomes</span>
+      <span class="zh-content">🎯 学习成果</span>
+    </h2>
+    
+    <div class="outcomes-grid">
+      <div class="outcome-card">
+        <div class="outcome-icon">💻</div>
+        <div class="outcome-title">
+          <span class="en-content">Professional Code</span>
+          <span class="zh-content">专业代码</span>
+        </div>
+      </div>
       
-      <div class="outcomes-grid">
-        <div class="outcome-card">
-          <div class="outcome-icon">💻</div>
-          <div class="outcome-title">
-            <span class="en-content">Professional Code</span>
-            <span class="zh-content">专业代码</span>
-          </div>
+      <div class="outcome-card">
+        <div class="outcome-icon">🔧</div>
+        <div class="outcome-title">
+          <span class="en-content">Real Projects</span>
+          <span class="zh-content">实际项目</span>
         </div>
-        
-        <div class="outcome-card">
-          <div class="outcome-icon">🔧</div>
-          <div class="outcome-title">
-            <span class="en-content">Real Projects</span>
-            <span class="zh-content">实际项目</span>
-          </div>
+      </div>
+      
+      <div class="outcome-card">
+        <div class="outcome-icon">🧩</div>
+        <div class="outcome-title">
+          <span class="en-content">Problem Solving</span>
+          <span class="zh-content">问题解决</span>
         </div>
-        
-        <div class="outcome-card">
-          <div class="outcome-icon">🧩</div>
-          <div class="outcome-title">
-            <span class="en-content">Problem Solving</span>
-            <span class="zh-content">问题解决</span>
-          </div>
-        </div>
-        
-        <div class="outcome-card">
-          <div class="outcome-icon">🚀</div>
-          <div class="outcome-title">
-            <span class="en-content">Competition Ready</span>
-            <span class="zh-content">竞赛准备</span>
-          </div>
+      </div>
+      
+      <div class="outcome-card">
+        <div class="outcome-icon">🚀</div>
+        <div class="outcome-title">
+          <span class="en-content">Competition Ready</span>
+          <span class="zh-content">竞赛准备</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Sidebar -->
-  <div class="course-sidebar">
-    <!-- Course Info Card -->
-    <div class="info-card">
-      <h3>
-        <span class="en-content">Course Information</span>
-        <span class="zh-content">课程信息</span>
-      </h3>
-      
-      <div class="info-item">
-        <div class="info-icon">⏱️</div>
-        <div class="info-content">
-          <h4>
-            <span class="en-content">Duration</span>
-            <span class="zh-content">课程时长</span>
-          </h4>
-          <p>40 Hours</p>
-        </div>
-      </div>
-      
-      <div class="info-item">
-        <div class="info-icon">👥</div>
-        <div class="info-content">
-          <h4>
-            <span class="en-content">Age Group</span>
-            <span class="zh-content">年龄组</span>
-          </h4>
-          <p>10-18 Years</p>
-        </div>
-      </div>
-      
-      <div class="info-item">
-        <div class="info-icon">📊</div>
-        <div class="info-content">
-          <h4>
-            <span class="en-content">Level</span>
-            <span class="zh-content">级别</span>
-          </h4>
-          <p>Beginner to Intermediate</p>
-        </div>
-      </div>
-      
-      <div class="info-item">
-        <div class="info-icon">🏫</div>
-        <div class="info-content">
-          <h4>
-            <span class="en-content">Class Size</span>
-            <span class="zh-content">班级规模</span>
-          </h4>
-          <p>1-on-1 or Max 4 Students</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Prerequisites -->
-    <div class="info-card">
-      <h3>
-        <span class="en-content">Prerequisites</span>
-        <span class="zh-content">先修要求</span>
-      </h3>
+  <!-- Prerequisites & Enrollment Section -->
+  <div class="prereq-enroll-grid">
+    <div class="prereq-section">
+      <h2 class="section-title">
+        <span class="en-content">📋 Prerequisites</span>
+        <span class="zh-content">📋 先修要求</span>
+      </h2>
       <ul class="prereq-list">
         <li>
           <span class="en-content">Basic computer skills</span>
@@ -916,20 +887,21 @@ description_zh: 从基础到高级的完整Python编程之旅
       </ul>
     </div>
 
-    <!-- Enroll Section -->
-    <div class="enroll-section">
-      <div class="price">
-        <span class="en-content">Get Started Today</span>
-        <span class="zh-content">立即开始</span>
+    <div class="enroll-box">
+      <div class="enroll-content">
+        <h2 class="enroll-title">
+          <span class="en-content">Get Started Today</span>
+          <span class="zh-content">立即开始</span>
+        </h2>
+        <a href="./contact.html" class="enroll-button">
+          <span class="en-content">Enroll Now</span>
+          <span class="zh-content">立即报名</span>
+        </a>
+        <p class="enroll-subtitle">
+          <span class="en-content">✨ Free consultation & assessment</span>
+          <span class="zh-content">✨ 免费咨询和评估</span>
+        </p>
       </div>
-      <a href="./contact.html" class="enroll-button">
-        <span class="en-content">Enroll Now</span>
-        <span class="zh-content">立即报名</span>
-      </a>
-      <p style="margin-top: 1.5rem; font-size: 1rem; opacity: 0.95; position: relative; z-index: 1;">
-        <span class="en-content">✨ Free consultation & assessment</span>
-        <span class="zh-content">✨ 免费咨询和评估</span>
-      </p>
     </div>
   </div>
 </div>
