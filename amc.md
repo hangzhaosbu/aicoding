@@ -352,20 +352,23 @@ description_zh: 征服美国数学竞赛，晋级AIME
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    max-width: 1100px;
+    gap: 0.8rem;
+    flex-wrap: nowrap;
+    max-width: 1300px;
     margin: 0 auto;
+    padding: 0 1rem;
   }
 
   .pathway-item {
     background: white;
-    padding: 1.5rem 2rem;
+    padding: 1.2rem 1rem;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
-    min-width: 140px;
+    min-width: 100px;
+    flex: 1;
+    max-width: 130px;
   }
 
   .pathway-item:hover {
@@ -388,17 +391,33 @@ description_zh: 征服美国数学竞赛，晋级AIME
   .pathway-name {
     font-weight: 700;
     color: #1F2937;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
 
   .pathway-arrow {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #9CA3AF;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 1000px) {
+    .pathway-flow {
+      flex-wrap: wrap;
+      max-width: 600px;
+    }
+    .pathway-item {
+      min-width: 120px;
+      max-width: 150px;
+    }
+    .pathway-arrow:nth-of-type(3) {
+      display: none;
+    }
   }
 
   @media (max-width: 768px) {
     .pathway-flow {
       flex-direction: column;
+      max-width: 200px;
     }
     .pathway-arrow {
       transform: rotate(90deg);
