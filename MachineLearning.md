@@ -1304,8 +1304,8 @@ description_zh: 掌握人工智能，征服竞赛与未来
     <div class="stat-item">
       <div class="stat-number">10+</div>
       <div class="stat-label">
-        <span class="en-content">Kaggle Medals</span>
-        <span class="zh-content">Kaggle奖牌</span>
+        <span class="en-content">Competition Medals</span>
+        <span class="zh-content">竞赛奖牌</span>
       </div>
     </div>
     <div class="stat-item">
