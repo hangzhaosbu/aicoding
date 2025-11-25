@@ -182,28 +182,30 @@ description_zh: 掌握人工智能，征服竞赛与未来
   .phase-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
     margin: 4rem auto;
-    max-width: 1600px;
-    padding: 0 2rem;
+    max-width: 1800px;
+    padding: 0 3rem;
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1600px) {
     .phase-cards {
       grid-template-columns: repeat(2, 1fr);
       gap: 2.5rem;
+      max-width: 1000px;
     }
   }
 
   @media (max-width: 768px) {
     .phase-cards {
       grid-template-columns: 1fr;
+      padding: 0 1.5rem;
     }
   }
 
   .phase-card {
     background: white;
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 2rem;
     border-radius: 25px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -275,12 +277,12 @@ description_zh: 掌握人工智能，征服竞赛与未来
 
   .phase-header {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .phase-icon {
-    font-size: 3.5rem;
-    margin-bottom: 0.8rem;
+    font-size: 4rem;
+    margin-bottom: 1rem;
     display: inline-block;
     animation: pulse 3s ease-in-out infinite;
   }
@@ -291,19 +293,17 @@ description_zh: 掌握人工智能，征服竞赛与未来
   .phase-expert .phase-icon { animation-delay: 1.5s; }
 
   .phase-name {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #1F2937;
-    margin-bottom: 0.3rem;
-    white-space: nowrap;
+    margin-bottom: 0.4rem;
   }
 
   .phase-subtitle {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #6B7280;
-    margin-bottom: 1.2rem;
-    white-space: nowrap;
+    margin-bottom: 1.5rem;
   }
 
   .phase-topics {
@@ -319,18 +319,19 @@ description_zh: 掌握人工智能，征服竞赛与未来
   }
 
   .phase-topics li {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-    padding-left: 1.5rem;
+    margin: 0.6rem 0;
+    font-size: 0.95rem;
+    padding-left: 1.8rem;
     position: relative;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 1.5;
   }
 
-  @media (max-width: 1600px) {
+  @media (max-width: 1800px) {
     .phase-topics li {
       white-space: normal;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
     }
   }
 
