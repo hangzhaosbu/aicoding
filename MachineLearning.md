@@ -178,34 +178,29 @@ description_zh: 掌握人工智能，征服竞赛与未来
     font-size: 1.2rem;
   }
 
-  /* Phase Cards - Premium Design (4-column like USACO) */
+  /* Phase Cards - Premium Design (2x2 layout) */
   .phase-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2.5rem;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 3rem;
     margin: 4rem auto;
-    max-width: 1800px;
+    max-width: 1400px;
     padding: 0 3rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  @media (max-width: 1600px) {
+  @media (max-width: 900px) {
     .phase-cards {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2.5rem;
-      max-width: 1000px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .phase-cards {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
+      max-width: 600px;
       padding: 0 1.5rem;
     }
   }
 
   .phase-card {
     background: white;
-    padding: 2.5rem 2rem;
+    padding: 3rem;
     border-radius: 25px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -320,19 +315,10 @@ description_zh: 掌握人工智能，征服竞赛与未来
 
   .phase-topics li {
     margin: 0.6rem 0;
-    font-size: 0.95rem;
+    font-size: 1rem;
     padding-left: 1.8rem;
     position: relative;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.5;
-  }
-
-  @media (max-width: 1800px) {
-    .phase-topics li {
-      white-space: normal;
-      font-size: 0.9rem;
-    }
+    line-height: 1.6;
   }
 
   .phase-topics li::before {
