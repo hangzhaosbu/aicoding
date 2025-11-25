@@ -1649,7 +1649,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">Data Science Competitions</span>
         <span class="zh-content">数据科学竞赛</span>
       </p>
-      <a href="#" class="enroll-btn">
+      <a href="./kaggle.html" class="enroll-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1663,7 +1663,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">American Mathematics Competitions</span>
         <span class="zh-content">美国数学竞赛</span>
       </p>
-      <a href="#" class="enroll-btn">
+      <a href="./amc.html" class="enroll-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1677,7 +1677,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">American Invitational Math Exam</span>
         <span class="zh-content">美国数学邀请赛</span>
       </p>
-      <a href="#" class="enroll-btn">
+      <a href="./aime.html" class="enroll-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1691,7 +1691,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">USA Mathematical Olympiad</span>
         <span class="zh-content">美国数学奥林匹克</span>
       </p>
-      <a href="#" class="enroll-btn">
+      <a href="./USAMO.html" class="enroll-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1705,7 +1705,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">Computer Science League</span>
         <span class="zh-content">计算机科学联赛</span>
       </p>
-      <a href="#" class="enroll-btn">
+      <a href="./ACSL.html" class="enroll-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1719,7 +1719,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">Quantitative Finance Challenge</span>
         <span class="zh-content">量化金融挑战赛</span>
       </p>
-      <a href="#" class="enroll-btn">
+      <a href="./WorldQuant.html" class="enroll-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1733,7 +1733,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">Mathematical Modeling Contest</span>
         <span class="zh-content">数学建模竞赛</span>
       </p>
-      <a href="#" class="enroll-btn">
+      <a href="./HiMCM.html" class="enroll-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
