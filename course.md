@@ -1635,7 +1635,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">USA AI Olympiad</span>
         <span class="zh-content">美国人工智能奥林匹克</span>
       </p>
-      <a href="#" class="enroll-btn">
+      <a href="./USAAIO.html" class="enroll-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
