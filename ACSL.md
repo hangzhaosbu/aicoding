@@ -919,6 +919,7 @@ description_zh: 掌握计算机科学概念与编程，征服ACSL竞赛
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
+    align-items: stretch;
   }
 
   @media (max-width: 900px) {
@@ -939,6 +940,11 @@ description_zh: 掌握计算机科学概念与编程，征服ACSL竞赛
     background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 100%);
     border-radius: 20px;
     transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
   }
 
   .success-item:hover {
