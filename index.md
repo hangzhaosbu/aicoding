@@ -8,7 +8,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
 
 <style>
   /* ========================================
-     Animations
+     Premium Animations Library
   ======================================== */
   @keyframes gradientFlow {
     0% { background-position: 0% 50%; }
@@ -17,49 +17,213 @@ description_zh: 为未来科技领袖提供的精英编程教育
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-20px) rotate(-3deg); }
+    75% { transform: translateY(20px) rotate(3deg); }
+  }
+
+  @keyframes floatReverse {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(20px) rotate(3deg); }
+    75% { transform: translateY(-20px) rotate(-3deg); }
   }
 
   @keyframes pulse {
     0%, 100% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.05); opacity: 1; }
+    50% { transform: scale(1.08); opacity: 1; }
   }
 
   @keyframes slideInUp {
-    from { opacity: 0; transform: translateY(40px); }
+    from { opacity: 0; transform: translateY(60px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
-  @keyframes starTwinkle {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.3); }
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
   }
 
-  @keyframes arrowPulse {
-    0%, 100% { transform: translateX(0); opacity: 0.6; }
-    50% { transform: translateX(5px); opacity: 1; }
+  @keyframes starTwinkle {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+  }
+
+  @keyframes arrowFlow {
+    0% { transform: translateX(-3px); opacity: 0.4; }
+    50% { transform: translateX(8px); opacity: 1; }
+    100% { transform: translateX(-3px); opacity: 0.4; }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @keyframes borderGlow {
+    0%, 100% { box-shadow: 0 0 5px currentColor, 0 0 10px currentColor; }
+    50% { box-shadow: 0 0 20px currentColor, 0 0 30px currentColor; }
+  }
+
+  @keyframes morphBlob {
+    0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    50% { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
+    75% { border-radius: 60% 40% 60% 30% / 70% 30% 50% 60%; }
+  }
+
+  @keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes particleFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+    25% { transform: translate(10px, -20px) scale(1.2); opacity: 1; }
+    50% { transform: translate(-5px, -40px) scale(0.8); opacity: 0.8; }
+    75% { transform: translate(-15px, -20px) scale(1.1); opacity: 0.9; }
+  }
+
+  @keyframes textReveal {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+  }
+
+  @keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes ripple {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+
+  @keyframes cardEntrance {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
   }
 
   /* ========================================
-     Hero Section
+     Hero Section - Premium Design
   ======================================== */
   .hero-section {
-    min-height: 85vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5rem 2rem;
-    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #4338ca 50%, #6366f1 75%, #4338ca 100%);
+    background: linear-gradient(135deg, 
+      #0f0c29 0%, 
+      #302b63 30%, 
+      #24243e 60%,
+      #0f0c29 100%);
     background-size: 400% 400%;
-    animation: gradientFlow 15s ease infinite;
-    border-radius: 30px;
+    animation: gradientFlow 20s ease infinite;
+    border-radius: 40px;
     margin-bottom: 5rem;
     position: relative;
     overflow: hidden;
+    box-shadow: 
+      0 50px 100px rgba(0, 0, 0, 0.5),
+      inset 0 0 100px rgba(99, 102, 241, 0.1);
   }
 
+  /* Aurora Background Effect */
+  .hero-aurora {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .hero-aurora::before,
+  .hero-aurora::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+  }
+
+  .hero-aurora::before {
+    background: conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      rgba(99, 102, 241, 0.15) 60deg,
+      transparent 120deg,
+      rgba(139, 92, 246, 0.1) 180deg,
+      transparent 240deg,
+      rgba(236, 72, 153, 0.08) 300deg,
+      transparent 360deg
+    );
+    animation: rotateGlow 30s linear infinite;
+  }
+
+  .hero-aurora::after {
+    background: conic-gradient(
+      from 180deg at 50% 50%,
+      transparent 0deg,
+      rgba(6, 182, 212, 0.1) 90deg,
+      transparent 180deg,
+      rgba(16, 185, 129, 0.08) 270deg,
+      transparent 360deg
+    );
+    animation: rotateGlow 25s linear infinite reverse;
+  }
+
+  /* Morphing Orbs */
+  .hero-orbs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: morphBlob 20s ease-in-out infinite, float 15s ease-in-out infinite;
+  }
+
+  .hero-orb:nth-child(1) {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.6), rgba(139, 92, 246, 0.4));
+    top: -200px;
+    left: -150px;
+  }
+
+  .hero-orb:nth-child(2) {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.5), rgba(239, 68, 68, 0.3));
+    bottom: -150px;
+    right: -100px;
+    animation-delay: -5s;
+  }
+
+  .hero-orb:nth-child(3) {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.4), rgba(16, 185, 129, 0.3));
+    bottom: 20%;
+    left: 10%;
+    animation-delay: -10s;
+  }
+
+  /* Twinkling Stars */
   .hero-stars {
     position: absolute;
     width: 100%;
@@ -71,79 +235,145 @@ description_zh: 为未来科技领袖提供的精英编程教育
 
   .hero-star {
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
     background: white;
     border-radius: 50%;
-    animation: starTwinkle 3s ease-in-out infinite;
+    animation: starTwinkle 4s ease-in-out infinite;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
   }
 
-  .hero-star:nth-child(1) { left: 5%; top: 15%; animation-delay: 0s; }
-  .hero-star:nth-child(2) { left: 15%; top: 45%; animation-delay: 0.5s; }
-  .hero-star:nth-child(3) { left: 25%; top: 75%; animation-delay: 1s; }
-  .hero-star:nth-child(4) { left: 45%; top: 20%; animation-delay: 1.5s; }
-  .hero-star:nth-child(5) { left: 65%; top: 70%; animation-delay: 0.3s; }
-  .hero-star:nth-child(6) { left: 80%; top: 35%; animation-delay: 0.8s; }
-  .hero-star:nth-child(7) { left: 90%; top: 60%; animation-delay: 1.2s; }
+  .hero-star:nth-child(1) { left: 5%; top: 10%; animation-delay: 0s; }
+  .hero-star:nth-child(2) { left: 12%; top: 35%; animation-delay: 0.7s; }
+  .hero-star:nth-child(3) { left: 20%; top: 65%; animation-delay: 1.4s; }
+  .hero-star:nth-child(4) { left: 35%; top: 15%; animation-delay: 2.1s; }
+  .hero-star:nth-child(5) { left: 50%; top: 80%; animation-delay: 0.3s; }
+  .hero-star:nth-child(6) { left: 65%; top: 25%; animation-delay: 1s; }
+  .hero-star:nth-child(7) { left: 75%; top: 55%; animation-delay: 1.7s; }
+  .hero-star:nth-child(8) { left: 85%; top: 75%; animation-delay: 2.4s; }
+  .hero-star:nth-child(9) { left: 92%; top: 20%; animation-delay: 0.5s; }
+  .hero-star:nth-child(10) { left: 45%; top: 45%; animation-delay: 1.2s; }
+
+  /* Floating Particles */
+  .hero-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .hero-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+    border-radius: 50%;
+    animation: particleFloat 8s ease-in-out infinite;
+  }
+
+  .hero-particle:nth-child(1) { left: 10%; bottom: 20%; animation-delay: 0s; }
+  .hero-particle:nth-child(2) { left: 30%; bottom: 30%; animation-delay: 2s; }
+  .hero-particle:nth-child(3) { left: 50%; bottom: 15%; animation-delay: 4s; }
+  .hero-particle:nth-child(4) { left: 70%; bottom: 25%; animation-delay: 1s; }
+  .hero-particle:nth-child(5) { left: 90%; bottom: 35%; animation-delay: 3s; }
+
+  /* Floating Emoji Icons */
+  .floating-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .floating-icon {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.15;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+  }
+
+  .floating-icon:nth-child(1) { top: 12%; left: 8%; animation: float 10s infinite ease-in-out; }
+  .floating-icon:nth-child(2) { top: 18%; right: 10%; animation: floatReverse 12s infinite ease-in-out 1s; }
+  .floating-icon:nth-child(3) { bottom: 25%; left: 10%; animation: float 9s infinite ease-in-out 2s; }
+  .floating-icon:nth-child(4) { bottom: 20%; right: 12%; animation: floatReverse 11s infinite ease-in-out 0.5s; }
+  .floating-icon:nth-child(5) { top: 50%; left: 5%; animation: float 13s infinite ease-in-out 1.5s; }
+  .floating-icon:nth-child(6) { top: 40%; right: 5%; animation: floatReverse 10s infinite ease-in-out 2.5s; }
 
   .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 10;
     text-align: center;
-    animation: slideInUp 1s ease-out;
+    animation: slideInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 0.6rem 1.5rem;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 0.7rem 1.8rem;
     border-radius: 50px;
     margin-bottom: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: bounceIn 1s ease-out 0.3s backwards;
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
   .hero-badge-dot {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background: #10B981;
     border-radius: 50%;
     animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 0 20px #10B981, 0 0 40px #10B981;
   }
 
   .hero-badge-text {
     color: white;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 600;
+    letter-spacing: 0.5px;
   }
 
   .hero-title {
-    font-size: 4.5rem;
-    font-weight: 800;
+    font-size: 5rem;
+    font-weight: 900;
     color: white;
-    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
     margin-bottom: 1.5rem;
-    letter-spacing: -2px;
+    letter-spacing: -3px;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 30%, #ffffff 50%, #ddd6fe 70%, #ffffff 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 8s ease infinite;
   }
 
   .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: rgba(255, 255, 255, 0.95);
     margin-bottom: 1rem;
-    font-weight: 400;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
   }
 
   .hero-description {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   .hero-buttons {
@@ -154,37 +384,60 @@ description_zh: 为未来科技领袖提供的精英编程教育
   }
 
   .hero-btn {
-    padding: 1.1rem 2.5rem;
-    border-radius: 50px;
+    padding: 1.2rem 2.8rem;
+    border-radius: 60px;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     text-decoration: none;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .hero-btn:hover::before {
+    left: 100%;
   }
 
   .hero-btn-primary {
-    background: white;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
     color: #4338ca;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    box-shadow: 
+      0 10px 40px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
   }
 
   .hero-btn-primary:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 
+      0 20px 60px rgba(0, 0, 0, 0.4),
+      0 0 60px rgba(99, 102, 241, 0.3);
     color: #4338ca;
   }
 
   .hero-btn-secondary {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
     color: white;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.3);
   }
 
   .hero-btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.5);
     color: white;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   }
 
   /* ========================================
@@ -201,30 +454,32 @@ description_zh: 为未来科技领袖提供的精英编程教育
     font-weight: 700;
     color: #6366f1;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     margin-bottom: 1rem;
-    padding: 0.5rem 1.5rem;
-    background: rgba(99, 102, 241, 0.1);
+    padding: 0.6rem 1.8rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
     border-radius: 50px;
+    border: 1px solid rgba(99, 102, 241, 0.2);
   }
 
   .section-title {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 800;
     color: #1F2937;
     margin-bottom: 1rem;
+    letter-spacing: -1px;
   }
 
   .section-subtitle {
     color: #6B7280;
-    font-size: 1.2rem;
-    max-width: 650px;
+    font-size: 1.25rem;
+    max-width: 700px;
     margin: 0 auto;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   /* ========================================
-     Learning Paths Section
+     Learning Paths Section - Premium
   ======================================== */
   .paths-section {
     margin: 6rem 0;
@@ -234,74 +489,129 @@ description_zh: 为未来科技领袖提供的精英编程教育
   .path-container {
     margin-bottom: 3rem;
     background: white;
-    border-radius: 24px;
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
+    border-radius: 28px;
+    box-shadow: 
+      0 20px 60px rgba(0, 0, 0, 0.08),
+      0 1px 3px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    border: 1px solid #E5E7EB;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: cardEntrance 0.8s ease-out backwards;
+  }
+
+  .path-container:nth-child(1) { animation-delay: 0.1s; }
+  .path-container:nth-child(2) { animation-delay: 0.2s; }
+  .path-container:nth-child(3) { animation-delay: 0.3s; }
+  .path-container:nth-child(4) { animation-delay: 0.4s; }
+  .path-container:nth-child(5) { animation-delay: 0.5s; }
+  .path-container:nth-child(6) { animation-delay: 0.6s; }
+  .path-container:nth-child(7) { animation-delay: 0.7s; }
+
+  .path-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+      0 40px 80px rgba(0, 0, 0, 0.12),
+      0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
   .path-header {
-    padding: 1.5rem 2rem;
+    padding: 1.8rem 2.5rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
     color: white;
     position: relative;
+    overflow: hidden;
+  }
+
+  .path-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
   }
 
   .path-header-icon {
-    font-size: 2rem;
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+    font-size: 2.5rem;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+    position: relative;
+    z-index: 1;
   }
 
   .path-header-content {
     flex: 1;
+    position: relative;
+    z-index: 1;
   }
 
   .path-header-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 800;
-    margin-bottom: 0.2rem;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.3rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.5px;
   }
 
   .path-header-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     opacity: 0.9;
   }
 
   .path-header-goal {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 700;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
   }
 
-  /* Path Colors */
-  .path-ap { background: linear-gradient(135deg, #3B82F6, #1D4ED8); }
-  .path-acsl { background: linear-gradient(135deg, #8B5CF6, #6D28D9); }
-  .path-usaco { background: linear-gradient(135deg, #10B981, #059669); }
-  .path-ml { background: linear-gradient(135deg, #F59E0B, #D97706); }
-  .path-math { background: linear-gradient(135deg, #EF4444, #DC2626); }
-  .path-wq { background: linear-gradient(135deg, #06B6D4, #0891B2); }
-  .path-himcm { background: linear-gradient(135deg, #EC4899, #DB2777); }
+  /* Path Colors - Premium Gradients */
+  .path-ap { background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 50%, #1E40AF 100%); }
+  .path-acsl { background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 50%, #6D28D9 100%); }
+  .path-usaco { background: linear-gradient(135deg, #10B981 0%, #059669 50%, #047857 100%); }
+  .path-ml { background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%); }
+  .path-math { background: linear-gradient(135deg, #EF4444 0%, #DC2626 50%, #B91C1C 100%); }
+  .path-wq { background: linear-gradient(135deg, #06B6D4 0%, #0891B2 50%, #0E7490 100%); }
+  .path-himcm { background: linear-gradient(135deg, #EC4899 0%, #DB2777 50%, #BE185D 100%); }
 
-  /* Timeline */
+  /* Timeline - Premium Design */
   .path-timeline {
-    padding: 2rem;
+    padding: 2.5rem;
     display: flex;
     align-items: stretch;
     gap: 0;
     overflow-x: auto;
     position: relative;
+    background: linear-gradient(180deg, #FAFAFA 0%, #FFFFFF 100%);
+  }
+
+  .path-timeline::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .path-timeline::-webkit-scrollbar-track {
+    background: #F3F4F6;
+    border-radius: 3px;
+  }
+
+  .path-timeline::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    border-radius: 3px;
   }
 
   .timeline-step {
     flex: 1;
-    min-width: 180px;
+    min-width: 170px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -311,87 +621,103 @@ description_zh: 为未来科技领袖提供的精英编程教育
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 0.5rem;
-    min-width: 50px;
+    padding: 0 0.3rem;
+    min-width: 40px;
   }
 
   .timeline-arrow {
-    font-size: 1.5rem;
-    color: #D1D5DB;
-    animation: arrowPulse 2s ease-in-out infinite;
+    font-size: 1.8rem;
+    font-weight: 300;
+    background: linear-gradient(90deg, #9CA3AF, #6B7280);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: arrowFlow 2s ease-in-out infinite;
   }
 
   .step-card {
-    background: #F9FAFB;
-    border-radius: 16px;
+    background: white;
+    border-radius: 18px;
     padding: 1.5rem;
     height: 100%;
     border: 2px solid #E5E7EB;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
   }
 
   .step-card:hover {
-    border-color: #C7D2FE;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   }
 
   .step-number {
     position: absolute;
-    top: -12px;
-    left: 1rem;
-    width: 28px;
-    height: 28px;
+    top: -14px;
+    left: 1.2rem;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
-    font-weight: 700;
+    font-size: 0.85rem;
+    font-weight: 800;
     color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 
-  .step-ap .step-number { background: #3B82F6; }
-  .step-acsl .step-number { background: #8B5CF6; }
-  .step-usaco .step-number { background: #10B981; }
-  .step-ml .step-number { background: #F59E0B; }
-  .step-math .step-number { background: #EF4444; }
-  .step-wq .step-number { background: #06B6D4; }
-  .step-himcm .step-number { background: #EC4899; }
+  .step-ap .step-number { background: linear-gradient(135deg, #3B82F6, #1D4ED8); }
+  .step-acsl .step-number { background: linear-gradient(135deg, #8B5CF6, #6D28D9); }
+  .step-usaco .step-number { background: linear-gradient(135deg, #10B981, #059669); }
+  .step-ml .step-number { background: linear-gradient(135deg, #F59E0B, #D97706); }
+  .step-math .step-number { background: linear-gradient(135deg, #EF4444, #DC2626); }
+  .step-wq .step-number { background: linear-gradient(135deg, #06B6D4, #0891B2); }
+  .step-himcm .step-number { background: linear-gradient(135deg, #EC4899, #DB2777); }
 
   .step-duration {
     display: inline-block;
-    padding: 0.3rem 0.8rem;
+    padding: 0.35rem 0.9rem;
     border-radius: 50px;
     font-size: 0.75rem;
     font-weight: 700;
     margin-bottom: 0.8rem;
-    background: #E5E7EB;
+    background: linear-gradient(135deg, #F3F4F6, #E5E7EB);
     color: #4B5563;
+    letter-spacing: 0.3px;
   }
 
   .step-title {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: #1F2937;
     margin-bottom: 0.5rem;
+    line-height: 1.3;
   }
 
   .step-description {
     font-size: 0.85rem;
     color: #6B7280;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
-  /* Final Goal Step */
+  /* Final Goal Step - Premium Gold Design */
   .step-goal {
-    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 50%, #FCD34D 100%);
     border-color: #F59E0B;
+    box-shadow: 
+      0 4px 20px rgba(245, 158, 11, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .step-goal:hover {
+    box-shadow: 
+      0 15px 40px rgba(245, 158, 11, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
   .step-goal .step-number {
     background: linear-gradient(135deg, #F59E0B, #D97706);
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.5);
   }
 
   .step-goal .step-title {
@@ -403,14 +729,34 @@ description_zh: 为未来科技领袖提供的精英编程教育
     font-weight: 600;
   }
 
+  .step-goal .step-duration {
+    background: linear-gradient(135deg, #FDE68A, #FCD34D);
+    color: #92400E;
+  }
+
   /* ========================================
-     Why Choose Us Section
+     Why Choose Us Section - Premium
   ======================================== */
   .why-section {
     margin: 6rem 0;
-    padding: 4rem 2rem;
-    background: linear-gradient(180deg, #F9FAFB 0%, #F3F4F6 100%);
-    border-radius: 30px;
+    padding: 5rem 3rem;
+    background: linear-gradient(180deg, #F9FAFB 0%, #F3F4F6 50%, #F9FAFB 100%);
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .why-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(ellipse at 0% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 100% 100%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
+    pointer-events: none;
   }
 
   .why-grid {
@@ -418,93 +764,156 @@ description_zh: 为未来科技领袖提供的精英编程教育
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 3rem;
+    position: relative;
+    z-index: 1;
   }
 
   .why-card {
     background: white;
-    border-radius: 20px;
-    padding: 2rem;
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
     text-align: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-    border: 1px solid #E5E7EB;
-    transition: all 0.4s ease;
+    box-shadow: 
+      0 10px 40px rgba(0, 0, 0, 0.04),
+      0 1px 3px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .why-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .why-card:hover::before {
+    transform: scaleX(1);
   }
 
   .why-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.1),
+      0 1px 3px rgba(0, 0, 0, 0.02);
   }
 
   .why-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    display: block;
   }
 
   .why-title {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #1F2937;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
   }
 
   .why-description {
     color: #6B7280;
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   /* ========================================
-     Stats Section
+     Stats Section - Premium Dark
   ======================================== */
   .stats-section {
-    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
-    border-radius: 30px;
-    padding: 4rem 3rem;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    border-radius: 40px;
+    padding: 5rem 3rem;
     margin: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+      0 50px 100px rgba(0, 0, 0, 0.3),
+      inset 0 0 100px rgba(99, 102, 241, 0.1);
+  }
+
+  .stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+    pointer-events: none;
   }
 
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
+    position: relative;
+    z-index: 1;
   }
 
   .stat-item {
     text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+  }
+
+  .stat-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
   }
 
   .stat-icon {
-    font-size: 2.5rem;
-    margin-bottom: 0.8rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.3));
   }
 
   .stat-number {
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 4rem;
+    font-weight: 900;
     color: white;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    margin-bottom: 0.3rem;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    background: linear-gradient(135deg, #ffffff, #c7d2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .stat-label {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-weight: 600;
   }
 
   /* ========================================
-     CTA Section
+     CTA Section - Premium
   ======================================== */
   .cta-section {
     background: white;
-    border-radius: 30px;
-    padding: 5rem 3rem;
+    border-radius: 40px;
+    padding: 6rem 4rem;
     margin: 6rem 0;
     text-align: center;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-    border: 1px solid #E5E7EB;
+    box-shadow: 
+      0 30px 80px rgba(0, 0, 0, 0.08),
+      0 1px 3px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.04);
     position: relative;
     overflow: hidden;
   }
@@ -515,31 +924,35 @@ description_zh: 为未来科技领袖提供的精英编程教育
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7, #ec4899);
+    height: 6px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899, #f59e0b, #10b981);
+    background-size: 200% 100%;
+    animation: gradientFlow 5s linear infinite;
   }
 
   .cta-icon {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    animation: float 4s ease-in-out infinite;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    animation: float 5s ease-in-out infinite;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
   }
 
   .cta-title {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     font-weight: 800;
     color: #1F2937;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: -1px;
   }
 
   .cta-description {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #6B7280;
-    margin-bottom: 2.5rem;
-    max-width: 600px;
+    margin-bottom: 3rem;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   .cta-buttons {
@@ -550,60 +963,83 @@ description_zh: 为未来科技领袖提供的精英编程教育
   }
 
   .cta-btn {
-    padding: 1.1rem 2.5rem;
-    border-radius: 50px;
+    padding: 1.2rem 3rem;
+    border-radius: 60px;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     text-decoration: none;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .cta-btn:hover::before {
+    left: 100%;
   }
 
   .cta-btn-primary {
     background: linear-gradient(135deg, #6366f1, #8b5cf6);
     color: white;
-    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+    box-shadow: 
+      0 10px 40px rgba(99, 102, 241, 0.4),
+      0 0 0 1px rgba(99, 102, 241, 0.1);
   }
 
   .cta-btn-primary:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.5);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 
+      0 20px 60px rgba(99, 102, 241, 0.5),
+      0 0 60px rgba(99, 102, 241, 0.2);
     color: white;
   }
 
   .cta-btn-secondary {
     background: #F3F4F6;
     color: #4B5563;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   }
 
   .cta-btn-secondary:hover {
     background: #E5E7EB;
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     color: #1F2937;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   }
 
   /* ========================================
-     Responsive Design
+     Responsive Design - Premium
   ======================================== */
   @media (max-width: 1200px) {
     .path-timeline {
       flex-wrap: nowrap;
       overflow-x: auto;
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
     }
     
     .timeline-step {
       min-width: 160px;
     }
-  }
 
-  @media (max-width: 900px) {
     .why-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
 
+  @media (max-width: 900px) {
     .stats-grid {
       grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .path-header {
@@ -613,13 +1049,22 @@ description_zh: 为未来科技领袖提供的精英编程教育
     .path-header-goal {
       width: 100%;
       text-align: center;
-      margin-top: 0.5rem;
+      margin-top: 0.8rem;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
     }
   }
 
   @media (max-width: 768px) {
     .hero-title {
-      font-size: 3rem;
+      font-size: 2.8rem;
+      letter-spacing: -1px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
     }
 
     .section-title {
@@ -651,6 +1096,14 @@ description_zh: 为未来科技领袖提供的精英编程教育
     .timeline-step {
       min-width: 100%;
     }
+
+    .floating-icons {
+      display: none;
+    }
+
+    .hero-section {
+      border-radius: 24px;
+    }
   }
 
   @media (max-width: 480px) {
@@ -663,18 +1116,43 @@ description_zh: 为未来科技领袖提供的精英编程教育
     .hero-btn,
     .cta-btn {
       width: 100%;
-      max-width: 280px;
+      max-width: 300px;
       justify-content: center;
+      text-align: center;
     }
 
     .stats-grid {
       grid-template-columns: 1fr;
+    }
+
+    .stat-item {
+      padding: 1.5rem;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+    }
+
+    .hero-title {
+      font-size: 2.2rem;
+    }
+
+    .cta-section {
+      padding: 3rem 1.5rem;
     }
   }
 </style>
 
 <!-- Hero Section -->
 <section class="hero-section">
+  <div class="hero-aurora"></div>
+  
+  <div class="hero-orbs">
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+  </div>
+  
   <div class="hero-stars">
     <div class="hero-star"></div>
     <div class="hero-star"></div>
@@ -683,6 +1161,26 @@ description_zh: 为未来科技领袖提供的精英编程教育
     <div class="hero-star"></div>
     <div class="hero-star"></div>
     <div class="hero-star"></div>
+    <div class="hero-star"></div>
+    <div class="hero-star"></div>
+    <div class="hero-star"></div>
+  </div>
+
+  <div class="hero-particles">
+    <div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+  </div>
+  
+  <div class="floating-icons">
+    <span class="floating-icon">💻</span>
+    <span class="floating-icon">🚀</span>
+    <span class="floating-icon">🎯</span>
+    <span class="floating-icon">🏆</span>
+    <span class="floating-icon">🧠</span>
+    <span class="floating-icon">⚡</span>
   </div>
   
   <div class="hero-content">
@@ -705,8 +1203,8 @@ description_zh: 为未来科技领袖提供的精英编程教育
     </p>
     
     <p class="hero-description">
-      <span class="en-content">7 specialized learning tracks for programming, competitions, and research. Choose your path to excellence.</span>
-      <span class="zh-content">7条专业学习路线，涵盖编程、竞赛和研究。选择您的卓越之路。</span>
+      <span class="en-content">7 specialized learning tracks designed for programming mastery, competition excellence, and academic achievement. Your journey to success starts here.</span>
+      <span class="zh-content">7条专业学习路线，专为编程精通、竞赛卓越和学术成就而设计。您的成功之旅从这里开始。</span>
     </p>
     
     <div class="hero-buttons">
@@ -791,8 +1289,8 @@ description_zh: 为未来科技领袖提供的精英编程教育
             <span class="zh-content">AP CSP备考</span>
           </h4>
           <p class="step-description">
-            <span class="en-content">Computing concepts, data, algorithms, internet, impact</span>
-            <span class="zh-content">计算概念、数据、算法、互联网、影响</span>
+            <span class="en-content">Computing concepts, data, algorithms, internet</span>
+            <span class="zh-content">计算概念、数据、算法、互联网</span>
           </p>
         </div>
       </div>
@@ -828,7 +1326,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
           </span>
           <h4 class="step-title">
             <span class="en-content">Exam Practice</span>
-            <span class="zh-content">模拟考试</span>
+            <span class="zh-content">模拟冲刺</span>
           </h4>
           <p class="step-description">
             <span class="en-content">FRQ training, mock exams → Score 5!</span>
@@ -891,7 +1389,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
             <span class="zh-content">ACSL初级</span>
           </h4>
           <p class="step-description">
-            <span class="en-content">Number systems, Boolean algebra, graph theory basics</span>
+            <span class="en-content">Number systems, Boolean algebra, graph theory</span>
             <span class="zh-content">数制、布尔代数、图论基础</span>
           </p>
         </div>
@@ -911,8 +1409,8 @@ description_zh: 为未来科技领袖提供的精英编程教育
             <span class="zh-content">ACSL中级</span>
           </h4>
           <p class="step-description">
-            <span class="en-content">Bit manipulation, regex, prefix/postfix notation</span>
-            <span class="zh-content">位运算、正则表达式、前缀/后缀表示法</span>
+            <span class="en-content">Bit manipulation, regex, prefix/postfix</span>
+            <span class="zh-content">位运算、正则表达式、前缀/后缀</span>
           </p>
         </div>
       </div>
@@ -939,7 +1437,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
     </div>
   </div>
 
-  <!-- Track 3: USACO -->
+  <!-- Track 3: USACO - UPDATED -->
   <div class="path-container">
     <div class="path-header path-usaco">
       <span class="path-header-icon">🐄</span>
@@ -967,12 +1465,12 @@ description_zh: 为未来科技领袖提供的精英编程教育
             <span class="zh-content">3-4个月</span>
           </span>
           <h4 class="step-title">
-            <span class="en-content">C++ & Basics</span>
-            <span class="zh-content">C++与基础</span>
+            <span class="en-content">Python → Bronze</span>
+            <span class="zh-content">Python → 铜级</span>
           </h4>
           <p class="step-description">
-            <span class="en-content">C++ fundamentals, STL, time complexity</span>
-            <span class="zh-content">C++基础，STL，时间复杂度</span>
+            <span class="en-content">Python basics, simulation, ad hoc problems</span>
+            <span class="zh-content">Python基础、模拟、专项问题</span>
           </p>
         </div>
       </div>
@@ -983,16 +1481,16 @@ description_zh: 为未来科技领袖提供的精英编程教育
         <div class="step-card">
           <span class="step-number">2</span>
           <span class="step-duration">
-            <span class="en-content">4-6 months</span>
-            <span class="zh-content">4-6个月</span>
+            <span class="en-content">4-5 months</span>
+            <span class="zh-content">4-5个月</span>
           </span>
           <h4 class="step-title">
-            <span class="en-content">Bronze → Silver</span>
-            <span class="zh-content">铜级 → 银级</span>
+            <span class="en-content">Java → Silver</span>
+            <span class="zh-content">Java → 银级</span>
           </h4>
           <p class="step-description">
-            <span class="en-content">Simulation, sorting, binary search, greedy</span>
-            <span class="zh-content">模拟、排序、二分查找、贪心</span>
+            <span class="en-content">Java OOP, sorting, binary search, greedy</span>
+            <span class="zh-content">Java面向对象、排序、二分、贪心</span>
           </p>
         </div>
       </div>
@@ -1007,12 +1505,12 @@ description_zh: 为未来科技领袖提供的精英编程教育
             <span class="zh-content">6-8个月</span>
           </span>
           <h4 class="step-title">
-            <span class="en-content">Silver → Gold</span>
-            <span class="zh-content">银级 → 金级</span>
+            <span class="en-content">Gold Level</span>
+            <span class="zh-content">金级</span>
           </h4>
           <p class="step-description">
-            <span class="en-content">DFS/BFS, DP basics, DSU, trees</span>
-            <span class="zh-content">DFS/BFS、DP基础、并查集、树</span>
+            <span class="en-content">DFS/BFS, DP basics, DSU, trees, graphs</span>
+            <span class="zh-content">DFS/BFS、DP基础、并查集、树、图</span>
           </p>
         </div>
       </div>
@@ -1027,19 +1525,19 @@ description_zh: 为未来科技领袖提供的精英编程教育
             <span class="zh-content">8-12个月</span>
           </span>
           <h4 class="step-title">
-            <span class="en-content">Gold → Platinum</span>
-            <span class="zh-content">金级 → 白金级</span>
+            <span class="en-content">C++ → Platinum</span>
+            <span class="zh-content">C++ → 白金级</span>
           </h4>
           <p class="step-description">
-            <span class="en-content">Advanced DP, segment trees → Platinum!</span>
-            <span class="zh-content">高级DP、线段树 → 白金级！</span>
+            <span class="en-content">C++ STL, advanced DP, segment trees → Platinum!</span>
+            <span class="zh-content">C++ STL、高级DP、线段树 → 白金级！</span>
           </p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Track 4: Machine Learning / AI -->
+  <!-- Track 4: Machine Learning / AI - UPDATED -->
   <div class="path-container">
     <div class="path-header path-ml">
       <span class="path-header-icon">🤖</span>
@@ -1054,8 +1552,8 @@ description_zh: 为未来科技领袖提供的精英编程教育
         </p>
       </div>
       <span class="path-header-goal">
-        <span class="en-content">🎯 Goal: Kaggle Medal / USAAIO Award</span>
-        <span class="zh-content">🎯 目标：Kaggle奖牌 / USAAIO获奖</span>
+        <span class="en-content">🎯 Goal: USAAIO Award / Kaggle Medal</span>
+        <span class="zh-content">🎯 目标：USAAIO获奖 / Kaggle奖牌</span>
       </span>
     </div>
     <div class="path-timeline">
@@ -1067,8 +1565,8 @@ description_zh: 为未来科技领袖提供的精英编程教育
             <span class="zh-content">3-4个月</span>
           </span>
           <h4 class="step-title">
-            <span class="en-content">Python & Data</span>
-            <span class="zh-content">Python与数据</span>
+            <span class="en-content">Python for Data</span>
+            <span class="zh-content">Python数据基础</span>
           </h4>
           <p class="step-description">
             <span class="en-content">Python, NumPy, Pandas, data visualization</span>
@@ -1083,16 +1581,16 @@ description_zh: 为未来科技领袖提供的精英编程教育
         <div class="step-card">
           <span class="step-number">2</span>
           <span class="step-duration">
-            <span class="en-content">4-5 months</span>
-            <span class="zh-content">4-5个月</span>
+            <span class="en-content">5-6 months</span>
+            <span class="zh-content">5-6个月</span>
           </span>
           <h4 class="step-title">
-            <span class="en-content">Machine Learning</span>
-            <span class="zh-content">机器学习</span>
+            <span class="en-content">ML & Deep Learning</span>
+            <span class="zh-content">机器学习与深度学习</span>
           </h4>
           <p class="step-description">
-            <span class="en-content">Sklearn, regression, classification, clustering</span>
-            <span class="zh-content">Sklearn、回归、分类、聚类</span>
+            <span class="en-content">Sklearn, PyTorch, CNN, RNN, transformers</span>
+            <span class="zh-content">Sklearn、PyTorch、CNN、RNN、Transformer</span>
           </p>
         </div>
       </div>
@@ -1103,16 +1601,16 @@ description_zh: 为未来科技领袖提供的精英编程教育
         <div class="step-card">
           <span class="step-number">3</span>
           <span class="step-duration">
-            <span class="en-content">4-6 months</span>
-            <span class="zh-content">4-6个月</span>
+            <span class="en-content">3-4 months</span>
+            <span class="zh-content">3-4个月</span>
           </span>
           <h4 class="step-title">
-            <span class="en-content">Deep Learning</span>
-            <span class="zh-content">深度学习</span>
+            <span class="en-content">USAAIO Prep</span>
+            <span class="zh-content">USAAIO备赛</span>
           </h4>
           <p class="step-description">
-            <span class="en-content">PyTorch, CNN, RNN, transformers</span>
-            <span class="zh-content">PyTorch、CNN、RNN、Transformer</span>
+            <span class="en-content">AI concepts, problem solving, competition prep</span>
+            <span class="zh-content">AI概念、问题求解、竞赛准备</span>
           </p>
         </div>
       </div>
@@ -1127,12 +1625,12 @@ description_zh: 为未来科技领袖提供的精英编程教育
             <span class="zh-content">3-4个月</span>
           </span>
           <h4 class="step-title">
-            <span class="en-content">Competition Prep</span>
-            <span class="zh-content">竞赛备战</span>
+            <span class="en-content">Kaggle Projects</span>
+            <span class="zh-content">Kaggle实战</span>
           </h4>
           <p class="step-description">
-            <span class="en-content">Kaggle projects → Medal / USAAIO Award!</span>
-            <span class="zh-content">Kaggle项目 → 奖牌 / USAAIO获奖！</span>
+            <span class="en-content">Real competitions → USAAIO Award / Kaggle Medal!</span>
+            <span class="zh-content">真实竞赛 → USAAIO获奖 / Kaggle奖牌！</span>
           </p>
         </div>
       </div>
@@ -1154,7 +1652,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
         </p>
       </div>
       <span class="path-header-goal">
-        <span class="en-content">🎯 Goal: AIME Qualification / USAMO</span>
+        <span class="en-content">🎯 Goal: AIME / USAMO Qualification</span>
         <span class="zh-content">🎯 目标：AIME资格 / USAMO</span>
       </span>
     </div>
@@ -1271,7 +1769,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
             <span class="zh-content">Python与统计</span>
           </h4>
           <p class="step-description">
-            <span class="en-content">Python, statistics, probability basics</span>
+            <span class="en-content">Python, statistics, probability fundamentals</span>
             <span class="zh-content">Python、统计学、概率基础</span>
           </p>
         </div>
@@ -1328,7 +1826,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
           </span>
           <h4 class="step-title">
             <span class="en-content">Competition</span>
-            <span class="zh-content">竞赛</span>
+            <span class="zh-content">竞赛实战</span>
           </h4>
           <p class="step-description">
             <span class="en-content">Submit alphas → Gold Badge!</span>
@@ -1428,7 +1926,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
           </span>
           <h4 class="step-title">
             <span class="en-content">Competition</span>
-            <span class="zh-content">竞赛</span>
+            <span class="zh-content">竞赛实战</span>
           </h4>
           <p class="step-description">
             <span class="en-content">Practice problems → Outstanding Award!</span>
