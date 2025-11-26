@@ -7,8 +7,10 @@ description_zh: 由计算机科学博士提供的精英编程教育
 ---
 
 <style>
-  /* Advanced Animations */
-  @keyframes gradientWave {
+  /* ========================================
+     Premium Animation Library
+  ======================================== */
+  @keyframes gradientFlow {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
@@ -16,199 +18,375 @@ description_zh: 由计算机科学博士提供的精英编程教育
 
   @keyframes float {
     0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(-2deg); }
-    75% { transform: translateY(10px) rotate(2deg); }
+    25% { transform: translateY(-15px) rotate(-2deg); }
+    75% { transform: translateY(15px) rotate(2deg); }
   }
 
-  @keyframes shimmer {
-    0% { left: -100%; }
-    100% { left: 100%; }
-  }
-
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  @keyframes floatReverse {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(15px) rotate(2deg); }
+    75% { transform: translateY(-15px) rotate(-2deg); }
   }
 
   @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.08); opacity: 0.9; }
   }
 
-  @keyframes rotate {
+  @keyframes shimmer {
+    0% { left: -100%; opacity: 0; }
+    50% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+  }
+
+  @keyframes slideInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes rotateGlow {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
 
-  @keyframes shimmerGlow {
-    0%, 100% {
-      opacity: 0.3;
-      transform: translate(-50%, -50%) scale(0.8);
-    }
-    50% {
-      opacity: 0.6;
-      transform: translate(-50%, -50%) scale(1.2);
-    }
+  @keyframes morphBlob {
+    0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    50% { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
+    75% { border-radius: 60% 40% 60% 30% / 70% 30% 50% 60%; }
   }
 
-  @keyframes diagonalSweep1 {
-    0% {
-      left: -150%;
-      top: -10px;
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    50% {
-      left: 50%;
-      top: 50%;
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      left: 150%;
-      top: 110%;
-      opacity: 0;
-    }
+  @keyframes starTwinkle {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
   }
 
-  @keyframes diagonalSweep2 {
-    0% {
-      right: -150%;
-      bottom: -10px;
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    50% {
-      right: 50%;
-      bottom: 50%;
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      right: 150%;
-      bottom: 110%;
-      opacity: 0;
-    }
+  @keyframes particleFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+    25% { transform: translate(15px, -25px) scale(1.2); opacity: 1; }
+    50% { transform: translate(-10px, -50px) scale(0.8); opacity: 0.8; }
+    75% { transform: translate(-20px, -25px) scale(1.1); opacity: 0.9; }
   }
 
-  /* About Hero - Ultra Premium */
+  @keyframes cardEntrance {
+    from { opacity: 0; transform: translateY(40px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes iconBounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.1); }
+  }
+
+  @keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes borderGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes expand {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  @keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes imageFloat {
+    0%, 100% { transform: rotate(-2deg) translateY(0px); }
+    50% { transform: rotate(-2deg) translateY(-15px); }
+  }
+
+  @keyframes morphShape {
+    0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    20% { border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%; }
+    40% { border-radius: 70% 30% 50% 50% / 50% 60% 40% 60%; }
+    60% { border-radius: 40% 60% 30% 70% / 70% 50% 50% 30%; }
+    80% { border-radius: 60% 40% 60% 40% / 40% 70% 30% 60%; }
+  }
+
+  @keyframes windMorph {
+    0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: scale(1) rotate(0deg); }
+    25% { border-radius: 60% 40% 50% 50% / 40% 60% 40% 60%; transform: scale(1.02) rotate(5deg); }
+    50% { border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%; transform: scale(1) rotate(-5deg); }
+    75% { border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%; transform: scale(1.02) rotate(3deg); }
+  }
+
+  @keyframes sealRotate {
+    0%, 100% { transform: rotate(15deg) scale(1); }
+    25% { transform: rotate(10deg) scale(1.05); }
+    50% { transform: rotate(20deg) scale(1); }
+    75% { transform: rotate(12deg) scale(1.05); }
+  }
+
+  @keyframes cornerGlow {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+
+  /* ========================================
+     About Hero - Ultra Premium Cosmic
+  ======================================== */
   .about-hero {
-    min-height: 60vh;
+    min-height: 55vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5rem 2rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 100%);
-    background-size: 300% 300%;
-    animation: gradientWave 10s ease infinite;
-    border-radius: 30px;
+    background: linear-gradient(135deg, 
+      #0f0c29 0%, 
+      #302b63 25%, 
+      #24243e 50%,
+      #1a1a2e 75%,
+      #0f0c29 100%);
+    background-size: 400% 400%;
+    animation: gradientFlow 20s ease infinite;
+    border-radius: 40px;
     margin-bottom: 5rem;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.4);
+    box-shadow: 
+      0 50px 100px rgba(0, 0, 0, 0.5),
+      inset 0 0 100px rgba(99, 102, 241, 0.1);
   }
 
-  .about-hero::before {
-    content: '';
+  /* Aurora Effect */
+  .hero-aurora {
     position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    animation: rotate 15s linear infinite;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
     pointer-events: none;
   }
 
-  .about-hero::after {
+  .hero-aurora::before,
+  .hero-aurora::after {
     content: '';
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.15) 20%, transparent 60%);
-    transform: translate(-50%, -50%);
-    filter: blur(40px);
-    animation: shimmerGlow 4s ease-in-out infinite;
-    pointer-events: none;
-  }
-
-  /* Diagonal corner shimmer effect */
-  .about-hero .diagonal-shimmer-1,
-  .about-hero .diagonal-shimmer-2 {
     position: absolute;
     width: 150%;
-    height: 20px;
-    background: linear-gradient(90deg, 
-      transparent 0%, 
-      rgba(255,255,255,0.1) 20%,
-      rgba(255,255,255,0.3) 50%, 
-      rgba(255,255,255,0.1) 80%,
-      transparent 100%);
-    filter: blur(20px);
+    height: 150%;
+    top: -25%;
+    left: -25%;
+  }
+
+  .hero-aurora::before {
+    background: conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      rgba(99, 102, 241, 0.15) 60deg,
+      transparent 120deg,
+      rgba(139, 92, 246, 0.1) 180deg,
+      transparent 240deg,
+      rgba(236, 72, 153, 0.08) 300deg,
+      transparent 360deg
+    );
+    animation: rotateGlow 30s linear infinite;
+  }
+
+  .hero-aurora::after {
+    background: conic-gradient(
+      from 180deg at 50% 50%,
+      transparent 0deg,
+      rgba(6, 182, 212, 0.1) 90deg,
+      transparent 180deg,
+      rgba(16, 185, 129, 0.08) 270deg,
+      transparent 360deg
+    );
+    animation: rotateGlow 25s linear infinite reverse;
+  }
+
+  /* Morphing Orbs */
+  .hero-orbs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: morphBlob 20s ease-in-out infinite, float 15s ease-in-out infinite;
+  }
+
+  .hero-orb:nth-child(1) {
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.6), rgba(139, 92, 246, 0.4));
+    top: -150px;
+    left: -100px;
+  }
+
+  .hero-orb:nth-child(2) {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.5), rgba(239, 68, 68, 0.3));
+    bottom: -100px;
+    right: -80px;
+    animation-delay: -5s;
+  }
+
+  .hero-orb:nth-child(3) {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.4), rgba(16, 185, 129, 0.3));
+    top: 50%;
+    left: 60%;
+    animation-delay: -10s;
+  }
+
+  /* Twinkling Stars */
+  .hero-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     pointer-events: none;
   }
 
-  .about-hero .diagonal-shimmer-1 {
-    top: -10px;
-    left: -150%;
-    transform: rotate(45deg);
-    animation: diagonalSweep1 8s ease-in-out infinite;
+  .hero-star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    animation: starTwinkle 4s ease-in-out infinite;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
   }
 
-  .about-hero .diagonal-shimmer-2 {
-    bottom: -10px;
-    right: -150%;
-    transform: rotate(-45deg);
-    animation: diagonalSweep2 8s ease-in-out infinite;
-    animation-delay: 4s;
+  .hero-star:nth-child(1) { left: 8%; top: 15%; animation-delay: 0s; }
+  .hero-star:nth-child(2) { left: 18%; top: 45%; animation-delay: 0.7s; }
+  .hero-star:nth-child(3) { left: 28%; top: 75%; animation-delay: 1.4s; }
+  .hero-star:nth-child(4) { left: 42%; top: 20%; animation-delay: 2.1s; }
+  .hero-star:nth-child(5) { left: 58%; top: 65%; animation-delay: 0.3s; }
+  .hero-star:nth-child(6) { left: 72%; top: 30%; animation-delay: 1s; }
+  .hero-star:nth-child(7) { left: 88%; top: 55%; animation-delay: 1.7s; }
+  .hero-star:nth-child(8) { left: 95%; top: 25%; animation-delay: 2.4s; }
+
+  /* Floating Particles */
+  .hero-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
   }
 
-  .about-hero h1 {
+  .hero-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+    border-radius: 50%;
+    animation: particleFloat 10s ease-in-out infinite;
+  }
+
+  .hero-particle:nth-child(1) { left: 15%; bottom: 20%; animation-delay: 0s; }
+  .hero-particle:nth-child(2) { left: 35%; bottom: 30%; animation-delay: 2s; }
+  .hero-particle:nth-child(3) { left: 55%; bottom: 15%; animation-delay: 4s; }
+  .hero-particle:nth-child(4) { left: 75%; bottom: 25%; animation-delay: 1s; }
+  .hero-particle:nth-child(5) { left: 90%; bottom: 35%; animation-delay: 3s; }
+
+  /* Floating Icons */
+  .hero-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero-floating-icon {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.12;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+  }
+
+  .hero-floating-icon:nth-child(1) { top: 15%; left: 8%; animation: float 10s infinite ease-in-out; }
+  .hero-floating-icon:nth-child(2) { top: 20%; right: 10%; animation: floatReverse 12s infinite ease-in-out 1s; }
+  .hero-floating-icon:nth-child(3) { bottom: 20%; left: 12%; animation: float 9s infinite ease-in-out 2s; }
+  .hero-floating-icon:nth-child(4) { bottom: 25%; right: 15%; animation: floatReverse 11s infinite ease-in-out 0.5s; }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    animation: slideInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hero-icon {
     font-size: 4rem;
-    font-weight: 800;
+    margin-bottom: 1.5rem;
+    animation: iconBounce 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+  }
+
+  .hero-title {
+    font-size: 4.5rem;
+    font-weight: 900;
     color: white;
-    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
     margin-bottom: 1rem;
-    position: relative;
-    z-index: 1;
-    animation: float 6s ease-in-out infinite;
+    letter-spacing: -2px;
+    background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 30%, #ffffff 50%, #ddd6fe 70%, #ffffff 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGradient 8s ease infinite;
   }
 
-  .about-hero p {
+  .hero-subtitle {
     font-size: 1.4rem;
-    color: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
   }
 
-  /* Mission Section - Premium Design */
+  /* ========================================
+     Mission Section - Premium Glass
+  ======================================== */
   .mission-section {
     background: white;
-    padding: 4rem 3rem;
-    border-radius: 30px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    padding: 4.5rem 3.5rem;
+    border-radius: 32px;
+    box-shadow: 
+      0 30px 80px rgba(0, 0, 0, 0.1),
+      0 1px 3px rgba(0, 0, 0, 0.02);
     margin-bottom: 5rem;
     position: relative;
     overflow: hidden;
-    animation: slideIn 0.8s ease-out;
+    animation: slideInUp 0.8s ease-out;
+    border: 1px solid rgba(0, 0, 0, 0.04);
   }
 
   .mission-section::before {
@@ -218,128 +396,89 @@ description_zh: 由计算机科学博士提供的精英编程教育
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-    animation: shimmer 3s infinite;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899, #f59e0b);
+    background-size: 300% 100%;
+    animation: gradientFlow 5s linear infinite;
   }
 
-  .section-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #1F2937;
-    margin-bottom: 2rem;
-    text-align: center;
-    position: relative;
-    display: inline-block;
-    width: 100%;
-  }
-
-  .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 5px;
-    background: linear-gradient(90deg, #667eea, #764ba2);
-    border-radius: 3px;
-  }
-
-  .mission-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #4B5563;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  /* Values Section - Premium Cards */
-  .values-section {
-    background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
-    padding: 5rem 3rem;
-    border-radius: 30px;
-    margin: 5rem 0;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .values-section::before {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 30% 70%, rgba(102, 126, 234, 0.05), transparent 50%),
-                radial-gradient(circle at 70% 30%, rgba(236, 72, 153, 0.05), transparent 50%);
-    animation: pulse 15s ease-in-out infinite;
-  }
-
-  .values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
-    position: relative;
-    z-index: 1;
-    margin-top: 3rem;
-  }
-
-  .value-card {
-    background: white;
-    padding: 3rem;
-    border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: hidden;
-    animation: slideIn 0.6s ease-out;
-  }
-
-  .value-card::before {
+  .mission-section::after {
     content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
-    animation: shimmer 3s infinite;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.05), transparent);
+    animation: shimmer 4s infinite;
+    pointer-events: none;
   }
 
-  .value-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.3);
-  }
-
-  .value-icon {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
+  .section-header {
     text-align: center;
-    animation: pulse 3s ease-in-out infinite;
+    margin-bottom: 2.5rem;
   }
 
-  .value-title {
-    font-size: 1.5rem;
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 0.85rem;
     font-weight: 700;
-    color: #1F2937;
-    text-align: center;
+    color: #6366f1;
+    text-transform: uppercase;
+    letter-spacing: 4px;
     margin-bottom: 1rem;
+    padding: 0.6rem 1.8rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    border-radius: 50px;
+    border: 1px solid rgba(99, 102, 241, 0.2);
   }
 
-  .value-description {
-    color: #6B7280;
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+    letter-spacing: -1px;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+    border-radius: 3px;
+  }
+
+  .mission-text {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: #4B5563;
     text-align: center;
-    line-height: 1.6;
+    max-width: 900px;
+    margin: 2rem auto 0;
+    position: relative;
+    z-index: 1;
   }
 
-  /* Instructor Section - Premium Design */
+  /* ========================================
+     Instructor Section - Premium Design
+  ======================================== */
   .instructor-section {
     background: white;
-    padding: 5rem 3rem;
-    border-radius: 30px;
+    padding: 5rem 3.5rem;
+    border-radius: 32px;
     margin: 5rem 0;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    box-shadow: 
+      0 30px 80px rgba(0, 0, 0, 0.1),
+      0 1px 3px rgba(0, 0, 0, 0.02);
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.04);
   }
 
   .instructor-section::before {
@@ -349,13 +488,9 @@ description_zh: 由计算机科学博士提供的精英编程教育
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
-    transform: scaleX(0);
-    animation: expand 2s ease-out forwards;
-  }
-
-  @keyframes expand {
-    to { transform: scaleX(1); }
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899, #f59e0b);
+    background-size: 300% 100%;
+    animation: gradientFlow 5s linear infinite;
   }
 
   .instructor-content {
@@ -368,16 +503,16 @@ description_zh: 由计算机科学博士提供的精英编程教育
 
   .instructor-image-container {
     position: relative;
-    animation: float 6s ease-in-out infinite;
     width: 100%;
     display: flex;
     justify-content: center;
+    animation: slideInUp 1s ease-out;
   }
 
   .instructor-image-wrapper {
     position: relative;
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
   }
 
   .instructor-image-frame {
@@ -388,160 +523,71 @@ description_zh: 由计算机科学博士提供的精英编程教育
     background: linear-gradient(135deg, rgba(245,242,235,0.9), white);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     box-shadow: 
-      0 10px 40px rgba(0, 0, 0, 0.1),
+      0 20px 60px rgba(0, 0, 0, 0.15),
       inset 0 0 40px rgba(0, 0, 0, 0.05);
     transform: rotate(-2deg);
-    transition: transform 0.5s ease;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     animation: morphShape 15s ease-in-out infinite, imageFloat 6s ease-in-out infinite;
-  }
-
-  @keyframes morphShape {
-    0%, 100% {
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
-    20% {
-      border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
-    }
-    40% {
-      border-radius: 70% 30% 50% 50% / 50% 60% 40% 60%;
-    }
-    60% {
-      border-radius: 40% 60% 30% 70% / 70% 50% 50% 30%;
-    }
-    80% {
-      border-radius: 60% 40% 60% 40% / 40% 70% 30% 60%;
-    }
-  }
-
-  @keyframes imageFloat {
-    0%, 100% { 
-      transform: rotate(-2deg) translateY(0px);
-    }
-    50% { 
-      transform: rotate(-2deg) translateY(-10px);
-    }
   }
 
   .instructor-image-frame::before {
     content: '';
     position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
     background: linear-gradient(45deg, 
-      #667eea 0%,
-      #764ba2 25%,
-      #f093fb 50%,
-      #f5576c 75%,
-      #667eea 100%);
+      #6366f1 0%,
+      #8b5cf6 25%,
+      #ec4899 50%,
+      #f59e0b 75%,
+      #6366f1 100%);
     background-size: 400% 400%;
     border-radius: inherit;
     z-index: -1;
-    opacity: 0.7;
-    animation: borderGradient 8s ease infinite, morphShapeBorder 15s ease-in-out infinite;
+    opacity: 0.8;
+    animation: gradientFlow 8s ease infinite, morphShape 15s ease-in-out infinite;
   }
 
-  @keyframes morphShapeBorder {
-    0%, 100% {
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
-    20% {
-      border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
-    }
-    40% {
-      border-radius: 70% 30% 50% 50% / 50% 60% 40% 60%;
-    }
-    60% {
-      border-radius: 40% 60% 30% 70% / 70% 50% 50% 30%;
-    }
-    80% {
-      border-radius: 60% 40% 60% 40% / 40% 70% 30% 60%;
-    }
-  }
-
-  @keyframes borderGradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  /* Wind Effect Layers */
   .wind-effect {
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border: 2px solid rgba(102, 126, 234, 0.3);
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border: 2px solid rgba(99, 102, 241, 0.3);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    opacity: 0.3;
+    opacity: 0.4;
     animation: windMorph 12s ease-in-out infinite;
     z-index: -2;
   }
 
-  @keyframes windMorph {
-    0%, 100% {
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-      transform: scale(1) rotate(0deg);
-    }
-    25% {
-      border-radius: 60% 40% 50% 50% / 40% 60% 40% 60%;
-      transform: scale(1.02) rotate(5deg);
-    }
-    50% {
-      border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%;
-      transform: scale(1) rotate(-5deg);
-    }
-    75% {
-      border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
-      transform: scale(1.02) rotate(3deg);
-    }
-  }
-
   .wind-effect-2 {
     position: absolute;
-    top: -15px;
-    left: -15px;
-    right: -15px;
-    bottom: -15px;
-    border: 1px solid rgba(240, 147, 251, 0.2);
+    top: -18px;
+    left: -18px;
+    right: -18px;
+    bottom: -18px;
+    border: 1px solid rgba(236, 72, 153, 0.2);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    opacity: 0.2;
-    animation: windMorph2 10s ease-in-out infinite;
+    opacity: 0.3;
+    animation: windMorph 10s ease-in-out infinite reverse;
     animation-delay: -2s;
     z-index: -3;
-  }
-
-  @keyframes windMorph2 {
-    0%, 100% {
-      border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
-      transform: scale(1) rotate(0deg);
-    }
-    33% {
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-      transform: scale(1.03) rotate(-8deg);
-    }
-    66% {
-      border-radius: 70% 30% 30% 70% / 40% 60% 40% 60%;
-      transform: scale(1) rotate(6deg);
-    }
   }
 
   .instructor-image-frame:hover {
     animation-play-state: paused;
     transform: rotate(0deg) scale(1.05);
+    box-shadow: 
+      0 30px 80px rgba(99, 102, 241, 0.25),
+      inset 0 0 40px rgba(0, 0, 0, 0.05);
   }
 
   .instructor-image-frame:hover::before {
     animation-duration: 3s;
-    opacity: 0.9;
+    opacity: 1;
   }
 
   .instructor-image {
@@ -549,7 +595,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     height: 100%;
     object-fit: cover;
     filter: sepia(5%) contrast(1.05);
-    border: 3px solid white;
+    border: 4px solid white;
     border-radius: inherit;
     position: relative;
     z-index: 1;
@@ -560,7 +606,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     position: absolute;
     width: 25px;
     height: 25px;
-    border: 2px solid rgba(245, 87, 108, 0.6);
+    border: 2px solid rgba(99, 102, 241, 0.6);
     z-index: 2;
     animation: cornerGlow 4s ease-in-out infinite;
     opacity: 0.7;
@@ -580,6 +626,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     border-left: none;
     border-bottom: none;
     border-radius: 0 30% 0 0;
+    animation-delay: 1s;
   }
 
   .image-corner.bottom-left {
@@ -588,6 +635,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     border-right: none;
     border-top: none;
     border-radius: 0 0 0 30%;
+    animation-delay: 2s;
   }
 
   .image-corner.bottom-right {
@@ -596,26 +644,16 @@ description_zh: 由计算机科学博士提供的精英编程教育
     border-left: none;
     border-top: none;
     border-radius: 0 0 30% 0;
-  }
-
-  @keyframes cornerGlow {
-    0%, 100% {
-      opacity: 0.7;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.1);
-    }
+    animation-delay: 3s;
   }
 
   .image-seal {
     position: absolute;
     bottom: 25px;
     right: 25px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #f093fb, #f5576c);
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -623,26 +661,11 @@ description_zh: 由计算机科学博士提供的精英编程教育
     color: white;
     font-family: 'Noto Serif SC', serif;
     font-weight: 700;
-    font-size: 1.1rem;
-    box-shadow: 0 3px 15px rgba(245, 87, 108, 0.4);
+    font-size: 1.2rem;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
     transform: rotate(15deg);
     animation: sealRotate 10s ease-in-out infinite;
     z-index: 3;
-  }
-
-  @keyframes sealRotate {
-    0%, 100% {
-      transform: rotate(15deg) scale(1);
-    }
-    25% {
-      transform: rotate(10deg) scale(1.05);
-    }
-    50% {
-      transform: rotate(20deg) scale(1);
-    }
-    75% {
-      transform: rotate(12deg) scale(1.05);
-    }
   }
 
   .instructor-info {
@@ -650,15 +673,16 @@ description_zh: 由计算机科学博士提供的精英编程教育
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
+    animation: slideInUp 1s ease-out 0.3s backwards;
   }
 
   .instructor-name {
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-size: 2.8rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     text-align: center;
   }
 
@@ -672,75 +696,256 @@ description_zh: 由计算机科学博士提供的精英编程教育
 
   .instructor-bio {
     color: #4B5563;
-    line-height: 1.8;
+    line-height: 1.9;
     font-size: 1.1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     text-align: left;
   }
 
   .instructor-highlights {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: 0.8rem;
+    margin-top: 2.5rem;
     justify-content: center;
   }
 
   .highlight-badge {
-    background: linear-gradient(135deg, #EEF2FF 0%, #DDD6FE 100%);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
     color: #4F46E5;
-    padding: 0.5rem 1.2rem;
-    border-radius: 25px;
+    padding: 0.6rem 1.3rem;
+    border-radius: 50px;
     font-size: 0.9rem;
-    font-weight: 600;
-    box-shadow: 0 2px 10px rgba(79, 70, 229, 0.1);
-    transition: all 0.3s;
+    font-weight: 700;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .highlight-badge:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.2);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
   }
 
-  /* Success Stats - Premium */
-  .stats-section {
-    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
-    border-radius: 30px;
+  /* ========================================
+     Values Section - Premium Cards
+  ======================================== */
+  .values-section {
+    background: linear-gradient(135deg, 
+      rgba(99, 102, 241, 0.03) 0%, 
+      rgba(139, 92, 246, 0.02) 50%, 
+      rgba(236, 72, 153, 0.01) 100%);
     padding: 5rem 3rem;
+    border-radius: 40px;
     margin: 5rem 0;
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(99, 102, 241, 0.08);
   }
 
-  .stats-section::before {
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 3rem;
+  }
+
+  .value-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
+    box-shadow: 
+      0 15px 40px rgba(0, 0, 0, 0.06),
+      0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    animation: cardEntrance 0.8s ease-out backwards;
+  }
+
+  .value-card:nth-child(1) { animation-delay: 0.1s; }
+  .value-card:nth-child(2) { animation-delay: 0.2s; }
+  .value-card:nth-child(3) { animation-delay: 0.3s; }
+  .value-card:nth-child(4) { animation-delay: 0.4s; }
+  .value-card:nth-child(5) { animation-delay: 0.5s; }
+  .value-card:nth-child(6) { animation-delay: 0.6s; }
+
+  .value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .value-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .value-card::after {
     content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-    animation: shimmer 8s infinite;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.05), transparent);
+    transition: none;
+    z-index: 0;
+  }
+
+  .value-card:hover::after {
+    animation: shimmer 0.8s ease forwards;
+  }
+
+  .value-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 
+      0 30px 60px rgba(99, 102, 241, 0.15),
+      0 0 0 2px rgba(99, 102, 241, 0.1);
+  }
+
+  .value-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    animation: float 5s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+  }
+
+  .value-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1F2937;
+    text-align: center;
+    margin-bottom: 0.8rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .value-description {
+    color: #6B7280;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ========================================
+     Stats Section - Cosmic Theme
+  ======================================== */
+  .stats-section {
+    background: linear-gradient(135deg, 
+      #0f0c29 0%, 
+      #302b63 25%, 
+      #24243e 50%,
+      #1a1a2e 75%,
+      #0f0c29 100%);
+    background-size: 400% 400%;
+    animation: gradientFlow 20s ease infinite;
+    border-radius: 40px;
+    padding: 5rem 3rem;
+    margin: 5rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+      0 50px 100px rgba(0, 0, 0, 0.4),
+      inset 0 0 100px rgba(99, 102, 241, 0.1);
+  }
+
+  .stats-section::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      rgba(99, 102, 241, 0.08) 60deg,
+      transparent 120deg,
+      rgba(139, 92, 246, 0.06) 180deg,
+      transparent 240deg,
+      rgba(236, 72, 153, 0.04) 300deg,
+      transparent 360deg
+    );
+    animation: rotateGlow 30s linear infinite;
+    pointer-events: none;
+  }
+
+  .stats-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    animation: morphBlob 20s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .stats-orb-1 {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(139, 92, 246, 0.3));
+    top: -100px;
+    left: -80px;
+  }
+
+  .stats-orb-2 {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.4), rgba(239, 68, 68, 0.2));
+    bottom: -80px;
+    right: -50px;
+    animation-delay: -10s;
+  }
+
+  .stats-content {
+    position: relative;
+    z-index: 10;
   }
 
   .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 3rem;
-    position: relative;
-    z-index: 1;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
     margin-top: 3rem;
   }
 
   .stat-item {
     text-align: center;
-    animation: slideIn 1s ease-out;
+    animation: countUp 1s ease-out backwards;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+  }
+
+  .stat-item:nth-child(1) { animation-delay: 0.1s; }
+  .stat-item:nth-child(2) { animation-delay: 0.2s; }
+  .stat-item:nth-child(3) { animation-delay: 0.3s; }
+  .stat-item:nth-child(4) { animation-delay: 0.4s; }
+
+  .stat-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-5px);
   }
 
   .stat-number {
     font-size: 4rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #667eea 0%, #EC4899 50%, #F59E0B 100%);
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 50%, #ddd6fe 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
@@ -748,33 +953,52 @@ description_zh: 由计算机科学博士提供的精英编程教育
   }
 
   .stat-label {
-    color: #9CA3AF;
-    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 500;
+    letter-spacing: 3px;
+    font-weight: 600;
   }
 
-  /* Philosophy Section - Premium */
+  /* ========================================
+     Philosophy Section - Premium Glass
+  ======================================== */
   .philosophy-section {
-    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-    padding: 4rem 3rem;
-    border-radius: 30px;
+    background: linear-gradient(135deg, 
+      rgba(245, 158, 11, 0.08) 0%, 
+      rgba(251, 191, 36, 0.05) 50%, 
+      rgba(245, 158, 11, 0.03) 100%);
+    backdrop-filter: blur(10px);
+    padding: 4.5rem 3.5rem;
+    border-radius: 32px;
     margin: 5rem 0;
-    border-left: 5px solid #F59E0B;
+    border-left: 6px solid;
+    border-image: linear-gradient(180deg, #f59e0b, #fbbf24, #f59e0b) 1;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 20px 60px rgba(245, 158, 11, 0.1);
   }
 
-  .philosophy-section::after {
+  .philosophy-section::before {
     content: '';
     position: absolute;
     top: 50%;
-    right: 10%;
-    width: 300px;
-    height: 300px;
+    right: 5%;
+    width: 350px;
+    height: 350px;
     background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
-    animation: pulse 4s ease-in-out infinite;
+    animation: pulse 5s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .philosophy-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #92400E;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
   }
 
   .philosophy-list {
@@ -782,18 +1006,26 @@ description_zh: 由计算机科学博士提供的精英编程教育
     padding: 0;
     position: relative;
     z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .philosophy-item {
-    padding: 1.5rem 0;
+    padding: 1.5rem 2rem;
     color: #78350F;
     display: flex;
     align-items: flex-start;
-    transition: transform 0.3s;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(245, 158, 11, 0.2);
   }
 
   .philosophy-item:hover {
-    transform: translateX(10px);
+    transform: translateX(15px);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.1);
   }
 
   .philosophy-check {
@@ -801,110 +1033,139 @@ description_zh: 由计算机科学博士提供的精英编程教育
     font-weight: bold;
     margin-right: 1.5rem;
     font-size: 1.5rem;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(251, 191, 36, 0.2));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* CTA Section - Premium */
+  .philosophy-item strong {
+    color: #92400E;
+    font-weight: 700;
+  }
+
+  /* ========================================
+     CTA Section - Ultra Premium
+  ======================================== */
   .cta-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 100%);
-    background-size: 300% 300%;
-    animation: gradientWave 10s ease infinite;
-    border-radius: 30px;
-    padding: 5rem 3rem;
+    background: linear-gradient(135deg, 
+      #0f0c29 0%, 
+      #302b63 25%, 
+      #24243e 50%,
+      #1a1a2e 75%,
+      #0f0c29 100%);
+    background-size: 400% 400%;
+    animation: gradientFlow 20s ease infinite;
+    border-radius: 40px;
+    padding: 5rem 4rem;
     text-align: center;
     color: white;
-    margin: 6rem 0;
+    margin: 5rem 0 0 0;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.4);
+    box-shadow: 
+      0 50px 100px rgba(0, 0, 0, 0.4),
+      inset 0 0 100px rgba(99, 102, 241, 0.1);
   }
 
   .cta-section::before {
     content: '';
     position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    animation: rotate 15s linear infinite;
-  }
-
-  .cta-section::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.15) 20%, transparent 60%);
-    transform: translate(-50%, -50%);
-    filter: blur(40px);
-    animation: shimmerGlow 4s ease-in-out infinite;
-    pointer-events: none;
-  }
-
-  /* Diagonal shimmer for CTA */
-  .cta-section .diagonal-shimmer-1,
-  .cta-section .diagonal-shimmer-2 {
-    position: absolute;
     width: 150%;
-    height: 20px;
-    background: linear-gradient(90deg, 
-      transparent 0%, 
-      rgba(255,255,255,0.1) 20%,
-      rgba(255,255,255,0.3) 50%, 
-      rgba(255,255,255,0.1) 80%,
-      transparent 100%);
-    filter: blur(20px);
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      rgba(99, 102, 241, 0.1) 60deg,
+      transparent 120deg,
+      rgba(139, 92, 246, 0.08) 180deg,
+      transparent 240deg,
+      rgba(236, 72, 153, 0.05) 300deg,
+      transparent 360deg
+    );
+    animation: rotateGlow 30s linear infinite;
     pointer-events: none;
   }
 
-  .cta-section .diagonal-shimmer-1 {
-    top: -10px;
-    left: -150%;
-    transform: rotate(45deg);
-    animation: diagonalSweep1 8s ease-in-out infinite;
+  .cta-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    animation: morphBlob 20s ease-in-out infinite;
+    pointer-events: none;
   }
 
-  .cta-section .diagonal-shimmer-2 {
-    bottom: -10px;
-    right: -150%;
-    transform: rotate(-45deg);
-    animation: diagonalSweep2 8s ease-in-out infinite;
-    animation-delay: 4s;
+  .cta-orb-1 {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.6), rgba(139, 92, 246, 0.4));
+    top: -150px;
+    left: -100px;
+  }
+
+  .cta-orb-2 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.5), rgba(239, 68, 68, 0.3));
+    bottom: -100px;
+    right: -50px;
+    animation-delay: -10s;
   }
 
   .cta-content {
     position: relative;
-    z-index: 1;
+    z-index: 10;
+  }
+
+  .cta-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    animation: float 5s ease-in-out infinite;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
   }
 
   .cta-title {
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 900;
     margin-bottom: 1rem;
-    color: white !important;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 50%, #ffffff 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGradient 8s ease infinite;
   }
 
   .cta-description {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
-    color: white !important;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
   }
 
   .cta-button {
-    background: white;
-    color: #667eea;
-    padding: 1.2rem 3rem;
-    border-radius: 50px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    color: #4338ca;
+    padding: 1.3rem 3.5rem;
+    border-radius: 60px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
+    font-weight: 800;
+    font-size: 1.15rem;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: inline-block;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 
+      0 15px 40px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
   }
@@ -916,8 +1177,8 @@ description_zh: 由计算机科学博士提供的精英编程教育
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.2), transparent);
-    transition: left 0.5s;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
+    transition: left 0.5s ease;
   }
 
   .cta-button:hover::before {
@@ -925,14 +1186,28 @@ description_zh: 由计算机科学博士提供的精英编程教育
   }
 
   .cta-button:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    color: #667eea;
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 
+      0 25px 60px rgba(0, 0, 0, 0.4),
+      0 0 60px rgba(99, 102, 241, 0.2);
+    color: #4338ca;
   }
 
-  /* Responsive */
+  /* ========================================
+     Responsive Design
+  ======================================== */
+  @media (max-width: 1200px) {
+    .values-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 768px) {
-    .about-hero h1 {
+    .hero-title {
       font-size: 2.5rem;
     }
 
@@ -940,52 +1215,158 @@ description_zh: 由计算机科学博士提供的精英编程教育
       font-size: 2rem;
     }
 
-    .instructor-content {
+    .values-grid {
       grid-template-columns: 1fr;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-number {
+      font-size: 3rem;
     }
 
     .cta-title {
       font-size: 2rem;
     }
+
+    .about-hero {
+      border-radius: 24px;
+      min-height: 45vh;
+    }
+
+    .mission-section,
+    .instructor-section {
+      padding: 3rem 1.5rem;
+      border-radius: 24px;
+    }
+
+    .values-section,
+    .stats-section,
+    .cta-section {
+      padding: 3rem 1.5rem;
+      border-radius: 24px;
+    }
+
+    .philosophy-section {
+      padding: 3rem 1.5rem;
+      border-radius: 24px;
+    }
+
+    .hero-icons {
+      display: none;
+    }
+
+    .instructor-image-wrapper {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-button {
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+    }
+
+    .philosophy-item {
+      padding: 1rem 1.2rem;
+    }
   }
 </style>
 
-<div class="about-hero">
-  <div class="diagonal-shimmer-1"></div>
-  <div class="diagonal-shimmer-2"></div>
-  <h1>
-    <span class="en-content">About AIcoding Academy</span>
-    <span class="zh-content">关于 AIcoding 学院</span>
-  </h1>
-  <p>
-    <span class="en-content">An educational brand created by Ph.D. computer science majors dedicated to excellence</span>
-    <span class="zh-content">由计算机科学博士创立的致力于卓越的教育品牌</span>
-  </p>
-</div>
+<!-- About Hero -->
+<section class="about-hero">
+  <div class="hero-aurora"></div>
+  
+  <div class="hero-orbs">
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+  </div>
+  
+  <div class="hero-stars">
+    <div class="hero-star"></div>
+    <div class="hero-star"></div>
+    <div class="hero-star"></div>
+    <div class="hero-star"></div>
+    <div class="hero-star"></div>
+    <div class="hero-star"></div>
+    <div class="hero-star"></div>
+    <div class="hero-star"></div>
+  </div>
+
+  <div class="hero-particles">
+    <div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+  </div>
+  
+  <div class="hero-icons">
+    <span class="hero-floating-icon">🎓</span>
+    <span class="hero-floating-icon">💻</span>
+    <span class="hero-floating-icon">🏆</span>
+    <span class="hero-floating-icon">🚀</span>
+  </div>
+  
+  <div class="hero-content">
+    <div class="hero-icon">🌟</div>
+    <h1 class="hero-title">
+      <span class="en-content">About AIcoding Academy</span>
+      <span class="zh-content">关于 AIcoding 学院</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span class="en-content">An educational brand created by Ph.D. computer science majors dedicated to excellence</span>
+      <span class="zh-content">由计算机科学博士创立的致力于卓越的教育品牌</span>
+    </p>
+  </div>
+</section>
 
 <!-- Mission Statement -->
-<div class="mission-section">
-  <h2 class="section-title">
-    <span class="en-content">Our Mission</span>
-    <span class="zh-content">我们的使命</span>
-  </h2>
+<section class="mission-section">
+  <div class="section-header">
+    <span class="section-eyebrow">
+      <span class="en-content">Who We Are</span>
+      <span class="zh-content">关于我们</span>
+    </span>
+    <h2 class="section-title">
+      <span class="en-content">Our Mission</span>
+      <span class="zh-content">我们的使命</span>
+    </h2>
+  </div>
   <p class="mission-text">
     <span class="en-content">AIcoding is an educational brand created by a group of Ph.D. computer science majors to provide premium tutoring and background improvement services to K-12 students. We bridge the gap between academic excellence and practical programming skills, preparing the next generation of tech innovators.</span>
     <span class="zh-content">AIcoding 是由一群计算机科学博士创立的教育品牌，为K-12学生提供优质的辅导和背景提升服务。我们在学术卓越与实践编程技能之间架起桥梁，培养下一代科技创新者。</span>
   </p>
-</div>
+</section>
 
 <!-- Instructor Introduction -->
-<div class="instructor-section">
-  <h2 class="section-title">
-    <span class="en-content">Meet Our Lead Instructor</span>
-    <span class="zh-content">认识我们的首席讲师</span>
-  </h2>
+<section class="instructor-section">
+  <div class="section-header">
+    <span class="section-eyebrow">
+      <span class="en-content">Expert Guidance</span>
+      <span class="zh-content">专业指导</span>
+    </span>
+    <h2 class="section-title">
+      <span class="en-content">Meet Our Lead Instructor</span>
+      <span class="zh-content">认识我们的首席讲师</span>
+    </h2>
+  </div>
   
   <div class="instructor-content">
     <div class="instructor-image-container">
@@ -998,6 +1379,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
           <div class="image-corner bottom-left"></div>
           <div class="image-corner bottom-right"></div>
           <img src="{{ site.baseurl }}/images/h.png" alt="H Teacher" class="instructor-image">
+          <div class="image-seal">H</div>
         </div>
       </div>
     </div>
@@ -1030,14 +1412,20 @@ description_zh: 由计算机科学博士提供的精英编程教育
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Our Values -->
-<div class="values-section">
-  <h2 class="section-title">
-    <span class="en-content">What Sets Us Apart</span>
-    <span class="zh-content">我们的独特之处</span>
-  </h2>
+<section class="values-section">
+  <div class="section-header">
+    <span class="section-eyebrow">
+      <span class="en-content">Why Choose Us</span>
+      <span class="zh-content">为什么选择我们</span>
+    </span>
+    <h2 class="section-title">
+      <span class="en-content">What Sets Us Apart</span>
+      <span class="zh-content">我们的独特之处</span>
+    </h2>
+  </div>
   
   <div class="values-grid">
     <div class="value-card">
@@ -1112,62 +1500,69 @@ description_zh: 由计算机科学博士提供的精英编程教育
       </p>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Student Success Stats -->
-<div class="stats-section">
-  <h2 class="section-title" style="color: white;">
-    <span class="en-content">Student Success Stories</span>
-    <span class="zh-content">学生成功故事</span>
-  </h2>
+<section class="stats-section">
+  <div class="stats-orb stats-orb-1"></div>
+  <div class="stats-orb stats-orb-2"></div>
   
-  <div class="stats-grid">
-    <div class="stat-item">
-      <div class="stat-number">50+</div>
-      <div class="stat-label">
-        <span class="en-content">Students Taught</span>
-        <span class="zh-content">教授学生</span>
-      </div>
+  <div class="stats-content">
+    <div class="section-header">
+      <h2 class="section-title" style="color: white; -webkit-text-fill-color: white;">
+        <span class="en-content">Student Success Stories</span>
+        <span class="zh-content">学生成功故事</span>
+      </h2>
     </div>
     
-    <div class="stat-item">
-      <div class="stat-number">20+</div>
-      <div class="stat-label">
-        <span class="en-content">Competition Winners</span>
-        <span class="zh-content">竞赛获奖者</span>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">
+          <span class="en-content">Students Taught</span>
+          <span class="zh-content">教授学生</span>
+        </div>
       </div>
-    </div>
-    
-    <div class="stat-item">
-      <div class="stat-number">90%</div>
-      <div class="stat-label">
-        <span class="en-content">AP Score 5 Rate</span>
-        <span class="zh-content">AP 5分率</span>
+      
+      <div class="stat-item">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">
+          <span class="en-content">Competition Winners</span>
+          <span class="zh-content">竞赛获奖者</span>
+        </div>
       </div>
-    </div>
-    
-    <div class="stat-item">
-      <div class="stat-number">100%</div>
-      <div class="stat-label">
-        <span class="en-content">College Acceptance</span>
-        <span class="zh-content">大学录取率</span>
+      
+      <div class="stat-item">
+        <div class="stat-number">90%</div>
+        <div class="stat-label">
+          <span class="en-content">AP Score 5 Rate</span>
+          <span class="zh-content">AP 5分率</span>
+        </div>
+      </div>
+      
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">
+          <span class="en-content">College Acceptance</span>
+          <span class="zh-content">大学录取率</span>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Educational Philosophy -->
-<div class="philosophy-section">
-  <h2 class="section-title" style="color: #92400E;">
-    <span class="en-content">Our Educational Philosophy</span>
-    <span class="zh-content">我们的教育理念</span>
+<section class="philosophy-section">
+  <h2 class="philosophy-title">
+    <span class="en-content">📚 Our Educational Philosophy</span>
+    <span class="zh-content">📚 我们的教育理念</span>
   </h2>
   
   <ul class="philosophy-list">
     <li class="philosophy-item">
       <span class="philosophy-check">✓</span>
       <span>
-        <strong class="en-content">Learning by Doing:</strong>
+        <strong class="en-content">Learning by Doing: </strong>
         <strong class="zh-content">实践学习：</strong>
         <span class="en-content">Hands-on coding from day one with real projects and practical applications</span>
         <span class="zh-content">从第一天起就通过真实项目和实际应用进行编程实践</span>
@@ -1176,7 +1571,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     <li class="philosophy-item">
       <span class="philosophy-check">✓</span>
       <span>
-        <strong class="en-content">Conceptual Understanding:</strong>
+        <strong class="en-content">Conceptual Understanding: </strong>
         <strong class="zh-content">概念理解：</strong>
         <span class="en-content">Deep comprehension of algorithms and data structures, not just memorization</span>
         <span class="zh-content">深入理解算法和数据结构，而不仅仅是死记硬背</span>
@@ -1185,7 +1580,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
     <li class="philosophy-item">
       <span class="philosophy-check">✓</span>
       <span>
-        <strong class="en-content">Competitive Edge:</strong>
+        <strong class="en-content">Competitive Edge: </strong>
         <strong class="zh-content">竞争优势：</strong>
         <span class="en-content">Training students to excel in competitions and stand out in college applications</span>
         <span class="zh-content">培训学生在竞赛中脱颖而出，在大学申请中崭露头角</span>
@@ -1194,31 +1589,33 @@ description_zh: 由计算机科学博士提供的精英编程教育
     <li class="philosophy-item">
       <span class="philosophy-check">✓</span>
       <span>
-        <strong class="en-content">Lifelong Skills:</strong>
+        <strong class="en-content">Lifelong Skills: </strong>
         <strong class="zh-content">终身技能：</strong>
         <span class="en-content">Building problem-solving abilities that extend beyond programming</span>
         <span class="zh-content">培养超越编程的问题解决能力</span>
       </span>
     </li>
   </ul>
-</div>
+</section>
 
 <!-- CTA Section -->
-<div class="cta-section">
-  <div class="diagonal-shimmer-1"></div>
-  <div class="diagonal-shimmer-2"></div>
+<section class="cta-section">
+  <div class="cta-orb cta-orb-1"></div>
+  <div class="cta-orb cta-orb-2"></div>
+  
   <div class="cta-content">
+    <div class="cta-icon">🚀</div>
     <h2 class="cta-title">
       <span class="en-content">Join the AIcoding Family</span>
       <span class="zh-content">加入 AIcoding 大家庭</span>
     </h2>
     <p class="cta-description">
-      <span class="en-content">Experience the difference that expert instruction makes</span>
-      <span class="zh-content">体验专家指导的不同之处</span>
+      <span class="en-content">Experience the difference that expert instruction makes. Start your journey to coding excellence today.</span>
+      <span class="zh-content">体验专家指导的不同之处。今天就开始您的编程卓越之旅。</span>
     </p>
     <a href="{{ site.baseurl }}/contact.html" class="cta-button">
-      <span class="en-content">Get Started Today</span>
-      <span class="zh-content">立即开始</span>
+      <span class="en-content">Get Started Today →</span>
+      <span class="zh-content">立即开始 →</span>
     </a>
   </div>
-</div>
+</section>
