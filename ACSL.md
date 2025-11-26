@@ -936,7 +936,7 @@ description_zh: 掌握计算机科学概念与编程，征服ACSL竞赛
 
   .success-item {
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 100%);
     border-radius: 20px;
     transition: all 0.4s ease;
@@ -944,7 +944,7 @@ description_zh: 掌握计算机科学概念与编程，征服ACSL竞赛
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 180px;
+    height: 200px;
   }
 
   .success-item:hover {
@@ -955,17 +955,25 @@ description_zh: 掌握计算机科学概念与编程，征服ACSL竞赛
   .success-icon {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .success-number {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 800;
     background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     animation: pulse 3s ease-in-out infinite;
+    white-space: nowrap;
+    height: 50px;
   }
 
   .success-label {
@@ -973,6 +981,10 @@ description_zh: 掌握计算机科学概念与编程，征服ACSL竞赛
     font-size: 0.95rem;
     font-weight: 600;
     margin-top: 0.3rem;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* Testimonials Section */
@@ -2173,7 +2185,7 @@ description_zh: 掌握计算机科学概念与编程，征服ACSL竞赛
     </div>
     <div class="success-item">
       <div class="success-icon">🏅</div>
-      <span class="success-number" style="font-size: 2.2rem;">Top&nbsp;10%</span>
+      <span class="success-number">Top&nbsp;10%</span>
       <div class="success-label">
         <span class="en-content">Worldwide Ranking</span>
         <span class="zh-content">全球排名</span>
