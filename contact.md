@@ -1589,7 +1589,7 @@ description_zh: 与 AIcoding 学院取得联系
       </div>
     </div>
     
-    <!-- Email -->
+    <!-- Email - Contact via Form -->
     <div class="contact-method">
       <div class="contact-icon email-icon">
         <svg viewBox="0 0 24 24">
@@ -1601,11 +1601,14 @@ description_zh: 与 AIcoding 学院取得联系
           <span class="en-content">Email</span>
           <span class="zh-content">邮箱</span>
         </h3>
-        <p>hangzhao2021@gmail.com</p>
-        <a href="mailto:hangzhao2021@gmail.com" class="action-link">
-          <span class="en-content">Send Email →</span>
-          <span class="zh-content">发送邮件 →</span>
-        </a>
+        <p>
+          <span class="en-content">Use the contact form</span>
+          <span class="zh-content">请使用联系表单</span>
+        </p>
+        <span class="action-link" style="cursor: pointer;" onclick="document.getElementById('name').focus();">
+          <span class="en-content">Send Message →</span>
+          <span class="zh-content">发送消息 →</span>
+        </span>
       </div>
     </div>
     
@@ -1777,8 +1780,7 @@ description_zh: 与 AIcoding 学院取得联系
       from_email: form.email.value,
       phone: form.phone.value || 'Not provided',
       course: form.course.value || 'Not specified',
-      message: form.message.value,
-      to_email: 'hangzhao2021@gmail.com'
+      message: form.message.value
     };
     
     try {
@@ -1799,13 +1801,8 @@ description_zh: 与 AIcoding 学院取得联系
     } catch (error) {
       console.error('EmailJS Error:', error);
       
-      // Fallback to mailto
-      const subject = `New Contact from AIcoding Academy - ${form.name.value}`;
-      const body = `Name: ${form.name.value}\nEmail: ${form.email.value}\nPhone: ${form.phone.value || 'Not provided'}\nCourse Interest: ${form.course.value || 'Not specified'}\nMessage:\n${form.message.value}`;
-      
-      window.location.href = `mailto:hangzhao2021@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      
-      errorMessage.innerHTML = '<span class="message-icon">⚠️</span><span class="en-content">Direct send failed. Opening your email client instead.</span><span class="zh-content">直接发送失败。正在打开您的邮件客户端。</span>';
+      // Show error message - form submission failed
+      errorMessage.innerHTML = '<span class="message-icon">⚠️</span><span><span class="en-content">Message failed to send. Please try again or contact us by phone/WeChat.</span><span class="zh-content">消息发送失败。请重试或通过电话/微信联系我们。</span></span>';
       errorMessage.classList.add('show');
       successMessage.classList.remove('show');
       
