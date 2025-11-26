@@ -28,24 +28,9 @@ description_zh: 为未来科技领袖提供的精英编程教育
     75% { transform: translateY(-15px) rotate(-2deg); }
   }
 
-  @keyframes shimmer {
-    0% { background-position: -1000px 0; }
-    100% { background-position: 1000px 0; }
-  }
-
   @keyframes slideInUp {
     from { opacity: 0; transform: translateY(40px); }
     to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-40px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-
-  @keyframes slideInRight {
-    from { opacity: 0; transform: translateX(40px); }
-    to { opacity: 1; transform: translateX(0); }
   }
 
   @keyframes pulse {
@@ -80,28 +65,11 @@ description_zh: 为未来科技领袖提供的精英编程教育
     50% { opacity: 1; transform: scale(1.3); }
   }
 
-  @keyframes typewriter {
-    from { width: 0; }
-    to { width: 100%; }
-  }
-
-  @keyframes blink {
-    50% { border-color: transparent; }
-  }
-
-  @keyframes countUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes ripple {
-    0% { transform: scale(1); opacity: 0.5; }
-    100% { transform: scale(2.5); opacity: 0; }
-  }
-
-  @keyframes borderGlow {
-    0%, 100% { border-color: rgba(102, 126, 234, 0.5); }
-    50% { border-color: rgba(168, 85, 247, 0.8); }
+  @keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
   }
 
   @keyframes textGradient {
@@ -110,45 +78,39 @@ description_zh: 为未来科技领袖提供的精英编程教育
     100% { background-position: 0% 50%; }
   }
 
-  @keyframes bounceIn {
-    0% { transform: scale(0.3); opacity: 0; }
-    50% { transform: scale(1.05); }
-    70% { transform: scale(0.9); }
-    100% { transform: scale(1); opacity: 1; }
+  @keyframes drawLine {
+    from { stroke-dashoffset: 1000; }
+    to { stroke-dashoffset: 0; }
   }
 
-  @keyframes waveMove {
-    0% { transform: translateX(0) translateY(0); }
-    50% { transform: translateX(-25px) translateY(10px); }
-    100% { transform: translateX(0) translateY(0); }
+  @keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
   }
 
   /* ========================================
-     Hero Section - Ultra Premium
+     Hero Section
   ======================================== */
   .hero-section {
-    min-height: 95vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5rem 2rem;
     background: linear-gradient(135deg, 
-      #667eea 0%, 
-      #764ba2 20%, 
-      #6366F1 40%, 
-      #8B5CF6 60%, 
-      #A855F7 80%, 
-      #667eea 100%);
+      #1e1b4b 0%, 
+      #312e81 25%, 
+      #4338ca 50%, 
+      #6366f1 75%, 
+      #4338ca 100%);
     background-size: 400% 400%;
-    animation: gradientFlow 12s ease infinite;
+    animation: gradientFlow 15s ease infinite;
     border-radius: 30px;
     margin-bottom: 5rem;
     position: relative;
     overflow: hidden;
-    box-shadow: 
-      0 30px 80px rgba(102, 126, 234, 0.4),
-      0 0 120px rgba(139, 92, 246, 0.2);
+    box-shadow: 0 30px 80px rgba(67, 56, 202, 0.4);
   }
 
   /* Aurora effect */
@@ -172,30 +134,12 @@ description_zh: 为未来科技领袖提供的精英编程教育
     background: linear-gradient(
       45deg,
       transparent 30%,
-      rgba(120, 119, 198, 0.15) 40%,
-      rgba(167, 139, 250, 0.2) 50%,
-      rgba(120, 119, 198, 0.15) 60%,
+      rgba(99, 102, 241, 0.15) 40%,
+      rgba(139, 92, 246, 0.2) 50%,
+      rgba(99, 102, 241, 0.15) 60%,
       transparent 70%
     );
-    animation: rotate 20s linear infinite;
-  }
-
-  .hero-aurora::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      -45deg,
-      transparent 30%,
-      rgba(236, 72, 153, 0.1) 40%,
-      rgba(245, 158, 11, 0.1) 50%,
-      rgba(236, 72, 153, 0.1) 60%,
-      transparent 70%
-    );
-    animation: rotateReverse 25s linear infinite;
+    animation: rotate 25s linear infinite;
   }
 
   /* Floating orbs */
@@ -212,34 +156,32 @@ description_zh: 为未来科技领袖提供的精英编程教育
   .hero-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.4;
+    filter: blur(80px);
+    opacity: 0.3;
     animation: morphBlob 15s ease-in-out infinite, float 12s ease-in-out infinite;
   }
 
   .hero-orb:nth-child(1) {
     width: 400px;
     height: 400px;
-    background: rgba(167, 139, 250, 0.6);
+    background: rgba(139, 92, 246, 0.5);
     top: -150px;
     left: -100px;
-    animation-delay: 0s;
   }
 
   .hero-orb:nth-child(2) {
     width: 350px;
     height: 350px;
-    background: rgba(236, 72, 153, 0.5);
+    background: rgba(59, 130, 246, 0.4);
     top: 60%;
     right: -100px;
     animation-delay: -5s;
-    animation-direction: reverse;
   }
 
   .hero-orb:nth-child(3) {
     width: 300px;
     height: 300px;
-    background: rgba(245, 158, 11, 0.4);
+    background: rgba(16, 185, 129, 0.3);
     bottom: -100px;
     left: 30%;
     animation-delay: -3s;
@@ -273,10 +215,6 @@ description_zh: 为未来科技领袖提供的精英编程教育
   .hero-star:nth-child(6) { left: 70%; top: 35%; animation-delay: 0.8s; }
   .hero-star:nth-child(7) { left: 85%; top: 60%; animation-delay: 1.2s; }
   .hero-star:nth-child(8) { left: 95%; top: 20%; animation-delay: 0.6s; }
-  .hero-star:nth-child(9) { left: 30%; top: 5%; animation-delay: 1.8s; }
-  .hero-star:nth-child(10) { left: 75%; top: 85%; animation-delay: 2s; }
-  .hero-star:nth-child(11) { left: 60%; top: 50%; animation-delay: 0.2s; }
-  .hero-star:nth-child(12) { left: 10%; top: 85%; animation-delay: 1.3s; }
 
   /* Floating icons */
   .floating-icons {
@@ -289,8 +227,8 @@ description_zh: 为未来科技领袖提供的精英编程教育
 
   .floating-icon {
     position: absolute;
-    font-size: 3.5rem;
-    opacity: 0.15;
+    font-size: 3rem;
+    opacity: 0.12;
     color: white;
     filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
   }
@@ -300,8 +238,6 @@ description_zh: 为未来科技领袖提供的精英编程教育
   .floating-icon:nth-child(3) { bottom: 25%; left: 12%; animation: float 7s infinite ease-in-out 2s; }
   .floating-icon:nth-child(4) { bottom: 15%; right: 15%; animation: floatReverse 10s infinite ease-in-out 0.5s; }
   .floating-icon:nth-child(5) { top: 45%; left: 5%; animation: float 8.5s infinite ease-in-out 1.5s; }
-  .floating-icon:nth-child(6) { top: 35%; right: 5%; animation: floatReverse 7.5s infinite ease-in-out 2.5s; }
-  .floating-icon:nth-child(7) { bottom: 40%; left: 45%; animation: float 9.5s infinite ease-in-out 3s; }
 
   .hero-content {
     position: relative;
@@ -310,7 +246,6 @@ description_zh: 为未来科技领袖提供的精英编程教育
     animation: slideInUp 1s ease-out;
   }
 
-  /* Animated badge */
   .hero-badge {
     display: inline-flex;
     align-items: center;
@@ -341,17 +276,17 @@ description_zh: 为未来科技领袖提供的精英编程教育
   }
 
   .hero-title {
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 800;
     color: white;
-    text-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
     margin-bottom: 1.5rem;
-    letter-spacing: -3px;
+    letter-spacing: -2px;
     line-height: 1.1;
   }
 
   .hero-title-gradient {
-    background: linear-gradient(135deg, #ffffff 0%, #E0E7FF 50%, #ffffff 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 50%, #ffffff 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -359,26 +294,24 @@ description_zh: 为未来科技领袖提供的精英编程教育
   }
 
   .hero-subtitle {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.95);
     margin-bottom: 1rem;
     font-weight: 400;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    animation: slideInUp 1s ease-out 0.2s backwards;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
 
   .hero-description {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.7;
-    animation: slideInUp 1s ease-out 0.4s backwards;
   }
 
   .hero-buttons {
@@ -386,56 +319,34 @@ description_zh: 为未来科技领袖提供的精英编程教育
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    animation: slideInUp 1s ease-out 0.6s backwards;
   }
 
   .hero-btn {
-    padding: 1.2rem 3rem;
+    padding: 1.1rem 2.5rem;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    position: relative;
-    overflow: hidden;
   }
 
   .hero-btn-primary {
     background: white;
-    color: #667eea;
-    box-shadow: 
-      0 10px 40px rgba(0, 0, 0, 0.2),
-      0 0 30px rgba(255, 255, 255, 0.2);
-  }
-
-  .hero-btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.2), transparent);
-    transition: left 0.5s;
-  }
-
-  .hero-btn-primary:hover::before {
-    left: 100%;
+    color: #4338ca;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
   }
 
   .hero-btn-primary:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 
-      0 20px 50px rgba(0, 0, 0, 0.3),
-      0 0 50px rgba(255, 255, 255, 0.3);
-    color: #667eea;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    color: #4338ca;
   }
 
   .hero-btn-secondary {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     color: white;
     border: 2px solid rgba(255, 255, 255, 0.4);
@@ -445,254 +356,31 @@ description_zh: 为未来科技领袖提供的精英编程教育
     background: rgba(255, 255, 255, 0.25);
     transform: translateY(-5px);
     color: white;
-    border-color: rgba(255, 255, 255, 0.6);
-  }
-
-  /* Hero stats row */
-  .hero-stats {
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-    margin-top: 4rem;
-    animation: slideInUp 1s ease-out 0.8s backwards;
-  }
-
-  .hero-stat {
-    text-align: center;
-    position: relative;
-  }
-
-  .hero-stat::after {
-    content: '';
-    position: absolute;
-    right: -1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.3);
-  }
-
-  .hero-stat:last-child::after {
-    display: none;
-  }
-
-  .hero-stat-number {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: white;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
-  }
-
-  .hero-stat-label {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 500;
   }
 
   /* ========================================
-     Trusted By / Social Proof Section
+     Section Styles
   ======================================== */
-  .trusted-section {
-    padding: 3rem 0;
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  .trusted-label {
-    font-size: 0.9rem;
-    color: #9CA3AF;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 2rem;
-    font-weight: 600;
-  }
-
-  .trusted-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-    opacity: 0.6;
-    filter: grayscale(100%);
-    transition: all 0.5s ease;
-  }
-
-  .trusted-logos:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-  }
-
-  .trusted-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #6B7280;
-    padding: 1rem 2rem;
-    background: #F3F4F6;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-  }
-
-  .trusted-logo:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  /* ========================================
-     Features Grid - Premium Cards
-  ======================================== */
-  .features-section {
-    margin: 6rem 0;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    margin: 3rem 0;
-  }
-
-  .feature-card {
-    background: white;
-    border-radius: 25px;
-    padding: 3rem 2.5rem;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(229, 231, 235, 0.5);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #667eea, #764ba2, #EC4899);
-    transform: scaleX(0);
-    transition: transform 0.5s ease;
-    transform-origin: left;
-  }
-
-  .feature-card:hover::before {
-    transform: scaleX(1);
-  }
-
-  .feature-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.12);
-  }
-
-  .feature-icon-wrapper {
-    position: relative;
-    width: 85px;
-    height: 85px;
-    margin: 0 auto 2rem;
-  }
-
-  .feature-icon {
-    width: 85px;
-    height: 85px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.8rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 22px;
-    color: white;
-    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.35);
-    position: relative;
-    z-index: 1;
-    transition: all 0.4s ease;
-  }
-
-  .feature-card:hover .feature-icon {
-    transform: scale(1.08) rotate(-3deg);
-    box-shadow: 0 20px 45px rgba(102, 126, 234, 0.45);
-  }
-
-  .feature-icon-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border-radius: 22px;
-    filter: blur(20px);
-    opacity: 0.4;
-    z-index: 0;
-    animation: pulseGlow 3s ease-in-out infinite;
-  }
-
-  .feature-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #1F2937;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .feature-description {
-    color: #6B7280;
-    line-height: 1.8;
-    text-align: center;
-    font-size: 1.05rem;
-  }
-
-  /* ========================================
-     Courses Showcase Section
-  ======================================== */
-  .courses-section {
-    margin: 6rem 0;
-    padding: 5rem 0;
-    background: linear-gradient(180deg, #F9FAFB 0%, #F3F4F6 100%);
-    border-radius: 40px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .courses-section::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: 
-      radial-gradient(ellipse at 20% 0%, rgba(102, 126, 234, 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 100%, rgba(236, 72, 153, 0.06) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
   .section-header {
     text-align: center;
     margin-bottom: 4rem;
-    position: relative;
-    z-index: 1;
   }
 
   .section-eyebrow {
     display: inline-block;
     font-size: 0.85rem;
     font-weight: 700;
-    color: #667eea;
+    color: #6366f1;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 1rem;
     padding: 0.5rem 1.5rem;
-    background: rgba(102, 126, 234, 0.1);
+    background: rgba(99, 102, 241, 0.1);
     border-radius: 50px;
   }
 
   .section-title {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 800;
     color: #1F2937;
     margin-bottom: 1rem;
@@ -707,253 +395,126 @@ description_zh: 为未来科技领袖提供的精英编程教育
     transform: translateX(-50%);
     width: 80px;
     height: 5px;
-    background: linear-gradient(90deg, #667eea, #764ba2, #EC4899);
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
     border-radius: 3px;
   }
 
   .section-subtitle {
     color: #6B7280;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 400;
-    max-width: 600px;
+    max-width: 650px;
     margin: 1.5rem auto 0;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
-  /* Course categories tabs */
-  .course-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-    padding: 0 2rem;
+  /* ========================================
+     What We Offer Section
+  ======================================== */
+  .offer-section {
+    margin: 6rem 0;
   }
 
-  .course-tab {
-    padding: 0.8rem 2rem;
-    background: white;
-    border: 2px solid #E5E7EB;
-    border-radius: 50px;
-    font-weight: 600;
-    color: #6B7280;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-  }
-
-  .course-tab:hover,
-  .course-tab.active {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    border-color: transparent;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-    transform: translateY(-2px);
-  }
-
-  /* Course cards grid */
-  .courses-grid {
+  .offer-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 1;
+    gap: 2.5rem;
+    margin-top: 3rem;
   }
 
-  .course-card {
+  .offer-card {
     background: white;
     border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(229, 231, 235, 0.5);
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    border: 1px solid #F3F4F6;
+    transition: all 0.4s ease;
+    text-align: center;
   }
 
-  .course-card:hover {
+  .offer-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
   }
 
-  .course-card-header {
-    height: 160px;
-    position: relative;
+  .offer-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-  }
-
-  .course-card-header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
-    animation: rotate 15s linear infinite;
-  }
-
-  .course-card-icon {
-    font-size: 4rem;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    font-size: 2.5rem;
+    border-radius: 20px;
     position: relative;
-    z-index: 1;
-    animation: float 5s ease-in-out infinite;
   }
 
-  .course-card-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.4rem 1rem;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    z-index: 2;
+  .offer-icon-programming {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
   }
 
-  .badge-popular {
-    background: #EF4444;
-    color: white;
+  .offer-icon-competition {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(239, 68, 68, 0.15));
   }
 
-  .badge-new {
-    background: #10B981;
-    color: white;
+  .offer-icon-research {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(6, 182, 212, 0.15));
   }
 
-  .badge-hot {
-    background: #F59E0B;
-    color: white;
-  }
-
-  .course-card-body {
-    padding: 2rem;
-  }
-
-  .course-card-title {
-    font-size: 1.35rem;
+  .offer-title {
+    font-size: 1.4rem;
     font-weight: 700;
     color: #1F2937;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
   }
 
-  .course-card-subtitle {
-    font-size: 0.95rem;
-    color: #9CA3AF;
+  .offer-description {
+    color: #6B7280;
+    font-size: 1rem;
+    line-height: 1.7;
     margin-bottom: 1.5rem;
   }
 
-  .course-card-features {
+  .offer-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 1.5rem 0;
+    margin: 0;
+    text-align: left;
   }
 
-  .course-card-features li {
+  .offer-list li {
     display: flex;
     align-items: center;
     gap: 0.6rem;
+    padding: 0.5rem 0;
     color: #4B5563;
     font-size: 0.95rem;
-    margin-bottom: 0.6rem;
+    border-bottom: 1px solid #F3F4F6;
   }
 
-  .course-card-features li::before {
-    content: '→';
+  .offer-list li:last-child {
+    border-bottom: none;
+  }
+
+  .offer-list li::before {
+    content: '✓';
     color: #10B981;
     font-weight: 700;
   }
 
-  .course-card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1.5rem;
-    border-top: 1px solid #F3F4F6;
-  }
-
-  .course-card-tags {
-    display: flex;
-    gap: 0.5rem;
-  }
-
-  .course-tag {
-    padding: 0.3rem 0.8rem;
-    background: #F3F4F6;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #6B7280;
-  }
-
-  .course-tag.age {
-    background: rgba(102, 126, 234, 0.1);
-    color: #667eea;
-  }
-
-  .course-tag.level {
-    background: rgba(16, 185, 129, 0.1);
-    color: #10B981;
-  }
-
-  .course-card-btn {
-    padding: 0.7rem 1.5rem;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .course-card-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-    color: white;
-  }
-
-  /* Course gradient backgrounds */
-  .course-gradient-python { background: linear-gradient(135deg, #F472B6, #EC4899); }
-  .course-gradient-java { background: linear-gradient(135deg, #60A5FA, #3B82F6); }
-  .course-gradient-cpp { background: linear-gradient(135deg, #8B5CF6, #7C3AED); }
-  .course-gradient-apcsa { background: linear-gradient(135deg, #34D399, #10B981); }
-  .course-gradient-apcsp { background: linear-gradient(135deg, #FBBF24, #F59E0B); }
-  .course-gradient-webdev { background: linear-gradient(135deg, #A78BFA, #8B5CF6); }
-  .course-gradient-ds { background: linear-gradient(135deg, #38BDF8, #0EA5E9); }
-  .course-gradient-algo { background: linear-gradient(135deg, #FB923C, #F97316); }
-  .course-gradient-ml { background: linear-gradient(135deg, #E879F9, #D946EF); }
-
   /* ========================================
-     Competition Training Section
+     Learning Paths Section - ENHANCED
   ======================================== */
-  .competition-section {
+  .paths-section {
     margin: 6rem 0;
-    padding: 5rem;
-    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+    padding: 5rem 2rem;
+    background: linear-gradient(180deg, #F9FAFB 0%, #F3F4F6 100%);
     border-radius: 40px;
     position: relative;
     overflow: hidden;
   }
 
-  .competition-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #667eea, #EC4899, #F59E0B, #10B981, #667eea);
-    background-size: 300% 100%;
-    animation: gradientFlow 6s ease infinite;
-  }
-
-  .competition-section::after {
+  .paths-section::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -961,274 +522,227 @@ description_zh: 为未来科技领袖提供的精英编程教育
     top: 0;
     left: 0;
     background: 
-      radial-gradient(ellipse at 10% 20%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
-      radial-gradient(ellipse at 90% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+      radial-gradient(ellipse at 0% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 100% 100%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
     pointer-events: none;
   }
 
-  .competition-content {
+  .paths-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
     position: relative;
     z-index: 1;
   }
 
-  .competition-section .section-header {
-    margin-bottom: 3rem;
+  .path-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
   }
 
-  .competition-section .section-eyebrow {
-    background: rgba(102, 126, 234, 0.2);
-    color: #A5B4FC;
+  .path-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
   }
 
-  .competition-section .section-title {
-    color: white;
-  }
-
-  .competition-section .section-subtitle {
-    color: #9CA3AF;
-  }
-
-  /* Competition grid */
-  .competition-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .competition-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.4s ease;
+  .path-card-header {
+    padding: 2.5rem 2rem 2rem;
     position: relative;
     overflow: hidden;
   }
 
-  .competition-card::before {
+  .path-card-header::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--comp-color-1), var(--comp-color-2));
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    bottom: 0;
+    opacity: 0.1;
   }
 
-  .competition-card:hover::before {
-    opacity: 1;
+  .path-header-algo {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
   }
 
-  .competition-card:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  .path-header-ml {
+    background: linear-gradient(135deg, #10B981, #06B6D4);
   }
 
-  .competition-card-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+  .path-header-research {
+    background: linear-gradient(135deg, #F59E0B, #EF4444);
   }
 
-  .competition-card-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 0.5rem;
-  }
-
-  .competition-card-subtitle {
-    font-size: 0.9rem;
-    color: #9CA3AF;
-    margin-bottom: 1rem;
-  }
-
-  .competition-card-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #A5B4FC;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .competition-card-link:hover {
-    color: white;
-    gap: 0.8rem;
-  }
-
-  /* Competition colors */
-  .comp-usaco { --comp-color-1: #FFD700; --comp-color-2: #FFA500; }
-  .comp-usaaio { --comp-color-1: #667eea; --comp-color-2: #764ba2; }
-  .comp-kaggle { --comp-color-1: #20BEFF; --comp-color-2: #0097A7; }
-  .comp-amc { --comp-color-1: #10B981; --comp-color-2: #059669; }
-  .comp-aime { --comp-color-1: #3B82F6; --comp-color-2: #1D4ED8; }
-  .comp-usamo { --comp-color-1: #EF4444; --comp-color-2: #DC2626; }
-  .comp-acsl { --comp-color-1: #8B5CF6; --comp-color-2: #7C3AED; }
-  .comp-wq { --comp-color-1: #1E3A5F; --comp-color-2: #C9A227; }
-  .comp-himcm { --comp-color-1: #14B8A6; --comp-color-2: #0F766E; }
-
-  /* Featured competition highlight */
-  .competition-featured {
-    grid-column: span 3;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 165, 0, 0.1));
-    border-color: rgba(255, 215, 0, 0.3);
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    padding: 3rem;
-    text-align: left;
-  }
-
-  .competition-featured-icon {
-    font-size: 5rem;
-    animation: float 4s ease-in-out infinite;
-  }
-
-  .competition-featured-content {
-    flex: 1;
-  }
-
-  .competition-featured-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #FFD700, #FFA500);
-    color: #1F2937;
-    padding: 0.4rem 1rem;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-  }
-
-  .competition-featured-title {
-    font-size: 2rem;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 0.5rem;
-  }
-
-  .competition-featured-subtitle {
-    color: #D1D5DB;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-  }
-
-  .competition-featured-stats {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .competition-featured-stat {
-    text-align: left;
-  }
-
-  .competition-featured-stat-number {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #FFD700;
-  }
-
-  .competition-featured-stat-label {
-    font-size: 0.85rem;
-    color: #9CA3AF;
-  }
-
-  /* ========================================
-     Learning Path Section
-  ======================================== */
-  .path-section {
-    margin: 6rem 0;
-    padding: 5rem 2rem;
-  }
-
-  .path-timeline {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
-    max-width: 1100px;
-    margin: 4rem auto 0;
-  }
-
-  .path-timeline::before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 60px;
-    right: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, #667eea, #764ba2, #EC4899, #F59E0B, #10B981);
-    border-radius: 2px;
-  }
-
-  .path-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 180px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .path-step-icon {
-    width: 80px;
-    height: 80px;
+  .path-icon {
+    width: 70px;
+    height: 70px;
     background: white;
-    border-radius: 50%;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2.2rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     margin-bottom: 1.5rem;
-    border: 4px solid;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .path-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .path-tagline {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .path-card-body {
+    padding: 2rem;
+  }
+
+  .path-description {
+    color: #4B5563;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .path-stages {
+    margin-bottom: 1.5rem;
+  }
+
+  .path-stage {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #F3F4F6;
+  }
+
+  .path-stage:last-child {
+    border-bottom: none;
+  }
+
+  .path-stage-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .path-stage-algo .path-stage-number { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
+  .path-stage-ml .path-stage-number { background: linear-gradient(135deg, #10B981, #06B6D4); }
+  .path-stage-research .path-stage-number { background: linear-gradient(135deg, #F59E0B, #EF4444); }
+
+  .path-stage-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 0.3rem;
+  }
+
+  .path-stage-content p {
+    font-size: 0.9rem;
+    color: #6B7280;
+    line-height: 1.5;
+  }
+
+  .path-target {
+    background: #F9FAFB;
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .path-target-icon {
+    font-size: 1.3rem;
+  }
+
+  .path-target-text {
+    font-size: 0.9rem;
+    color: #4B5563;
+    font-weight: 600;
+  }
+
+  .path-target-text span {
+    font-weight: 700;
+  }
+
+  .path-target-algo span { color: #6366f1; }
+  .path-target-ml span { color: #10B981; }
+  .path-target-research span { color: #F59E0B; }
+
+  /* ========================================
+     Why Choose Us Section
+  ======================================== */
+  .why-section {
+    margin: 6rem 0;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .why-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #F3F4F6;
     transition: all 0.4s ease;
   }
 
-  .path-step:hover .path-step-icon {
-    transform: scale(1.1);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  .why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
   }
 
-  .path-step:nth-child(1) .path-step-icon { border-color: #667eea; }
-  .path-step:nth-child(2) .path-step-icon { border-color: #764ba2; }
-  .path-step:nth-child(3) .path-step-icon { border-color: #EC4899; }
-  .path-step:nth-child(4) .path-step-icon { border-color: #F59E0B; }
-  .path-step:nth-child(5) .path-step-icon { border-color: #10B981; }
+  .why-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
 
-  .path-step-title {
-    font-size: 1.1rem;
+  .why-title {
+    font-size: 1.15rem;
     font-weight: 700;
     color: #1F2937;
     margin-bottom: 0.5rem;
   }
 
-  .path-step-description {
-    font-size: 0.9rem;
+  .why-description {
     color: #6B7280;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   /* ========================================
      Stats Section
   ======================================== */
   .stats-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #EC4899 100%);
-    background-size: 200% 200%;
-    animation: gradientFlow 10s ease infinite;
-    border-radius: 40px;
-    padding: 5rem 3rem;
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+    border-radius: 30px;
+    padding: 4rem 3rem;
     margin: 6rem 0;
     position: relative;
     overflow: hidden;
@@ -1237,12 +751,14 @@ description_zh: 为未来科技领袖提供的精英编程教育
   .stats-section::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
-    animation: rotate 30s linear infinite;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 50%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);
+    pointer-events: none;
   }
 
   .stats-grid {
@@ -1258,23 +774,23 @@ description_zh: 为未来科技领袖提供的精英编程教育
   }
 
   .stat-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
   }
 
   .stat-number {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 800;
     color: white;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.3rem;
     line-height: 1;
   }
 
   .stat-label {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
@@ -1285,7 +801,6 @@ description_zh: 为未来科技领袖提供的精英编程教育
   ======================================== */
   .testimonials-section {
     margin: 6rem 0;
-    padding: 5rem 0;
   }
 
   .testimonials-grid {
@@ -1299,32 +814,23 @@ description_zh: 为未来科技领袖提供的精英编程教育
     background: white;
     border-radius: 24px;
     padding: 2.5rem;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
     position: relative;
-    transition: all 0.4s ease;
     border: 1px solid #F3F4F6;
+    transition: all 0.4s ease;
   }
 
   .testimonial-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
   }
 
-  .testimonial-card::before {
-    content: '"';
-    position: absolute;
-    top: 1.5rem;
-    left: 2rem;
-    font-size: 5rem;
-    font-family: Georgia, serif;
+  .testimonial-quote {
+    font-size: 3rem;
     color: #E5E7EB;
+    font-family: Georgia, serif;
     line-height: 1;
-  }
-
-  .testimonial-content {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .testimonial-text {
@@ -1332,6 +838,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
     color: #4B5563;
     line-height: 1.8;
     font-style: italic;
+    margin-bottom: 1.5rem;
   }
 
   .testimonial-author {
@@ -1341,30 +848,30 @@ description_zh: 为未来科技领袖提供的精英编程教育
   }
 
   .testimonial-avatar {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: white;
   }
 
-  .testimonial-avatar.gradient-1 { background: linear-gradient(135deg, #667eea, #764ba2); }
-  .testimonial-avatar.gradient-2 { background: linear-gradient(135deg, #EC4899, #F472B6); }
-  .testimonial-avatar.gradient-3 { background: linear-gradient(135deg, #10B981, #34D399); }
+  .avatar-purple { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
+  .avatar-green { background: linear-gradient(135deg, #10B981, #06B6D4); }
+  .avatar-orange { background: linear-gradient(135deg, #F59E0B, #EF4444); }
 
   .testimonial-info h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #1F2937;
     margin-bottom: 0.2rem;
   }
 
   .testimonial-info p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #9CA3AF;
   }
 
@@ -1372,24 +879,38 @@ description_zh: 为未来科技领袖提供的精英编程教育
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 50px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
-  .badge-usaco-gold { background: linear-gradient(135deg, #FFD700, #FFA500); color: #1F2937; }
-  .badge-ap5 { background: linear-gradient(135deg, #10B981, #059669); color: white; }
-  .badge-finalist { background: linear-gradient(135deg, #3B82F6, #1D4ED8); color: white; }
+  .badge-gold { 
+    background: linear-gradient(135deg, #FFD700, #FFA500); 
+    color: #1F2937; 
+  }
+  .badge-green { 
+    background: linear-gradient(135deg, #10B981, #059669); 
+    color: white; 
+  }
+  .badge-blue { 
+    background: linear-gradient(135deg, #3B82F6, #1D4ED8); 
+    color: white; 
+  }
 
   /* ========================================
      CTA Section
   ======================================== */
   .cta-section {
-    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
-    border-radius: 40px;
-    padding: 6rem 3rem;
+    background: white;
+    border-radius: 30px;
+    padding: 5rem 3rem;
     margin: 6rem 0;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    border: 1px solid #F3F4F6;
     position: relative;
     overflow: hidden;
   }
@@ -1400,58 +921,31 @@ description_zh: 为未来科技领袖提供的精英编程教育
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(ellipse at 20% 50%, rgba(102, 126, 234, 0.2) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .cta-section::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
-    animation: rotate 40s linear infinite;
-  }
-
-  .cta-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    height: 5px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7, #ec4899);
   }
 
   .cta-icon {
     font-size: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     animation: float 4s ease-in-out infinite;
   }
 
   .cta-title {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 800;
-    color: white;
-    margin-bottom: 1.5rem;
+    color: #1F2937;
+    margin-bottom: 1rem;
     line-height: 1.2;
   }
 
-  .cta-title-gradient {
-    background: linear-gradient(135deg, #667eea, #EC4899, #F59E0B);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textGradient 5s ease infinite;
-  }
-
   .cta-description {
-    font-size: 1.3rem;
-    color: #9CA3AF;
-    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    color: #6B7280;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 1.7;
   }
 
@@ -1460,14 +954,13 @@ description_zh: 为未来科技领袖提供的精英编程教育
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 3rem;
   }
 
-  .cta-button {
-    padding: 1.2rem 3rem;
+  .cta-btn {
+    padding: 1.1rem 2.5rem;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: inline-flex;
@@ -1475,88 +968,57 @@ description_zh: 为未来科技领袖提供的精英编程教育
     gap: 0.5rem;
   }
 
-  .cta-button-primary {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+  .cta-btn-primary {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
     color: white;
-    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
   }
 
-  .cta-button-primary:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.5);
-    color: white;
-  }
-
-  .cta-button-secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-  }
-
-  .cta-button-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
+  .cta-btn-primary:hover {
     transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.5);
     color: white;
   }
 
-  .cta-contact {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  .cta-btn-secondary {
+    background: #F3F4F6;
+    color: #4B5563;
   }
 
-  .cta-contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    color: #9CA3AF;
-    font-size: 1rem;
-  }
-
-  .cta-contact-icon {
-    font-size: 1.3rem;
+  .cta-btn-secondary:hover {
+    background: #E5E7EB;
+    transform: translateY(-5px);
+    color: #1F2937;
   }
 
   /* ========================================
      Responsive Design
   ======================================== */
-  @media (max-width: 1200px) {
-    .courses-grid,
-    .competition-grid {
-      grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 1100px) {
+    .paths-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .competition-featured {
-      grid-column: span 2;
+    .why-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
   @media (max-width: 900px) {
-    .features-grid,
+    .offer-grid,
     .testimonials-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .stats-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
-    }
-
-    .path-timeline {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .path-timeline::before {
-      display: none;
-    }
-
-    .path-step {
-      width: 45%;
     }
   }
 
@@ -1570,97 +1032,65 @@ description_zh: 为未来科技领袖提供的精英编程教育
       font-size: 1.2rem;
     }
 
-    .hero-stats {
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .hero-stat::after {
-      display: none;
-    }
-
-    .features-grid,
-    .courses-grid,
-    .competition-grid,
-    .testimonials-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .competition-featured {
-      grid-column: span 1;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .competition-featured-stats {
-      justify-content: center;
-    }
-
-    .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
     .section-title {
       font-size: 2.2rem;
     }
 
-    .cta-title {
-      font-size: 2.2rem;
-    }
-
-    .path-step {
-      width: 100%;
-    }
-
-    .cta-contact {
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
+    .why-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .floating-icons {
       display: none;
     }
 
-    .hero-orbs {
-      opacity: 0.5;
+    .cta-title {
+      font-size: 2rem;
     }
   }
 
   @media (max-width: 480px) {
-    .hero-btn {
-      padding: 1rem 2rem;
-      font-size: 1rem;
-    }
-
     .hero-buttons {
       flex-direction: column;
       align-items: center;
+    }
+
+    .hero-btn {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
     }
 
     .stats-grid {
       grid-template-columns: 1fr;
     }
 
-    .stat-number {
-      font-size: 3rem;
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-btn {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
     }
   }
 </style>
 
 <!-- Hero Section -->
 <section class="hero-section">
-  <!-- Aurora effect -->
   <div class="hero-aurora"></div>
   
-  <!-- Floating orbs -->
   <div class="hero-orbs">
     <div class="hero-orb"></div>
     <div class="hero-orb"></div>
     <div class="hero-orb"></div>
   </div>
   
-  <!-- Twinkling stars -->
   <div class="hero-stars">
     <div class="hero-star"></div>
     <div class="hero-star"></div>
@@ -1670,21 +1100,14 @@ description_zh: 为未来科技领袖提供的精英编程教育
     <div class="hero-star"></div>
     <div class="hero-star"></div>
     <div class="hero-star"></div>
-    <div class="hero-star"></div>
-    <div class="hero-star"></div>
-    <div class="hero-star"></div>
-    <div class="hero-star"></div>
   </div>
   
-  <!-- Floating icons -->
   <div class="floating-icons">
     <span class="floating-icon">💻</span>
     <span class="floating-icon">🚀</span>
     <span class="floating-icon">🎯</span>
     <span class="floating-icon">🏆</span>
-    <span class="floating-icon">⚡</span>
     <span class="floating-icon">🧠</span>
-    <span class="floating-icon">✨</span>
   </div>
   
   <div class="hero-content">
@@ -1702,681 +1125,364 @@ description_zh: 为未来科技领袖提供的精英编程教育
     </h1>
     
     <p class="hero-subtitle">
-      <span class="en-content">Transforming Students into Tech Innovators</span>
-      <span class="zh-content">将学生培养成科技创新者</span>
+      <span class="en-content">Empowering Future Tech Leaders</span>
+      <span class="zh-content">培养未来科技领袖</span>
     </p>
     
     <p class="hero-description">
-      <span class="en-content">Elite programming education, competition training, and personalized mentorship for future tech leaders aged 10-18.</span>
-      <span class="zh-content">为10-18岁的未来科技领袖提供精英编程教育、竞赛培训和个性化指导。</span>
+      <span class="en-content">Elite programming education, competition training, and research mentorship for students aged 10-18. Choose your path to excellence.</span>
+      <span class="zh-content">为10-18岁学生提供精英编程教育、竞赛培训和研究指导。选择您的卓越之路。</span>
     </p>
     
     <div class="hero-buttons">
-      <a href="./contact.html" class="hero-btn hero-btn-primary">
-        <span class="en-content">🚀 Start Your Journey</span>
-        <span class="zh-content">🚀 开始您的旅程</span>
+      <a href="./course.html" class="hero-btn hero-btn-primary">
+        <span class="en-content">🚀 Explore Programs</span>
+        <span class="zh-content">🚀 探索课程</span>
       </a>
-      <a href="./course.html" class="hero-btn hero-btn-secondary">
-        <span class="en-content">📚 Explore Courses</span>
-        <span class="zh-content">📚 探索课程</span>
+      <a href="./contact.html" class="hero-btn hero-btn-secondary">
+        <span class="en-content">📞 Free Consultation</span>
+        <span class="zh-content">📞 免费咨询</span>
       </a>
-    </div>
-    
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-number">9+</div>
-        <div class="hero-stat-label">
-          <span class="en-content">Courses</span>
-          <span class="zh-content">课程</span>
-        </div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-number">9+</div>
-        <div class="hero-stat-label">
-          <span class="en-content">Competitions</span>
-          <span class="zh-content">竞赛</span>
-        </div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-number">90%</div>
-        <div class="hero-stat-label">
-          <span class="en-content">Success Rate</span>
-          <span class="zh-content">成功率</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- Features Section -->
-<section class="features-section">
+<!-- What We Offer Section -->
+<section class="offer-section">
   <div class="section-header">
     <span class="section-eyebrow">
-      <span class="en-content">Why Choose Us</span>
-      <span class="zh-content">为什么选择我们</span>
+      <span class="en-content">What We Offer</span>
+      <span class="zh-content">我们提供</span>
     </span>
     <h2 class="section-title">
-      <span class="en-content">The AIcoding Advantage</span>
-      <span class="zh-content">AIcoding 的优势</span>
+      <span class="en-content">Three Pillars of Excellence</span>
+      <span class="zh-content">卓越的三大支柱</span>
       <span class="section-title-underline"></span>
     </h2>
     <p class="section-subtitle">
-      <span class="en-content">World-class education designed to unlock your full potential</span>
-      <span class="zh-content">世界级教育，旨在释放您的全部潜力</span>
+      <span class="en-content">Comprehensive education designed to prepare students for any tech career path</span>
+      <span class="zh-content">全面的教育，旨在为学生的任何科技职业道路做好准备</span>
     </p>
   </div>
   
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon-wrapper">
-        <div class="feature-icon">🎯</div>
-        <div class="feature-icon-glow"></div>
-      </div>
-      <h3 class="feature-title">
-        <span class="en-content">Personalized Learning</span>
-        <span class="zh-content">个性化学习</span>
+  <div class="offer-grid">
+    <div class="offer-card">
+      <div class="offer-icon offer-icon-programming">💻</div>
+      <h3 class="offer-title">
+        <span class="en-content">Programming Courses</span>
+        <span class="zh-content">编程课程</span>
       </h3>
-      <p class="feature-description">
-        <span class="en-content">AI-powered curriculum tailored to your unique learning style, pace, and goals. Small class sizes ensure individual attention.</span>
-        <span class="zh-content">AI驱动的课程，根据您独特的学习风格、节奏和目标量身定制。小班教学确保个性化关注。</span>
+      <p class="offer-description">
+        <span class="en-content">From fundamentals to advanced topics, master the languages and skills that power modern technology.</span>
+        <span class="zh-content">从基础到高级，掌握驱动现代技术的语言和技能。</span>
       </p>
+      <ul class="offer-list">
+        <li><span class="en-content">Python, Java, C++ Fundamentals</span><span class="zh-content">Python、Java、C++ 基础</span></li>
+        <li><span class="en-content">AP Computer Science A & Principles</span><span class="zh-content">AP计算机科学A和原理</span></li>
+        <li><span class="en-content">Data Structures & Algorithms</span><span class="zh-content">数据结构与算法</span></li>
+        <li><span class="en-content">Full-Stack Web Development</span><span class="zh-content">全栈网站开发</span></li>
+      </ul>
     </div>
     
-    <div class="feature-card">
-      <div class="feature-icon-wrapper">
-        <div class="feature-icon">🏆</div>
-        <div class="feature-icon-glow"></div>
-      </div>
-      <h3 class="feature-title">
-        <span class="en-content">Competition Excellence</span>
-        <span class="zh-content">竞赛卓越</span>
-      </h3>
-      <p class="feature-description">
-        <span class="en-content">Proven track record with USACO Platinum, AMC qualifiers, and Kaggle winners. Strategic preparation for 9+ major competitions.</span>
-        <span class="zh-content">USACO白金、AMC晋级者和Kaggle获奖者的成功记录。为9+项主要竞赛提供战略性备考。</span>
-      </p>
-    </div>
-    
-    <div class="feature-card">
-      <div class="feature-icon-wrapper">
-        <div class="feature-icon">👨‍🏫</div>
-        <div class="feature-icon-glow"></div>
-      </div>
-      <h3 class="feature-title">
-        <span class="en-content">Elite Instructors</span>
-        <span class="zh-content">精英导师</span>
-      </h3>
-      <p class="feature-description">
-        <span class="en-content">Learn from PhD holders, FAANG engineers, and competition gold medalists with 5+ years of teaching experience.</span>
-        <span class="zh-content">向拥有5年以上教学经验的博士、FAANG工程师和竞赛金牌得主学习。</span>
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Courses Showcase Section -->
-<section class="courses-section">
-  <div class="section-header">
-    <span class="section-eyebrow">
-      <span class="en-content">Our Curriculum</span>
-      <span class="zh-content">我们的课程</span>
-    </span>
-    <h2 class="section-title">
-      <span class="en-content">Premium Courses</span>
-      <span class="zh-content">高端课程</span>
-      <span class="section-title-underline"></span>
-    </h2>
-    <p class="section-subtitle">
-      <span class="en-content">From fundamentals to advanced topics, we cover the complete programming journey</span>
-      <span class="zh-content">从基础到高级，我们涵盖完整的编程学习之旅</span>
-    </p>
-  </div>
-  
-  <div class="courses-grid">
-    <!-- Python -->
-    <div class="course-card">
-      <div class="course-card-header course-gradient-python">
-        <span class="course-card-badge badge-popular">POPULAR</span>
-        <span class="course-card-icon">🐍</span>
-      </div>
-      <div class="course-card-body">
-        <h3 class="course-card-title">
-          <span class="en-content">Python Fundamental I & II</span>
-          <span class="zh-content">Python基础 I & II</span>
-        </h3>
-        <p class="course-card-subtitle">
-          <span class="en-content">Complete Python Programming Journey</span>
-          <span class="zh-content">完整的Python编程之旅</span>
-        </p>
-        <ul class="course-card-features">
-          <li><span class="en-content">Variables, Data Types, Control Flow</span><span class="zh-content">变量、数据类型、控制流</span></li>
-          <li><span class="en-content">Functions & OOP Concepts</span><span class="zh-content">函数和面向对象概念</span></li>
-          <li><span class="en-content">File Handling & Libraries</span><span class="zh-content">文件处理和库</span></li>
-          <li><span class="en-content">Real-world Projects</span><span class="zh-content">实际项目</span></li>
-        </ul>
-        <div class="course-card-footer">
-          <div class="course-card-tags">
-            <span class="course-tag age">Age: 10-18</span>
-            <span class="course-tag level">Beginner</span>
-          </div>
-          <a href="./course.html" class="course-card-btn">
-            <span class="en-content">Learn More</span>
-            <span class="zh-content">了解更多</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Java -->
-    <div class="course-card">
-      <div class="course-card-header course-gradient-java">
-        <span class="course-card-badge badge-popular">POPULAR</span>
-        <span class="course-card-icon">☕</span>
-      </div>
-      <div class="course-card-body">
-        <h3 class="course-card-title">
-          <span class="en-content">Java Fundamental I & II</span>
-          <span class="zh-content">Java基础 I & II</span>
-        </h3>
-        <p class="course-card-subtitle">
-          <span class="en-content">Object-Oriented Programming Mastery</span>
-          <span class="zh-content">面向对象编程精通</span>
-        </p>
-        <ul class="course-card-features">
-          <li><span class="en-content">Java Syntax & Structure</span><span class="zh-content">Java语法和结构</span></li>
-          <li><span class="en-content">OOP Principles & Design</span><span class="zh-content">OOP原则和设计</span></li>
-          <li><span class="en-content">Collections Framework</span><span class="zh-content">集合框架</span></li>
-          <li><span class="en-content">GUI Development</span><span class="zh-content">GUI开发</span></li>
-        </ul>
-        <div class="course-card-footer">
-          <div class="course-card-tags">
-            <span class="course-tag age">Age: 10-18</span>
-            <span class="course-tag level">Beginner</span>
-          </div>
-          <a href="./course.html" class="course-card-btn">
-            <span class="en-content">Learn More</span>
-            <span class="zh-content">了解更多</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- C++ -->
-    <div class="course-card">
-      <div class="course-card-header course-gradient-cpp">
-        <span class="course-card-icon">⚙️</span>
-      </div>
-      <div class="course-card-body">
-        <h3 class="course-card-title">
-          <span class="en-content">C++ Fundamental I & II</span>
-          <span class="zh-content">C++基础 I & II</span>
-        </h3>
-        <p class="course-card-subtitle">
-          <span class="en-content">System Programming & Performance</span>
-          <span class="zh-content">系统编程与性能</span>
-        </p>
-        <ul class="course-card-features">
-          <li><span class="en-content">Memory Management</span><span class="zh-content">内存管理</span></li>
-          <li><span class="en-content">Pointers & References</span><span class="zh-content">指针和引用</span></li>
-          <li><span class="en-content">STL & Templates</span><span class="zh-content">STL和模板</span></li>
-          <li><span class="en-content">Competitive Programming</span><span class="zh-content">竞赛编程</span></li>
-        </ul>
-        <div class="course-card-footer">
-          <div class="course-card-tags">
-            <span class="course-tag age">Age: 12-18</span>
-            <span class="course-tag level">Intermediate</span>
-          </div>
-          <a href="./course.html" class="course-card-btn">
-            <span class="en-content">Learn More</span>
-            <span class="zh-content">了解更多</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- AP CSA -->
-    <div class="course-card">
-      <div class="course-card-header course-gradient-apcsa">
-        <span class="course-card-icon">📘</span>
-      </div>
-      <div class="course-card-body">
-        <h3 class="course-card-title">
-          <span class="en-content">AP Computer Science A</span>
-          <span class="zh-content">AP计算机科学A</span>
-        </h3>
-        <p class="course-card-subtitle">
-          <span class="en-content">College-Level Java Programming</span>
-          <span class="zh-content">大学水平Java编程</span>
-        </p>
-        <ul class="course-card-features">
-          <li><span class="en-content">Complete AP CSA Curriculum</span><span class="zh-content">完整AP CSA课程</span></li>
-          <li><span class="en-content">Practice Exams</span><span class="zh-content">模拟考试</span></li>
-          <li><span class="en-content">FRQ Training</span><span class="zh-content">FRQ培训</span></li>
-          <li><span class="en-content">Score 5 Guarantee</span><span class="zh-content">5分保障</span></li>
-        </ul>
-        <div class="course-card-footer">
-          <div class="course-card-tags">
-            <span class="course-tag age">Age: 14-18</span>
-            <span class="course-tag level">Intermediate</span>
-          </div>
-          <a href="./course.html" class="course-card-btn">
-            <span class="en-content">Learn More</span>
-            <span class="zh-content">了解更多</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- AP CSP -->
-    <div class="course-card">
-      <div class="course-card-header course-gradient-apcsp">
-        <span class="course-card-badge badge-new">NEW</span>
-        <span class="course-card-icon">💡</span>
-      </div>
-      <div class="course-card-body">
-        <h3 class="course-card-title">
-          <span class="en-content">AP Computer Science Principles</span>
-          <span class="zh-content">AP计算机科学原理</span>
-        </h3>
-        <p class="course-card-subtitle">
-          <span class="en-content">Computational Thinking & Creativity</span>
-          <span class="zh-content">计算思维与创造力</span>
-        </p>
-        <ul class="course-card-features">
-          <li><span class="en-content">Computational Thinking</span><span class="zh-content">计算思维</span></li>
-          <li><span class="en-content">Data & Information</span><span class="zh-content">数据与信息</span></li>
-          <li><span class="en-content">Internet & Computing</span><span class="zh-content">互联网与计算</span></li>
-          <li><span class="en-content">Creative Performance Task</span><span class="zh-content">创意绩效任务</span></li>
-        </ul>
-        <div class="course-card-footer">
-          <div class="course-card-tags">
-            <span class="course-tag age">Age: 14-18</span>
-            <span class="course-tag level">Beginner</span>
-          </div>
-          <a href="./course.html" class="course-card-btn">
-            <span class="en-content">Learn More</span>
-            <span class="zh-content">了解更多</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Full-Stack Web Development -->
-    <div class="course-card">
-      <div class="course-card-header course-gradient-webdev">
-        <span class="course-card-badge badge-hot">TRENDING</span>
-        <span class="course-card-icon">🌐</span>
-      </div>
-      <div class="course-card-body">
-        <h3 class="course-card-title">
-          <span class="en-content">Full-Stack Web Development</span>
-          <span class="zh-content">全栈网站开发</span>
-        </h3>
-        <p class="course-card-subtitle">
-          <span class="en-content">Build Modern Web Applications</span>
-          <span class="zh-content">构建现代Web应用</span>
-        </p>
-        <ul class="course-card-features">
-          <li><span class="en-content">HTML5, CSS3, JavaScript</span><span class="zh-content">HTML5, CSS3, JavaScript</span></li>
-          <li><span class="en-content">React, Vue, Angular</span><span class="zh-content">React, Vue, Angular</span></li>
-          <li><span class="en-content">Node.js & Database Design</span><span class="zh-content">Node.js与数据库设计</span></li>
-          <li><span class="en-content">Deploy Real Applications</span><span class="zh-content">部署真实应用</span></li>
-        </ul>
-        <div class="course-card-footer">
-          <div class="course-card-tags">
-            <span class="course-tag age">Age: 13-18</span>
-            <span class="course-tag level">All Levels</span>
-          </div>
-          <a href="./course.html" class="course-card-btn">
-            <span class="en-content">Learn More</span>
-            <span class="zh-content">了解更多</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Data Structures -->
-    <div class="course-card">
-      <div class="course-card-header course-gradient-ds">
-        <span class="course-card-icon">📦</span>
-      </div>
-      <div class="course-card-body">
-        <h3 class="course-card-title">
-          <span class="en-content">Data Structures</span>
-          <span class="zh-content">数据结构</span>
-        </h3>
-        <p class="course-card-subtitle">
-          <span class="en-content">Foundation of Efficient Programming</span>
-          <span class="zh-content">高效编程的基础</span>
-        </p>
-        <ul class="course-card-features">
-          <li><span class="en-content">Arrays, Linked Lists, Stacks</span><span class="zh-content">数组、链表、栈</span></li>
-          <li><span class="en-content">Trees & Graphs</span><span class="zh-content">树和图</span></li>
-          <li><span class="en-content">Hash Tables & Heaps</span><span class="zh-content">哈希表和堆</span></li>
-          <li><span class="en-content">Time & Space Complexity</span><span class="zh-content">时间和空间复杂度</span></li>
-        </ul>
-        <div class="course-card-footer">
-          <div class="course-card-tags">
-            <span class="course-tag age">Age: 12-18</span>
-            <span class="course-tag level">Intermediate</span>
-          </div>
-          <a href="./course.html" class="course-card-btn">
-            <span class="en-content">Learn More</span>
-            <span class="zh-content">了解更多</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Algorithms -->
-    <div class="course-card">
-      <div class="course-card-header course-gradient-algo">
-        <span class="course-card-icon">🧮</span>
-      </div>
-      <div class="course-card-body">
-        <h3 class="course-card-title">
-          <span class="en-content">Algorithms</span>
-          <span class="zh-content">算法</span>
-        </h3>
-        <p class="course-card-subtitle">
-          <span class="en-content">Problem Solving & Optimization</span>
-          <span class="zh-content">问题解决与优化</span>
-        </p>
-        <ul class="course-card-features">
-          <li><span class="en-content">Sorting & Searching</span><span class="zh-content">排序和搜索</span></li>
-          <li><span class="en-content">Dynamic Programming</span><span class="zh-content">动态规划</span></li>
-          <li><span class="en-content">Graph Algorithms</span><span class="zh-content">图算法</span></li>
-          <li><span class="en-content">Greedy & Divide-Conquer</span><span class="zh-content">贪心和分治</span></li>
-        </ul>
-        <div class="course-card-footer">
-          <div class="course-card-tags">
-            <span class="course-tag age">Age: 13-18</span>
-            <span class="course-tag level">Advanced</span>
-          </div>
-          <a href="./course.html" class="course-card-btn">
-            <span class="en-content">Learn More</span>
-            <span class="zh-content">了解更多</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Machine Learning & AI -->
-    <div class="course-card">
-      <div class="course-card-header course-gradient-ml">
-        <span class="course-card-badge badge-hot">HOT</span>
-        <span class="course-card-icon">🤖</span>
-      </div>
-      <div class="course-card-body">
-        <h3 class="course-card-title">
-          <span class="en-content">Machine Learning & AI</span>
-          <span class="zh-content">机器学习与人工智能</span>
-        </h3>
-        <p class="course-card-subtitle">
-          <span class="en-content">Future of Technology</span>
-          <span class="zh-content">技术的未来</span>
-        </p>
-        <ul class="course-card-features">
-          <li><span class="en-content">Neural Networks</span><span class="zh-content">神经网络</span></li>
-          <li><span class="en-content">Deep Learning</span><span class="zh-content">深度学习</span></li>
-          <li><span class="en-content">Computer Vision</span><span class="zh-content">计算机视觉</span></li>
-          <li><span class="en-content">NLP & AI Projects</span><span class="zh-content">NLP和AI项目</span></li>
-        </ul>
-        <div class="course-card-footer">
-          <div class="course-card-tags">
-            <span class="course-tag age">Age: 14-18</span>
-            <span class="course-tag level">Advanced</span>
-          </div>
-          <a href="./course.html" class="course-card-btn">
-            <span class="en-content">Learn More</span>
-            <span class="zh-content">了解更多</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Competition Training Section -->
-<section class="competition-section">
-  <div class="competition-content">
-    <div class="section-header">
-      <span class="section-eyebrow">
+    <div class="offer-card">
+      <div class="offer-icon offer-icon-competition">🏆</div>
+      <h3 class="offer-title">
         <span class="en-content">Competition Training</span>
         <span class="zh-content">竞赛培训</span>
-      </span>
-      <h2 class="section-title">
-        <span class="en-content">Prepare for Excellence</span>
-        <span class="zh-content">备战卓越</span>
-        <span class="section-title-underline"></span>
-      </h2>
-      <p class="section-subtitle">
-        <span class="en-content">Strategic preparation for the world's most prestigious competitions</span>
-        <span class="zh-content">为世界上最负盛名的竞赛提供战略性备考</span>
+      </h3>
+      <p class="offer-description">
+        <span class="en-content">Strategic preparation for prestigious competitions that stand out on college applications.</span>
+        <span class="zh-content">为在大学申请中脱颖而出的著名竞赛提供战略性准备。</span>
       </p>
+      <ul class="offer-list">
+        <li><span class="en-content">USACO (Bronze → Platinum)</span><span class="zh-content">USACO（铜→白金）</span></li>
+        <li><span class="en-content">AMC 8/10/12, AIME, USAMO</span><span class="zh-content">AMC 8/10/12、AIME、USAMO</span></li>
+        <li><span class="en-content">USAAIO, Kaggle, ACSL</span><span class="zh-content">USAAIO、Kaggle、ACSL</span></li>
+        <li><span class="en-content">HiMCM, WorldQuant</span><span class="zh-content">HiMCM、WorldQuant</span></li>
+      </ul>
     </div>
     
-    <div class="competition-grid">
-      <!-- Featured: USACO -->
-      <div class="competition-card competition-featured comp-usaco">
-        <span class="competition-featured-icon">🥇</span>
-        <div class="competition-featured-content">
-          <span class="competition-featured-badge">FLAGSHIP PROGRAM</span>
-          <h3 class="competition-featured-title">USACO</h3>
-          <p class="competition-featured-subtitle">
-            <span class="en-content">USA Computing Olympiad - The gold standard in competitive programming</span>
-            <span class="zh-content">美国计算机奥林匹克 - 竞赛编程的黄金标准</span>
-          </p>
-          <div class="competition-featured-stats">
-            <div class="competition-featured-stat">
-              <div class="competition-featured-stat-number">10+</div>
-              <div class="competition-featured-stat-label">
-                <span class="en-content">Platinum Qualifiers</span>
-                <span class="zh-content">白金晋级者</span>
-              </div>
-            </div>
-            <div class="competition-featured-stat">
-              <div class="competition-featured-stat-number">95%</div>
-              <div class="competition-featured-stat-label">
-                <span class="en-content">Promotion Rate</span>
-                <span class="zh-content">晋级率</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- USAAIO -->
-      <div class="competition-card comp-usaaio">
-        <span class="competition-card-icon">🤖</span>
-        <h4 class="competition-card-title">USAAIO</h4>
-        <p class="competition-card-subtitle">
-          <span class="en-content">USA AI Olympiad</span>
-          <span class="zh-content">美国AI奥林匹克</span>
-        </p>
-        <a href="./course.html" class="competition-card-link">
-          <span class="en-content">Learn More →</span>
-          <span class="zh-content">了解更多 →</span>
-        </a>
-      </div>
-      
-      <!-- Kaggle -->
-      <div class="competition-card comp-kaggle">
-        <span class="competition-card-icon">📊</span>
-        <h4 class="competition-card-title">Kaggle</h4>
-        <p class="competition-card-subtitle">
-          <span class="en-content">Data Science Competitions</span>
-          <span class="zh-content">数据科学竞赛</span>
-        </p>
-        <a href="./course.html" class="competition-card-link">
-          <span class="en-content">Learn More →</span>
-          <span class="zh-content">了解更多 →</span>
-        </a>
-      </div>
-      
-      <!-- AMC -->
-      <div class="competition-card comp-amc">
-        <span class="competition-card-icon">🔢</span>
-        <h4 class="competition-card-title">AMC 8/10/12</h4>
-        <p class="competition-card-subtitle">
-          <span class="en-content">American Mathematics Competitions</span>
-          <span class="zh-content">美国数学竞赛</span>
-        </p>
-        <a href="./course.html" class="competition-card-link">
-          <span class="en-content">Learn More →</span>
-          <span class="zh-content">了解更多 →</span>
-        </a>
-      </div>
-      
-      <!-- AIME -->
-      <div class="competition-card comp-aime">
-        <span class="competition-card-icon">📐</span>
-        <h4 class="competition-card-title">AIME</h4>
-        <p class="competition-card-subtitle">
-          <span class="en-content">American Invitational Math Exam</span>
-          <span class="zh-content">美国数学邀请赛</span>
-        </p>
-        <a href="./course.html" class="competition-card-link">
-          <span class="en-content">Learn More →</span>
-          <span class="zh-content">了解更多 →</span>
-        </a>
-      </div>
-      
-      <!-- USAMO -->
-      <div class="competition-card comp-usamo">
-        <span class="competition-card-icon">🎯</span>
-        <h4 class="competition-card-title">USAMO</h4>
-        <p class="competition-card-subtitle">
-          <span class="en-content">USA Mathematical Olympiad</span>
-          <span class="zh-content">美国数学奥林匹克</span>
-        </p>
-        <a href="./course.html" class="competition-card-link">
-          <span class="en-content">Learn More →</span>
-          <span class="zh-content">了解更多 →</span>
-        </a>
-      </div>
-      
-      <!-- ACSL -->
-      <div class="competition-card comp-acsl">
-        <span class="competition-card-icon">💻</span>
-        <h4 class="competition-card-title">ACSL</h4>
-        <p class="competition-card-subtitle">
-          <span class="en-content">Computer Science League</span>
-          <span class="zh-content">计算机科学联赛</span>
-        </p>
-        <a href="./course.html" class="competition-card-link">
-          <span class="en-content">Learn More →</span>
-          <span class="zh-content">了解更多 →</span>
-        </a>
-      </div>
-      
-      <!-- WorldQuant -->
-      <div class="competition-card comp-wq">
-        <span class="competition-card-icon">📈</span>
-        <h4 class="competition-card-title">WorldQuant</h4>
-        <p class="competition-card-subtitle">
-          <span class="en-content">Quantitative Finance Challenge</span>
-          <span class="zh-content">量化金融挑战赛</span>
-        </p>
-        <a href="./course.html" class="competition-card-link">
-          <span class="en-content">Learn More →</span>
-          <span class="zh-content">了解更多 →</span>
-        </a>
-      </div>
-      
-      <!-- HiMCM -->
-      <div class="competition-card comp-himcm">
-        <span class="competition-card-icon">📋</span>
-        <h4 class="competition-card-title">HiMCM</h4>
-        <p class="competition-card-subtitle">
-          <span class="en-content">Mathematical Modeling Contest</span>
-          <span class="zh-content">数学建模竞赛</span>
-        </p>
-        <a href="./course.html" class="competition-card-link">
-          <span class="en-content">Learn More →</span>
-          <span class="zh-content">了解更多 →</span>
-        </a>
-      </div>
+    <div class="offer-card">
+      <div class="offer-icon offer-icon-research">🔬</div>
+      <h3 class="offer-title">
+        <span class="en-content">Research & AI</span>
+        <span class="zh-content">研究与人工智能</span>
+      </h3>
+      <p class="offer-description">
+        <span class="en-content">Cutting-edge AI/ML training and research mentorship for future innovators.</span>
+        <span class="zh-content">为未来创新者提供前沿AI/ML培训和研究指导。</span>
+      </p>
+      <ul class="offer-list">
+        <li><span class="en-content">Machine Learning Fundamentals</span><span class="zh-content">机器学习基础</span></li>
+        <li><span class="en-content">Deep Learning & Neural Networks</span><span class="zh-content">深度学习与神经网络</span></li>
+        <li><span class="en-content">Computer Vision & NLP</span><span class="zh-content">计算机视觉与NLP</span></li>
+        <li><span class="en-content">Research Project Mentorship</span><span class="zh-content">研究项目指导</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- Learning Path Section -->
-<section class="path-section">
+<!-- Learning Paths Section -->
+<section class="paths-section">
   <div class="section-header">
     <span class="section-eyebrow">
-      <span class="en-content">Your Journey</span>
-      <span class="zh-content">您的旅程</span>
+      <span class="en-content">Choose Your Path</span>
+      <span class="zh-content">选择您的路径</span>
     </span>
     <h2 class="section-title">
-      <span class="en-content">Learning Path</span>
+      <span class="en-content">Learning Paths</span>
       <span class="zh-content">学习路径</span>
       <span class="section-title-underline"></span>
     </h2>
     <p class="section-subtitle">
-      <span class="en-content">A structured roadmap from beginner to expert</span>
-      <span class="zh-content">从入门到专家的结构化路线图</span>
+      <span class="en-content">Three distinct tracks to match your interests and goals. Each path leads to excellence.</span>
+      <span class="zh-content">三条不同的路线，匹配您的兴趣和目标。每条路径都通向卓越。</span>
     </p>
   </div>
   
-  <div class="path-timeline">
-    <div class="path-step">
-      <div class="path-step-icon">🌱</div>
-      <h4 class="path-step-title">
-        <span class="en-content">Fundamentals</span>
-        <span class="zh-content">基础</span>
+  <div class="paths-grid">
+    <!-- Algorithm Competition Path -->
+    <div class="path-card">
+      <div class="path-card-header path-header-algo">
+        <div class="path-icon">⚡</div>
+        <h3 class="path-title">
+          <span class="en-content">Algorithm Track</span>
+          <span class="zh-content">算法竞赛路线</span>
+        </h3>
+        <p class="path-tagline">
+          <span class="en-content">Competitive Programming Excellence</span>
+          <span class="zh-content">竞赛编程卓越</span>
+        </p>
+      </div>
+      <div class="path-card-body">
+        <p class="path-description">
+          <span class="en-content">Master algorithmic problem-solving and compete in prestigious olympiads. Perfect for students who love logical challenges.</span>
+          <span class="zh-content">掌握算法问题解决并参加著名奥赛。适合热爱逻辑挑战的学生。</span>
+        </p>
+        
+        <div class="path-stages">
+          <div class="path-stage path-stage-algo">
+            <span class="path-stage-number">1</span>
+            <div class="path-stage-content">
+              <h4><span class="en-content">Foundation</span><span class="zh-content">基础</span></h4>
+              <p><span class="en-content">C++/Python basics, intro algorithms</span><span class="zh-content">C++/Python基础，算法入门</span></p>
+            </div>
+          </div>
+          <div class="path-stage path-stage-algo">
+            <span class="path-stage-number">2</span>
+            <div class="path-stage-content">
+              <h4><span class="en-content">Data Structures</span><span class="zh-content">数据结构</span></h4>
+              <p><span class="en-content">Trees, graphs, hash tables, heaps</span><span class="zh-content">树、图、哈希表、堆</span></p>
+            </div>
+          </div>
+          <div class="path-stage path-stage-algo">
+            <span class="path-stage-number">3</span>
+            <div class="path-stage-content">
+              <h4><span class="en-content">Advanced Algorithms</span><span class="zh-content">高级算法</span></h4>
+              <p><span class="en-content">DP, graph algorithms, number theory</span><span class="zh-content">动态规划、图算法、数论</span></p>
+            </div>
+          </div>
+          <div class="path-stage path-stage-algo">
+            <span class="path-stage-number">4</span>
+            <div class="path-stage-content">
+              <h4><span class="en-content">Competition Prep</span><span class="zh-content">竞赛备战</span></h4>
+              <p><span class="en-content">USACO Silver → Gold → Platinum</span><span class="zh-content">USACO 银→金→白金</span></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="path-target path-target-algo">
+          <span class="path-target-icon">🎯</span>
+          <span class="path-target-text">
+            <span class="en-content">Target: <span>USACO Platinum, ACSL, AMC/AIME</span></span>
+            <span class="zh-content">目标：<span>USACO白金、ACSL、AMC/AIME</span></span>
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Machine Learning Path -->
+    <div class="path-card">
+      <div class="path-card-header path-header-ml">
+        <div class="path-icon">🤖</div>
+        <h3 class="path-title">
+          <span class="en-content">AI/ML Track</span>
+          <span class="zh-content">人工智能路线</span>
+        </h3>
+        <p class="path-tagline">
+          <span class="en-content">Data Science & Machine Learning</span>
+          <span class="zh-content">数据科学与机器学习</span>
+        </p>
+      </div>
+      <div class="path-card-body">
+        <p class="path-description">
+          <span class="en-content">Learn AI/ML from fundamentals to advanced applications. Build real-world projects and compete in data science challenges.</span>
+          <span class="zh-content">从基础到高级应用学习AI/ML。构建真实项目并参加数据科学挑战。</span>
+        </p>
+        
+        <div class="path-stages">
+          <div class="path-stage path-stage-ml">
+            <span class="path-stage-number">1</span>
+            <div class="path-stage-content">
+              <h4><span class="en-content">Python & Data</span><span class="zh-content">Python与数据</span></h4>
+              <p><span class="en-content">Python, NumPy, Pandas, visualization</span><span class="zh-content">Python、NumPy、Pandas、可视化</span></p>
+            </div>
+          </div>
+          <div class="path-stage path-stage-ml">
+            <span class="path-stage-number">2</span>
+            <div class="path-stage-content">
+              <h4><span class="en-content">Machine Learning</span><span class="zh-content">机器学习</span></h4>
+              <p><span class="en-content">Supervised/unsupervised learning</span><span class="zh-content">监督/无监督学习</span></p>
+            </div>
+          </div>
+          <div class="path-stage path-stage-ml">
+            <span class="path-stage-number">3</span>
+            <div class="path-stage-content">
+              <h4><span class="en-content">Deep Learning</span><span class="zh-content">深度学习</span></h4>
+              <p><span class="en-content">Neural networks, CNN, RNN, transformers</span><span class="zh-content">神经网络、CNN、RNN、Transformer</span></p>
+            </div>
+          </div>
+          <div class="path-stage path-stage-ml">
+            <span class="path-stage-number">4</span>
+            <div class="path-stage-content">
+              <h4><span class="en-content">Applications</span><span class="zh-content">应用</span></h4>
+              <p><span class="en-content">CV, NLP, competition projects</span><span class="zh-content">计算机视觉、NLP、竞赛项目</span></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="path-target path-target-ml">
+          <span class="path-target-icon">🎯</span>
+          <span class="path-target-text">
+            <span class="en-content">Target: <span>USAAIO, Kaggle Medals, HiMCM</span></span>
+            <span class="zh-content">目标：<span>USAAIO、Kaggle奖牌、HiMCM</span></span>
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Research Path -->
+    <div class="path-card">
+      <div class="path-card-header path-header-research">
+        <div class="path-icon">🔬</div>
+        <h3 class="path-title">
+          <span class="en-content">Research Track</span>
+          <span class="zh-content">科研路线</span>
+        </h3>
+        <p class="path-tagline">
+          <span class="en-content">Academic Research & Publications</span>
+          <span class="zh-content">学术研究与发表</span>
+        </p>
+      </div>
+      <div class="path-card-body">
+        <p class="path-description">
+          <span class="en-content">Conduct original research under mentorship. Develop projects worthy of science fairs and academic publications.</span>
+          <span class="zh-content">在导师指导下进行原创研究。开发值得参加科学展览和学术发表的项目。</span>
+        </p>
+        
+        <div class="path-stages">
+          <div class="path-stage path-stage-research">
+            <span class="path-stage-number">1</span>
+            <div class="path-stage-content">
+              <h4><span class="en-content">Programming Skills</span><span class="zh-content">编程技能</span></h4>
+              <p><span class="en-content">Python, data analysis, web development</span><span class="zh-content">Python、数据分析、网站开发</span></p>
+            </div>
+          </div>
+          <div class="path-stage path-stage-research">
+            <span class="path-stage-number">2</span>
+            <div class="path-stage-content">
+              <h4><span class="en-content">Research Methods</span><span class="zh-content">研究方法</span></h4>
+              <p><span class="en-content">Literature review, methodology design</span><span class="zh-content">文献综述、方法论设计</span></p>
+            </div>
+          </div>
+          <div class="path-stage path-stage-research">
+            <span class="path-stage-number">3</span>
+            <div class="path-stage-content">
+              <h4><span class="en-content">Project Development</span><span class="zh-content">项目开发</span></h4>
+              <p><span class="en-content">Build original research project</span><span class="zh-content">构建原创研究项目</span></p>
+            </div>
+          </div>
+          <div class="path-stage path-stage-research">
+            <span class="path-stage-number">4</span>
+            <div class="path-stage-content">
+              <h4><span class="en-content">Publication</span><span class="zh-content">发表</span></h4>
+              <p><span class="en-content">Paper writing, submission, presentation</span><span class="zh-content">论文撰写、投稿、演示</span></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="path-target path-target-research">
+          <span class="path-target-icon">🎯</span>
+          <span class="path-target-text">
+            <span class="en-content">Target: <span>Science Fairs, Publications, Patents</span></span>
+            <span class="zh-content">目标：<span>科学展览、论文发表、专利</span></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-section">
+  <div class="section-header">
+    <span class="section-eyebrow">
+      <span class="en-content">Why AIcoding</span>
+      <span class="zh-content">为什么选择AIcoding</span>
+    </span>
+    <h2 class="section-title">
+      <span class="en-content">The AIcoding Difference</span>
+      <span class="zh-content">AIcoding的独特优势</span>
+      <span class="section-title-underline"></span>
+    </h2>
+  </div>
+  
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">👨‍🏫</div>
+      <h4 class="why-title">
+        <span class="en-content">Expert Instructors</span>
+        <span class="zh-content">专家导师</span>
       </h4>
-      <p class="path-step-description">
-        <span class="en-content">Python, Java, or C++ basics</span>
-        <span class="zh-content">Python、Java或C++基础</span>
+      <p class="why-description">
+        <span class="en-content">PhD holders, FAANG engineers, and competition gold medalists</span>
+        <span class="zh-content">博士、FAANG工程师和竞赛金牌得主</span>
       </p>
     </div>
     
-    <div class="path-step">
-      <div class="path-step-icon">📚</div>
-      <h4 class="path-step-title">
-        <span class="en-content">Data Structures</span>
-        <span class="zh-content">数据结构</span>
+    <div class="why-card">
+      <div class="why-icon">👥</div>
+      <h4 class="why-title">
+        <span class="en-content">Small Classes</span>
+        <span class="zh-content">小班教学</span>
       </h4>
-      <p class="path-step-description">
-        <span class="en-content">Arrays, Trees, Graphs</span>
-        <span class="zh-content">数组、树、图</span>
+      <p class="why-description">
+        <span class="en-content">Maximum 8 students per class for personalized attention</span>
+        <span class="zh-content">每班最多8名学生，确保个性化关注</span>
       </p>
     </div>
     
-    <div class="path-step">
-      <div class="path-step-icon">⚡</div>
-      <h4 class="path-step-title">
-        <span class="en-content">Algorithms</span>
-        <span class="zh-content">算法</span>
+    <div class="why-card">
+      <div class="why-icon">📈</div>
+      <h4 class="why-title">
+        <span class="en-content">Proven Results</span>
+        <span class="zh-content">成果显著</span>
       </h4>
-      <p class="path-step-description">
-        <span class="en-content">DP, Graph, Optimization</span>
-        <span class="zh-content">动态规划、图、优化</span>
+      <p class="why-description">
+        <span class="en-content">90% success rate in competitions and AP exams</span>
+        <span class="zh-content">竞赛和AP考试90%成功率</span>
       </p>
     </div>
     
-    <div class="path-step">
-      <div class="path-step-icon">🏆</div>
-      <h4 class="path-step-title">
-        <span class="en-content">Competitions</span>
-        <span class="zh-content">竞赛</span>
+    <div class="why-card">
+      <div class="why-icon">🎯</div>
+      <h4 class="why-title">
+        <span class="en-content">Flexible Learning</span>
+        <span class="zh-content">灵活学习</span>
       </h4>
-      <p class="path-step-description">
-        <span class="en-content">USACO, AMC, ACSL</span>
-        <span class="zh-content">USACO、AMC、ACSL</span>
-      </p>
-    </div>
-    
-    <div class="path-step">
-      <div class="path-step-icon">🚀</div>
-      <h4 class="path-step-title">
-        <span class="en-content">Advanced</span>
-        <span class="zh-content">高级</span>
-      </h4>
-      <p class="path-step-description">
-        <span class="en-content">AI, ML, Research</span>
-        <span class="zh-content">AI、机器学习、研究</span>
+      <p class="why-description">
+        <span class="en-content">Online and in-person options to fit your schedule</span>
+        <span class="zh-content">线上和线下选项，适合您的时间安排</span>
       </p>
     </div>
   </div>
@@ -2398,8 +1504,8 @@ description_zh: 为未来科技领袖提供的精英编程教育
       <div class="stat-icon">🏆</div>
       <div class="stat-number">20+</div>
       <div class="stat-label">
-        <span class="en-content">Awards Won</span>
-        <span class="zh-content">获得奖项</span>
+        <span class="en-content">Awards</span>
+        <span class="zh-content">奖项</span>
       </div>
     </div>
     
@@ -2416,7 +1522,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
       <div class="stat-icon">⭐</div>
       <div class="stat-number">5+</div>
       <div class="stat-label">
-        <span class="en-content">Years Experience</span>
+        <span class="en-content">Years</span>
         <span class="zh-content">年经验</span>
       </div>
     </div>
@@ -2431,73 +1537,57 @@ description_zh: 为未来科技领袖提供的精英编程教育
       <span class="zh-content">成功故事</span>
     </span>
     <h2 class="section-title">
-      <span class="en-content">Student Testimonials</span>
+      <span class="en-content">What Students Say</span>
       <span class="zh-content">学生评价</span>
       <span class="section-title-underline"></span>
     </h2>
-    <p class="section-subtitle">
-      <span class="en-content">Hear from our accomplished students</span>
-      <span class="zh-content">听听我们优秀学生的声音</span>
-    </p>
   </div>
   
   <div class="testimonials-grid">
     <div class="testimonial-card">
-      <span class="testimonial-badge badge-usaco-gold">USACO Gold</span>
-      <div class="testimonial-content">
-        <p class="testimonial-text">
-          <span class="en-content">"The structured USACO training helped me advance from Bronze to Gold in just 8 months. The problem-solving strategies I learned here are invaluable."</span>
-          <span class="zh-content">"结构化的USACO培训帮助我在短短8个月内从铜级晋升到金级。我在这里学到的问题解决策略非常宝贵。"</span>
-        </p>
-      </div>
+      <span class="testimonial-badge badge-gold">USACO Gold</span>
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">
+        <span class="en-content">The structured training helped me advance from Bronze to Gold in 8 months. The problem-solving strategies are invaluable.</span>
+        <span class="zh-content">结构化培训帮助我在8个月内从铜级晋升到金级。问题解决策略非常宝贵。</span>
+      </p>
       <div class="testimonial-author">
-        <div class="testimonial-avatar gradient-1">A</div>
+        <div class="testimonial-avatar avatar-purple">A</div>
         <div class="testimonial-info">
-          <h4>Alex Chen</h4>
-          <p>
-            <span class="en-content">High School Junior</span>
-            <span class="zh-content">高中二年级</span>
-          </p>
+          <h4>Alex C.</h4>
+          <p><span class="en-content">Algorithm Track</span><span class="zh-content">算法竞赛路线</span></p>
         </div>
       </div>
     </div>
     
     <div class="testimonial-card">
-      <span class="testimonial-badge badge-ap5">AP Score: 5</span>
-      <div class="testimonial-content">
-        <p class="testimonial-text">
-          <span class="en-content">"The AP CSA course was incredibly well-structured. The practice exams and FRQ training prepared me perfectly. Got a 5 with confidence!"</span>
-          <span class="zh-content">"AP CSA课程结构非常完善。模拟考试和FRQ培训让我准备得很充分。自信地拿到了5分！"</span>
-        </p>
-      </div>
+      <span class="testimonial-badge badge-green">AP Score: 5</span>
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">
+        <span class="en-content">The AP CSA course was incredibly well-structured. Practice exams and FRQ training prepared me perfectly. Got a 5!</span>
+        <span class="zh-content">AP CSA课程结构非常完善。模拟考试和FRQ培训让我准备充分。拿到了5分！</span>
+      </p>
       <div class="testimonial-author">
-        <div class="testimonial-avatar gradient-2">S</div>
+        <div class="testimonial-avatar avatar-green">S</div>
         <div class="testimonial-info">
-          <h4>Sarah Wang</h4>
-          <p>
-            <span class="en-content">High School Senior</span>
-            <span class="zh-content">高中三年级</span>
-          </p>
+          <h4>Sarah W.</h4>
+          <p><span class="en-content">AP Track</span><span class="zh-content">AP课程</span></p>
         </div>
       </div>
     </div>
     
     <div class="testimonial-card">
-      <span class="testimonial-badge badge-finalist">HiMCM Finalist</span>
-      <div class="testimonial-content">
-        <p class="testimonial-text">
-          <span class="en-content">"The mathematical modeling training was exceptional. Our team reached Finalist status in HiMCM, and I learned skills that will last a lifetime."</span>
-          <span class="zh-content">"数学建模培训非常出色。我们的团队在HiMCM中获得了Finalist称号，我学到了终身受用的技能。"</span>
-        </p>
-      </div>
+      <span class="testimonial-badge badge-blue">Research Published</span>
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">
+        <span class="en-content">My mentor guided me through my first research project. We published a paper and I won at the regional science fair!</span>
+        <span class="zh-content">导师指导我完成了第一个研究项目。我们发表了论文，我还在地区科学展览中获奖！</span>
+      </p>
       <div class="testimonial-author">
-        <div class="testimonial-avatar gradient-3">M</div>
+        <div class="testimonial-avatar avatar-orange">M</div>
         <div class="testimonial-info">
-          <h4>Michael Liu</h4>
-          <p>
-            <span class="en-content">High School Junior</span>
-            <span class="zh-content">高中二年级</span>
-          </p>
+          <h4>Michael L.</h4>
+          <p><span class="en-content">Research Track</span><span class="zh-content">科研路线</span></p>
         </div>
       </div>
     </div>
@@ -2506,35 +1596,23 @@ description_zh: 为未来科技领袖提供的精英编程教育
 
 <!-- CTA Section -->
 <section class="cta-section">
-  <div class="cta-content">
-    <div class="cta-icon">🚀</div>
-    <h2 class="cta-title">
-      <span class="en-content">Ready to <span class="cta-title-gradient">Transform</span> Your Future?</span>
-      <span class="zh-content">准备好<span class="cta-title-gradient">改变</span>您的未来了吗？</span>
-    </h2>
-    <p class="cta-description">
-      <span class="en-content">Join the elite community of future tech innovators. Start your journey with a free consultation today.</span>
-      <span class="zh-content">加入未来科技创新者的精英社区。立即通过免费咨询开始您的旅程。</span>
-    </p>
-    <div class="cta-buttons">
-      <a href="./contact.html" class="cta-button cta-button-primary">
-        <span class="en-content">🎯 Schedule Free Consultation</span>
-        <span class="zh-content">🎯 预约免费咨询</span>
-      </a>
-      <a href="./course.html" class="cta-button cta-button-secondary">
-        <span class="en-content">📚 Browse All Courses</span>
-        <span class="zh-content">📚 浏览所有课程</span>
-      </a>
-    </div>
-    <div class="cta-contact">
-      <div class="cta-contact-item">
-        <span class="cta-contact-icon">📞</span>
-        <span>+1 (347) 379-6896</span>
-      </div>
-      <div class="cta-contact-item">
-        <span class="cta-contact-icon">💬</span>
-        <span>WeChat: SpiritedAway2023</span>
-      </div>
-    </div>
+  <div class="cta-icon">🚀</div>
+  <h2 class="cta-title">
+    <span class="en-content">Ready to Start Your Journey?</span>
+    <span class="zh-content">准备好开始您的旅程了吗？</span>
+  </h2>
+  <p class="cta-description">
+    <span class="en-content">Join AIcoding Academy and unlock your full potential. Schedule a free consultation to find the perfect learning path for you.</span>
+    <span class="zh-content">加入AIcoding学院，释放您的全部潜力。预约免费咨询，找到最适合您的学习路径。</span>
+  </p>
+  <div class="cta-buttons">
+    <a href="./contact.html" class="cta-btn cta-btn-primary">
+      <span class="en-content">📞 Free Consultation</span>
+      <span class="zh-content">📞 免费咨询</span>
+    </a>
+    <a href="./course.html" class="cta-btn cta-btn-secondary">
+      <span class="en-content">📚 View All Courses</span>
+      <span class="zh-content">📚 查看所有课程</span>
+    </a>
   </div>
 </section>
