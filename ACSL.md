@@ -2167,7 +2167,7 @@ description_zh: 掌握计算机科学概念与编程，征服ACSL竞赛
     </div>
     <div class="success-item">
       <div class="success-icon">🏅</div>
-      <span class="success-number">Top 10%</span>
+      <span class="success-number" style="font-size: 2.2rem;">Top&nbsp;10%</span>
       <div class="success-label">
         <span class="en-content">Worldwide Ranking</span>
         <span class="zh-content">全球排名</span>
