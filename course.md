@@ -1375,7 +1375,7 @@ description_zh: 全方位编程课程，适合各个水平
             <span class="zh-content">初级</span>
           </span>
         </div>
-        <a href="./course_webpage/python.html" class="enroll-btn">
+        <a href="./course_webpages/python.html" class="enroll-btn">
           <span class="en-content">Learn More</span>
           <span class="zh-content">了解更多</span>
         </a>
@@ -1430,7 +1430,7 @@ description_zh: 全方位编程课程，适合各个水平
             <span class="zh-content">初级</span>
           </span>
         </div>
-        <a href="./course_webpage/java.html" class="enroll-btn">
+        <a href="./course_webpages/java.html" class="enroll-btn">
           <span class="en-content">Learn More</span>
           <span class="zh-content">了解更多</span>
         </a>
@@ -1479,7 +1479,7 @@ description_zh: 全方位编程课程，适合各个水平
             <span class="zh-content">中级</span>
           </span>
         </div>
-        <a href="./course_webpage/cplusplus.html" class="enroll-btn">
+        <a href="./course_webpages/cplusplus.html" class="enroll-btn">
           <span class="en-content">Learn More</span>
           <span class="zh-content">了解更多</span>
         </a>
@@ -1548,7 +1548,7 @@ description_zh: 全方位编程课程，适合各个水平
             <span class="zh-content">中级</span>
           </span>
         </div>
-        <a href="./course_webpage/datastructure.html" class="enroll-btn">
+        <a href="./course_webpages/datastructure.html" class="enroll-btn">
           <span class="en-content">Learn More</span>
           <span class="zh-content">了解更多</span>
         </a>
@@ -1597,7 +1597,7 @@ description_zh: 全方位编程课程，适合各个水平
             <span class="zh-content">高级</span>
           </span>
         </div>
-        <a href="./course_webpage/algorithm.html" class="enroll-btn">
+        <a href="./course_webpages/algorithm.html" class="enroll-btn">
           <span class="en-content">Learn More</span>
           <span class="zh-content">了解更多</span>
         </a>
@@ -1652,7 +1652,7 @@ description_zh: 全方位编程课程，适合各个水平
             <span class="zh-content">高级</span>
           </span>
         </div>
-        <a href="./course_webpage/MachineLearning.html" class="enroll-btn">
+        <a href="./course_webpages/MachineLearning.html" class="enroll-btn">
           <span class="en-content">Learn More</span>
           <span class="zh-content">了解更多</span>
         </a>
@@ -1701,7 +1701,7 @@ description_zh: 全方位编程课程，适合各个水平
             <span class="zh-content">中级</span>
           </span>
         </div>
-        <a href="./course_webpage/APCSA.html" class="enroll-btn">
+        <a href="./course_webpages/APCSA.html" class="enroll-btn">
           <span class="en-content">Learn More</span>
           <span class="zh-content">了解更多</span>
         </a>
@@ -1756,7 +1756,7 @@ description_zh: 全方位编程课程，适合各个水平
             <span class="zh-content">初级</span>
           </span>
         </div>
-        <a href="./course_webpage/APCSP.html" class="enroll-btn">
+        <a href="./course_webpages/APCSP.html" class="enroll-btn">
           <span class="en-content">Learn More</span>
           <span class="zh-content">了解更多</span>
         </a>
@@ -1811,7 +1811,7 @@ description_zh: 全方位编程课程，适合各个水平
             <span class="zh-content">所有级别</span>
           </span>
         </div>
-        <a href="./course_webpage/webdev.html" class="enroll-btn">
+        <a href="./course_webpages/webdev.html" class="enroll-btn">
           <span class="en-content">Learn More</span>
           <span class="zh-content">了解更多</span>
         </a>
@@ -1846,7 +1846,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">USA Computing Olympiad</span>
         <span class="zh-content">美国计算机奥林匹克</span>
       </p>
-      <a href="./course_webpage/USACO.html" class="competition-btn">
+      <a href="./course_webpages/USACO.html" class="competition-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1860,7 +1860,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">USA AI Olympiad</span>
         <span class="zh-content">美国人工智能奥林匹克</span>
       </p>
-      <a href="./course_webpage/USAAIO.html" class="competition-btn">
+      <a href="./course_webpages/USAAIO.html" class="competition-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1874,7 +1874,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">Data Science Competitions</span>
         <span class="zh-content">数据科学竞赛</span>
       </p>
-      <a href="./course_webpage/kaggle.html" class="competition-btn">
+      <a href="./course_webpages/kaggle.html" class="competition-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1888,7 +1888,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">American Mathematics Competitions</span>
         <span class="zh-content">美国数学竞赛</span>
       </p>
-      <a href="./course_webpage/amc.html" class="competition-btn">
+      <a href="./course_webpages/amc.html" class="competition-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1902,7 +1902,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">American Invitational Math Exam</span>
         <span class="zh-content">美国数学邀请赛</span>
       </p>
-      <a href="./course_webpage/aime.html" class="competition-btn">
+      <a href="./course_webpages/aime.html" class="competition-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1916,7 +1916,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">USA Mathematical Olympiad</span>
         <span class="zh-content">美国数学奥林匹克</span>
       </p>
-      <a href="./course_webpage/USAMO.html" class="competition-btn">
+      <a href="./course_webpages/USAMO.html" class="competition-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1930,7 +1930,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">Computer Science League</span>
         <span class="zh-content">计算机科学联赛</span>
       </p>
-      <a href="./course_webpage/ACSL.html" class="competition-btn">
+      <a href="./course_webpages/ACSL.html" class="competition-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1944,7 +1944,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">Quantitative Finance Challenge</span>
         <span class="zh-content">量化金融挑战赛</span>
       </p>
-      <a href="./course_webpage/WorldQuant.html" class="competition-btn">
+      <a href="./course_webpages/WorldQuant.html" class="competition-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
@@ -1958,7 +1958,7 @@ description_zh: 全方位编程课程，适合各个水平
         <span class="en-content">Mathematical Modeling Contest</span>
         <span class="zh-content">数学建模竞赛</span>
       </p>
-      <a href="./course_webpage/HiMCM.html" class="competition-btn">
+      <a href="./course_webpages/HiMCM.html" class="competition-btn">
         <span class="en-content">Learn More</span>
         <span class="zh-content">了解更多</span>
       </a>
