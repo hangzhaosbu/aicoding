@@ -1208,11 +1208,11 @@ description_zh: 为未来科技领袖提供的精英编程教育
     </p>
     
     <div class="hero-buttons">
-      <a href="./course.html" class="hero-btn hero-btn-primary">
+      <a href="./main_webpages/course.html" class="hero-btn hero-btn-primary">
         <span class="en-content">🚀 Explore Programs</span>
         <span class="zh-content">🚀 探索课程</span>
       </a>
-      <a href="./contact.html" class="hero-btn hero-btn-secondary">
+      <a href="./main_webpages/contact.html" class="hero-btn hero-btn-secondary">
         <span class="en-content">📞 Free Consultation</span>
         <span class="zh-content">📞 免费咨询</span>
       </a>
@@ -2055,11 +2055,11 @@ description_zh: 为未来科技领袖提供的精英编程教育
     <span class="zh-content">选择您的路线，开始卓越之旅。预约免费咨询，找到最适合您的路径。</span>
   </p>
   <div class="cta-buttons">
-    <a href="./contact.html" class="cta-btn cta-btn-primary">
+    <a href="./main_webpages/contact.html" class="cta-btn cta-btn-primary">
       <span class="en-content">📞 Free Consultation</span>
       <span class="zh-content">📞 免费咨询</span>
     </a>
-    <a href="./course.html" class="cta-btn cta-btn-secondary">
+    <a href="./main_webpages/course.html" class="cta-btn cta-btn-secondary">
       <span class="en-content">📚 View All Courses</span>
       <span class="zh-content">📚 查看所有课程</span>
     </a>
