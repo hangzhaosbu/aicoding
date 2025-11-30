@@ -2,7 +2,7 @@
 layout: default
 title: Contact Us
 title_zh: 联系我们
-description: Get in Touch with AIcoding Academy
+description: Get in Touch with AIcoding Edu
 description_zh: 与 AIcoding 学院取得联系
 ---
 
@@ -1467,7 +1467,7 @@ description_zh: 与 AIcoding 学院取得联系
     </div>
     
     <form id="contactForm">
-      <input type="hidden" name="_subject" value="New contact from AIcoding Academy">
+      <input type="hidden" name="_subject" value="New contact from AIcoding Edu">
       
       <div class="form-group">
         <label class="form-label" for="name">
