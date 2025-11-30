@@ -1,6 +1,6 @@
 ---
 layout: default
-title: AIcoding Academy
+title: AIcoding Edu
 title_zh: AIcoding 学院
 description: Elite Programming Education for Future Tech Leaders
 description_zh: 为未来科技领袖提供的精英编程教育
@@ -1193,7 +1193,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
     </div>
     
     <h1 class="hero-title">
-      <span class="en-content">AIcoding Academy</span>
+      <span class="en-content">AIcoding Edu</span>
       <span class="zh-content">AIcoding 学院</span>
     </h1>
     
