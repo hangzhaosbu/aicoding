@@ -1327,7 +1327,7 @@ description_zh: 由计算机科学博士提供的精英编程教育
   <div class="hero-content">
     <div class="hero-icon">🌟</div>
     <h1 class="hero-title">
-      <span class="en-content">About AIcoding Academy</span>
+      <span class="en-content">About AIcoding Edu</span>
       <span class="zh-content">关于 AIcoding 学院</span>
     </h1>
     <p class="hero-subtitle">
