@@ -1307,8 +1307,8 @@ description_zh: 掌握人工智能，征服竞赛与未来
 <!-- Course Schedule -->
 <div class="schedule-section">
   <h2>
-    <span class="en-content">2024-2025 Competition Calendar</span>
-    <span class="zh-content">2024-2025 竞赛日历</span>
+    <span class="en-content">2025-2026 Competition Calendar</span>
+    <span class="zh-content">2025-2026 竞赛日历</span>
   </h2>
   
   <div class="schedule-calendar">
@@ -1318,8 +1318,8 @@ description_zh: 掌握人工智能，征服竞赛与未来
         <span class="zh-content">USAAIO资格赛</span>
       </h3>
       <p>
-        <span class="en-content">January 2025</span>
-        <span class="zh-content">2025年1月</span>
+        <span class="en-content">January 2026</span>
+        <span class="zh-content">2026年1月</span>
       </p>
     </div>
     
@@ -1340,8 +1340,8 @@ description_zh: 掌握人工智能，征服竞赛与未来
         <span class="zh-content">USAAIO决赛</span>
       </h3>
       <p>
-        <span class="en-content">April 2025</span>
-        <span class="zh-content">2025年4月</span>
+        <span class="en-content">April 2026</span>
+        <span class="zh-content">2026年4月</span>
       </p>
     </div>
     
