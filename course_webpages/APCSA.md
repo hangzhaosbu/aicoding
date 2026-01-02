@@ -991,20 +991,20 @@ description_zh: 通过全面的Java培训在AP CSA考试中取得优异成绩
 <!-- Exam Information -->
 <div class="exam-info">
   <h2>
-    <span class="en-content">📅 2025 AP CSA Exam Information</span>
-    <span class="zh-content">📅 2025年AP CSA考试信息</span>
+    <span class="en-content">📅 2026 AP CSA Exam Information</span>
+    <span class="zh-content">📅 2026年AP CSA考试信息</span>
   </h2>
   
   <div class="exam-stats">
     <div class="stat-card">
       <div class="stat-icon">📆</div>
       <span class="stat-number">
-        <span class="en-content">May 7</span>
-        <span class="zh-content">5月7日</span>
+        <span class="en-content">May 15</span>
+        <span class="zh-content">5月15日</span>
       </span>
       <div class="stat-label">
-        <span class="en-content">2025 Exam Date</span>
-        <span class="zh-content">2025考试日期</span>
+        <span class="en-content">2026 Exam Date</span>
+        <span class="zh-content">2026考试日期</span>
       </div>
     </div>
     <div class="stat-card">
