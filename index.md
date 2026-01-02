@@ -1188,7 +1188,7 @@ description_zh: 为未来科技领袖提供的精英编程教育
       <span class="hero-badge-dot"></span>
       <span class="hero-badge-text">
         <span class="en-content">Now Enrolling for 2026</span>
-        <span class="zh-content">2025年招生进行中</span>
+        <span class="zh-content">2026年招生进行中</span>
       </span>
     </div>
     
