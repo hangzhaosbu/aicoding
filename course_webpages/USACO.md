@@ -1590,44 +1590,44 @@ description_zh: 美国计算机奥林匹克竞赛准备
 <!-- Contest Dates -->
 <div class="contest-dates">
   <h2>
-    <span class="en-content">2024-2025 Contest Schedule</span>
-    <span class="zh-content">2024-2025 竞赛日程</span>
+    <span class="en-content">2025-2026 Contest Schedule</span>
+    <span class="zh-content">2025-2026 竞赛日程</span>
   </h2>
   
   <div class="contest-calendar">
     <div class="contest-month">
       <h3>
         <span>📅</span>
-        <span class="en-content">December Contest</span>
-        <span class="zh-content">12月竞赛</span>
+        <span class="en-content">First Contest</span>
+        <span class="zh-content">第一次竞赛</span>
       </h3>
       <p>
-        <span class="en-content">Dec 20-23, 2024</span>
-        <span class="zh-content">2024年12月20-23日</span>
+        <span class="en-content">Jan 9-12, 2026</span>
+        <span class="zh-content">2026年1月9-12日</span>
       </p>
     </div>
     
     <div class="contest-month">
       <h3>
         <span>📅</span>
-        <span class="en-content">January Contest</span>
-        <span class="zh-content">1月竞赛</span>
+        <span class="en-content">Second Contest</span>
+        <span class="zh-content">第二次竞赛</span>
       </h3>
       <p>
-        <span class="en-content">Jan 24-27, 2025</span>
-        <span class="zh-content">2025年1月24-27日</span>
+        <span class="en-content">Jan 30-Feb 2, 2026</span>
+        <span class="zh-content">2026年1月30日-2月2日</span>
       </p>
     </div>
     
     <div class="contest-month">
       <h3>
         <span>📅</span>
-        <span class="en-content">February Contest</span>
-        <span class="zh-content">2月竞赛</span>
+        <span class="en-content">Third Contest</span>
+        <span class="zh-content">第三次竞赛</span>
       </h3>
       <p>
-        <span class="en-content">Feb 21-24, 2025</span>
-        <span class="zh-content">2025年2月21-24日</span>
+        <span class="en-content">Feb 20-23, 2026</span>
+        <span class="zh-content">2026年2月20-23日</span>
       </p>
     </div>
     
@@ -1638,8 +1638,8 @@ description_zh: 美国计算机奥林匹克竞赛准备
         <span class="zh-content">美国公开赛</span>
       </h3>
       <p>
-        <span class="en-content">March 14-17, 2025</span>
-        <span class="zh-content">2025年3月14-17日</span>
+        <span class="en-content">March 28, 2026 (in person)</span>
+        <span class="zh-content">2026年3月28日 (线下)</span>
       </p>
     </div>
   </div>
