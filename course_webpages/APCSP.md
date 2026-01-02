@@ -1296,8 +1296,8 @@ description_zh: 掌握计算思维，征服AP CSP考试
 <!-- Exam Information -->
 <div class="exam-info">
   <h2>
-    <span class="en-content">📅 2025 AP CSP Exam Format</span>
-    <span class="zh-content">📅 2025年AP CSP考试形式</span>
+    <span class="en-content">📅 2026 AP CSP Exam Format</span>
+    <span class="zh-content">📅 2026年AP CSP考试形式</span>
   </h2>
   
   <div class="exam-grid">
